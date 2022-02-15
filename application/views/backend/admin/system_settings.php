@@ -9,8 +9,8 @@
 			<h1>
 				<?php foreach ($edit_profile as $key => $row): ?>
 					<?php
-						echo $this->db->get_where('clinic', array('clinic_id' => $row['clinic_id']))->row()->clinic_name.'<br>';
-						echo $row['clinic_id'];
+						echo $this->db->get_where('exhibition', array('exhibition_id' => $row['exhibition_id']))->row()->exhibition_name.'<br>';
+						echo $row['exhibition_id'];
 					?>
 					<?php endforeach ?>
 				</h1>
@@ -18,16 +18,16 @@
 				<?php echo form_open(base_url(). 'systemsetting/system_settings/do_update', array('class' => 'form-horizontal form-groups-bordered', 'enctype'=> 'multipart/form-data'));?>
 
 				<div class="form-group">
-					<label class="col-md-12" for="example-text"><?php echo get_phrase('clinic ID');?></label>
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('System ID');?></label>
 					<div class="col-sm-12">
 					<?php
-						//echo $this->db->get_where('clinic', array('clinic_id' => $this->session->userdata('clinic_id')))->row()->clinic_name;
+						//echo $this->db->get_where('exhibition', array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->exhibition_name;
 						//echo $this->db->get_where('department', array('department_id' => '2'))->row()->name;
-						//echo $this->db->get_where('clinic', array('clinic_id' => $this->session->userdata('clinic_id')))->row()->clinic_name;
-						// $this->session->userdata('clinic_id');
+						//echo $this->db->get_where('exhibition', array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->exhibition_name;
+						// $this->session->userdata('exhibition_id');
 					?>
-					<input type="text" class="form-control" name="clinic_id" readonly value="<?php  echo ($this->db->get_where('settings', array('type' => 'clinic_id'))->row()->description)?$this->db->get_where('settings', array('type' => 'clinic_id'))->row()->description:$this->session->userdata('clinic_id');?>">
-					 <!--<input type="text" class="form-control" name="system_name" value="<?php  //echo ($this->db->get_where('settings', array('type' => 'clinic_id'))->row()->description)?$this->db->get_where('settings', array('type' => 'clinic_id'))->row()->description:$this->session->userdata('clinic_id');?>"> -->
+					<input type="text" class="form-control" name="exhibition_id" readonly value="<?php  echo ($this->db->get_where('settings', array('type' => 'exhibition_id'))->row()->description)?$this->db->get_where('settings', array('type' => 'exhibition_id'))->row()->description:$this->session->userdata('exhibition_id');?>">
+					 <!--<input type="text" class="form-control" name="system_name" value="<?php  //echo ($this->db->get_where('settings', array('type' => 'exhibition_id'))->row()->description)?$this->db->get_where('settings', array('type' => 'exhibition_id'))->row()->description:$this->session->userdata('exhibition_id');?>"> -->
 
 					 <!-- <input type="text" class="form-control" name="system_name" value=""> -->
 
@@ -36,9 +36,9 @@
 
 
 				<div class="form-group">
-					<label class="col-md-12" for="example-text"><?php echo get_phrase('clinic Name');?></label>
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('System Name');?></label>
 					<div class="col-sm-12">
-						<input type="text" class="form-control" name="system_title" value=" <?php echo $this->db->get_where('clinic', array('clinic_id' => $this->session->userdata('clinic_id')))->row()->clinic_name;?>">
+						<input type="text" class="form-control" name="system_title" value=" <?php echo $this->db->get_where('exhibition', array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->exhibition_name;?>">
 					</div>
 				</div>
 
@@ -199,7 +199,7 @@
 
 				<div class="radio radio-custom">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'default') echo 'checked';?> name="skin_colour" id="radio2" value="default">
-                  <label for="radio2"> Default </label>
+                  <label for="radio2"> Dark Blue </label>
 				</div>
 
 				<div class="radio radio-success">
@@ -212,20 +212,20 @@
                   <label for="radio4"> Gray </label>
 				</div>
 
-				<div class="radio radio-black">
+				<!-- <div class="radio radio-black">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'black') echo 'checked';?> name="skin_colour" id="radio5" value="black">
                   <label for="radio5"> Black </label>
-				</div>
+				</div> -->
 
-				<div class="radio radio-purple">
+				<!-- <div class="radio radio-purple">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'purple') echo 'checked';?> name="skin_colour" id="radio6" value="purple">
                   <label for="radio6"> Purple </label>
-				</div>
+				</div> -->
 
-				<div class="radio radio-info">
+				<!-- <div class="radio radio-info">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'blue') echo 'checked';?> name="skin_colour" id="radio7" value="blue">
                   <label for="radio7"> Blue </label>
-				</div>
+				</div> -->
 
 
 

@@ -20731,7 +20731,7 @@
                     font-weight: bold;
                 }
                 .profile-pic {
-                    background-color: #2e3192;
+                    /* background-color: #2e3192; */
                     border-radius: 999px;
                 }
                 table.dataTable {

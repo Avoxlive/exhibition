@@ -888,66 +888,66 @@ class Crud_model extends CI_Model {
         //  $this->db->where('type', 'system_title');
         //  $this->db->update('settings', $data);
 
-        $data['description'] = $this->input->get('clinic_id');
-        $this->db->where('type', 'clinic_id');
-        $this->db->update('clinic', $data);
+        $data['description'] = $this->input->get('exhibition_id');
+        $this->db->where('type', 'exhibition_id');
+        $this->db->update('settings', $data);
 
-        $data['description']    =   $this->input->post('clinic_name');
-        $this->db->where('type', 'clinic_name');
-        $this->db->update('clinic', $data);
+        $data['description']    =   $this->input->post('exhibition_name');
+        $this->db->where('type', 'exhibition_name');
+        $this->db->update('settings', $data);
 
-        $data['description']    =   $this->input->post('clinic_admin_email');
-        $this->db->where('type', 'clinic_admin_email');
-        $this->db->update('clinic', $data);
+        $data['description']    =   $this->input->post('exhibition_admin_email');
+        $this->db->where('type', 'exhibition_admin_email');
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('password');
         $this->db->where('type', 'password');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
 
         $data['description']    =   $this->input->post('location');
         $this->db->where('type', 'location');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('phone');
         $this->db->where('type', 'phone');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('currency');
         $this->db->where('type', 'currency');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('system_email');
         $this->db->where('type', 'system_email');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('language');
         $this->db->where('type', 'language');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('text_align');
         $this->db->where('type', 'text_align');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
 
         $data['description']    =   $this->input->post('running_session');
         $this->db->where('type', 'session');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('footer');
         $this->db->where('type', 'footer');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
         $data['description']    =   $this->input->post('paypal_email');
         $this->db->where('type', 'paypal_email');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
 
 
 
         $settiings_array = array(
-            'clinic_id'  => $this->session->userdata('clinic_id'),
+            'exhibition_id'  => $this->session->userdata('exhibition_id'),
         );
-        $this->db->update('clinic', $settiings_array);
+        $this->db->update('settings', $settiings_array);
 
     }
 
@@ -956,11 +956,11 @@ class Crud_model extends CI_Model {
 
         $data['description']    =   $this->input->post('skin_colour');
         $this->db->where('type', 'skin_colour');
-        $this->db->update('clinic', $data);
+        $this->db->update('settings', $data);
     }
 
     function get_settings($type){
-        $get_settings = $this->db->get_where('clinic', array('type' => $type))->row()->description;
+        $get_settings = $this->db->get_where('settings', array('type' => $type))->row()->description;
         return $get_settings;
     }
 

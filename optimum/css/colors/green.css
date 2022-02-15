@@ -53,7 +53,7 @@ body {
   color: #ffffff;
 }
 .navbar-header {
-  background: #00c292;
+  background: #427853;
 }
 .navbar-top-links > li > a {
   color: #ffffff;
@@ -68,7 +68,7 @@ body {
 }
 /*Sidebar*/
 .sidebar {
-  background: #fff;
+  background: #427853;
   box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
 }
 .sidebar .label-custom {
@@ -78,7 +78,7 @@ body {
   color: #54667a;
 }
 #side-menu li a {
-  color: #54667a;
+  color: #f5f2f2;
   border-left: 0px solid #fff;
 }
 #side-menu > li > a:hover,

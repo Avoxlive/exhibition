@@ -984,21 +984,21 @@
 
         <ul class=" nav nav-second-level<?php
                 // if (
-                    // $page_name == 'system_settings'
-                //     $page_name == 'manage_language' ||
-                //     $page_name == 'paymentSetting' ||
-                //     $page_name == 'sms_settings'
+                //     $page_name == 'system_settings'
+                //     // $page_name == 'manage_language' ||
+                //     // $page_name == 'paymentSetting' ||
+                //     // $page_name == 'sms_settings'
                 // )
                 //     echo 'opened active';
                 ?>"> -->
 
 
-                 <!-- <li class="<?php if ($page_name == 'system_settings') echo 'active'; ?> ">
+                 <li class="<?php if ($page_name == 'system_settings') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>systemsetting/system_settings">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                              <span class="hide-menu"><?php echo get_phrase('general_settings'); ?></span>
                         </a>
-                    </li> -->
+                    </li>
 
 <!--
 

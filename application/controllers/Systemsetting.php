@@ -13,9 +13,9 @@ class Systemsetting extends CI_Controller {
     }
 /**default functin, redirects to login page if no admin logged in yet***/
     public function index() {
-        	if ($this->session->userdata('admin_login', 'clinic_id' ) != 1)
+        	if ($this->session->userdata('admin_login', 'exhibition_id' ) != 1)
             redirect(base_url() . 'login', 'refresh');
-        	if ($this->session->userdata('admin_login', 'clinic_id') == 1)
+        	if ($this->session->userdata('admin_login', 'exhibition_id') == 1)
             redirect(base_url() . 'admin/dashboard', 'refresh');
     }
 
@@ -44,7 +44,7 @@ class Systemsetting extends CI_Controller {
     }
     $page_data['page_name'] = 'system_settings';
     $page_data['page_title'] = get_phrase('system_settings');
-    $page_data['settings'] = $this->db->get_where('settings', array('clinic_id' => $clinic_id))->result_array();
+    $page_data['settings'] = $this->db->get_where('settings', array('exhibition_id' => $exhibition_id))->result_array();
     $this->load->view('backend/index', $page_data);
     }
 
