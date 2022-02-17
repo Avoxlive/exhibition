@@ -17,45 +17,34 @@
                  		<label class="col-md-12" for="example-text"><?php echo get_phrase('title');?></label>
                     	<div class="col-sm-12">
 							<input type="text" class="form-control" name="title" value="<?=$value['title']?>" required>
-
 						</div>
 					</div>
 
-                    <div class="form-group">
-				                                <label class="col-md-12"
-				                                    for="example-text"><?php echo get_phrase('patient');?></label>
-				                                <div class="col-sm-12">
-				                                    <select name="patient_id" class="form-control select2" style="width:100%"
-				                                        id="patient_id"
-														 onchange="return get_group_sub_groups(this.value)"
-														 >
-				                                        <option value=""><?php echo get_phrase('select');?></option>
-				                                        <?php
-								$patients = $this->crud_model->get_patients(); foreach($patients as $row): ?>
-				                                        <option value="<?php echo $row['patient_id'];?>"><?php echo $row['name'];?>
-				                                        </option>
-				                                        <?php endforeach; ?>
-				                                    </select>
-				                                </div>
-				                            </div>
-
-
-
+					<div class="form-group">
+                 		<label class="col-md-12" for="example-text"><?php echo get_phrase('visitor');?></label>
+                    	<div class="col-sm-12">
+							<select name="visitor_id" class="form-control select2" style="width:100%"id="visitor_id" onchange="return get_group_sub_groups(this.value)">
+                              <option value=""><?php echo get_phrase('select');?></option>
+                              <?php
+								$classes = $this->crud_model->get_visitors(); foreach($classes as $row): ?>
+                            		<option value="<?php echo $row['visitor_id'];?>"><?php echo $row['name'];?></option>
+                                <?php endforeach; ?>
+                          </select>
+						</div>
+					</div>
                     <div class="form-group">
                  		<label class="col-md-12" for="example-text"><?php echo get_phrase('description');?></label>
                     	<div class="col-sm-12">
                 			<textarea rows="5" name="description" class="form-control" placeholder="please specify meeting description here" ><?=$value['description']?></textarea>
 						</div>
-            	</div>
-
+            	    </div>
 			</div>
 
-					 <div class="col-sm-6">
-
-						 <div class="form-group">
+					<div class="col-sm-6">
+						<div class="form-group">
 							<label class="col-sm-12"><?php echo get_phrase('date'); ?></label>
 							<div class="col-sm-12">
-								 <input type="date" class="form-control datepicker" name="meeting_date" value="<?=date('Y-m-d', $value['meeting_date'])?>" required>
+								<input type="date" class="form-control datepicker" name="meeting_date" value="<?=date('Y-m-d', $value['meeting_date'])?>" required>
 							</div>
 					</div>
 
@@ -99,21 +88,17 @@
 
                 <hr class="sep-3">
 				<div class="form-group">
-                    	<div class="col-sm-12">
-                			<input type="checkbox" id="check" value="1" name="send_notification_sms"> <i></i> <?=get_phrase('send_notification_sms')?>
-						</div>
-                        <p style="color:red" id="initial">Meeting will not be sent to mobile number(s)!</p>
-                        <p style="color:green" id="send_sms">Meetting info will be sent to parent and students' phone number(s). Note that only parent(s) and student(s) in the class selected will receive message</p>
+					<div class="col-sm-12">
+						<input type="checkbox" id="check" value="1" name="send_notification_sms"> <i></i> <?=get_phrase('send_notification_sms')?>
+					</div>
+					<p style="color:red" id="initial">Meeting will not be sent to mobile number(s)!</p>
+					<p style="color:green" id="send_sms">Meetting info will be sent to parent and students' phone number(s). Note that only parent(s) and student(s) in the class selected will receive message</p>
             	</div>
  `           </div>
         </div>`
-
 		<input type="submit" class="btn btn-success btn-rounded btn-block btn-sm" value="<?php echo get_phrase('save');?>">
-
         <?php echo form_close();?>
         <?php endforeach;?>
-
-
             </div>
         </div>
     </div>
@@ -121,7 +106,6 @@
                     <script type="text/javascript">
 
 function get_class_sections(class_id) {
-
     $.ajax({
         url: '<?php echo base_url();?>admin/get_class_section/' + class_id ,
         success: function(response)
@@ -129,28 +113,20 @@ function get_class_sections(class_id) {
             jQuery('#section_selector_holder').html(response);
         }
     });
-
 }
 
 
 $('#check').click(function(){
-
     if($('#check').is(':checked') == true){
         $("#send_sms").show(500);
         $("#initial").hide(500);
     }else{
-
         $("#send_sms").hide(500);
         $("#initial").show(500);
     }
-
 });
 
 $("#send_sms").hide();
-
-
-
-
 $(document).ready(function(){
     var class_id = $('#class_id').val();
     get_class_sections(class_id);

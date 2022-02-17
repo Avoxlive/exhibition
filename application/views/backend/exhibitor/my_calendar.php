@@ -179,7 +179,7 @@ $name = $this->session->userdata('name');
                                 </label>
                                 <select id="status" name="status">
 
-                                    <option name="status" id="status" class="form-control" value="rejected">Reject
+                                    <option name="status" class="form-control" value="rejected">Reject
                                 <!-- <input type="hidden" name="color" id="status" class="form-control" value="#890000"> -->
 
                                     </option>
@@ -190,8 +190,6 @@ $name = $this->session->userdata('name');
                                     </option>
                                     </select>
                             </div>
-
-
 
 
 
@@ -214,6 +212,7 @@ $name = $this->session->userdata('name');
 
                             <button type="submit" class="btn green">submit
                             <input type="hidden" name="color" class="form-control" value="#008000">
+
                             <!-- <input type="hidden" name="status" class="form-control" value="confirmed"> -->
                             </button>
                         </div>

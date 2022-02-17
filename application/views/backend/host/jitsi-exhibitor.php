@@ -52,50 +52,56 @@
                 height: 240px;
             }
             .gallery-scroll-bg .service-text{
-width: 100%;
-height: 220px;
+                width: 100%;
+                height: 220px;
             }
 
             .clinic-scroll {
-    padding: 0.5rem 0rem;
-    background-color: #f3f8f8;
-    width: 20%;
-    height: 400px;
-    float: right;
-    text-align: right;
-}
+                padding: 0.5rem 0rem;
+                background-color: #f3f8f8;
+                width: 20%;
+                height: 400px;
+                float: right;
+                text-align: right;
+            }
 
-.clinic-scroll .service-text {
-    margin: 0px;
-    padding: 0px 10px;
-    text-align: center;
-    width: 100%;
-    height: 470px;
-    border-radius: 0px;
-    overflow: hidden;
-    /* border: 10px solid #f0f; */
-    /* -webkit-box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
-    box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%); */
-    /* border: 1px solid #e7e7e7 */
+            .clinic-scroll .service-text {
+                margin: 0px;
+                padding: 0px 10px;
+                text-align: center;
+                width: 100%;
+                height: 450px;
+                border-radius: 0px;
+                overflow: hidden;
+                /* border: 10px solid #f0f; */
+                /* -webkit-box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
+                box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%); */
+                /* border: 1px solid #e7e7e7 */
 
-}
-.clinic-scroll .service-text img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.clinic-scroll h2{
-    padding: 5px;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center  ;
-}
+            }
+            @media (max-width: 768px) {
+                .clinic-scroll .service-text {
+                height: 320px;
+            }
+        }
+
+
+            .clinic-scroll .service-text img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .clinic-scroll h2{
+                padding: 5px;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center  ;
+            }
 
         </style>
 
 							<!-- Select * From Jitsi with Jitsi ID -->
                             <?php
-
                             include 'advertisement_block.php';
                             include 'exhibitor_advertisement_block.php';
                             $select = $this->db->get_where('jitsi', array('jitsi_id' => $jitsi_id))->result_array();
@@ -161,6 +167,7 @@ height: 220px;
             disableKick: false,
             },
 
+
 			},
 
 			interfaceConfigOverwrite: {
@@ -221,10 +228,7 @@ height: 220px;
 <script>
          $(document).ready(function() {
             $('.exhibitor-advertise-scroll-in').owlCarousel({
-
-
-
-                animateOut: 'fadeOut',
+            animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             smartSpeed: 450,
             autoplay: true,

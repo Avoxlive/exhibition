@@ -170,7 +170,7 @@
 												if(($row['status'] == 'live') && ($row['start_time'] <= date('h:i', time())) && ($row['end_time'] >= date('h:i', time()))) :?>
 
 											   <a
-				                                    href="<?php echo base_url();?>doctor/stream_jitsi/<?php echo $row['jitsi_id'];?>"><button type="button" class="btn btn-success btn-rounded btn-sm"><i class="fa fa-youtube-play"></i> start meeting</button></a>
+				                                    href="<?php echo base_url();?>exhibitor/stream_jitsi/<?php echo $row['jitsi_id'];?>"><button type="button" class="btn btn-success btn-rounded btn-sm"><i class="fa fa-youtube-play"></i> start meeting</button></a>
 				                                <?php endif;?>
 
                             <a href="#" onclick="confirm_modal('<?php echo base_url();?>admin/jitsi/delete/<?php echo $row['jitsi_id'];?>');"><button type="button" class="btn btn-danger btn-rounded btn-sm"><i class="fa fa-times"></i> delete</button></a>

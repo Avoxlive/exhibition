@@ -149,3 +149,26 @@ body {
   background: #00c292;
   color: #ffffff;
 }
+
+/* table header */
+
+table.dataTable {
+  background: #427853;
+}
+
+/* calendar header */
+
+.fc th.fc-widget-header {
+  background: #427853;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 7px 0;
+  text-transform: uppercase;
+}
+
+.alert-success {
+  background: #427853;
+  color: #fff;
+  border-color: #427853;
+}

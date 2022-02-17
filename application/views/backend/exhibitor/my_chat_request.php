@@ -32,9 +32,9 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id))-
                              <?php $no = 1 ;  $get_visitor_from_model =( $this->chat_model->list_all_visitor_and_order_with_chat_request($exhibitor_id)) and ($this->crud_model->list_all_visitor_and_order_with_visitor_id());
                             //  <?php $no = 1 ;  $get_visitor_from_model = $this->chat_model->list_all_visitor_and_order_with_chat_request($exhibitor_id);
                                     foreach ($get_visitor_from_model as $key => $visitor):
-    ?>
+                            ?>
 
-    <?php if($visitor['status'] == 'pending'):?>
+                            <?php if($visitor['status'] == 'pending'):?>
                                 <td><?php echo $no++ ; ?></td>
                                 <!-- <td><?php echo $visitor['visitor_id'];?></td> -->
                                 <td><?php echo $visitor['visitor_name'];?></td>
@@ -48,11 +48,8 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id))-
                                     <!-- <a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
 				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
 				                                            class="fa fa-edit"></i> edit</button></a> -->
-
-
-                             </tr>
-                            <?php  endforeach;
-                            ?>
+               </tr>
+                            <?php  endforeach; ?>
                         </tbody>
                     </table>
                 </div>
