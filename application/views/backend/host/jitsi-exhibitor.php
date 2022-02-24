@@ -77,11 +77,25 @@
                 /* -webkit-box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
                 box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%); */
                 /* border: 1px solid #e7e7e7 */
-
             }
+
             @media (max-width: 768px) {
                 .clinic-scroll .service-text {
-                height: 320px;
+                height: 150px;
+            }
+            .clinic-scroll{
+                height: 200px !important;
+            }
+            .clinic-scroll  h2{
+                font-size: 10px !important;
+                padding: 0px !important;
+            }
+            .gallery-scroll-bg .service-text{
+                width: 100%;
+                height: 120px;
+            }
+            #container{
+                height: 55vh !important;
             }
         }
 
@@ -96,6 +110,27 @@
                 font-size: 30px;
                 font-weight: bold;
                 text-align: center  ;
+            }
+            .conference-block{
+              padding: 0px;
+              margin: 0px;
+
+            }
+            .conference-block .block-exhibition-advertisement{
+                display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(200px, auto);
+    font-size: 30px;
+    width: 100%;
+
+            }
+
+            .conference-block .block-exhibitor-advertisement{
+                display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(200px, auto);
             }
 
         </style>
@@ -117,22 +152,58 @@
         <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <h4 style="color:white"><i class="fa fa-plus"></i> Meeting Title : <?=$row['title']?></h4>
+                    <h4 style="color:white"><i class="fa fa-plus"></i> Meeting Title : <?=$row['title']?>
+                    &nbsp;&nbsp;&nbsp; HOST BY :
+                    <img src="<?=$this->crud_model->get_image_url($user_type, $user_id)?>" HostImageclass="img-circle" height="30" width="30"/> <?=$HostName->name?>
+					&nbsp;&nbsp;&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a>
+
+                </h4>
+
 
                 </div>
-                <div class="navbar-form navbar-right">
-                    <h5 style="color:white"> HOST BY :
+                <!-- <div class="navbar-form navbar-right">
+                    <h4 style="color:white"> HOST BY :
 					<img src="<?=$this->crud_model->get_image_url($user_type, $user_id)?>" HostImageclass="img-circle" height="30" width="30"/> <?=$HostName->name?>
-					&nbsp;&nbsp;&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a></h5>
-<!-- <h5 style="color:#fff;"> <?php //echo $accountType ?></h5> -->
+					&nbsp;&nbsp;&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a></h4>
+<h5 style="color:#fff;"> <?php
+// echo $accountType ?></h5>
 
 
-                </div>
+                </div> -->
             </div>
         </nav>
 
+<div id="container" style="width:100%;height:65vh">
+
+        <!-- <div class="conference-block">
+            <div class="block-exhibition-advertisement">
+                        <?php
+                            // include 'advertisement_block.php';
+
+                            // include 'exhibitor_advertisement_block.php';
+                            // $select = $this->db->get_where('jitsi', array('jitsi_id' => $jitsi_id))->result_array();
+                            // foreach ($select as $key => $row):
+							// $user = explode('-', $row['user_id']);
+							// $user_type = $user[0];
+							// $user_id = $user[1];
+							// $HostName =  $this->db->get_where($user_type, array($user_type.'_id' => $user_id))->row();
+                            // $accountType = $this->session->userdata('login_type');
+                        ?>
+
+
+            </div>
+            <div class="block-exhibitor-advertisement">
+<h2>
+
+<div id="container" style="width:100%;height:65vh">
+</h2>
+<h2>
+</h2>
+            </div>
+
+        </div> -->
+
 		<!-- Container That Render Jitsi -->
-		<div id="container" style="width:100%;height:65vh">
 
 	<!-- Meet Jitsi API -->
 	<script src="https://8x8.vc/external_api.js"></script>
@@ -167,9 +238,7 @@
             disableKick: false,
             },
 
-
 			},
-
 			interfaceConfigOverwrite: {
 			filmStripOnly: true,
            //TOOLBAR_BUTTONS: [],
@@ -180,7 +249,7 @@
 		}
 
 
-		var api = new JitsiMeetExternalAPI(domain, options);
+		    var api = new JitsiMeetExternalAPI(domain, options);
 			api.executeCommand('subject', '<?php echo $row['title'];?>');
 
 	</script>
