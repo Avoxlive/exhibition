@@ -4874,6 +4874,40 @@
                 .box-width .box-wrapper .user a{
                     color: #fff;
                 }
+                /* @media (max-width: 576px) {
+                    .hero-bottom h5{
+                        font-size: 3rem;
+                    }
+
+                } */
+                @media screen and (max-width:767px){
+                    .hero-bottom h5{
+                        font-size: 3rem !important;
+                    }
+
+                    .hero-bottom .bottom-button .btn-primary{
+                        font-size: 18px !important;
+                        width: 60% !important;
+                        margin: 10px 0px!important;
+
+                  }
+                  .hero-bottom .bottom-button .btn-info{
+                    font-size: 18px !important;
+                    width: 60% !important;
+                    margin: 10px 0px!important;
+              }
+              .hero-bottom .bottom-button{
+                  width: 100%;
+              }
+              .why-avox .why-avox-block {
+ grid-template-columns: 1fr !important;
+              }
+
+              .avox-feature .header {
+                  padding: 0px!important;
+              }
+
+                }
 
                 .hero-bottom{
                     margin: 20px 0px;
@@ -21000,7 +21034,6 @@
     -webkit-box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
     box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
     /* border: 1px solid #e7e7e7 */
-
 }
 
 .owl-carousel .owl-nav div{
@@ -21060,7 +21093,7 @@
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #fff !important;
+    color: #103160 !important;
     font-size: 20px;
     font-weight: 400;
 

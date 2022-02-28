@@ -958,15 +958,12 @@
                 </a>
             </li>
 
-
                     <li class="<?php if ($page_name == 'transport_route') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>transportation/transport_route">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                             <span class="hide-menu"><?php echo get_phrase('transport_route'); ?></span>
                         </a>
                     </li>
-
-
 
                      <li class="<?php if ($page_name == 'vehicle') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>transportation/vehicle">
@@ -996,7 +993,7 @@
                  <li class="<?php if ($page_name == 'system_settings') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>systemsetting/system_settings">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('general_settings'); ?></span>
+                        <span class="hide-menu"><?php echo get_phrase('general_settings'); ?></span>
                         </a>
                     </li>
 

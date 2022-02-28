@@ -18,7 +18,7 @@
             <li>
                     <div class="pull-right">
                             <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
+                            <input type="text" placeholder="Search..." class="form-control"> <a href="#"><i class="fa fa-search"></i></a> </form>
                     </div>
                     </li>
                 <!-- <li class="dropdown">

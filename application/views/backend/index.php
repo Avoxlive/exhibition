@@ -49,8 +49,6 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
                                    <?php if($login_status == '2'): ?>
                                    <?php echo '<i class="fa fa-circle" style="color:red"></i>';?>
                                    <?php endif;?>
-
-
                                    </span>
                                 </li>
                         <?php endforeach;?>

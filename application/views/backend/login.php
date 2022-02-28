@@ -7,43 +7,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="We ddevelop creative software, eye catching software. We also train to become a creative thinker">
-    <meta name="author" content="OPTIMUM LINKUP COMPUTERS">
-    <link rel="icon" sizes="16x16" href="<?php echo base_url() ?>uploads/logo.png">
-    <title><?php echo $system_title;?></title>
-    <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link
-        href="<?php echo base_url(); ?>optimum/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css"
-        rel="stylesheet">
-    <!-- animation CSS -->
-    <link href="<?php echo base_url(); ?>optimum/css/animate.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?php echo base_url(); ?>optimum/css/style.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>optimum/css/home.css" rel="stylesheet">
-    <!-- color CSS -->
-    <link href="<?php echo base_url(); ?>optimum/css/colors/megna.css" id="theme" rel="stylesheet">
-    <link href="<?php echo base_url();?>optimum/plugins/bower_components/toast-master/css/jquery.toast.css"
-        rel="stylesheet">
-
-        	 <!--Owl carousel CSS -->
-    <link href="<?php echo base_url(); ?>optimum/plugins/bower_components/owl.carousel/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url(); ?>optimum/plugins/bower_components/owl.carousel/owl.theme.default.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>js/font-awesome-icon-picker/fontawesome-four-iconpicker.min.css" type="text/css" />
-
-    <script src="<?php echo base_url(); ?>optimum/js/jquery-1.11.3.min.js"></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
+ <?php include 'css-ui.php'; ?>
 
 </head>
 
@@ -59,51 +23,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
 
 
-<!-- <section class="hero-section">
-    <div class="hero-image">
-        <img src="#" alt="hero-img" class="img-fluid">
+<section id="wrapper" class="login-register">
 
-        <div class="hero-login-sec">
-kkokoko
-        </div>
-    </div>
-</section> -->
-
-
-
-    <section id="wrapper" class="login-register">
-
-    <nav class="navbar navbar-default navbar-static-top m-b-0">
-    <div class="container">
-
-    <!-- Brand and toggle get grouped for better mobile display -->
-
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-      <ul class="nav navbar-nav">
-      <div class="home-header-left">
-<a class="home-logo" href="#">
-<img src="<?php echo base_url(); ?>optimum/plugins/logo/logo-avox.png" alt="home-logo">
-
-</a>
-
-</div>
-      </ul>
-
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Sign up</a></li>
-
-      </ul>
-    </div>
-  </div>
-</nav>
+  <?php include 'header-head.php';?>
 
         <div class="box-width">
             <div class="box-wrapper">
@@ -122,7 +44,7 @@ kkokoko
                     <label for="name">Name</label><br>
 
                                 <input class="form-control" type="email" name="email" required=""
-                                    placeholder="<?php echo get_phrase('email');?>" style="width:100%">
+                                placeholder="<?php echo get_phrase('email');?>" style="width:100%">
                             </div>
                         </div>
                         <div class="form-group">
@@ -335,7 +257,7 @@ kkokoko
                    <img src="<?php echo base_url(); ?>optimum/plugins/images/img1.png" href="#" alt="image1">
                    </div>
 
-                   <h2>The host can do branding for their brands, they can use banners and posters. </h2>
+                   <h2>The host can do branding for their brands, they can use banners and posters.</h2>
                </div>
 
                <div class="avox-block-in">
@@ -360,7 +282,7 @@ kkokoko
    <section class="avox-feature">
        <div class="container">
            <div class="header">
-<h2>Features</h2>
+           <h2>Features</h2>
            </div>
            <div class="feature-box">
                <div class="feature-box-content">
@@ -419,8 +341,8 @@ kkokoko
     <div class="testimonial-block">
         <div class="testimonial-content">
             <h2>What Our</h2>
-<h2>Customers</h2>
-<h2>Are Saying</h2>
+            <h2>Customers</h2>
+            <h2>Are Saying</h2>
         </div>
         <div class="client-testimonial">
             <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h2>
@@ -434,7 +356,7 @@ kkokoko
 
                                     <div class="owl-item">
                                         <div class="service-text">
-                                        <a href="#"><img src="#" class="hvrbox-layer_bottom img-rounded"></a>
+                                        <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" class="hvrbox-layer_bottom img-rounded"></a>
                                         </div>
 
                                     </div>
@@ -545,92 +467,7 @@ kkokoko
 
 </section>
 
-    <script src="js/index.js"></script>
-
-
-    <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url(); ?>optimum/bootstrap/dist/js/tether.min.js"></script>
-    <script src="<?php echo base_url(); ?>optimum/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script
-        src="<?php echo base_url(); ?>optimum/plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js">
-    </script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js">
-    </script>
-
-
-    <!--slimscroll JavaScript -->
-    <script src="<?php echo base_url(); ?>optimum/js/jquery.slimscroll.js"></script>
-    <!--Wave Effects -->
-    <script src="<?php echo base_url(); ?>optimum/js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="<?php echo base_url(); ?>optimum/js/custom.min.js"></script>
-    <!--Style Switcher -->
-    <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/styleswitcher/jQuery.style.switcher.js">
-    </script>
-
-    <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-
-    <?php if (($this->session->flashdata('error_message')) !=''):?>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $.toast({
-            heading: 'Error Message',
-            text: '<?php echo $this->session->flashdata('error_message');?>',
-            position: 'top-right',
-            loaderBg: '#ff6849',
-            icon: 'warning',
-            hideAfter: '3500',
-            stack: 6
-
-        });
-
-    });
-    </script>
-
-<script>
-         $(document).ready(function() {
-            $('.testimonial').owlCarousel({
-
-
-
-            autoplay: true,
-            autoplayHoverPause: true,
-            autoplayTimeout: 20,
-            autoplaySpeed: 12000,
-            fluidSpeed: true,
-            loop: true,
-            margin: 20,
-            nav: false,
-            dots: false,
-            /*navText: [
-              "<i class='fa fa-chevron-left'></i>",
-              "<i class='fa fa-chevron-right'></i>"
-              ], */
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                }
-            }
-        });
-         });
-</script>
-
-<!-- <script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script> -->
-<script src="<?php echo base_url(); ?>assets/js/owl-carousel-min.js"></script>
-
-    <?php endif;?>
-
-
-
+   <?php include 'js-ui.php'; ?>
 
 </body>
 
