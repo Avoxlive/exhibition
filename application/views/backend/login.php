@@ -72,7 +72,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
                                 <button
                                     class="btn btn-infoo btn-rounded btn-sm btn-block text-uppercase waves-effect waves-light"
-                                    type="submit" style="width:40%; color:white">
+                                    type="submit" style="width:50%; color:white">
                                     <?php echo get_phrase('Sign_in');?>
                                 </button>
 
@@ -238,7 +238,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
 <div class="bottom-button">
 
-                <button type="submit" class="btn btn-primary">Host an Event</button>
+<a href="<?php echo base_url(); ?>home/signup"><button type="submit" class="btn btn-primary">Host an Event</button></a>
                 <button type="submit" class="btn btn-info">Join an Event</button>
 </div>
     </section>
@@ -459,7 +459,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             <div class="footer-right">
                <h2>AVOX.LIVE</h2>
                <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
-               <button type="submit" class="btn btn-primary text-center" ><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
+               <div class="text-center">
+               <button type="submit" class="btn btn-primary" ><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
+               </div>
                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
             </div>
         </div>

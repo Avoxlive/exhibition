@@ -17,12 +17,10 @@
 
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="<?php echo base_url(); ?>home/login">Home</a></li>
         <li><a href="<?php echo base_url(); ?>home/feature">Features</a></li>
-
-
         <li><a href="<?php echo base_url(); ?>home/pricing">Pricing</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="<?php echo base_url(); ?>home/contactus">Contact us</a></li>
         <!-- <li><a href="#">Sign up</a></li> -->
 
       </ul>

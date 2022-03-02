@@ -1,6 +1,6 @@
 .home-header-left{
-    height: 120px;
-    width: 100px;
+    height: 100px;
+    width: 100%;
 }
 
 .navbar-collapse .home-header-left .home-logo{
@@ -409,6 +409,9 @@ padding: 20px 0px;
         text-align: justify;
         padding: 20px 0px;
     }
+    .bottom .footer-in .footer-right .button-center{
+        text-align: center;
+    }
     .bottom .footer-in .footer-right button{
         width: 50%;
         color: #fff;
@@ -423,7 +426,7 @@ padding: 20px 0px;
         font-size: 30px;
     }
 
-    .bottom .footer-in .footer-right h4{
+    .bottom .footer-in .footer-right  h4{
         font-size: 18px ;
         color: #fff;
         text-align: center;

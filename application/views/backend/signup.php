@@ -19,52 +19,40 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <?php include 'header-head.php';?>
 
 
-
-    <section class="pricing">
-        <div class="container">
-            <div class="heading">
-                <h2>Pricing</h2>
-            </div>
-            <div class="pricing-sec">
-                <div class="price-one">
-                    <div class="price-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="img1" class="img-fluid">
-                    </div>
-                    <h2>Prefect for one quick projects</h2>
-                    <h3>$0</h3>
-                    <div class="btn-center">
-                    <button class="btn btn-primary">Buy now</button>
-                    </div>
-                </div>
-
-                <div class="price-one">
-                    <div class="price-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price2.png" alt="img1" class="img-fluid">
-                    </div>
-                    <h2>For individuals and small teams</h2>
-                    <h3>$10</h3>
-                    <div class="btn-center">
-                    <button class="btn btn-primary">Buy now</button>
-                    </div>
-                </div>
-
-                <div class="price-one">
-                    <div class="price-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price3.png" alt="img1" class="img-fluid">
-                    </div>
-                    <h2>Prefect for one quick projects</h2>
-                    <h3>$0</h3>
-                    <div class="btn-center">
-                    <button class="btn btn-primary">Buy now</button>
-                    </div>
-                </div>
-
-
-            </div>
-
+    <!-- <section class="get-in-touch">
+    <div class="container">
+        <div class="heading">
+            <h2>Get in touch</h2>
+            <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2">
 
         </div>
-    </section>
+        <div class="contact-us">
+            <div class="contact-us-form">
+                <h2>Contact us</h2>
+                            <form>
+                <div class="form-group">
+                    <label for="name">Name</label><br>
+                    <input type="text" class="form-control" id="name"  placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label><br>
+                    <input type="email" class="form-control" id="email"  placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label><br>
+                    <textarea class="form-control" id="message"  placeholder="Enter your message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+            <div class="contact-us-image">
+                <img src="<?php echo base_url(); ?>optimum/plugins/images/contact-img.jpeg" alt="image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+</section> -->
 
 
 <section class="bottom">
