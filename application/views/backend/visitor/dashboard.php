@@ -1,68 +1,68 @@
  <!--row -->
  <div class="dashboard-box">
                     <div class="dashboard-box-in">
-                      
+
                             <div class="r-icon-stats">
                                 <i class="ti-user bg-megna"></i>
                                 <div class="bodystate">
                                     <h4><?php echo $this->db->count_all_results('student');?></h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('Patients');?></span>
-                       
+                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+
                     </div>
                     <div class="dashboard-box-in">
-                     
+
                             <div class="r-icon-statsb">
                                 <i class="ti-user bg-megna"></i>
                                 <div class="bodystate">
                                     <h4><?php echo $this->db->count_all_results('teacher');?></h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('Doctors');?></span>
-                       
+                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+
                     </div>
                     <div class="dashboard-box-in">
-                  
+
                             <div class="r-icon-statsw">
                                  <i class="ti-user bg-megna"></i>
                                 <div class="bodystate">
                                     <h4><?php echo $this->db->count_all_results('parent');?></h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('parents');?></span>
-                      
+                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+
                     </div>
                     <div class="dashboard-box-in">
-                        
+
                             <div class="r-icon-statsy">
                                 <i class="ti-user bg-megna"></i>
                                 <div class="bodystate">
                                     <h4>
-                                    <?php 
+                                    <?php
 
                                     $check_daily_attendance = array('date' => date('Y-m-d'), 'status' => '1');
                                     $get_attendance_information = $this->db->get_where('attendance', $check_daily_attendance, 'student_id', $this->session->userdata('student_id'));
                                     $display_attendance_here = $get_attendance_information->num_rows();
                                     echo $display_attendance_here;
                                     ?>
-                                    
+
                                     </h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('Attendance');?></span>
-                      
+                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+
                     </div>
 
-               
-          
+
+
                 <!--/row -->
                 <!-- .row -->
                <?php /*
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="white-box">
                             <div class="stats-row">
-                                
+
 
                         <style>
                         #chartdiv {
@@ -72,11 +72,11 @@
 
                         .amcharts-chart-div a{
                             display:none !important;
-                        }	
+                        }
 
                         </style>
 
-              
+
 
                         <!-- Chart code -->
                         <script>
@@ -86,7 +86,7 @@
                         am4core.useTheme(am4themes_animated);
                         // Themes end
 
-                      
+
 
                         var chart = am4core.create("chartdiv", am4charts.XYChart);
                         chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
@@ -94,17 +94,17 @@
                         chart.paddingBottom = 30;
 
                         chart.data = [
-                
+
                         <?php $select_student = $this->db->get_where('invoice', array('year' => $running_year, 'student_id' => $this->session->userdata('student_id')))->result_array(); //$this->crud_model->get_invoice_info();
                             foreach ($select_student as $key => $student_selected):?>
-                            
+
                             {
                             "name": "<?php echo $this->crud_model->get_type_name_by_id('student', $student_selected['student_id']);?>",
                             "steps": <?php echo $student_selected['amount_paid'];?>,
                             "href": "<?php echo base_url();?>uploads/student_image/<?php echo $student_selected['student_id']. '.jpg';?>"
-                            }, 
+                            },
                         <?php endforeach;?>
-                        
+
                         ];
 
                         var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());

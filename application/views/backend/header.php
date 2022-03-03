@@ -4,7 +4,8 @@
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
                 <div class="top-left-part"><a class="logo" href="#"><b><img src="<?php echo base_url();?>uploads/logo.png" class="img-fluid" alt="home"/></b><small class="hidden-xs" style="display:inline !important;"><strong>
-                    <?php echo $system_title = $this->db->get_where('settings' , array('type'=>'system_title'))->row()->description; ?>
+                    <?php
+                    // echo $system_title = $this->db->get_where('settings' , array('type'=>'system_title'))->row()->description; ?>
                 </small></a></div>
 
                     <!-- <ul class="nav navbar-top-links navbar-left hidden-xs">
@@ -16,10 +17,10 @@
 
             <ul class="nav navbar-top-links navbar-right pull-right">
             <li>
-                    <div class="pull-right">
+                    <!-- <div class="pull-right">
                             <form role="search" class="app-search hidden-xs">
                             <input type="text" placeholder="Search..." class="form-control"> <a href="#"><i class="fa fa-search"></i></a> </form>
-                    </div>
+                    </div> -->
                     </li>
                 <!-- <li class="dropdown">
                     <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"><i class="icon-envelope"></i>
@@ -178,6 +179,29 @@
             <!-- /.navbar-top-links -->
             <!-- /.navbar-static-side -->
         </nav>
+        <section class="gallery-scroll-bg">
+            <div class="#">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-12 p-0">
+                        <div class="owl-carousel owl-theme owl-loaded gallery-scroll-in">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage">
+                                    <?php  $select = $this->advertisment_model->selectAdvertismentAdminInsert();
+                                        foreach ($select as $key => $row) {
+                                    ?>
+                                        <div class="owl-item">
+                                            <div class="service-text">
+                                                <a href="#"><img src="<?php echo base_url() . "uploads/advertisment_image/" . $row['file_name'];?>" class="hvrbox-layer_bottom img-rounded"></a>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 <script type="text/javascript">

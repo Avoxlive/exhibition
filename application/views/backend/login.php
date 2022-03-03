@@ -279,7 +279,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
        </div>
    </section>
 
-   <section class="avox-feature">
+   <section class="avox-feature" id="feature">
        <div class="container">
            <div class="header">
            <h2>Features</h2>
@@ -333,7 +333,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
    </section>
 
 
-   <section class="testimonial">
+   <!-- <section class="testimonial">
 <div class="container">
     <div class="heading">
         <h2>Client Testimonial</h2>
@@ -384,10 +384,10 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     </div>
 
 </div>
-   </section>
+   </section> -->
 
 
-<section class="get-in-touch">
+<section class="get-in-touch" id="contactus">
     <div class="container">
         <div class="heading">
             <h2>Get in touch</h2>

@@ -21070,15 +21070,15 @@
 }
 .owl-carousel:hover .owl-nav div{
     opacity:1;
-    visibility:visible
+    visibility:visible;
 }
 .owl-carousel:hover .owl-nav div:hover{
     color:#fff;
-    background:#ff3500
+    background:#ff3500;
 }
 
 .navbar-default{
-    padding-top: 30px;
+    /* padding-top: 30px; */
     /* background: #66B9D3; */
     /* background: linear-gradient(rgba(25, 93, 155) ); */
     /* background: rgb(102,185,211); */
@@ -21099,10 +21099,14 @@
     color: #103160 !important;
     font-size: 20px;
     font-weight: 400;
-
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
     color: #555 !important;
     background: none !important;
+}
+.gallery-scroll-bg .service-text{
+    height: 200px;
+    width: 100%;
+    background: #00aff0;
 }
