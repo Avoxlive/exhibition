@@ -4,10 +4,11 @@
 				  	<div class="panel panel-info">
 
                                 <div class="panel-body table-responsive">
-								  <?php echo get_phrase('list_live_class');?>
-								  <hr class="sep-2">
+								  <!-- <?php echo get_phrase('list_live_class');?>
+								  <hr class="sep-2"> -->
 
                                 <table id="example23" class="display nowrap" cellspacing="0" width="100%">
+                                <!-- <table id="#" class="display nowrap" cellspacing="0" width="100%"> -->
                     <thead>
                         <tr>
 							<th><?=get_phrase('created_by')?></th>
@@ -43,7 +44,8 @@
 							<td><?=$this->crud_model->get_type_name_by_id('section', $row['section_id']);?></td> -->
 							<td><?=date('d M, Y', $row['meeting_date'])?></td>
                             <td><?=$row['start_time'] .' - '.$row['end_time']?></td>
-							<td><span class="label label-<?php if($row['status'] == 'pending') echo 'warning';elseif($row['status'] == 'live') echo 'success'; else echo 'danger';?>"><?=$row['status']?></span></td>
+							<!-- <td><span class="label label-<?php if($row['status'] == 'pending') echo 'warning';elseif($row['status'] == 'live') echo 'success'; else echo 'danger';?>"><?=$row['status']?></span></td> -->
+							<td><span class="#"><?=$row['status']?></span></td>
 							<td><?=$row['description']?></td>
 							<td>
 

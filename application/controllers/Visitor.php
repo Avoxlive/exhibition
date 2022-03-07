@@ -62,7 +62,6 @@ class Visitor extends CI_Controller {
 
         //     $visitor_profile = $this->db->get_where('visitor', array('visitor_id' => $this->session->userdata('visitor_id')))->row();
         //     $select_visitor_class_id = $visitor_profile->class_id;
-
         //     $page_data['page_name']     = 'subject';
         //     $page_data['page_title']    = get_phrase('Class Subjects');
         //     $page_data['select_subject']  = $this->db->get_where('subject', array('class_id' => $select_visitor_class_id))->result_array();
