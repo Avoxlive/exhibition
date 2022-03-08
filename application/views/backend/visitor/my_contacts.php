@@ -22,8 +22,8 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
 <div class="row">
     <div class="col-sm-12">
         <div class="panel panel-info">
-            <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list');?>
-            </div>
+            <!-- <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list');?>
+            </div> -->
             <div class="panel-wrapper collapse in" aria-expanded="true">
                 <div class="panel-body table-responsive">
                     <table id="example23" class="display nowrap" cellspacing="0" width="100%">
@@ -49,7 +49,7 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
                                 echo $no++ ; ?></td>
                                 <td><?php echo $exhibitor['name'];?></td>
                                 <td><a href="<?php echo base_url();?>visitor/chat_Rsend/<?php echo $exhibitor['exhibitor_id'];?>"
-                                    class="btn btn btn-info btn-circle btn-xs" ><i class="prime zmdi zmdi-comment-outline"></i></a></td>
+                                    class="message-icon" ><i class="fa fa-commenting" aria-hidden="true"></i></a></td>
                                     <!-- <td><button type="submit" href="<?php echo base_url();?>visitor/chat_request/<?php echo $exhibitor['exhibitor_id'];?>" class="btn btn-info">send request</button></td> -->
                                     <!-- <td><button type="submit" href="<?php echo base_url();?>visitor/chat_request/<?php echo $exhibitor['exhibitor_id'];?>" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">send request</button></td> -->
 

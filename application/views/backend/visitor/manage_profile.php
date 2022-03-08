@@ -1,3 +1,78 @@
+<div class="manage-profile">
+	<div class="manage-profile-in">
+		<div class="manage-profile-left">
+			<h2>My profile</h2>
+			<?php
+
+				foreach ($edit_profile as $key => $row):
+
+
+				?>
+
+				<?php echo form_open(base_url(). 'visitor/manage_profile/update', array('class' => 'form-horizontal form-groups-bordered', 'enctype'=> 'multipart/form-data'));?>
+				<div class="form-group">
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('Name');?></label>
+					<div class="col-sm-12">
+						<input type="text" class="form-control" name="name" value="<?php echo $row['name'];?>">
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('Email');?></label>
+					<div class="col-sm-12">
+						<input type="text" class="form-control" name="email" value="<?php echo $row['email'];?>">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('Company name');?></label>
+					<div class="col-sm-12">
+						<input type="text" class="form-control" name="company" value="<?php echo $row['company name'];?>">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('phone number');?></label>
+					<div class="col-sm-12">
+						<input type="text" class="form-control" name="phone" value="<?php echo $row['phone number'];?>">
+					</div>
+				</div>
+
+
+				<!-- <div class="form-group">
+					 <label class="col-sm-12"><?php echo get_phrase('visitor Image');?>*</label>
+					 <div class="col-sm-12">
+  		  			 <input type='file' class="form-control" name="userfile" onChange="readURL(this);">
+					 <img id="blah" src="<?php echo $this->crud_model->get_image_url('visitor', $row['visitor_id']); ?>" alt="" height="200" width="200"/>
+					</div>
+					</div> -->
+
+
+
+					<div class="form-group">
+					<div class="btn-left">
+					<button type="submit" class="btn"><?php echo get_phrase('save');?></button>
+				</div>
+					</div>
+
+
+
+
+				<?php echo form_close();?>
+
+
+				<?php endforeach;?>
+
+
+		</div>
+		<div class="manage-profile-right">
+			<img id="blah" src="<?php echo $this->crud_model->get_image_url('visitor', $row['visitor_id']); ?>" alt="" height="200" width="200"/>
+
+
+		</div>
+	</div>
+
+</div>
+<!--
 <div class="row">
 
 	<div class="col-sm-7">
@@ -98,4 +173,4 @@
 </div>
 </div>
 
-</div>
+</div> -->

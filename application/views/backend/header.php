@@ -199,7 +199,7 @@
                                     ?>
                                         <div class="owl-item">
                                             <div class="service-text">
-                                                <a href="#"><img src="<?php echo base_url() . "uploads/advertisment_image/" . $row['file_name'];?>" class="hvrbox-layer_bottom img-rounded"></a>
+                                                <!-- <a href="#"><img src="<?php echo base_url() . "uploads/advertisment_image/" . $row['file_name'];?>" class="hvrbox-layer_bottom img-rounded"></a> -->
                                             </div>
                                         </div>
                                     <?php } ?>

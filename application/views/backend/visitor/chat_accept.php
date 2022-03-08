@@ -6,8 +6,8 @@ $exhibitor_id = $this->session->userdata('exhibitor_id');
 <div class="row">
     <div class="col-sm-12">
         <div class="panel panel-info">
-            <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list');?>
-            </div>
+            <!-- <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list');?>
+            </div> -->
             <div class="panel-wrapper collapse in" aria-expanded="true">
                 <div class="panel-body table-responsive">
                     <table id="example23" class="display nowrap" cellspacing="0" width="100%">
@@ -31,15 +31,18 @@ $exhibitor_id = $this->session->userdata('exhibitor_id');
                                 <td>
                                     <?php
                if($exhibitor['status'] == 'accepted') :?>
+               <div class="chat-acceptance">
                                     <a href="<?php echo base_url();?>visitor/chat/<?php echo $exhibitor['exhibitor_id'];?>"
-                                    class="btn btn btn-success btn-circle btn-xs" ><i class="prime zmdi zmdi-comment-outline"></i></a>
+                                   ><i class="fa fa-comments-o" aria-hidden="true"></i> Request Accepted</a>
+               </div>
 
                                     <?php endif?>
 
                                     <?php
                if($exhibitor['status'] == 'pending') :?>
-                                    <a href="#"
-                                    class="btn btn btn-info btn-circle btn-xs" ><i class="prime zmdi zmdi-comment-outline"></i>Request pending</a>
+                     <div   class="chat-pending">
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Request pending</a>
+                     </div>
 
                                     <?php endif?>
                                 </td>

@@ -125,7 +125,7 @@ $name = $this->session->userdata('name');
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">Start Time</label>
+                                                    <label class="control-label col-sm-3">Start Time</label>
                                                     <div class="col-sm-12">
                                                         <div data-date-format="yyyy-mm-dd hh-mm-ss"
                                                             data-date-viewmode="years">
@@ -136,7 +136,7 @@ $name = $this->session->userdata('name');
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                <label class="control-label col-sm-2">End Date</label>
+                                <label class="control-label col-sm-3">End Date</label>
                                 <div class="col-sm-12">
                                     <div  data-date-format="yyyy-mm-dd hh-mm-ss" data-date-viewmode="years">
                                         <input class="form-control m-r-10" name="end_date"  type="date"   required>
@@ -145,7 +145,7 @@ $name = $this->session->userdata('name');
                                 </div>
                             </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">End Time</label>
+                                                    <label class="control-label col-sm-3">End Time</label>
                                                     <div class="col-sm-12">
                                                         <div data-date-format="hh-mm-ss" data-date-viewmode="years">
                                                             <input class="form-control m-r-10" name="end_time"
