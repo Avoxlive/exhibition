@@ -46,11 +46,11 @@ $name = $this->session->userdata('name');
 
 <!-- <span style="margin-left:10px;">chat Request status</span><br> -->
 
-<?php
+                            <?php
                                  $get_chat_request_status_from_model = $this->chat_model->fetch_chat_status_from_exhibitor($visitor_id,$exhibitor_id);
                                  foreach ($get_chat_request_status_from_model as $key => $chat_request):?>
 
-<?php
+                            <?php
                                 //   if($chat_request['status'] == 'pending'): ?>
                                             <div class="">
                                     <p>The Chat Request sent by you is <?php echo $chat_request['status'];?></p>
@@ -83,10 +83,10 @@ $name = $this->session->userdata('name');
                     required />
                     <input type="hidden" class="form-control" name="visitor_name" value="<?php echo"$name"; ?>"
                    >
-                <span class="input-group-btn">
+                <span class="request-button">
 
                 <?php if($chat_request['status'] == ''):?>
-                    <button type="submit" class="btn btn-success">
+                    <button type="submit" class="">
                         <!-- <span class="glyphicon glyphicon-comment"></span> -->
                         Send request
                     </button>

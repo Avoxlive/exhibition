@@ -677,6 +677,26 @@ color: #fff;
         .pricing .pricing-sec .price-one button{
         width: 30%;
         }
+        .home-header-left {
+            height: 140px;
+            width: 40%;
+            margin: 0px;
+        }
+        .box-width {
+            width: 100%;
+            margin-top: 42rem;
+        }
+        .get-in-touch .contact-us .contact-us-form button {
+            width: 50%;
+        }
+        [class*=" ti-"], [class^=ti-] {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 600;
+        }
+        .navbar-default .navbar-toggle {
+            border:0px;
+        }
 
     }
 

@@ -146,7 +146,18 @@
  </div> -->
  <!--/row -->
 
- <div class="row">
+ <div class="admin-banner">
+<div class="admin-banner-in">
+    <div class="admin-banner-left">
+
+    </div>
+    <div class="admin-banner-right">
+
+    </div>
+</div>
+ </div>
+
+ <!-- <div class="row">
 
      <div class="col-sm-12">
 
@@ -196,5 +207,5 @@
 
 
      </div>
- </div>
+ </div> -->
  <!-- /.row -->

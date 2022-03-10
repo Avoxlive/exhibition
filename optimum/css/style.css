@@ -21188,7 +21188,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
     height: 200px;
     width: 100%;
     /* background: #00aff0; */
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 .gallery-scroll-bg .service-text img{
     border-radius: 20px;
@@ -21215,12 +21215,12 @@ table.dataTable thead th, table.dataTable thead td {
 .add-sec .add-sec1{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 1rem;
-    grid-auto-rows: minmax(200px,auto);
+    gap: 10rem;
+    grid-auto-rows: minmax(140px,auto);
     margin: 0px 60px;
 }
 .add-sec .add-sec1 .add-img{
-    margin: 40px 0px;
+    margin: 20px 0px;
     height: 140px;
     width: 130px;
 }
@@ -21230,17 +21230,18 @@ table.dataTable thead th, table.dataTable thead td {
     object-fit: fill;
 }
 .add-sec .add-sec1 .add-left{
-    margin: 20px;
+    margin: 0px 20px;
+    /* background: #007658; */
 }
 
 .add-sec .add-sec1 .add-left .gallery-scroll-bg{
-    height: 200px;
-    width: 100%;
+    height: 160px;
+    /* width: 100%; */
 }
-/* .add-sec .add-sec1 .add-left .gallery-scroll-bg .service-text{
-height: 200px;
-width: 100%;
-} */
+.add-sec .add-sec1 .add-left .gallery-scroll-bg .service-text{
+height: 160px;
+/* width: 100%; */
+}
 
 table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
     background-color: #fff !important;
@@ -21248,7 +21249,6 @@ table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
 
 table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
     background-color: #fff !important;
-    color: ;
 }
 table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     background-color: #fff !important;
@@ -21371,7 +21371,7 @@ color:#195D9B;
     height: 140px;
     width: 40%;
     border-radius: 20px;
-    padding: 10px;
+    /* padding: 10px; */
     background: #fff;
     box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
     -webkit-box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
@@ -21381,4 +21381,36 @@ color:#195D9B;
     height: 100%;
     width: 100%;
     object-fit: contain;
+    border-radius: 20px;
+}
+.request-button button{
+    background: linear-gradient(90deg, rgba(25,93,155,1) 52%, rgba(29,132,185,1) 100%, rgba(102,185,211,1) 100%, rgba(255,255,255,0) 100%);
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    width: 100%;
+    color: #fff;
+    border: 1px solid #66B9D3;
+    margin: 20px;
+}
+
+@media screen and (max-width:767px){
+
+    .add-sec .add-sec1 {
+        grid-template-columns: 1fr;
+    }
+    .add-sec .add-sec1 .add-left .gallery-scroll-bg {
+        height: 140px;
+        width: 100%;
+    }
+    .gallery-scroll-bg .service-text img {
+        border-radius: 20px;
+        height: 80%;
+        width: 100%;
+        object-fit: fill;
+    }
+    .gallery-scroll-bg .service-text {
+        margin-top: 0rem;
+    }
+
 }
