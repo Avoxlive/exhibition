@@ -20323,7 +20323,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     }
                     .content-wrapper.fix-sidebar .navbar-left,
                     .fix-sidebar.content-wrapper .navbar-left {
-                        margin-left: 60px!important
+                        margin-left: 60px !important;
                     }
                     .content-wrapper.fix-sidebar .sidebar,
                     .fix-sidebar.content-wrapper .sidebar {
@@ -20392,16 +20392,16 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     ul.timeline>li>.timeline-badge {
                         top: 16px;
                         left: 15px;
-                        margin-left: 0
+                        margin-left: 0;
                     }
                     ul.timeline>li>.timeline-panel {
-                        float: right
+                        float: right;
                     }
                     ul.timeline>li>.timeline-panel:before {
                         right: auto;
                         left: -15px;
                         border-right-width: 15px;
-                        border-left-width: 0
+                        border-left-width: 0;
                     }
                     ul.timeline>li>.timeline-panel:after {
                         right: auto;
@@ -20424,7 +20424,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     .fix-header #page-wrapper {
                         margin-top: 60px
                     }
-                    .fix-header .sidebar {
+                    .fix-header .sidebar{
                         position: fixed;
                         height: 350px;
                         top: 60px;
@@ -21197,7 +21197,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
     object-fit: fill;
 }
 .navbar-design{
-    margin: 4rem 4rem;
+    margin: 0rem 4rem;
 }
 
 table.dataTable thead th, table.dataTable thead td {
@@ -21236,11 +21236,11 @@ table.dataTable thead th, table.dataTable thead td {
 
 .add-sec .add-sec1 .add-left .gallery-scroll-bg{
     height: 160px;
-    /* width: 100%; */
+    width: 100%;
 }
 .add-sec .add-sec1 .add-left .gallery-scroll-bg .service-text{
 height: 160px;
-/* width: 100%; */
+width: 100%;
 }
 
 table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {

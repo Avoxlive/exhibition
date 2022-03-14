@@ -92,8 +92,8 @@ padding: 20px 0px;
     margin: 40px 0px;
 }
 .avox-feature .feature-box  .feature-box-image{
-    height: 400px;
-    width: 550px;
+    height: 390px;
+    width: 520px;
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -161,7 +161,7 @@ padding: 20px 0px;
     height: 250px;
     width: 250px;
     left: 500px;
-    top: 30px;
+    top: -10px;
  }
 
  .testimonial{
@@ -211,19 +211,24 @@ padding: 20px 0px;
 
  .testimonial .testimonial-block .client-testimonial .client-details{
     padding: 0.5rem 0rem;
-    background-color: #f3f8f8;
+    background-color: #236161;
 
  }
  .testimonial .testimonial-block .client-testimonial .client-details .service-text{
     margin: 10px;
     text-align: center;
-    width: 10%;
+    width: 100%;
     height: 145px;
     border-radius: 0px;
     overflow: hidden;
     /* border: 10px solid #f0f; */
     -webkit-box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
     box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
+ }
+ .testimonial .testimonial-block .client-testimonial .client-details .service-text img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
  }
 
  .get-in-touch{
@@ -267,7 +272,7 @@ padding: 20px 0px;
  .get-in-touch .contact-us .contact-us-form input {
     color: #66B9D3;
     background: #fff;
-    border: none    ;
+    border: none;
     width: 100%;
     padding: 20px;
  }
@@ -311,6 +316,7 @@ padding: 20px 0px;
     -webkit-box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
     -moz-box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
  }
+
  .get-in-touch .contact-us .contact-us-form button{
      background:linear-gradient(90deg, rgba(25,93,155,1) 52%, rgba(29,132,185,1) 100%, rgba(102,185,211,1) 100%, rgba(255,255,255,0) 100%);
      border-radius: 30px;
@@ -319,7 +325,6 @@ padding: 20px 0px;
      width: 30%;
      color: #fff;
      border:1px solid #66B9D3;
-
  }
 
  .bottom{
@@ -332,8 +337,7 @@ padding: 20px 0px;
         grid-template-columns: 1fr 1fr;
         gap:0rem;
         grid-auto-rows: minmax(400px,auto);
-
-     border-radius: 20px;
+        border-radius: 20px;
     }
     .bottom .footer-in .footer-left{
         padding: 0px;
@@ -353,11 +357,11 @@ padding: 20px 0px;
         padding-top: 10px;
         margin-left: 20px;
     }
+
     .bottom .footer-in .footer-left .footer-about .logo img{
         height: 100%;
         width: 100%;
         object-fit: cover;
-
     }
 
     .bottom .footer-in .footer-left .footer-about .logo-content{
@@ -386,7 +390,7 @@ padding: 20px 0px;
         color: #fff;
         font-weight: 400;
     }
-    .bottom .footer-in .footer-left .footer-link h3{
+    .bottom .footer-in .footer-left .footer-link a{
         font-size: 16px;
         color: #fff;
     }
@@ -506,7 +510,7 @@ padding: 20px 0px;
     box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
     -webkit-box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
     -moz-box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
-  margin: 10px;
+    margin: 10px;
 }
 .pricing .pricing-sec .price-one .price-img{
 
@@ -517,15 +521,14 @@ padding: 20px 0px;
     height: 100%;
     width: 100%;
     object-fit: cover;
-
    border-radius: 20px;
 }
 .pricing .pricing-sec  .price-one h2{
     font-size: 2rem;
     color:#1D84B9 ;
     text-align: center;
-
 }
+
 .pricing .pricing-sec  .price-one h3{
     font-size: 26px;
     color:#195D9B ;
@@ -533,7 +536,7 @@ padding: 20px 0px;
     font-weight: 600;
 }
 .pricing .pricing-sec .price-one button{
-    color:#1D84B9;
+color:#1D84B9;
 padding: 10px;
 font-size: 14px;
 margin: 2rem;

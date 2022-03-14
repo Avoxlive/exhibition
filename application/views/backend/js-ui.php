@@ -48,39 +48,6 @@ $(document).ready(function() {
 
 <?php endif;?>
 
-<script>
-     $(document).ready(function() {
-        $('.testimonial').owlCarousel({
-
-
-
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 20,
-        autoplaySpeed: 12000,
-        fluidSpeed: true,
-        loop: true,
-        margin: 20,
-        nav: false,
-        dots: true,
-        navText: [
-          "<i class='fa fa-chevron-left'></i>",
-          "<i class='fa fa-chevron-right'></i>"
-          ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
-     });
-</script>
 
 <script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/owl.carousel.min.js"></script>

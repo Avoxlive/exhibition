@@ -57,11 +57,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <!-- <div class="checkbox checkbox-primary pull-left">
-                                    <input id="checkbox-signup" type="checkbox">
-                                    <label for="checkbox-signup"> <?php echo get_phrase('remember_me');?> </label>
-
-                                </div> -->
                                 &nbsp;<a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i
                                         class="fa fa-lock m-r-5"></i> <?php echo get_phrase('forgot_password?');?></a>
                             </div>
@@ -76,15 +71,12 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                     <?php echo get_phrase('Sign_in');?>
                                 </button>
 
-                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
                                 <div align="center"><img id="install_progress"
                                         src="<?php echo base_url() ?>assets/images/preloader.gif"
                                         style="margin-left: 20px; display: none" /></div>
 
                             </div>
                         </div>
-
-
 
                         <?php echo form_close();?>
 
@@ -117,20 +109,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         </div>
 
 
-
-
-
-
-
         <!-- <div class="login-wrapper">
-
-
-
-
             <div class="login-box-left login-sidebar login-box-left-img">
-
                 <h2>WELCOME</h2>
-
                 <div class="user">
                     <h3>
                         New User?
@@ -144,7 +125,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
                 </div>
             </div>
-
 
             <div class="login-box login-sidebar">
 
@@ -247,10 +227,10 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
    <section class="why-avox">
        <div class="container">
-       <div class="heading">
-<h2>Why</h2>
-<h2>AVOX.LIVE</h2>
-       </div>
+        <div class="heading">
+            <h2>Why</h2>
+            <h2>AVOX.LIVE</h2>
+        </div>
            <div class="why-avox-block">
                <div class="avox-block-in">
                    <div class="avox-block-img">
@@ -264,7 +244,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                    <div class="avox-block-img">
                    <img src="<?php echo base_url(); ?>optimum/plugins/images/img2.png" href="#" alt="image1">
                    </div>
-
                    <h2>The host can do branding for their brands, they can use banners and posters. </h2>
                </div>
                <div class="avox-block-in">
@@ -291,12 +270,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
               <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2">
                </div>
-
-
                <div class="feature-box-image">
                    <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid image1">
                </div>
-
            </div>
 
            <div class="feature-box">
@@ -322,9 +298,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
                </div>
 
-               <div class="feature-box-image">
+                <div class="feature-box-image">
                    <img src="<?php echo base_url(); ?>optimum/plugins/images/feature3.jpeg" href="#" alt="image1" class="img-fluid">
-               </div>
+                </div>
 
            </div>
 
@@ -334,7 +310,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
 
    <!-- <section class="testimonial">
-<div class="container">
+    <div class="container">
     <div class="heading">
         <h2>Client Testimonial</h2>
     </div>
@@ -350,36 +326,27 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             <div class="client-details">
 
             <div class="col-md-12 col-lg-12 col-sm-12 col-12 p-0">
-                    <div class="owl-carousel owl-theme owl-loaded testimonial">
+                    <div class="owl-carousel owl-theme owl-loaded testimonial-client-details">
                         <div class="owl-stage-outer">
                             <div class="owl-stage">
 
-                                    <div class="owl-item">
+                                    <div class="owl-item" style="width: 140.563px!important; margin-right: 20px;">
                                         <div class="service-text">
-                                        <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" class="hvrbox-layer_bottom img-rounded"></a>
+                                        <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/13.jpg" class="hvrbox-layer_bottom img-rounded"></a>
                                         </div>
-
                                     </div>
-                                    <div class="owl-item">
-                                        <div class="service-text">
-                                        <a href="#"><img src="#" class="hvrbox-layer_bottom img-rounded"></a>
-                                        </div>
 
-                                    </div>
-                                    <div class="owl-item">
+                                    <div class="owl-item" style="width: 140.563px!important; margin-right: 20px;">
                                         <div class="service-text">
-                                        <a href="#"><img src="#" class="hvrbox-layer_bottom img-rounded"></a>
+                                        <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/13.jpg" class="hvrbox-layer_bottom img-rounded"></a>
                                         </div>
-
                                     </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 
@@ -392,7 +359,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         <div class="heading">
             <h2>Get in touch</h2>
             <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2">
-
         </div>
         <div class="contact-us">
             <div class="contact-us-form">
@@ -438,21 +404,21 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="footer-link">
                     <div>
                         <h2>Useful links</h2>
-                        <h3>Home</h3>
-                        <h3>Features</h3>
-                        <h3>Pricing</h3>
-                        <h3>Contact us</h3>
+                        <a href="#">Home</a><br>
+                        <a href="#">Features</a><br>
+                        <a href="#">Pricing</a><br>
+                        <a href="#">Contact us</a>
                     </div>
                     <div>
                     <h2>Social media</h2>
-                        <h3>Linked in</h3>
-                        <h3>Twitter</h3>
-                        <h3>Instagram</h3>
+                        <a href="#">Linked In</a><br>
+                        <a href="#">Twitter</a><br>
+                        <a href="#">Instagram</a>
                     </div>
                     <div>
                     <h2>Use Cases</h2>
-                        <h3>Conferences</h3>
-                        <h3>Events</h3>
+                        <a href="#">Conferences</a><br>
+                        <a href="#">Events</a>
                     </div>
                 </div>
             </div>
@@ -460,16 +426,16 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                <h2>AVOX.LIVE</h2>
                <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
                <div class="text-center">
-               <button type="submit" class="btn btn-primary" ><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
+               <button type="submit" class="btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
                </div>
                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
             </div>
         </div>
     </div>
-
 </section>
 
    <?php include 'js-ui.php'; ?>
+   <?php include 'js.php'; ?>
 
 </body>
 

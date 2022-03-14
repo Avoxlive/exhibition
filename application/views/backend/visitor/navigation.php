@@ -12,7 +12,7 @@
                         <!-- /input-group -->
             </li>
 
-            <!-- <li class="user-pro">
+            <li class="user-pro">
                         <?php
                             $key = $this->session->userdata('login_type') . '_id';
                             $face_file = 'uploads/' . $this->session->userdata('login_type') . '_image/' . $this->session->userdata($key) . '.jpg';
@@ -29,15 +29,15 @@
                                 $name           =   $this->crud_model->get_type_name_by_id($account_type , $this->session->userdata($account_id), 'name');
                                 echo $name;
                         ?>
-                        <span class="fa arrow"></span></span>
+                        <!-- <span class="fa arrow"></span></span> -->
                     </a>
-                        <ul class="nav nav-second-level">
+                        <!-- <ul class="nav nav-second-level">
                             <li><a href="javascript:void(0)"><i class="ti-user"></i> My Profile</a></li>
                             <li><a href="javascript:void(0)"><i class="ti-email"></i> Inbox</a></li>
                             <li><a href="javascript:void(0)"><i class="ti-settings"></i> Account Setting</a></li>
                             <li><a href="<?php echo base_url();?>login/logout"><i class="fa fa-power-off"></i> Logout</a></li>
-                        </ul>
-                </li> -->
+                        </ul> -->
+                </li>
 
 
 
@@ -147,6 +147,8 @@
 
         </ul>
     </div>
+     nmn
 </div>
     </div>
+
 <!-- Left navbar-header end -->

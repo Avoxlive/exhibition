@@ -10,6 +10,8 @@ $name = $this->session->userdata('name');
 //     $visitor_id = $this->session->userdata('visitor_id');
 //     endforeach;
 ?>
+
+
 <div class="container">
     <div class="page-content-wrapper">
         <div class="page-content">
@@ -48,7 +50,6 @@ $name = $this->session->userdata('name');
 
                                                     </div>
                                                 </div>
-
 
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-2">Name <span class="required"> *
@@ -136,21 +137,20 @@ $name = $this->session->userdata('name');
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                <label class="control-label col-sm-3">End Date</label>
-                                <div class="col-sm-12">
-                                    <div  data-date-format="yyyy-mm-dd hh-mm-ss" data-date-viewmode="years">
-                                        <input class="form-control m-r-10" name="end_date"  type="date"   required>
+                                                    <label class="control-label col-sm-3">End Date</label>
+                                                    <div class="col-sm-12">
+                                                        <div  data-date-format="yyyy-mm-dd hh-mm-ss" data-date-viewmode="years">
+                                                            <input class="form-control m-r-10" name="end_date"  type="date"   required>
 
-                                    </div>
-                                </div>
-                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-3">End Time</label>
                                                     <div class="col-sm-12">
                                                         <div data-date-format="hh-mm-ss" data-date-viewmode="years">
                                                             <input class="form-control m-r-10" name="end_time"
                                                                 type="time" required>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -207,8 +207,6 @@ $name = $this->session->userdata('name');
                                                     <div class="col-sm-12">
                                                         <input type="text" name="title" class="form-control"
                                                             placeholder="Enter You Name" required>
-
-
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -218,9 +216,7 @@ $name = $this->session->userdata('name');
                                                     <div class="col-sm-12">
                                                         <textarea type="text" name="description" class="form-control"
                                                             placeholder="Enter description" required>
-                                    </textarea>
-
-
+                                                        </textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
