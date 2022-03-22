@@ -29,6 +29,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="price-one">
                     <div class="price-img">
                         <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="img1" class="img-fluid">
+                        <div class="text-on-image">BASIC</div>
                     </div>
                     <h2>Prefect for one quick projects</h2>
                     <h3>$0</h3>
@@ -40,6 +41,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="price-one">
                     <div class="price-img">
                         <img src="<?php echo base_url(); ?>optimum/plugins/images/price2.png" alt="img1" class="img-fluid">
+                        <div class="text-on-image">MEDIUM</div>
+
                     </div>
                     <h2>For individuals and small teams</h2>
                     <h3>$10</h3>
@@ -51,6 +54,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="price-one">
                     <div class="price-img">
                         <img src="<?php echo base_url(); ?>optimum/plugins/images/price3.png" alt="img1" class="img-fluid">
+                        <div class="text-on-image">ADVANCED</div>
+
                     </div>
                     <h2>Prefect for one quick projects</h2>
                     <h3>$0</h3>
@@ -82,21 +87,21 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="footer-link">
                     <div>
                         <h2>Useful links</h2>
-                        <h3>Home</h3>
-                        <h3>Features</h3>
-                        <h3>Pricing</h3>
-                        <h3>Contact us</h3>
+                        <a>Home</a><br>
+                        <a>Features</a><br>
+                        <a>Pricing</a><br>
+                        <a>Contact us</a>
                     </div>
                     <div>
                     <h2>Social media</h2>
-                        <h3>Linked in</h3>
-                        <h3>Twitter</h3>
-                        <h3>Instagram</h3>
+                        <a>Linked In</a><br>
+                        <a>Twitter</a><br>
+                        <a>Instagram</a>
                     </div>
                     <div>
                     <h2>Use Cases</h2>
-                        <h3>Conferences</h3>
-                        <h3>Events</h3>
+                        <a>Conferences</a><br>
+                        <a>Events</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +109,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                <h2>AVOX.LIVE</h2>
                <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
                <div class="text-center">
-               <button type="submit" class="btn btn-primary text-center" ><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
+               <button type="submit" class="btn btn-primary text-center"><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
                </div>
                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
             </div>

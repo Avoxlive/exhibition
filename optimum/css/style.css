@@ -1089,7 +1089,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 #page-wrapper {
                     padding: 0 0 60px;
-                    min-height: 568px;
+                    max-height: 300px!important;
                     background: #f6faff;
                 }
 
@@ -1942,7 +1942,6 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     /* border-radius: 5px; */
                     padding: 10px;
                     margin: 10px 10px 10px 500px;
-
                 }
                 .chat_receive{
                     border-radius: 0px 30px 30px 30px !important;
@@ -2115,7 +2114,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 .panel-blue,
                 .panel-info {
-                    margin-top: 2rem;
+                    margin-top: 1rem;
                     border-color: #f6faff !important;
                     border-radius: 20px;
                     /* box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08); */
@@ -2130,7 +2129,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     color: #000;
                     background-color: #ffff;
                     margin-top: 30px;
-    border-radius: 20px 20px 0px 0px;
+                    border-radius: 20px 20px;
                     /* background: linear-gradient(to top, #5B86E5, #56CCF2) !important; */
                 }
 
@@ -2178,7 +2177,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 .panel-danger a,
                 .panel-red a {
-                    color: #fb9678
+                    color: #fb9678;
                 }
 
                 .panel-danger a:hover,
@@ -6565,8 +6564,12 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 }
 
                 .sidebar #side-menu .user-pro .img-circle {
-                    width: 30px;
+                    width: 40px;
                     margin-right: 10px
+                }
+                .sidebar #side-menu .user-pro span {
+                   font-size: 20px;
+                   font-weight: 500;
                 }
 
                 .sidebar #side-menu .user-pro .nav-second-level li i {
@@ -20246,7 +20249,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                         left: 220px
                     }
                     .content-wrapper #page-wrapper {
-                        margin-left: 60px
+                        margin-left: 60px;
                     }
                     .content-wrapper .navbar-left {
                         margin-left: 0
@@ -20312,10 +20315,10 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     }
                     .mail_listing {
                         border-left: 1px solid rgba(120, 130, 140, .13);
-                        padding-left: 20px
+                        padding-left: 20px;
                     }
                     .inbox-panel {
-                        padding-right: 20px
+                        padding-right: 20px;
                     }
                     .top-minus {
                         margin-top: -62px;
@@ -20327,11 +20330,11 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     }
                     .content-wrapper.fix-sidebar .sidebar,
                     .fix-sidebar.content-wrapper .sidebar {
-                        position: fixed
+                        position: fixed;
                     }
                     .content-wrapper.fix-sidebar .sidebar .sidebar-nav,
                     .fix-sidebar.content-wrapper .sidebar .sidebar-nav {
-                        position: absolute
+                        position: absolute;
                     }
                     .content-wrapper.fix-sidebar .sidebar .sidebar-nav .nav-second-level,
                     .fix-sidebar.content-wrapper .sidebar .sidebar-nav .nav-second-level {
@@ -20372,7 +20375,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     .navbar-top-links .dropdown-alerts,
                     .navbar-top-links .dropdown-messages,
                     .navbar-top-links .dropdown-tasks {
-                        width: 260px
+                        width: 260px;
                     }
                     .row-in-br {
                         border-right: 0;
@@ -20429,7 +20432,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                         height: 350px;
                         top: 60px;
                         z-index: 100;
-                        overflow: auto!important;
+                        overflow: auto !important;
                         box-shadow: 0 10px 35px rgba(0, 0, 0, .2)
                     }
                     .mega-dropdown-menu {
@@ -20447,24 +20450,24 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     .chat-main-box .chat-left-aside {
                         left: -250px;
                         transition: .5s ease-in;
-                        background: #fff
+                        background: #fff;
                     }
-                    .chat-main-box .chat-left-aside.open-pnl {
-                        left: 0
+                    .chat-main-box .chat-left-aside .open-pnl {
+                        left: 0;
                     }
                     .chat-main-box .chat-left-aside .open-panel {
-                        display: block
+                        display: block;
                     }
                     .chat-main-box .chat-right-aside {
-                        margin: 0
+                        margin: 0;
                     }
                     .table-responsive.pro-rd {
-                        border: none
+                        border: none;
                     }
                     #msform fieldset,
                     .login-register,
                     .step-register {
-                        position: relative
+                        position: relative;
                     }
                 }
 
@@ -20506,7 +20509,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 .mega-dropdown .mega-dropdown-menu>li {
                     float: left;
-                    width: 100%
+                    width: 100%;
                 }
 
                 #side-menu {
@@ -20534,7 +20537,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 }
 
                 .btn-group.show {
-                    display: inline-block!important
+                    display: inline-block !important
                 }
 
                 .btn-lg {
@@ -20563,7 +20566,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     display: table;
                     width: 100%;
                     table-layout: fixed;
-                    border-collapse: separate
+                    border-collapse: separate;
                 }
 
                 .btn-group-justified .btn,
@@ -20592,7 +20595,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 .customtab.nav-tabs .nav-link.active:focus,
                 .customtab.nav-tabs .nav-link:hover {
                     border-bottom: 2px solid #ff6849;
-                    color: #ff6849
+                    color: #ff6849;
                 }
 
                 .vtabs .tabs-vertical li a.active,
@@ -20629,7 +20632,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 .nav-pills .nav-item.show .nav-link,
                 .nav-pills .nav-link.active {
-                    background: #ff6849
+                    background: #ff6849;
                 }
 
                 span.caret {
@@ -20666,22 +20669,18 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 .popover-title,
                 .tooltip {
                     font-family: 'Poppins', sans-serif;
-                    font-size: 13px
+                    font-size: 13px;
                 }
-
                 .popover-title {
-                    margin-top: 0
+                    margin-top: 0;
                 }
-
                 .custom-select {
-                    height: calc(4.25rem)
+                    height: calc(4.25rem);
                 }
-
                 .fileinput .form-control {
                     width: 100%;
                     position: relative
                 }
-
                 .fileinput-new .input-group-addon {
                     position: absolute;
                     right: 3px;
@@ -21182,13 +21181,13 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 }
 .gallery-scroll-bg{
     width: 100%;
-    height: 200px;
+    height: 150px;
 }
 .gallery-scroll-bg .service-text{
-    height: 200px;
+    height: 140px;
     width: 100%;
     /* background: #00aff0; */
-    /* margin-top: 2rem; */
+    margin-top: 1rem;
 }
 .gallery-scroll-bg .service-text img{
     border-radius: 20px;
@@ -21214,15 +21213,18 @@ table.dataTable thead th, table.dataTable thead td {
 }
 .add-sec .add-sec1{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     grid-auto-rows: minmax(140px,auto);
     margin: 0px 60px;
 }
+.add-sec .add-sec1 .grid-gap{
+    margin: 20px;
+}
 .add-sec .add-sec1 .add-img{
-    margin: 20px 0px;
-    height: 140px;
-    width: 130px;
+    margin: 20px 40px;
+    height: 120px;
+    width: 120px;
 }
 .add-sec .add-sec1 .add-img img{
     height: 100%;
@@ -21286,11 +21288,11 @@ button.dt-button, div.dt-button, a.dt-button {
     color: #fff !important;
 }
 .fc button {
-color: #195D9B;
-background: #fff;
-border: #fff;
-border-radius: 20px 20px 20px 20px;
-box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
+    color: #195D9B;
+    background: #fff;
+    border: #fff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
     -webkit-box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
     -moz-box-shadow: 4px 7px 5px -3px rgba(169,195,245,0.75);
 }
@@ -21321,7 +21323,7 @@ box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
 }
 .manage-profile{
 
-    margin: 40px;
+    margin: 10px 40px;
 }
 
 .manage-profile .manage-profile-in{
@@ -21338,6 +21340,7 @@ box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
    font-size: 30px !important;
    font-weight: 400;
    color: #195D9B;
+   margin: 0px!important;
 }
 .manage-profile .manage-profile-in .manage-profile-left label{
     color: #66B9D3;
@@ -21346,7 +21349,7 @@ box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
 }
 .manage-profile .manage-profile-in .manage-profile-left input{
 border: 0px solid #fff;
-background: #F0F8FB!important;
+background: #F0F8FB !important;
 border-bottom: 2px solid #195D9B;
 width: 80%;
 padding: 5px 0px;
@@ -21360,11 +21363,11 @@ font-size: 16px;
 }
 .manage-profile .manage-profile-in .manage-profile-left .btn-left button{
     width: 20%;
-margin: 30px 0px;
-border-radius: 20px;
-border: 2px solid #195D9B;
-background: #f0f8fb;
-color:#195D9B;
+    margin: 30px 0px;
+    border-radius: 20px;
+    border: 2px solid #195D9B;
+    background: #f0f8fb;
+    color:#195D9B;
 }
 
 .manage-profile .manage-profile-in .manage-profile-right{
@@ -21414,3 +21417,21 @@ color:#195D9B;
     }
 
 }
+
+#turn {
+    display: none;
+    z-index: 100;
+    position: fixed;
+  }
+
+  @media (orientation: landscape) {
+    #turn {
+      display: block;
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: 777px) {
+    html {
+      transform: rotateZ(90deg);
+    }
+  }

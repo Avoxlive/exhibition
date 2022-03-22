@@ -19,16 +19,13 @@ $name = $this->session->userdata('name');
                 <button class="close" data-close="alert"></button>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                     <div class="portlet light bordered">
                         <div class="portlet-body">
-                            <div id="calendarIO"></div>
+                            <div id="calendarIO" ></div>
 
                             <?php
                                     // echo form_open(base_url() . 'visitor/my_calendar/insert/' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
-
-
-
 
 
                             <div class="modal fade" id="create_modal1" tabindex="-1" role="dialog"
@@ -47,7 +44,6 @@ $name = $this->session->userdata('name');
                                             <div class="modal-body">
                                                 <div class="form-group">
                                                     <div class="alert alert-danger" style="display: none;">
-
                                                     </div>
                                                 </div>
 
@@ -125,6 +121,7 @@ $name = $this->session->userdata('name');
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-3">Start Time</label>
                                                     <div class="col-sm-12">
@@ -439,24 +436,21 @@ function save()
                 if(data.status)
                 {
                     eventData = {
-                        id          : data.id,
-                        title       : $('#create_modal input[name=title]').val(),
-
-                        visitor_id      : $('#create_modal input[name=visitor_id]').val(),
+                        id                 : data.id,
+                        title              : $('#create_modal input[name=title]').val(),
+                        visitor_id         : $('#create_modal input[name=visitor_id]').val(),
                         // student_id      : $('#create_modal input[name=student_id]').val(),
                         // teacher_id      : $('#create_modal input[name=teacher_id]').val(),
-                        // teacher_name     : $('#create_modal input[name=teacher_name]').val(),
-                        exhibitor_id      : $('#create_modal input[name=exhibitor_id]').val(),
+                        // teacher_name    : $('#create_modal input[name=teacher_name]').val(),
+                        exhibitor_id       : $('#create_modal input[name=exhibitor_id]').val(),
                         exhibitor_name     : $('#create_modal input[name=exhibitor_name]').val(),
-                        visitor_name     : $('#create_modal input[name=visitor_name]').val(),
+                        visitor_name       : $('#create_modal input[name=visitor_name]').val(),
                         status      : $('#create_modal input[name=status]').val(),
-
                         description : $('#create_modal textarea[name=description]').val(),
-                        end_date : $('#create_modal textarea[name=end_date]').val(),
-
+                        end_date    : $('#create_modal textarea[name=end_date]').val(),
                         start       : moment($('#create_modal input[name=start_date]').val()).format('YYYY-MM-DD HH-MM-SS'),
-                         start_time       : moment($('#create_modal input[name=start_time]').val()).format('h:i'),
-                      end_time       : moment($('#create_modal input[name=end_time]').val()).format('HH-MM'),
+                        start_time  : moment($('#create_modal input[name=start_time]').val()).format('h:i'),
+                        end_time    : moment($('#create_modal input[name=end_time]').val()).format('HH-MM'),
                         end         : moment($('#create_modal input[name=end_date]').val()).format('YYYY-MM-DD HH:mm:ss'),
                         color       : $('#create_modal select[name=color]').val()
                     };
@@ -610,8 +604,8 @@ function update_attendance() {
 //     }
 // }
 
-function select_section(exhibitor_id) {
 
+function select_section(exhibitor_id) {
     var exhibitor = $(".exhibitor");
     for (var i = exhibitor.length - 1; i >= 0; i--) {
         exhibitor[i].style.display = "none";
@@ -626,13 +620,10 @@ function get_exhibitor(exhibitor_id) {
     $.ajax({
         url: '<?php echo base_url();?>admin/get_exhibitor_section1/' + exhibitor_id,
         success: function(response) {
-            jQuery('#section_selector_holder1').html(response);
+        jQuery('#section_selector_holder1').html(response);
         }
     });
 }
-
-
-
 
 
 </script>

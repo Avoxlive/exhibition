@@ -245,13 +245,11 @@
 				                        <tr>
 				                            <td>
 				                                <?php
-
 													$user = explode('-', $row['user_id']);
 													$user_type = $user[0];
 													$user_id = $user[1];
 													echo $this->db->get_where($user_type,array($user_type.'_id' => $user_id))->row()->name;
 													?>
-
 				                            </td>
 
 				                            <td><?=$row['title'];?></td>
@@ -261,12 +259,13 @@
 				                            <td><?=$this->crud_model->get_type_name_by_id('visitor', $row['visitor_id']);?></td>
 				                            <td><?=date('d M, Y', $row['meeting_date'])?></td>
 				                            <td><?=$row['start_time'] .' - '.$row['end_time']?></td>
-				                            <td><span
+				                            <!-- <td><span
 				                                    class="label label-<?php if($row['status'] == 'pending') echo 'warning';elseif($row['status'] == 'live') echo 'success'; else echo 'danger';?>"><?=$row['status']?></span>
+				                            </td> -->
+											<td><span class="#"><?=$row['status']?></span>
 				                            </td>
 				                            <td><?=$row['description']?></td>
 				                            <td>
-
 				                                <a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
 				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
 				                                            class="fa fa-edit"></i> edit</button></a>
@@ -276,12 +275,9 @@
 												date_default_timezone_set("Asia/Kolkata");
 												if(($row['status'] == 'live') && ($row['start_time'] <= date('h:i', time())) && ($row['end_time'] >= date('h:i', time()))) :?>
 
-											   <a
-
-
-				                                    href="<?php echo base_url();?>exhibitor/stream_jitsi/<?php echo $row['jitsi_id'];?>"><button
+											   <a href="<?php echo base_url();?>exhibitor/stream_jitsi/<?php echo $row['jitsi_id'];?>"><button
 				                                        type="button" class="btn btn-success btn-rounded btn-sm"><i
-				                                            class="fa fa-youtube-play"></i> start meeting</button></a>
+				                                        class="fa fa-youtube-play"></i>start meeting</button></a>
 				                                <?php endif;?>
 
 				                                <a href="#"

@@ -1,9 +1,12 @@
 <!-- Page Content -->
-<div id="page-wrapper">
+<div id="page-wrapper" style="max-height: 200px!important; min-height:400px!important;">
             <div class="#">
+
+
+
             <!-- <div class="container-fluid"> -->
 
-            <!-- <section class="gallery-scroll-bg">
+            <section class="gallery-scroll-bg">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-12 p-0">
@@ -25,7 +28,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
                 <div class="row bg-title">

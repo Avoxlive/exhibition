@@ -516,12 +516,22 @@ padding: 20px 0px;
 
    height: 230px;
    width: 100%;
+   position: relative;
   }
 .pricing .pricing-sec .price-one .price-img img{
     height: 100%;
     width: 100%;
     object-fit: cover;
    border-radius: 20px;
+}
+.pricing .pricing-sec .price-one .price-img .text-on-image{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
 }
 .pricing .pricing-sec  .price-one h2{
     font-size: 2rem;
@@ -664,14 +674,14 @@ color: #fff;
             height: 0px;
             width: 0px;
         }
-        .bottom .footer-in .footer-left .footer-about {
+        /* .bottom .footer-in .footer-left .footer-about {
             grid-template-columns: 1fr;
             grid-auto-rows: minmax(100px,auto);
         }
         .bottom .footer-in .footer-left .footer-about .logo {
             height: 140px;
             width: 110px;
-        }
+        } */
 
         .pricing .pricing-sec{
             grid-template-columns: 1fr;
@@ -694,7 +704,7 @@ color: #fff;
         }
         [class*=" ti-"], [class^=ti-] {
             font-size: 24px;
-            color: #fff;
+            color: #1D84B9;
             font-weight: 600;
         }
         .navbar-default .navbar-toggle {
@@ -745,7 +755,7 @@ box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
  }
  .signup-sec .box1 .box-left .boxes-three .pricing-sec h2{
     font-size: 1.5rem;
-    color:#1D84B9 ;
+    color:#1D84B9;
     text-align: center;
     line-height: 2rem;
 }
@@ -768,7 +778,7 @@ box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
 }
 .signup-sec .box1 .box-left .boxes-three .pricing-sec button:hover{
     background-color: #195D9B;
-color: #fff;
+    color: #fff;
 }
 .signup-sec .box1 .box-left .boxes-three .pricing-sec .btn-center{
     text-align: center;
@@ -793,7 +803,7 @@ margin: 40px 0px;
  }
  .signup-sec .box1 .box-left .box-content ul li{
      color:#195D9B;
-     font-size: 1.8rem ;
+     font-size: 1.8rem;
      margin: 20px 0px;
  }
     .signup-sec .box1 .box-right{
@@ -821,12 +831,14 @@ margin: 40px 0px;
         background: #f0fafd !important;
         width: 100%;
     }
+
     .signup-sec .box1 .box-right .sign-up-form .text-right{
         margin-top: 2rem;
-text-align: right;
+        text-align: right;
     }
+
     .signup-sec .box1 .box-right .sign-up-form button{
-        background: linear-gradient(90deg, rgba(25,93,155,1) 52%, rgba(29,132,185,1) 100%, rgba(102,185,211,1) 100%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg, rgba(25,93,155,1) 52%, rgba(29,132,185,1) 100%, rgba(102,185,211,1) 100%, rgba(255,255,255,0) 100%);
     border-radius: 30px;
     font-size: 20px;
     font-weight: 400;

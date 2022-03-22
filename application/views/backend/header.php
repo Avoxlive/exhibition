@@ -118,7 +118,7 @@
                             }
                             ?>
 
-                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="<?php echo base_url() . $face_file;?>" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">
+                        <!-- <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="<?php echo base_url() . $face_file;?>" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">
 
                                 <?php
                                 $account_type   =   $this->session->userdata('login_type');
@@ -126,7 +126,7 @@
                                 $name           =   $this->crud_model->get_type_name_by_id($account_type , $this->session->userdata($account_id), 'name');
                                 echo $name;
                                 ?>
-                        </b> </a>
+                        </b> </a> -->
                         <ul class="dropdown-menu dropdown-user animated flipInY">
                             <li>
                             <?php if($account_type == 'parent'):?>
@@ -147,29 +147,6 @@
 
 
                 </ul>
-                <!-- <section class="gallery-scroll-bg">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-12 p-0">
-                    <div class="owl-carousel owl-theme owl-loaded gallery-scroll-in">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage">
-                                <?php  $select = $this->advertisment_model->selectAdvertismentAdminInsert();
-                                    foreach ($select as $key => $row) {
-                                ?>
-                                    <div class="owl-item">
-                                        <div class="service-text">
-                                            <a href="#"><img src="<?php echo base_url() . "uploads/advertisment_image/" . $row['file_name'];?>" class="hvrbox-layer_bottom img-rounded"></a>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
             </div>
 
@@ -178,39 +155,7 @@
             <!-- /.navbar-top-links -->
             <!-- /.navbar-static-side -->
         </nav>
-<div class="add-sec">
-    <div class="add-sec1">
-        <div class="add-img">
-        <img src="<?php echo base_url(); ?>optimum/plugins/logo/logo-avox.png" alt="image1" class="img-fluid">
-        </div>
 
-    <div class="add-left">
-        <div class="gallery-scroll-bg">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-12 p-0">
-                        <div class="owl-carousel owl-theme owl-loaded gallery-scroll-in">
-                            <div class="owl-stage-outer">
-                                <div class="owl-stage">
-                                <?php  $select = $this->advertisment_model->selectAdvertismentAdminInsert();
-                                        foreach ($select as $key => $row) {
-                                    ?>
-                                        <div class="owl-item">
-                                            <div class="service-text">
-                                                <a href="#"><img src="<?php echo base_url() . "uploads/advertisment_image/" . $row['file_name'];?>" class="hvrbox-layer_bottom img-rounded"></a>
-                                            </div>
-                                        </div>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            </div>
-           </div>
-
-    </div>
-</div>
-</div>
 
 
 

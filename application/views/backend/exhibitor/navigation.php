@@ -1,4 +1,5 @@
     <!-- Left navbar-header -->
+    <div class="navbar-design">
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse slimscrollsidebar">
         <ul class="nav" id="side-menu">
@@ -80,7 +81,7 @@
                 <li class="<?php if ($page_name == 'my_calendar') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/my_calendar ">
                     <i class="fa fa-calendar p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('my_calendar'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('my_calendar'); ?></span>
                     </a>
                 </li>
 
@@ -88,7 +89,7 @@
                 <li class="<?php if ($page_name == 'appointment') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/appointment">
                     <i class="fa fa-calendar p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('Appointment'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('Appointment'); ?></span>
                     </a>
                 </li>
         <!-- </ul>
@@ -100,24 +101,24 @@
 
         <ul class=" nav nav-second-level -->
         <?php
-            if (
-                $page_name == 'chat_request' ||
-             $page_name == 'message' )
-            echo 'opened active';
+            // if (
+            //     $page_name == 'chat_request' ||
+            //  $page_name == 'message' )
+            // echo 'opened active';
             ?>
             <!-- "> -->
 
 
                 <li class="<?php if ($page_name == 'chat_request') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/my_chat_request ">
-                    <i class="fa fa-angle-double-right p-r-10"></i>
+                        <i class="fa fa-angle-double-right p-r-10"></i>
                         <span class="hide-menu"><?php echo get_phrase('my_chat_request'); ?></span>
                     </a>
                 </li>
 
-                <li class="<?php if ($page_name == 'message') echo 'active'; ?> ">
+                <li class="<?php if ($page_name == 'message') echo 'active'; ?>">
                     <a href="<?php echo base_url(); ?>exhibitor/my_chat ">
-                    <i class="fa fa-angle-double-right p-r-10"></i>
+                        <i class="fa fa-angle-double-right p-r-10"></i>
                         <span class="hide-menu"><?php echo get_phrase('my_chat'); ?></span>
                     </a>
                 </li>
@@ -205,14 +206,14 @@
             <li class="<?php if ($page_name == 'setting') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>exhibitor/exhibitor_advertisment">
                     <i class="fa fa-gears p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('settings'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('settings'); ?></span>
                 </a>
             </li>
 
             <li class="">
                 <a href="<?php echo base_url(); ?>login/logout">
                     <i class="fa fa-sign-out p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('Logout'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('Logout'); ?></span>
                 </a>
             </li>
 
@@ -220,4 +221,5 @@
         </ul>
     </div>
 </div>
+    </div>
 <!-- Left navbar-header end -->

@@ -16,11 +16,13 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
     <div id="wrapper">
 
 
-	<?php include 'header.php'; ?>
+	<?php
+	include 'header.php'; ?>
+	<?php
+	//  include 'logo-advertisement.php'; ?>
 	<?php include $loginType.'/navigation.php';?>
 	<?php include 'page_info.php';?>
 	<?php include $loginType.'/'.$page_name.'.php';?>
-
 
 	<?php  include 'dashboard.php'; ?>
 
@@ -32,7 +34,6 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
                         <div class="r-panel-body">
 
                             <ul class="m-t-20 chatonline">
-
                             <?php
                             $user_array = ['superadmin', 'admin', 'student','doctor','patient', 'teacher', 'parent', 'hrm', 'hostel', 'accountant', 'librarian'];
                             for($i= 0; $i < sizeof($user_array); $i++):
@@ -119,25 +120,20 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
 											<?php echo $all_message_selected['message'];?>
 									</span>
 									<?php endif;?>
-
 									<?php if($all_message_selected['user_id'] == $this->session->userdata('login_type'). '-'. $this->session->userdata('login_user_id')):?>
 									<span class="chat_msg_item chat_msg_item_user">
 											<?php echo $all_message_selected['message'];?>
 									</span>
 										<?php endif;?>
-
 								<?php endforeach;?>
-
-			</div>
-		</div>
+							</div>
+						</div>
 
 		<div class="fab_field">
 		  <a id="fab_camera" class="fab"><i class="zmdi zmdi-camera"></i></a>
 		  <a id="fab_send" class="fab submit"><i class="zmdi zmdi-mail-send "></i></a>
 		  <input type="hidden" id="user_id" name="user_id"  value="<?php echo $this->session->userdata('login_type'). '-'. $this->session->userdata('login_user_id');?>">
-
 		  <textarea id="chatSend" onclick="this.value=''" name="chatSend" placeholder="Send a message" class="chat_field chat_message" required></textarea>
-
 		</div>
 
   </div>
@@ -154,6 +150,7 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
         <!-- /#page-wrapper -->
     </div>
 
+
 <script src="<?php echo base_url();?>js/optimumajax.js"></script>
 <script>
 	$(document).ready(function() {
@@ -169,16 +166,13 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
 					success: function(res) {
 						if (res)
 						{
-						// echo some message here
+						//  echo some message here
 						}
 					}
 			    });
 	        });
         });
 </script>
-
-
-
 
  <?php include 'modal.php'; ?>
 

@@ -17,12 +17,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         <div class="cssload-speeding-wheel"></div>
     </div>
 
-
-
-
-
-
-
 <section id="wrapper" class="login-register">
 
   <?php include 'header-head.php';?>

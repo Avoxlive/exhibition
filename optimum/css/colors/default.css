@@ -74,7 +74,7 @@ body {
 }
 
 .navbar-header {
-    background: #1d84b9;
+    background: #ffff;
 }
 
 .navbar-top-links>li>a {
@@ -103,7 +103,7 @@ background: -webkit-linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
 background: -moz-linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
 background: linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
 border-radius: 30px;
-height: 60%;
+height: 92%;
 }
 
 .sidebar .label-custom {

@@ -1,6 +1,9 @@
     <!-- Left navbar-header -->
+
     <div class="navbar-design">
+
 <div class="navbar-default sidebar" role="navigation">
+
     <div class="sidebar-nav navbar-collapse slimscrollsidebar">
         <ul class="nav" id="side-menu">
             <li class="sidebar-search hidden-sm hidden-md hidden-lg">
@@ -147,7 +150,6 @@
 
         </ul>
     </div>
-     nmn
 </div>
     </div>
 
