@@ -42,7 +42,6 @@ table.dataTable thead .sorting_desc_disabled {
 }
 /* table.dataTable thead .sorting {
     background-image: url("sort_both.png")
-
 }
 table.dataTable thead .sorting_asc {
     background-image: url("sort_asc.png")
@@ -61,6 +60,13 @@ table.dataTable tbody tr {
 }
 table.dataTable tbody tr.selected {
     background-color: #B0BED9
+}
+@media screen and (max-width:767px){
+    table.dataTable tbody th,
+    table.dataTable tbody td {
+        padding: 4px!important;
+
+    }
 }
 table.dataTable tbody th,
 table.dataTable tbody td {
@@ -305,7 +311,7 @@ table.dataTable td {
 .dataTables_wrapper .dataTables_filter {
     float: right;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .dataTables_wrapper .dataTables_filter input {
     margin-left: 0.5em
@@ -353,7 +359,6 @@ table.dataTable td {
     color: white !important;
     border: 1px solid #6164c1;
     background-color: #6164c1;
-
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
     outline: none;
@@ -430,8 +435,8 @@ table.dataTable td {
 @media screen and (max-width: 767px) {
     .dataTables_wrapper .dataTables_info,
     .dataTables_wrapper .dataTables_paginate {
-        float: none;
-        text-align: center
+        /* float: none; */
+        /* text-align: center */
     }
     .dataTables_wrapper .dataTables_paginate {
         margin-top: 0.5em
@@ -440,10 +445,10 @@ table.dataTable td {
 @media screen and (max-width: 640px) {
     .dataTables_wrapper .dataTables_length,
     .dataTables_wrapper .dataTables_filter {
-        float: none;
-        text-align: center
+        float: right;
+        text-align: right
     }
     .dataTables_wrapper .dataTables_filter {
-        margin-top: 0.5em
+        margin-top: 0px;
     }
 }

@@ -13,11 +13,18 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
     <!-- <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div> -->
+	<div id="warning-message">
+		<div class="display-message">
+   <h2>This website is only viewable in landscape mode</h2>
+   <h2>Please rotate the screen for better experience</h2>
+</div>
+	</div>
+	<div id="wrappers">
     <div id="wrapper">
 
 
 	<?php
-	include 'header.php'; ?>
+	// include 'header.php'; ?>
 	<?php
 	//  include 'logo-advertisement.php'; ?>
 	<?php include $loginType.'/navigation.php';?>
@@ -26,7 +33,9 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
 
 	<?php  include 'dashboard.php'; ?>
 
-
+<!-- <div class="protrait-veiw">
+	<h2>hjhj</h2>
+</div> -->
                 <!-- .right-sidebar -->
                 <div class="right-sidebar" style="background:url(<?php echo base_url(); ?>assets/images/10.png); opacity: 0.9;">
                     <div class="slimscrollright">
@@ -62,6 +71,9 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
                 </div>
                 <!-- /.right-sidebar -->
             </div>
+		</div>
+
+
             <!-- /.container-fluid -->
 
 

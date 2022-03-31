@@ -19,7 +19,6 @@ class Login extends CI_Controller {
         if ($this->session->userdata('doctor_login')== 1) redirect (base_url(). 'doctor/dashboard');
         if ($this->session->userdata('exhibitor_login')== 1) redirect (base_url(). 'exhibitor/dashboard');
         if ($this->session->userdata('visitor_login')== 1) redirect (base_url(). 'visitor/dashboard');
-
         if ($this->session->userdata('patient_login')== 1) redirect (base_url(). 'patient/dashboard');
         $this->load->view('backend/login');
     }

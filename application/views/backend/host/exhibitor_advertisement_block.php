@@ -1,3 +1,4 @@
+<div id="wrappers">
 <section class="clinic-scroll">
         <div class="container-fluid">
             <div class="row">
@@ -25,3 +26,4 @@
             </div>
         </div>
     </section>
+</div>

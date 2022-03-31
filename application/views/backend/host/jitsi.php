@@ -46,13 +46,12 @@
                 border-color: transparent;
             }
             .gallery-scroll-bg .service-text{
-width: 100%;
-height: 220px;
+            width: 100%;
+            /* height: 220px; */
             }
-
             .gallery-scroll-bg .service-text img{
                 width: 100%;
-                height: 240px;
+                height: 160px;
             }
 
             .clinic-scroll {
@@ -62,6 +61,11 @@ height: 220px;
     height: 400px;
     float: right;
     text-align: right;
+}
+@media screen and (max-width:900px){
+.clinic-scroll .service-text {
+    height: 340px;
+}
 }
 
 .clinic-scroll .service-text {
@@ -76,7 +80,6 @@ height: 220px;
     /* -webkit-box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
     box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%); */
     /* border: 1px solid #e7e7e7 */
-
 }
 .clinic-scroll .service-text img{
     width: 100%;
@@ -90,7 +93,43 @@ height: 220px;
     font-weight: bold;
     text-align: center;
 }
+
+#warning-message { display: none; }
+  @media only screen and (orientation:portrait){
+      #wrappers {
+          display:none;
+        }
+      #warning-message {
+           display:block;
+        }
+      #warning-message .display-message {
+        background: #fff;
+        overflow: hidden;
+        padding: 10px 0px 10px 0px;
+        border-radius: 20px;
+        margin: 2px;
+        border: 2px solid #f7fafc;
+        box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
+        -webkit-box-shadow: 4px 7px 5px -3px rgb(169 195 245 / 75%);
+        -moz-box-shadow: 4px 7px 5px -3px rgba(169,195,245,0.75);
+      }
+      #warning-message h2{
+          font-size: 20px;
+          padding: 0px 20px;
+      }
+  }
+  @media only screen and (orientation:landscape){
+      #warning-message { display:none; }
+  }
         </style>
+
+
+        <div class="warning-message">
+		<div class="display-message">
+   <h2>This website is only viewable in landscape mode</h2>
+   <h2>Please rotate the screen for better experience</h2>
+</div>
+	</div>
 
 
 							<!-- Select * From Jitsi with Jitsi ID -->
@@ -111,11 +150,9 @@ height: 220px;
 
 		<!-- Nav For Top Fix navbar-fixed-top -->
 
+        <div id="wrappers">
         <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
-
             <div class="container">
-
-
                 <div class="navbar-header">
                     <h4 style="color:white"><i class="fa fa-plus"></i> Meeting Title : <?=$row['title']?></h4>
 
@@ -123,8 +160,9 @@ height: 220px;
                 <div class="navbar-form navbar-right">
                     <h5 style="color:white"> HOST BY :
 					<img src="<?=$this->crud_model->get_image_url($user_type, $user_id)?>" HostImageclass="img-circle" height="30" width="30"/> <?=$HostName->name?>
-					&nbsp;&nbsp;&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a></h5>
-<!-- <h5 style="color:#fff;"> <?php // echo $accountType ?></h5> -->
+					&nbsp;&nbsp;&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a>
+                </h5>
+                    <!-- <h5 style="color:#fff;"> <?php // echo $accountType ?></h5> -->
 
 
                 </div>
@@ -134,6 +172,7 @@ height: 220px;
             </div>
 
             </nav>
+        </div>
 
 
 
@@ -141,11 +180,12 @@ height: 220px;
 
 		<!-- Container That Render Jitsi -->
 
+        <div id="wrappers">
 		<div id="container" style="width:100%;height:65vh;">
 
 
 
-
+        </div>
 	<!-- Meet Jitsi API -->
 	<script src="https://8x8.vc/external_api.js"></script>
 
@@ -261,7 +301,7 @@ height: 220px;
 
 
 
-                animateOut: 'fadeOut',
+            animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             smartSpeed: 450,
             autoplay: true,

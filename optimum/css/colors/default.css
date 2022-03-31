@@ -103,7 +103,7 @@ background: -webkit-linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
 background: -moz-linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
 background: linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
 border-radius: 30px;
-height: 92%;
+height: 100%;
 }
 
 .sidebar .label-custom {
@@ -144,6 +144,16 @@ height: 92%;
     margin: 15px;
     border-radius: 10px;
     /* background: #2e3192; */
+}
+
+@media screen and (max-width:767px){
+
+    #side-menu>li>a.active {
+        margin: 0px;
+    }
+    .sidebar {
+        height: 100%;
+    }
 }
 
 #side-menu>li>a.active i {

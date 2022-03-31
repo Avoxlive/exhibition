@@ -1,3 +1,4 @@
+<div id="wrappers">
 <section class="gallery-scroll-bg">
         <div class="container-fluid">
             <div class="row">
@@ -14,7 +15,6 @@
                                         <a href="#"><img src="<?php
                                         echo base_url() . "uploads/advertisment_image/" . $row['file_name'];?>" class="hvrbox-layer_bottom img-rounded"></a>
                                         </div>
-
                                         <h2><?=$row['advertisement_content']?></h2>
                                     </div>
                                 <?php
@@ -26,3 +26,4 @@
             </div>
         </div>
     </section>
+</div>

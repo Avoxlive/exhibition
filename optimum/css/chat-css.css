@@ -10,7 +10,7 @@ ul li{
   margin: 1em;
   right: 0;
   z-index: 998;
-  
+
 }
 
 .fab {
@@ -172,7 +172,6 @@ ul li{
       font-weight: 400
 }
 
-
 .chat_option img {
     border-radius: 50%;
     width: 55px;
@@ -203,7 +202,6 @@ ul li{
   float: left;
 }
 
-
 .chat_body {
   background: #fff;
   width: 100%;
@@ -232,8 +230,6 @@ ul li{
   line-height: 40px;
   font-size: 15px;
 }
-
-
 
 .chat_field {
   position: relative;
@@ -480,7 +476,7 @@ input {
   background: #fff;
   display: inline-block;
   resize: none;
-  padding: 5px;
+  padding: 0px;
   border-radius: 3px;
 }
 .chat_form .get-notified input {
@@ -689,20 +685,15 @@ strong.chat_time {
 }
 /*Color Options*/
 
-
-
 .blue .fab {
   background: #42a5f5;
   color: #fff;
 }
 
-
-
 .blue .chat {
   background: #42a5f5;
   color: #999;
 }
-
 
 /* Ripple */
 
@@ -726,7 +717,7 @@ strong.chat_time {
 
 @-webkit-keyframes ripple {
   /*scale the element to 250% to safely cover the entire link and fade it out*/
-  
+
   100% {
     opacity: 0;
     -moz-transform: scale(5);
@@ -739,7 +730,7 @@ strong.chat_time {
 
 @keyframes ripple {
   /*scale the element to 250% to safely cover the entire link and fade it out*/
-  
+
   100% {
     opacity: 0;
     -moz-transform: scale(5);
@@ -762,4 +753,3 @@ strong.chat_time {
   color: #bbb;
 }
 /* CSS Document */
-

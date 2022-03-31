@@ -16,7 +16,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div>
-
+<div class="wrappers">
 <section id="wrapper" class="login-register">
 
   <?php include 'header-head.php';?>
@@ -59,8 +59,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                         <div class="form-group text-center m-t-20">
                             <div class="col-xs-12">
 
-                                <button
-                                    class="btn btn-infoo btn-rounded btn-sm btn-block text-uppercase waves-effect waves-light"
+                                <button class="btn btn-infoo btn-rounded btn-sm btn-block text-uppercase waves-effect waves-light"
                                     type="submit" style="width:50%; color:white">
                                     <?php echo get_phrase('Sign_in');?>
                                 </button>
@@ -427,6 +426,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         </div>
     </div>
 </section>
+</div>
 
    <?php include 'js-ui.php'; ?>
    <?php include 'js.php'; ?>
