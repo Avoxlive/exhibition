@@ -52,10 +52,10 @@
 
                         <ul class=" nav nav-second-level -->
                         <?php
-            if (
-                    $page_name == 'health_tip'
-                    )
-                echo 'opened active';
+            // if (
+            //         $page_name == 'health_tip'
+            //         )
+            //     echo 'opened active';
             ?>
              <!-- "> -->
 
@@ -92,6 +92,8 @@
                     <span class="hide-menu"><?php echo get_phrase('Appointment'); ?></span>
                     </a>
                 </li>
+
+
         <!-- </ul>
     </li> -->
 
@@ -108,32 +110,22 @@
             ?>
             <!-- "> -->
 
-
                 <li class="<?php if ($page_name == 'chat_request') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/my_chat_request ">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('my_chat_request'); ?></span>
+                        <span class="hide-menu"><?php echo get_phrase('my_chat_request');?></span>
                     </a>
                 </li>
 
                 <li class="<?php if ($page_name == 'message') echo 'active'; ?>">
-                    <a href="<?php echo base_url(); ?>exhibitor/my_chat ">
+                    <a href="<?php echo base_url(); ?>exhibitor/my_chat">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                         <span class="hide-menu"><?php echo get_phrase('my_chat'); ?></span>
                     </a>
                 </li>
 
-
-
         <!-- </ul>
     </li> -->
-
-
-
-
-
-
-
 
     <!-- <li class="attendance"> <a href="#" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-hospital-o p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('manage_attendance');?><span class="fa arrow"></span></span></a>
 
@@ -158,8 +150,6 @@
                         <span class="hide-menu"><?php echo get_phrase('view_attendance'); ?></span>
                     </a>
                 </li>
-
-
         </ul>
     </li>
 
@@ -199,11 +189,11 @@
             <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>exhibitor/manage_profile">
                     <i class="fa fa-gears p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('manage_profile'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('manage_profile'); ?></span>
                 </a>
             </li>
 
-            <li class="<?php if ($page_name == 'setting') echo 'active'; ?> ">
+            <li class="<?php if ($page_name == 'setting') echo 'active';?>">
                 <a href="<?php echo base_url(); ?>exhibitor/exhibitor_advertisment">
                     <i class="fa fa-gears p-r-10"></i>
                     <span class="hide-menu"><?php echo get_phrase('settings'); ?></span>
@@ -216,10 +206,8 @@
                     <span class="hide-menu"><?php echo get_phrase('Logout'); ?></span>
                 </a>
             </li>
-
-
         </ul>
     </div>
 </div>
-    </div>
+</div>
 <!-- Left navbar-header end -->

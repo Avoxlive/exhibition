@@ -214,11 +214,12 @@
 				        <div class="panel panel-info">
 
 				            <div class="panel-body table-responsive">
-				                <?php echo get_phrase('list_live_meeting');?>
+				                <?php
+								// echo get_phrase('list_live_meeting');?>
 								<?php
 											// echo "Today is " . date("Y/m/d") . "<br>";
 											// echo "The time is " . date("h:i:sa");?>
-				                <hr class="sep-2">
+				                <!-- <hr class="sep-2"> -->
 
 				                <table id="example23" class="display nowrap" cellspacing="0" width="100%">
 				                    <thead>

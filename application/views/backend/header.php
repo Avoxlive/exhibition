@@ -29,7 +29,7 @@
                                 <li>
                                     <div class="drop-title">You have 4 new messages</div>
                                 </li>
-                                    <li>
+                                <li>
                                         <div class="message-center">
                                             <a href="#">
                                                 <div class="user-img"> <img src="../plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
@@ -65,20 +65,15 @@
                 <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#">
 
                     <?php
-
                     if($set_language = $this->session->userdata('language')){
-
                     }
-
                     else{
                         $set_language = $this->db->get_where('settings', array('type' => 'language'))->row()->description;
                     }
-
                     $list_image = $this->db->get_where('language_list', array('db_field' => $set_language))->row()->db_field;
                     $list_name = $this->db->get_where('language_list', array('db_field' => $set_language))->row()->name;
 
                     ?>
-
                     <img src="<?php echo base_url();?>optimum/flag/<?php echo $list_image;?>.png" width="16px" height="16px"> <?php echo $list_name;?> <i class="fa fa-caret-down"></i>
                 </a>
 

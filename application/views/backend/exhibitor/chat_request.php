@@ -60,9 +60,11 @@
 //   if($chat_request['status'] == 'pending'):?>
     <input type="hidden" class="form-control" name="status"
                     value="accepted"/>
-        <button type="submit" class="btn btn-success" >
+                    <div class="request-button">
+        <button type="submit" >
             <!-- <span class="glyphicon glyphicon-comment"></span> -->
              Accept Chat Request</button>
+</div>
              <?php
     //  endif?>
     </span>

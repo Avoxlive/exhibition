@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="panel panel-info">
-            <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('Appointment Schedule List');?>
-            </div>
+            <!-- <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('Appointment Schedule List');?>
+            </div> -->
             <div class="panel-wrapper collapse in" aria-expanded="true">
                 <div class="panel-body table-responsive">
                     <table id="example23" class="display nowrap" cellspacing="0" width="100%">
@@ -14,7 +14,6 @@
                                 <th>Start_date</th>
                                 <th>Start-Time End_Time</th>
                                 <th>Status</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -25,7 +24,6 @@
                                 <td><?php $wop = $calendar['start_date']; print date("Y-m-d", strtotime($wop))?></td>
                                 <td><?php $wop = $calendar['start_date']; print date("h:i a", strtotime($wop))?> - <?php $wop = $calendar['end_time']; print date("h:i a", strtotime($wop))?></td>
                                 <td><?php echo $calendar['status'];?></td>
-
                              </tr>
                             <?php  endforeach;
                             ?>

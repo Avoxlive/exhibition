@@ -306,7 +306,6 @@ function retrive_visitor_name_from_visitor_name(){
         $sendvisitor = $this->db->get_where('chat_request', array('visitor_id' =>  $visitor_id))->row()->visitor_id;
         $sql = "select * from chat_request where exhibitor_id ='".$receiveexhibitor."' and visitor_id='".$sendvisitor."' order by chat_request_id asc";
         return $this->db->query($sql)->result_array();
-
     }
 }
 

@@ -14,8 +14,8 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id))-
 <div class="row">
     <div class="col-sm-12">
         <div class="panel panel-info">
-            <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list');?>
-            </div>
+            <!-- <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list');?>
+            </div> -->
             <div class="panel-wrapper collapse in" aria-expanded="true">
                 <div class="panel-body table-responsive">
                     <table id="example23" class="display nowrap" cellspacing="0" width="100%">
@@ -39,16 +39,14 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id))-
                                 <!-- <td><?php echo $visitor['visitor_id'];?></td> -->
                                 <td><?php echo $visitor['visitor_name'];?></td>
                                 <td>
-                                <a href="<?php echo base_url();?>exhibition/edit_chat_request/<?php echo $visitor['chat_request_id'];?>"
-                                    class="btn btn btn-info btn-circle btn-xs" ><i class="prime zmdi zmdi-comment-outline"></i>sent request</a>
-
+                                <a href="<?php echo base_url();?>exhibitor/edit_chat_request/<?php echo $visitor['chat_request_id'];?>"
+                                class="message-icon" ><i class="fa fa-commenting" aria-hidden="true"></i></a>
                                 </td>
                                 <?php endif?>
-
                                     <!-- <a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
 				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
-				                                            class="fa fa-edit"></i> edit</button></a> -->
-               </tr>
+				                                           class="fa fa-edit"></i> edit</button></a> -->
+                                    </tr>
                             <?php  endforeach; ?>
                         </tbody>
                     </table>

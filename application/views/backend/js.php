@@ -63,6 +63,14 @@
      });
 </script>
 
+<script>
+$(document).ready(function(){
+    $("div.clickable").on('click', function () {
+        alert('Click');
+    });
+});
+</script>
+
 <script src="<?php echo base_url(); ?>optimum/js/calculator.js" ></script>
 <script>
     function showPluginDetails() {
@@ -112,7 +120,6 @@ $(document).ready(function() {
             reader.onload = function (e) {
                 $('#blah').attr('src', e.target.result);
             }
-
             reader.readAsDataURL(input.files[0]);
         }
     }
@@ -123,10 +130,7 @@ $(document).ready(function() {
 <!-- <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/jquery/dist/jquery.min.js" ></script> -->
 <script src="<?php echo base_url(); ?>optimum/js/fullcalendar/fullcalendar.min.js" ></script>
 <script src="<?php echo base_url(); ?>optimum/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js" ></script>
-
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/dropzone-master/dist/dropzone.js" ></script>
-
-
 <!--Amcharts-->
 <script src="<?php echo base_url(); ?>optimum/js/amcharts/amcharts.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>optimum/js/amcharts/pie.js" type="text/javascript"></script>
@@ -147,7 +151,7 @@ $(document).ready(function() {
 
 
     <!-- Magnific popup JavaScript -->
-    <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js" ></script>
+<script src="<?php echo base_url(); ?>optimum/plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js" ></script>
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js" ></script>
 <!--Wave Effects -->
 <!-- <script src="<?php echo base_url(); ?>optimum/js/waves.js" ></script>  -->
@@ -194,10 +198,9 @@ $(document).ready(function() {
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/calendar/dist/cal-init.js" ></script>
 <!--Style Switcher -->
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/styleswitcher/jQuery.style.switcher.js" ></script>
-    <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/html5-editor/wysihtml5-0.3.0.js" ></script>
+<script src="<?php echo base_url(); ?>optimum/plugins/bower_components/html5-editor/wysihtml5-0.3.0.js" ></script>
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/html5-editor/bootstrap-wysihtml5.js" ></script>
 <script src="<?php echo base_url(); ?>optimum/js/validator.js" ></script>
-
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/switchery/dist/switchery.min.js" ></script>
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/custom-select/custom-select.min.js" type="text/javascript" ></script>
 <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
@@ -267,16 +270,12 @@ $(document).ready(function() {
             var lb;
             return $(this).ekkoLightbox({
                 onShown: function() {
-
                     lb = this;
-
                     $(lb.modal_content).on('click', '.modal-footer a', function(e) {
-
                         e.preventDefault();
                         lb.navigateTo(2);
 
                     });
-
                 }
             });
         });
@@ -302,16 +301,13 @@ $(document).ready(function() {
 		<script src="<?php echo base_url();?>assets/javascripts/forms/custom_validation.js"></script>
         <script src="<?php echo base_url();?>assets/javascripts/tables/examples.datatables.default.js"></script>
 		<script src="<?php echo base_url();?>assets/javascripts/tables/examples.datatables.tabletools.js"></script>
-
-<script src="<?php echo base_url(); ?>optimum/js/jquery.PrintArea.js" type="text/JavaScript"></script>
+        <script src="<?php echo base_url(); ?>optimum/js/jquery.PrintArea.js" type="text/JavaScript"></script>
 
 <!-- chat -->
 <!-- <script src="<?php echo base_url();?>optimum/js/jss/message/main.js"></script>
 <script src="<?php echo base_url();?>optimum/js/jss/message/prototype.js"></script>
 <script src="<?php echo base_url();?>optimum/js/jss/login/main.js"></script>
 <script src="<?php echo base_url();?>optimum/js/jss/signup/main.js"></script> -->
-
-
 <script src="<?php echo base_url();?>optimum/js/js.js"></script>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
@@ -507,7 +503,6 @@ $(document).ready(function() {
         toggleActive: true
     });
     jQuery('#datepicker-inline').datepicker({
-
         todayHighlight: true
     });
 
@@ -663,10 +658,10 @@ $(document).ready(function() {
   </script>
 
 
-  <script src="<?php echo base_url(); ?>optimum/js/caht-js.js"></script>
-  <script src="<?php //echo base_url(); ?>js/caht.js"></script>
+<script src="<?php echo base_url(); ?>optimum/js/caht-js.js"></script>
+<script src="<?php //echo base_url(); ?>js/caht.js"></script>
 
-  <script type="text/javascript">
+<script type="text/javascript">
 var audioUrl = '<?php echo base_url(); ?>uploads/chat.mp3';
 // SIMPLE EXEMPLE
 var audio = new Audio(audioUrl); // define your audio
@@ -696,16 +691,13 @@ $('.btn2').click( () => audio2[ soundNb++ % audio2.length ].play());
 
 
 <script>
-
-    $(document).ready(function() {
+$(document).ready(function() {
 $('.advertise-scroll-in').owlCarousel({
-
-
-    loop:true,
-  margin:30,
- nav: false,
- dots:false,
- autoplay:true,
+loop:true,
+margin:30,
+nav: false,
+dots:false,
+autoplay:true,
 navText: [
   "<i class='fa fa-chevron-left'></i>",
   "<i class='fa fa-chevron-right'></i>"
@@ -720,21 +712,10 @@ navText: [
       1000:{
           items:1
       }
-  }
+     }
         });
     });
-
-
-
-
-
-
-
-
-
     </script>
-
-
  <!-- jQuery file upload -->
     <script>
     $(document).ready(function() {
@@ -779,7 +760,8 @@ navText: [
     });
     </script>
 
-		<!--BlockUI Script -->
+
+	<!--BlockUI Script -->
     <script src="<?php echo base_url(); ?>optimum/plugins/bower_components/blockUI/jquery.blockUI.js"></script>
     <script type="application/javascript">
     // This is for BlockUI plugin demo
@@ -792,7 +774,7 @@ navText: [
         $('div.block2').block({
             message: '<h3>Please Wait...</h3>',
             css: {
-                border: '1px solid #fff'
+                border:'1px solid #fff'
             }
         });
     });
@@ -925,7 +907,7 @@ setInterval(function(){
     <script>
     $(document).ready(function() {
     $('#client-logos').owlCarousel({
-//        loop:true,
+   //   loop:true,
         margin:15,
         nav:true,
         responsive:{

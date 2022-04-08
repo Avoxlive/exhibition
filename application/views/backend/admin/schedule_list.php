@@ -1,12 +1,12 @@
- 
+
 <div class="container">
     <div class="page-content-wrapper">
         <div class="page-content">
             <div class="alert notification" style="display: none;">
                 <button class="close" data-close="alert"></button>
-            </div> 
+            </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="portlet light bordered">
                         <div class="portlet-body">
                              <div id="calendarIO"></div>
@@ -24,7 +24,7 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <div class="alert alert-danger" style="display: none;">
-                                    
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -34,8 +34,8 @@
                                     <input type="text" name="title" class="form-control" placeholder="Enter You Name" required>
                                     <input type="hidden" name="color" class="form-control" value="#F29339">
                                     <input type="hidden" name="status" class="form-control" value="panding">
-                                    
-                                    
+
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -59,8 +59,8 @@
 
                            <select name="doctor_name" style="visibility:hidden;" class="form-control select2" id="section_selector_holder1" >
                     <option value=""><?php echo get_phrase('select_name');?></option>
-                    </select> 
-                    
+                    </select>
+
                       </div>
                   </div>
 
@@ -76,23 +76,13 @@
                     <?php endforeach;?>
                    </select>
 
-                           <select name="patient_name" class="form-control select2" id="section_selector_holder" style="visibility:hidden;" >
+                    <select name="patient_name" class="form-control select2" id="section_selector_holder" style="visibility:hidden;" >
                     <option value=""><?php echo get_phrase('select_name');?></option>
-                    </select> 
-                    
+                    </select>
                       </div>
-                  </div>        
+                  </div>
 
-
-
-
-
-
-
-                            
-
-                            
-                            <!-- <div class="form-group">
+                    <!-- <div class="form-group">
                     <label class="col-md-12" for="example-text"><?php echo get_phrase('Teachers confirmed');?></label>
                     <div class="col-sm-12">
                            <select name="teacher_id" id="teacher_id" class="form-control select2" onchange="return get_class_teacher(this.value)" required>
@@ -106,8 +96,8 @@
 
                            <select name="teacher_name" style="visibility:hidden;" class="form-control select2" id="section_selector_holder1" >
                     <option value=""><?php echo get_phrase('select_name');?></option>
-                    </select> 
-                    
+                    </select>
+
                       </div>
                   </div> -->
 
@@ -125,8 +115,8 @@
 
                            <select name="student_name" class="form-control select2" id="section_selector_holder" style="visibility:hidden;" >
                     <option value=""><?php echo get_phrase('select_name');?></option>
-                    </select> 
-                    
+                    </select>
+
                       </div>
                   </div>         -->
                   <div class="form-group" style="margin-top: -27px; ">
@@ -142,7 +132,7 @@
                                 <div class="col-sm-12">
                                     <div  data-date-format="yyyy-mm-dd hh-mm-ss" data-date-viewmode="years">
                                         <input class="form-control m-r-10" name="start_time"  type="time"   required>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +141,7 @@
                                 <div class="col-sm-12">
                                     <div  data-date-format="yyyy-mm-dd hh-mm-ss" data-date-viewmode="years">
                                         <input class="form-control m-r-10" name="end_date"  type="date"   required>
-                                        
+
                                     </div>
                                 </div>
                             </div> -->
@@ -160,13 +150,13 @@
                                 <div class="col-sm-12">
                                     <div  data-date-format="yyyy-mm-dd hh-mm-ss" data-date-viewmode="years">
                                         <input class="form-control m-r-10" name="end_time"  type="time"   required>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        
+
                         <div class="modal-footer">
                             <a href="javascript::void" class="btn default" data-dismiss="modal">Cancel</a>
                             <a class="btn btn-danger delete_calendar" style="display: none;">Delete</a>
@@ -199,7 +189,7 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <div class="alert alert-danger" style="display: none;">
-                                    
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -209,8 +199,8 @@
                                     <input type="text" name="title" class="form-control" placeholder="Enter You Name" required>
                                     <!-- <input type="hidden" name="color" class="form-control" value="#008000">
                                     <input type="hidden" name="status" class="form-control" value="confirmed"> -->
-                                    
-                                    
+
+
                                 </div>
                             </div>
                              <div class="form-group">
@@ -219,8 +209,8 @@
                                 <div class="col-sm-12">
                                     <textarea type="text" name="description" class="form-control" placeholder="Enter description" required>
                                     </textarea>
-                                    
-                                    
+
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -251,7 +241,7 @@
                                     <input type="time"  name="end_time" class="form-control" placeholder="Enter End Time"  required>
                                 </div>
                             </div>
-                            
+
                         <div class="modal-footer">
                             <a href="javascript::void" class="btn default" data-dismiss="modal">Cancel</a>
                             <a class="btn btn-danger delete_calendar" style="display: none;">Reject</a>
@@ -280,7 +270,7 @@
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-                                     
+
                     right: 'month,agendaWeek,agendaDay'
                 },
 
@@ -321,7 +311,7 @@
 
         $(document).on('click', '.add_calendar', function(){
             $('#create_modal input[name=calendar_id]').val(0);
-            $('#create_modal').modal('show');  
+            $('#create_modal').modal('show');
         })
 
 
@@ -341,14 +331,14 @@
                 success: function(data)
                 {
                     if(data.status)
-                    { 
+                    {
 
                         eventData = {
 
                             id          : data.id,
                             title       : $('#create_modal input[name=title]').val(),
-                            
-                            
+
+
                             status      : $('#create_modal input[name=status]').val(),
                             description : $('#create_modal textarea[name=description]').val(),
                             end_date : $('#create_modal input[name=end_date]').val(),
@@ -361,7 +351,7 @@
                         $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
                         $('#create_modal').modal('hide');
                         $('#form_create')[0].reset();
-                        
+
                         $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
                     }
                     else
@@ -376,7 +366,7 @@
                     element.find('button[type=submit]').html('Submit');
                     element.find('.alert').css('display', 'block');
                     element.find('.alert').html('Wrong server, please save again');
-                }         
+                }
             });
             return false;
         })
@@ -392,7 +382,7 @@
             {
                 end = start;
             }
-         
+
             $.ajax({
                 url     : '<?php echo base_url(); ?>admin/save',
                 type    : 'POST',
@@ -405,10 +395,10 @@
                 {
 
                     if(data.status)
-                    {   
-                       
+                    {
+
                         $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html('Data success update');
-                        
+
 
 
                     }
@@ -416,12 +406,12 @@
                     {
                         $('.notification').removeClass('alert-primary').addClass('alert-danger').find('p').html('Data cant update');
                     }
-             
+
                 },
                 error: function (jqXHR, textStatus, errorThrown)
                 {
                     $('.notification').removeClass('alert-primary').addClass('alert-danger').find('p').html('Wrong server, please save again');
-                }         
+                }
             });
         }
 
@@ -442,12 +432,12 @@
                     success: function(data)
                     {
                         if(data.status)
-                        {   
+                        {
                             eventData = {
                                 id          : data.id,
                                 title       : $('#create_modal input[name=title]').val(),
-                                
-                                
+
+
                                 status      : $('#create_modal input[name=status]').val(),
 
                                 description : $('#create_modal textarea[name=description]').val(),
@@ -462,7 +452,7 @@
                             $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
                             $('#create_modal1').modal('hide');
                             $('#form_create')[0].reset();
-                            
+
                             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
 
                         }
@@ -478,7 +468,7 @@
                         element.find('button[type=submit]').html('Submit');
                         element.find('.alert').css('display', 'block');
                         element.find('.alert').html('Wrong server, please save again');
-                    }         
+                    }
                 });
                 return false;
             })
@@ -501,7 +491,7 @@
                     success: function(data)
                     {
                         if(data.status)
-                        {   
+                        {
                             eventData = {
                                 id          : data.id,
                                 title       : $('#create_modal input[name=title]').val(),
@@ -519,7 +509,7 @@
                             $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
                             $('#create_modal1').modal('hide');
                             $('#form_create')[0].reset();
-                            
+
                             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
 
                         }
@@ -535,12 +525,12 @@
                         element.find('button[type=submit]').html('Submit');
                         element.find('.alert').css('display', 'block');
                         element.find('.alert').html('Wrong server, please save again');
-                    }         
+                    }
                 });
                 return false;
             })
         }
-        
+
 
 
 
@@ -577,7 +567,7 @@
                     success: function(data)
                     {
                         if(data.status)
-                        {   
+                        {
                             event.title         = $('#create_modal input[name=title]').val();
                             event.description   = $('#create_modal textarea[name=description]').val();
                             event.end_date   = $('#create_modal textarea[name=end_date]').val();
@@ -590,7 +580,7 @@
 
                             $('#create_modal').modal('hide');
                             $('#form_create')[0].reset();
-                            
+
                             $('#create_modal input[name=calendar_id]').val(0)
                             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
 
@@ -607,7 +597,7 @@
                         element.find('button[type=submit]').html('Submit');
                         element.find('.alert').css('display', 'block');
                         element.find('.alert').html('Wrong server, please save again');
-                    }         
+                    }
                 });
                 return false;
             })
@@ -627,11 +617,11 @@
                     success: function(data)
                     {
                         if(data.status)
-                        {   
+                        {
                             $('#calendarIO').fullCalendar('removeEvents',event._id);
                             $('#create_modal').modal('hide');
                             $('#form_create')[0].reset();
-                            
+
                             $('#create_modal input[name=calendar_id]').val(0)
                             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
                         }
@@ -645,7 +635,7 @@
                     {
                         $('#form_create').find('.alert').css('display', 'block');
                         $('#form_create').find('.alert').html('Wrong server, please save again');
-                    }         
+                    }
                 });
             })
         }
@@ -693,7 +683,7 @@ for (var i = doctor.length - 1; i >= 0; i--) {
 //         url:        '<?php echo base_url();?>admin/get_teacher_section1/' + teacher_id,
 //         success:    function(response){
 //             jQuery('#section_selector_holder1').html(response);
-//         } 
+//         }
 //     });
 // }
 
@@ -702,7 +692,7 @@ function get_doctor(doctor_id){
         url:        '<?php echo base_url();?>admin/get_doctor_section1/' + doctor_id,
         success:    function(response){
             jQuery('#section_selector_holder1').html(response);
-        } 
+        }
     });
 }
 function select_section(patient_id) {
@@ -733,7 +723,7 @@ for (var i = patient.length - 1; i >= 0; i--) {
 //         url:        '<?php echo base_url();?>admin/get_student_section2/' + student_id,
 //         success:    function(response){
 //             jQuery('#section_selector_holder').html(response);
-//         } 
+//         }
 //     });
 // }
 
@@ -742,7 +732,7 @@ function get_patient(patient_id){
         url:        '<?php echo base_url();?>admin/get_patient_section2/' + patient_id,
         success:    function(response){
             jQuery('#section_selector_holder').html(response);
-        } 
+        }
     });
 }
 

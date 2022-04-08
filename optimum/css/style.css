@@ -1437,8 +1437,10 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 .btn-info,
                 .btn-info.disabled {
-                    background: #f2c010;
-                    border: 1px solid #f2c010;
+                    /* background: #f2c010;
+                    border: 1px solid #f2c010; */
+                    background: #66B9D3;
+                    border: 1px solid #66B9D3;
                 }
 
                 .btn-info.disabled.focus,
@@ -1447,9 +1449,9 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 .btn-info.focus,
                 .btn-info:focus,
                 .btn-info:hover {
-                    background: #f2c010;
+                    background: #66B9D3;
                     opacity: .8;
-                    border: 1px solid #f2c010
+                    border: 1px solid #66B9D3;
                 }
 
                 .btn-infoo,
@@ -1467,6 +1469,17 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     background: #2e3192;
                     opacity: .8;
                     border: 1px solid #2e3192
+                }
+
+                .submit-button{
+                    background: linear-gradient(90deg, rgba(25,93,155,1) 52%, rgba(29,132,185,1) 100%, rgba(102,185,211,1) 100%, rgba(255,255,255,0) 100%);
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    width: 100%;
+    color: #fff;
+    border: 1px solid #66B9D3;
+    margin: 20px;
                 }
 
                 .btn-warning,
@@ -3886,9 +3899,9 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 }
 
                 .alert-success {
-                    background: #2e3192;
+                    background: #195D9B;
                     color: #fff;
-                    border-color: #2e3192
+                    border-color: #195D9B
                 }
 
                 .alert-dark {
@@ -3910,9 +3923,9 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 }
 
                 .alert-primary {
-                    background: #2e3192;
+                    background: #195D9B;
                     color: #fff;
-                    border-color: #2e3192
+                    border-color: #195D9B
                 }
 
                 .alert-info {
@@ -20557,7 +20570,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 }
                 .btn-xs {
                     padding: 1px 8px;
-                    font-size: 25px
+                    font-size: 15px
                 }
 
                 .btn-circle {
@@ -21400,7 +21413,47 @@ font-size: 16px;
     margin: 20px;
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:900px){
+
+.box-width{
+width: 30%!important;
+}
+.box-width .box-wrapper .box-in button {
+    width: 70%!important;
+}
+.hero-bottom h5 {
+    font-size: 5rem;
+}
+.hero-bottom .bottom-button .btn-primary {
+    width: 25%;
+}
+.hero-bottom .bottom-button .btn-info {
+    width: 25%;
+}
+.avox-feature .feature-box .feature-box-content img {
+    display: none;
+}
+.avox-feature .feature-box .feature-box-image {
+    height: 330px!important;
+    width: 100%!important;
+}
+.avox-feature .feature-box .feature-box-content {
+    margin: 0px 0px!important;
+}
+.get-in-touch .heading img {
+    display: none;
+}
+
+.get-in-touch .contact-us {
+    gap: 4rem!important;
+}
+}
+/* @media screen and (max-width:767px){ */
+    @media screen and (max-width:900px){
+
+        table.dataTable tbody th, table.dataTable tbody td {
+            padding: 5px !important;
+        }
 
     .add-sec .add-sec1 {
         grid-template-columns: 1fr;
@@ -21510,7 +21563,7 @@ font-size: 16px;
         font-size: 10px !important;
     }
     .form-control {
-        height: 15px;
+        height: 30px;
     }
     .manage-profile .manage-profile-in .manage-profile-right{
         height: 90px;
@@ -21568,6 +21621,7 @@ font-size: 16px;
         }
   }
 
+/*
 .collapse {
     display: block !important;
-}
+} */

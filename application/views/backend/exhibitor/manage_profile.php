@@ -1,16 +1,72 @@
-<div class="row">
+<div class="manage-profile">
+	<div class="manage-profile-in">
+		<div class="manage-profile-left">
+			<h2>My profile</h2>
+			<?php
+				foreach ($edit_profile as $key => $row):
+				?>
+					<?php echo form_open(base_url(). 'exhibitor/manage_profile/update', array('class' => 'form-horizontal form-groups-bordered', 'enctype'=> 'multipart/form-data'));?>
 
-	<div class="col-sm-7">
+<div class="form-group">
+	<label class="col-md-12" for="example-text"><?php echo get_phrase('Name');?></label>
+	<div class="col-sm-12">
+		<input type="text" class="form-control" name="name" value="<?php echo $row['name'];?>">
+	</div>
+</div>
+
+<div class="form-group">
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('Email');?></label>
+					<div class="col-sm-12">
+						<input type="text" class="form-control" name="email" value="<?php echo $row['email'];?>">
+					</div>
+				</div>
+
+					<div class="form-group">
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('Company name');?></label>
+					<div class="col-sm-12">
+						<input type="text" class="form-control" name="company" value="<?php echo $row['company name'];?>">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('phone number');?></label>
+					<div class="col-sm-12">
+						<input type="text" class="form-control" name="phone" value="<?php echo $row['phone number'];?>">
+					</div>
+				</div>
+
+
+
+				<div class="form-group">
+				<div class="btn-left">
+					<button type="submit" class="btn"><i class="fa fa-save"></i>  <?php echo get_phrase('save');?></button>
+				</div>
+				</div>
+
+				<?php echo form_close();?>
+
+				<?php endforeach;?>
+
+
+		</div>
+
+		<div class="manage-profile-right">
+		<img id="blah" src="<?php echo $this->crud_model->get_image_url('exhibitor', $row['exhibitor_id']); ?>" alt="" height="200" width="200"/>
+		</div>
+	</div>
+</div>
+
+
+
+<!--
+<div class="row">
+<div class="col-sm-7">
 		<div class="panel panel-info">
 
 			<div class="panel-heading"><i class="fa fa-gear"></i>  <?php echo get_phrase('Edit Details');?></div>
 			<div class="panel-body table-responsive">
 
 				<?php
-
 				foreach ($edit_profile as $key => $row):
-
-
 				?>
 
 				<?php echo form_open(base_url(). 'exhibitor/manage_profile/update', array('class' => 'form-horizontal form-groups-bordered', 'enctype'=> 'multipart/form-data'));?>
@@ -59,9 +115,9 @@
 
 		</div>
 
-	</div>
+	</div> -->
 
-
+<!--
 <div class="col-sm-5">
 <div class="panel panel-info">
 <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('Change Password'); ?></div>
@@ -98,4 +154,4 @@
 </div>
 </div>
 
-</div>
+</div> -->

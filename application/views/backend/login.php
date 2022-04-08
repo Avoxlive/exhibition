@@ -16,7 +16,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div>
-<div class="wrappers">
+<div id="wrappers">
 <section id="wrapper" class="login-register">
 
   <?php include 'header-head.php';?>
@@ -35,69 +35,56 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
                         <div class="form-group ">
                             <div class="col-xs-12">
-                    <label for="name">Name</label><br>
-
+                                <label for="email">Name</label><br>
                                 <input class="form-control" type="email" name="email" required=""
                                 placeholder="<?php echo get_phrase('email');?>" style="width:100%">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                    <label for="name">Password</label><br>
-
+                                <label for="password">Password</label><br>
                                 <input class="form-control" type="password" name="password" required=""
-                                    placeholder="<?php echo get_phrase('password');?>" style="width:100%">
+                                placeholder="<?php echo get_phrase('password');?>" style="width:100%">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                 &nbsp;<a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i
-                                        class="fa fa-lock m-r-5"></i> <?php echo get_phrase('forgot_password?');?></a>
+                                    class="fa fa-lock m-r-5"></i> <?php echo get_phrase('forgot_password?');?></a>
                             </div>
                         </div>
 
                         <div class="form-group text-center m-t-20">
                             <div class="col-xs-12">
-
                                 <button class="btn btn-infoo btn-rounded btn-sm btn-block text-uppercase waves-effect waves-light"
                                     type="submit" style="width:50%; color:white">
                                     <?php echo get_phrase('Sign_in');?>
                                 </button>
-
-                                <div align="center"><img id="install_progress"
-                                        src="<?php echo base_url() ?>assets/images/preloader.gif"
-                                        style="margin-left: 20px; display: none" /></div>
-
+                                <div align="center"><img id="install_progress" src="<?php echo base_url() ?>assets/images/preloader.gif"
+                                style="margin-left: 20px; display: none" /></div>
                             </div>
                         </div>
-
                         <?php echo form_close();?>
-
                         <form method="post" role="form" id="recoverform" class="form-horizontal form-material"
                             action="<?php echo base_url();?>login/reset_password">
                             <input type="email" name="email" class="form-control"
                                 placeholder="<?php echo get_phrase('email');?>" style="width:100%" required>
-
                             <div class="form-group text-center m-t-20">
                                 <div class="col-xs-6">
                                     <a href="<?php echo base_url();?>"><button
-                                            class="btn btn-info btn-rounded btn-sm text-uppercase" type="button"
-                                            style="color:white"><i
-                                                class="fa fa-mail-reply-all"></i>&nbsp;<?php echo get_phrase('back_to_login');?></button></a>
-                                    <button class="btn btn-success btn-rounded btn-sm  text-uppercase" type="submit"
+                                        class="btn btn-info btn-rounded btn-sm text-uppercase" type="button"
                                         style="color:white"><i
-                                            class="fa fa-key"></i>&nbsp;<?php echo get_phrase('reset_password');?></button>
+                                                class="fa fa-mail-reply-all"></i>&nbsp;<?php echo get_phrase('back_to_login');?></button></a>
+                                    <button class="btn btn-success btn-rounded btn-sm text-uppercase" type="submit"
+                                        style="color:white"> <i class="fa fa-key"></i>&nbsp;
+                                        <?php echo get_phrase('reset_password');?>
+                                    </button>
                                 </div>
                             </div>
-
                             <?php echo form_close();?>
                         </form>
                     </form>
-
                 </div>
-
-
-
             </div>
         </div>
 
@@ -115,23 +102,16 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                             <?php echo get_phrase('Register');?>
                         </button>
                     </div>
-
                 </div>
             </div>
-
             <div class="login-box login-sidebar">
-
                 <div class="white-box-login p-40">
                     <h4 class="box-title m-b-20" align="center">
                         <img src="<?php echo base_url() ?>uploads/logo.png" class="img-circle" width="70" height="70" />
                     </h4>
                     <h5 align="center"><a href=""><?php echo $system_name;?></a></h5>
-
-
-
                     <form method="post" role="form" id="loginform" class="form-horizontal form-material"
                         action="<?php echo base_url();?>login/validate_login">
-
                         <div class="form-group ">
                             <div class="col-xs-12">
                                 <input class="form-control" type="email" name="email" required=""
@@ -144,11 +124,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                     placeholder="<?php echo get_phrase('passord');?>" style="width:100%">
                             </div>
                         </div>
-
-
                         <div class="form-group text-center m-t-20">
                             <div class="col-xs-12">
-
                                 <button
                                     class="btn btn-infoo btn-rounded btn-sm btn-block text-uppercase waves-effect waves-light"
                                     type="submit" style="width:40%; color:white">
@@ -156,8 +133,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                 </button>
                                 <div align="center"><img id="install_progress"
                                         src="<?php echo base_url() ?>assets/images/preloader.gif"
-                                        style="margin-left: 20px; display: none" /></div>
-
+                                        style="margin-left: 20px; display: none"/></div>
                             </div>
                         </div>
 
@@ -166,20 +142,16 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                 <div class="checkbox checkbox-primary pull-left">
                                     <input id="checkbox-signup" type="checkbox">
                                     <label for="checkbox-signup"> <?php echo get_phrase('remember_me');?> </label>
-
                                 </div>
                                 &nbsp;<a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i
                                         class="fa fa-lock m-r-5"></i> <?php echo get_phrase('forgot_password?');?></a>
                             </div>
                         </div>
-
                         <?php echo form_close();?>
-
                         <form method="post" role="form" id="recoverform" class="form-horizontal form-material"
                             action="<?php echo base_url();?>login/reset_password">
                             <input type="email" name="email" class="form-control"
                                 placeholder="<?php echo get_phrase('email');?>" style="width:100%" required>
-
                             <div class="form-group text-center m-t-20">
                                 <div class="col-xs-6">
                                     <a href="<?php echo base_url();?>"><button
@@ -200,19 +172,15 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
             </div>
         </div> -->
-
-
-
     </section>
 
-    <section class="hero-bottom">
+<section class="hero-bottom">
 <h5>Great meeting are just the <span>beginning</span></h5>
 <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-02.png" href="#" alt="image1" class="img-fluid image2">
 
 <div class="bottom-button">
-
-<a href="<?php echo base_url(); ?>home/signup"><button type="submit" class="btn btn-primary">Host an Event</button></a>
-                <button type="submit" class="btn btn-info">Join an Event</button>
+    <a href="<?php echo base_url(); ?>home/signup"><button type="submit" class="btn btn-primary">Host an Event</button></a>
+        <button type="submit" class="btn btn-info">Join an Event</button>
 </div>
     </section>
 
@@ -241,10 +209,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                </div>
                <div class="avox-block-in">
                    <div class="avox-block-img">
-                   <img src="<?php echo base_url(); ?>optimum/plugins/images/img3.png" href="#" alt="image1" class="img-fluid">
+                        <img src="<?php echo base_url(); ?>optimum/plugins/images/img3.png" href="#" alt="image1" class="img-fluid">
                    </div>
-
-                   <h2>The host can do branding for their brands, they can use banners and posters. </h2>
+                   <h2>The host can do branding for their brands, they can use banners and posters.</h2>
                </div>
            </div>
 
@@ -258,19 +225,16 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
            </div>
            <div class="feature-box">
                <div class="feature-box-content">
-              <h2>“One can talk to people and see them at the same time—so it is <span>Video Conferencing”</span></h2>
-              <h3>Engage a global audience in exhibitions/events like never before.</h3>
-
-              <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2">
-               </div>
-               <div class="feature-box-image">
-                   <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid image1">
-               </div>
+               <h2>“One can talk to people and see them at the same time—so it is <span>Video Conferencing”</span></h2>
+               <h3>Engage a global audience in exhibitions/events like never before.</h3>
+                <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2">
+                </div>
+                <div class="feature-box-image">
+                    <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid image1">
+                </div>
            </div>
 
            <div class="feature-box">
-
-
                <div class="feature-box-image">
                    <img src="<?php echo base_url(); ?>optimum/plugins/images/feature2.jpeg" href="#" alt="image1" class="img-fluid">
                </div>
@@ -278,7 +242,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
               <h2>“One can talk to people and see them at the same time—so it is <span>Video Conferencing”</span></h2>
               <h3>Engage a global audience in exhibitions/events like never before.</h3>
               <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image-second">
-
                </div>
 
            </div>
@@ -289,16 +252,13 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
               <h3>Engage a global audience in exhibitions/events like never before.</h3>
               <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2">
 
-               </div>
+            </div>
 
                 <div class="feature-box-image">
-                   <img src="<?php echo base_url(); ?>optimum/plugins/images/feature3.jpeg" href="#" alt="image1" class="img-fluid">
+                <img src="<?php echo base_url(); ?>optimum/plugins/images/feature3.jpeg" href="#" alt="image1" class="img-fluid">
                 </div>
-
            </div>
-
        </div>
-
    </section>
 
 
@@ -334,7 +294,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                         <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/13.jpg" class="hvrbox-layer_bottom img-rounded"></a>
                                         </div>
                                     </div>
-
                             </div>
                         </div>
                     </div>
@@ -342,7 +301,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
         </div>
     </div>
-
 </div>
    </section> -->
 
@@ -356,14 +314,14 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         <div class="contact-us">
             <div class="contact-us-form">
                 <h2>Contact us</h2>
-                            <form>
+                <form>
                 <div class="form-group">
-                    <label for="name">Name</label><br>
-                    <input type="text" class="form-control" id="name"  placeholder="Enter your full name">
+                    <label for="touch-name">Name</label><br>
+                    <input type="text" class="form-control" id="touch-name"  placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email address</label><br>
-                    <input type="email" class="form-control" id="email"  placeholder="Enter your email">
+                    <label for="touch-email">Email address</label><br>
+                    <input type="email" class="form-control" id="touch-email"  placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label><br>
@@ -403,25 +361,25 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                         <a href="#">Contact us</a>
                     </div>
                     <div>
-                    <h2>Social media</h2>
+                        <h2>Social media</h2>
                         <a href="#">Linked In</a><br>
                         <a href="#">Twitter</a><br>
                         <a href="#">Instagram</a>
                     </div>
                     <div>
-                    <h2>Use Cases</h2>
+                        <h2>Use Cases</h2>
                         <a href="#">Conferences</a><br>
                         <a href="#">Events</a>
                     </div>
                 </div>
             </div>
             <div class="footer-right">
-               <h2>AVOX.LIVE</h2>
-               <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
-               <div class="text-center">
-               <button type="submit" class="btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
-               </div>
-               <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
+                <h2>AVOX.LIVE</h2>
+                <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
+                </div>
+                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
             </div>
         </div>
     </div>

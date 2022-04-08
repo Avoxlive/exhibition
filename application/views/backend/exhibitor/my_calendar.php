@@ -11,7 +11,7 @@ $name = $this->session->userdata('name');
                 <button class="close" data-close="alert"></button>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="portlet light bordered">
                         <div class="portlet-body">
                              <div id="calendarIO"></div>
@@ -33,12 +33,10 @@ $name = $this->session->userdata('name');
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-2">Name  <span class="required"> * </span>
+                                <label class="control-label col-sm-2">Name<span class="required"> * </span>
                                 </label>
                                 <div class="col-sm-12">
                                     <input type="text" name="title" class="form-control" placeholder="Enter You Name" required>
-
-
                                 </div>
                             </div>
                             <div class="form-group">
@@ -49,7 +47,7 @@ $name = $this->session->userdata('name');
                             </div>
 
 
-                  <div class="form-group">
+                            <div class="form-group">
                                 <label class="control-label col-sm-3">Start Date</label>
                                 <div class="col-sm-12">
                                     <div  data-date-format="YYYY-MM-DD " data-datetime-viewmode="years">
@@ -121,11 +119,8 @@ $name = $this->session->userdata('name');
 
                             <div class="form-group">
                                 <div class="alert alert-danger" style="display: none;">
-
                                 </div>
                             </div>
-
-
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Name  <span class="required"> * </span>
                                 </label>
@@ -141,8 +136,6 @@ $name = $this->session->userdata('name');
                                 <div class="col-sm-12">
                                     <textarea type="text" name="description" class="form-control" placeholder="Enter description" required>
                                     </textarea>
-
-
                                 </div>
                             </div>
                             <div class="form-group">
@@ -178,28 +171,20 @@ $name = $this->session->userdata('name');
                                 <label class="control-label col-sm-2">Status<span class="required"> * </span>
                                 </label>
                                 <select id="status" name="status">
-
                                     <option name="status" class="form-control" value="rejected">Reject
-                                <!-- <input type="hidden" name="color" id="status" class="form-control" value="#890000"> -->
-
+                                    <!-- <input type="hidden" name="color" id="status" class="form-control" value="#890000"> -->
                                     </option>
-
                                     <option name="status" class="form-control" value="confirmed">accept
                                     <!-- <input type="hidden" name="color" id="status" class="form-control" value="#123123"> -->
-
                                     </option>
-                                    </select>
+                                </select>
                             </div>
 
 
 
                         <div class="modal-footer">
-
                             <a href="javascript::void" class="btn default" data-dismiss="modal">Cancel</a>
-
-
-        <!--
-                            <a class="btn btn-danger " style="display:block;">Reject
+                            <!--<a class="btn btn-danger " style="display:block;">Reject
                                     <input type="hidden" name="color" class="form-control" value="#234567">
                                     <input type="hidden" name="status" class="form-control" value="rejected"></a> -->
 
@@ -207,12 +192,9 @@ $name = $this->session->userdata('name');
                             <!-- <button type="submit" class="btn  delete_calendar red">reject
                             <input type="hidden" name="color" class="form-control" value="#cb1313">
                                     <input type="hidden" name="status" class="form-control" value="rejected">
-
                             </button> -->
-
                             <button type="submit" class="btn green">submit
                             <input type="hidden" name="color" class="form-control" value="#008000">
-
                             <!-- <input type="hidden" name="status" class="form-control" value="confirmed"> -->
                             </button>
                         </div>
@@ -230,16 +212,13 @@ $name = $this->session->userdata('name');
 
     <script type="text/javascript">
         var get_data        = '<?php echo $get_data; ?>';
-
         var backend_url     = '<?php echo base_url(); ?>';
-
         $(document).ready(function($id) {
             $('.date-time-picker').datepicker();
             $('#calendarIO').fullCalendar({
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-
                     right: 'month,agendaWeek,agendaDay'
                 },
 
@@ -301,13 +280,9 @@ $name = $this->session->userdata('name');
                 {
                     if(data.status)
                     {
-
                         eventData = {
-
                             id          : data.id,
                             title       : $('#create_modal input[name=title]').val(),
-
-
                             status      : $('#create_modal input[name=status]').val(),
                             description : $('#create_modal textarea[name=description]').val(),
                             end_date    : $('#create_modal input[name=end_date]').val(),
@@ -320,7 +295,6 @@ $name = $this->session->userdata('name');
                         $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
                         $('#create_modal').modal('hide');
                         $('#form_create')[0].reset();
-
                         $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
                     }
                     else
@@ -339,9 +313,7 @@ $name = $this->session->userdata('name');
             });
             return false;
         })
-
         $(document).on('reset', '#form_create', function(){
-
 var element = $(this);
 var eventData;
 $.ajax({
@@ -357,13 +329,9 @@ $.ajax({
     {
         if(data.status)
         {
-
             eventData = {
-
                 id          : data.id,
                 title       : $('#create_modal input[name=title]').val(),
-
-
                 status      : $('#create_modal input[name=status]').val(),
                 description : $('#create_modal textarea[name=description]').val(),
                 end_date    : $('#create_modal input[name=end_date]').val(),
@@ -376,7 +344,6 @@ $.ajax({
             $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
             $('#create_modal').modal('hide');
             $('#form_create')[0].reset();
-
             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
         }
         else
@@ -407,7 +374,6 @@ return false;
             {
                 end = start;
             }
-
             $.ajax({
                 url     : '<?php echo base_url(); ?>exhibitor/save',
                 type    : 'POST',
@@ -418,12 +384,9 @@ return false;
                 },
                 success: function(data)
                 {
-
                     if(data.status)
                     {
-
                         $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html('Data success update');
-
                     }
                     else
                     {
@@ -459,13 +422,9 @@ return false;
                             eventData = {
                                 id          : data.id,
                                 title       : $('#create_modal input[name=title]').val(),
-
-
                                 status      : $('#create_modal input[name=status]').val(),
-
                                 description : $('#create_modal textarea[name=description]').val(),
                                 end_date    : $('#create_modal textarea[name=end_date]').val(),
-
                                 start       : moment($('#create_modal input[name=start_date]').val()).format('YYYY-MM-DD HH-MM-SS'),
                                 start_time  : moment($('#create_modal input[name=start_time]').val()).format('HH-MM'),
                                 end_time    : moment($('#create_modal input[name=end_time]').val()).format('HH-MM'),
@@ -475,9 +434,7 @@ return false;
                             $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
                             $('#create_modal1').modal('hide');
                             $('#form_create')[0].reset();
-
                             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
-
                         }
                         else
                         {
@@ -538,13 +495,10 @@ return false;
                             event.end           = moment($('#create_modal input[name=end_date]').val()).format('YYYY-MM-DD ');
                             event.color         = $('#create_modal select[name=color]').val();
                             $('#calendarIO').fullCalendar('updateEvent', event);
-
                             $('#create_modal').modal('hide');
                             $('#form_create')[0].reset();
-
                             $('#create_modal input[name=calendar_id]').val(0)
                             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
-
                         }
                         else
                         {
@@ -579,11 +533,9 @@ return false;
                     {
                         if(data.status)
                         {
-
                             // $('#calendarIO').fullCalendar('removeEvents',event._id);
                             // $('#create_modal').modal('hide');
                             // $('#form_create')[0].reset();
-
                             // $('#create_modal input[name=calendar_id]').val(0)
                             // $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
                             event.title         = $('#create_modal input[name=title]').val();
@@ -592,15 +544,13 @@ return false;
                             event.start         = moment($('#create_modal input[name=start_date]').val()).format('YYYY-MM-DD');
                             event.start_time    = moment($('#create_modal input[name=start_time]').val()).format('H:i');
                             event.end_time      = moment($('#create_modal input[name=end_time]').val()).format('H:i');
-                            event.end           = moment($('#create_modal input[name=end_date]').val()).format('YYYY-MM-DD ');
+                            event.end           = moment($('#create_modal input[name=end_date]').val()).format('YYYY-MM-DD');
                             event.color         = $('#create_modal select[name=color]').val();
                             $('#calendarIO').fullCalendar('updateEvent', event);
-
                             $('#create_modal').modal('hide');
                             $('#form_create')[0].reset();
                             $('#create_modal input[name=calendar_id]').val(0)
                             $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
-
                         }
                         else
                         {
@@ -608,7 +558,6 @@ return false;
                             $('#form_create').find('.alert').html(data.notif);
                         }
                     },
-
                     error: function (jqXHR, textStatus, errorThrown)
                     {
                         $('#form_create').find('.alert').css('display', 'block');
@@ -625,13 +574,9 @@ return false;
   $("#update_attendance").hide();
 
 function update_attendance() {
-
     $("#attendance_list").hide();
     $("#update_attendance_button").hide();
     $("#update_attendance").show();
-
 }
-
-
 </script>
 

@@ -347,13 +347,13 @@
  </div> */ ?>
  <!-- /.row -->
 
- <div class="row">
+ <!-- <div class="row">
      <div class="col-sm-6">
          <p>&nbsp;</p>
      </div>
- </div>
+ </div> -->
 
- <div class="row">
+ <!-- <div class="row">
      <div class="col-sm-12">
          <div class="panel panel-info">
 
@@ -388,6 +388,6 @@
              </div>
          </div>
      </div>
- </div>
+ </div> -->
 
  <!-- /.row -->

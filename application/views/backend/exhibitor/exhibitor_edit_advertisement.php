@@ -43,7 +43,9 @@
 
         </div>`
 
+
 		<input type="submit" class="btn btn-success btn-rounded btn-block btn-sm" value="<?php echo get_phrase('save');?>">
+
 
         <?php echo form_close();?>
         <?php endforeach;?>

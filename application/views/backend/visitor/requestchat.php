@@ -104,7 +104,6 @@ $name = $this->session->userdata('name');
         //         async: false,
         //         dataType: 'json',
         //         success: function(response) {
-
         //             $('#createModal').modal('hide');
         //             $('#createForm')[0].reset();
         //             $('#exampleTable').DataTable().ajax.reload();
@@ -136,10 +135,6 @@ $name = $this->session->userdata('name');
         // });
 
 
-
-
-
-
         //     function load_chat_data(exhibitor_id,message)
         //     {
         //     $.ajax({
@@ -162,26 +157,17 @@ $name = $this->session->userdata('name');
         //                 html += '<div align="right"><span class="text-muted"><small><b>'+data[count].time+'</b></small></span></div>';
         //                 html += '<div class="col-md-2>&nbps;</div>';
         //                 html += '<div class="col-md-2 alert alert-info">';
-
-
-
         //              }
-
         //              html += data[count].message +'</div></div>';
-
         //          }
-
         //          $('#chat_area').html(html);
-
         //      }
         //   });
-
         //     }
-
         // setInterval(function(){
         //     if(receiver_message_id > 0)
         //     {
-        //         load_chat_data(receiver_message_id,'yes');
+        //        load_chat_data(receiver_message_id,'yes');
         //     }
         // },5000);
         </script>

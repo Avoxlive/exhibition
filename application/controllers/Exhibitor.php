@@ -186,13 +186,11 @@ class Exhibitor extends CI_Controller {
                 $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
                 redirect(base_url(). 'exhibitor/my_chat', 'refresh');
             }
-
             if($param1 == 'update'){
                 $this->chat_model->updateChatRequest($param2);
                 $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
                 redirect(base_url(). 'exhibitor/my_chat_request', 'refresh');
             }
-
             $page_data['page_name']     = 'chat_request';
             $page_data['page_title']    = get_phrase('manage_my_chat_request');
             $this->load->view('backend/index', $page_data);
@@ -209,8 +207,8 @@ class Exhibitor extends CI_Controller {
                             'description' => trim($val->description),
                             'start' => date_format( date_create($val->start_date) ,"Y-m-d H:i"),
                             'end'   => date_format( date_create($val->end_date) ,"Y-m-d H:i"),
-                                //    'end_time'   => date_format( date_create($val->end_time) ,"Y-m-d H:i:s"),
-                                //    'start_time'   => date_format( date_create($val->start_time) ,"Y-m-d H:i:s"),
+                            //    'end_time'   => date_format( date_create($val->end_time) ,"Y-m-d H:i:s"),
+                            //    'start_time'   => date_format( date_create($val->start_time) ,"Y-m-d H:i:s"),
                             'color' => $val->color,
                             );
                    }
@@ -321,7 +319,7 @@ class Exhibitor extends CI_Controller {
 
                        if($calendar_id == 0)
                        {
-                           $param['create_at']     = date('d-m-Y H:i');
+                            $param['create_at']     = date('d-m-Y H:i');
                             $title = $this->input->post('title');
                             $description = $this->input->post('description');
                             $start_date = $this->input->post('start_date');
@@ -335,7 +333,7 @@ class Exhibitor extends CI_Controller {
                                 'end_date' => $start_date.' '.$end_time,
                                 'start_time' => $start_time,
                                 'end_time' => $end_time,
-                   );
+                            );
                            $param['create_at']     = date('Y-m-d H:i:s');
                            $insert = $this->exhibitor_calendar_model->insert($this->table, $param);
 
@@ -372,7 +370,7 @@ class Exhibitor extends CI_Controller {
                                 'color' => $color,
                                 'status' => $status,
                             );
-                           $where      = [ 'id'  => $calendar_id];
+                           $where                      = ['id'  => $calendar_id];
                            $param['modified_at']       = date('Y-m-d H:i:s');
                            $update = $this->exhibitor_calendar_model->updatee($this->table, $param, $where);
 
@@ -387,7 +385,6 @@ class Exhibitor extends CI_Controller {
                                $response['status'] = FALSE;
                                $response['notif']  = 'Server wrong, please save again';
                            }
-
                        }
                    }
                    else
@@ -395,7 +392,6 @@ class Exhibitor extends CI_Controller {
                        $response['status'] = FALSE;
                        $response['notif']  = validation_errors();
                    }
-
                    echo json_encode($response);
                }
 
@@ -455,28 +451,25 @@ class Exhibitor extends CI_Controller {
                     }
 
                     function chat($visitor_id){
-
                         $page_data['visitor_id']      = $visitor_id;
                         $page_data['page_name']     = 'chat';
                         $page_data['page_title']    = get_phrase('chat with visitor');
                         $this->load->view('backend/index', $page_data);
                     }
 
-                    function create()
-                    {
+                    function create(){
                         $message = $this->input->post('message');
                         $visitor_id = $this->input->post('visitor_id');
                         $exhibitor_id = $this->input->post('exhibitor_id');
                         $message_sent_by = $this->session->userdata('login_type');
                         $data = array(
-                            'message'  => $message,
-                            'visitor_id' => $visitor_id,
-                            'exhibitor_id' => $exhibitor_id,
-                            'message_sent_by'   => $message_sent_by,
+                            'message'          => $message,
+                            'visitor_id'       => $visitor_id,
+                            'exhibitor_id'     => $exhibitor_id,
+                            'message_sent_by'  => $message_sent_by,
                         );
                         $this->load->model('chat_model');
                         $insert = $this->chat_model->createData($data);
                         echo json_encode($insert);
                     }
-
 }

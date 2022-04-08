@@ -35,10 +35,10 @@
 					</div> -->
 
 					<div class="form-group">
-                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('birthday');?></label>
+                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('date-of-birth');?></label>
                     <div class="col-sm-12">
-		<input class="form-control m-r-10" name="birthday" type="date" value="2018-08-19" id="example-date-input" required>
-						</div>
+		                <input class="form-control m-r-10" name="birthday" type="date" value="2018-08-19" id="example-date-input" required>
+					</div>
 					</div>
 
 						<div class="form-group">
@@ -87,18 +87,18 @@
 					</div>
 
 
-					<div class="form-group">
+					<!-- <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('qualification');?></label>
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="qualification" value="">
 						</div>
-					</div>
+					</div> -->
 
-					<div class="form-group">
+					            <!-- <div class="form-group">
                                     <label class="col-sm-12"><?php echo get_phrase('marital_status');?>*</label>
                                     <div class="col-sm-12">
                                        <select class=" form-control select2" name="marital_status" style="width:100%" required>
-                                         <option data-tokens=""><?php echo get_phrase('select_marital_status');?></option>
+                                        <option data-tokens=""><?php echo get_phrase('select_marital_status');?></option>
 										<option data-tokens="Married"><?php echo get_phrase('married');?></option>
                                         <option data-tokens="Single"><?php echo get_phrase('single');?></option>
                                         <option data-tokens="Divorced"><?php echo get_phrase('divorced');?></option>
@@ -143,7 +143,7 @@
 			  <p style="color:red">Accept zip, pdf, word, excel, rar and others</p>
 
 					</div>
-					</div>
+					</div> -->
 
 
 					</div>
@@ -200,7 +200,7 @@
     </div>
 </div> -->
 
-<div class="form-group">
+<!-- <div class="form-group">
     <label class="col-sm-12"><?php echo get_phrase('date_of_joining'); ?></label>
 
     <div class="col-sm-12">
@@ -213,7 +213,7 @@
     <div class="col-sm-12">
         <input type="number" class="form-control" name="joining_salary" value="" required>
     </div>
-</div>
+</div> -->
 <div class="form-group">
     <label class="col-sm-12"><?php echo get_phrase('status'); ?></label>
 
@@ -224,18 +224,18 @@
         </select>
     </div>
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
     <label class="col-sm-12"><?php echo get_phrase('date_of_joining'); ?></label>
 
     <div class="col-sm-12">
         <input type="date" class="form-control datepicker" name="date_of_leaving" value="" required>
     </div>
-</div>
+</div> -->
 
-<hr>
+<!-- <hr>
 <div class="alert alert-primary">BANK ACCOUNT DETAILS</div>
-<hr>
-
+<hr> -->
+<!--
 <div class="form-group">
      <label class="col-sm-12"><?php echo get_phrase('account_holder_name'); ?></label>
 
@@ -263,7 +263,7 @@
     <div class="col-sm-12">
         <input type="text" class="form-control" name="branch" value="" >
     </div>
-</div>
+</div> -->
 
 </div>
 </div>
@@ -288,7 +288,7 @@
             <div class="row">
                     <div class="col-sm-12">
 				  	<div class="panel panel-info">
-                            <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list_exhibitors');?></div>
+                            <!-- <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list_exhibitors');?></div> -->
                             <div class="panel-wrapper collapse in" aria-expanded="true">
                                 <div class="panel-body table-responsive">
 
@@ -325,28 +325,22 @@
 
 <a href="#" onclick="confirm_modal('<?php echo base_url();?>admin/exhibitor/delete/<?php echo $exhibitor['exhibitor_id'];?>');"><button type="button" class="btn btn-danger btn-circle btn-xs"><i class="fa fa-times"></i></button></a>
 
-
 <a href="<?php echo base_url().'uploads/exhibitor_image/'.  $exhibitor['file_name'];?>"><button type="button" class="btn btn-warning btn-circle btn-xs"><i class="fa fa-download"></i></button></a>
 
                             </td>
                         </tr>
 
         <?php } ?>
-
                     </tbody>
                 </table>
-
-
-
-</div>
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 
 
 <script type="text/javascript">
-
     function get_designation_val(department_id) {
         if(department_id != '')
             $.ajax({
@@ -358,7 +352,6 @@
                 }
             });
         else
-            jQuery('#designation_holder').html('<option value=""><?php echo get_phrase("select_a_department_first"); ?></option>');
+        jQuery('#designation_holder').html('<option value=""><?php echo get_phrase("select_a_department_first"); ?></option>');
     }
-
 </script>
