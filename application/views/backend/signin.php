@@ -16,13 +16,10 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div>
-<div id="wrappers">
-
-  <?php include 'header-blue.php';?>
-<section id="wrapper" class="login-register">
+    <?php include 'header-blue.php';?>
 
 
-        <div class="box-width">
+    <div class="box-width">
             <div class="box-wrapper">
                 <div class="box-in">
 
@@ -89,8 +86,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
         </div>
 
-
-        <!-- <div class="login-wrapper">
+<!--
+<div class="login-wrapper">
             <div class="login-box-left login-sidebar login-box-left-img">
                 <h2>WELCOME</h2>
                 <div class="user">
@@ -173,210 +170,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
             </div>
         </div> -->
-    </section>
 
-<!-- <section class="hero-bottom">
-<h5>Great meeting are just the <span>beginning</span></h5>
-<img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-02.png" href="#" alt="image1" class="img-fluid image2">
-
-<div class="bottom-button">
-    <a href="<?php echo base_url(); ?>home/signup"><button type="submit" class="btn btn-primary">Host an Event</button></a>
-        <button type="submit" class="btn btn-info">Join an Event</button>
-</div>
-    </section> -->
-
-    <hr>
-
-   <section class="why-avox">
-       <div class="container">
-        <div class="heading">
-            <h2>Why</h2>
-            <h2>AVOX.LIVE</h2>
-        </div>
-           <div class="why-avox-block">
-               <div class="avox-block-in">
-                   <div class="avox-block-img">
-                   <img src="<?php echo base_url(); ?>optimum/plugins/images/img1.png" href="#" alt="image1">
-                   </div>
-
-                   <h2>The host can do branding for their brands, they can use banners and posters.</h2>
-               </div>
-
-               <div class="avox-block-in">
-                   <div class="avox-block-img">
-                   <img src="<?php echo base_url(); ?>optimum/plugins/images/img2.png" href="#" alt="image1">
-                   </div>
-                   <h2>The host can do branding for their brands, they can use banners and posters. </h2>
-               </div>
-               <div class="avox-block-in">
-                   <div class="avox-block-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/img3.png" href="#" alt="image1" class="img-fluid">
-                   </div>
-                   <h2>The host can do branding for their brands, they can use banners and posters.</h2>
-               </div>
-           </div>
-
-       </div>
-   </section>
-
-   <section class="avox-feature" id="feature">
-
-       <div class="container">
-           <div class="header">
-           <h2>Features</h2>
-           </div>
-           <table class="feature-table">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td><i class="fa fa-check-circle-o" aria-hidden="true"></i></td>
-  </tr>
-   </table>
-           <div class="feature-box">
-               <div class="feature-box-content">
-               <h2>“One can talk to people and see them at the same time—so it is <span>Video Conferencing”</span></h2>
-               <h3>Engage a global audience in exhibitions/events like never before.</h3>
-                <!-- <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2"> -->
-                </div>
-                <div class="feature-box-image">
-                    <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid image1">
-                </div>
-           </div>
-
-           <div class="feature-box">
-               <div class="feature-box-image2">
-                   <img src="<?php echo base_url(); ?>optimum/plugins/images/feature2.jpeg" href="#" alt="image1" class="img-fluid">
-               </div>
-               <div class="feature-box-content">
-              <h2>“One can talk to people and see them at the same time—so it is <span>Video Conferencing”</span></h2>
-              <h3>Engage a global audience in exhibitions/events like never before.</h3>
-              <!-- <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image-second"> -->
-               </div>
-           </div>
-           <div class="feature-box">
-               <div class="feature-box-content">
-              <h2>“One can talk to people and see them at the same time—so it is <span>Video Conferencing”</span></h2>
-              <h3>Engage a global audience in exhibitions/events like never before.</h3>
-              <!-- <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2"> -->
-            </div>
-                <div class="feature-box-image">
-                <img src="<?php echo base_url(); ?>optimum/plugins/images/feature3.jpeg" href="#" alt="image1" class="img-fluid">
-                </div>
-           </div>
-       </div>
-   </section>
-
-
-   <!-- <section class="testimonial">
-    <div class="container">
-    <div class="heading">
-        <h2>Client Testimonial</h2>
-    </div>
-    <div class="testimonial-block">
-        <div class="testimonial-content">
-            <h2>What Our</h2>
-            <h2>Customers</h2>
-            <h2>Are Saying</h2>
-        </div>
-        <div class="client-testimonial">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h2>
-            <hr>
-            <div class="client-details">
-
-            <div class="col-md-12 col-lg-12 col-sm-12 col-12 p-0">
-                    <div class="owl-carousel owl-theme owl-loaded testimonial-client-details">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage">
-
-                                    <div class="owl-item" style="width: 140.563px!important; margin-right: 20px;">
-                                        <div class="service-text">
-                                        <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/13.jpg" class="hvrbox-layer_bottom img-rounded"></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="owl-item" style="width: 140.563px!important; margin-right: 20px;">
-                                        <div class="service-text">
-                                        <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/13.jpg" class="hvrbox-layer_bottom img-rounded"></a>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-   </section> -->
-
-
-<section class="get-in-touch" id="contactus">
-    <div class="container">
-        <div class="heading">
-            <h2>Get in touch</h2>
-            <!-- <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2"> -->
-        </div>
-        <div class="contact-us">
-            <div class="contact-us-form">
-                <h2>
-                You are welcome to write to us with your inputs, suggestions, proposals etc. We value every input.</h2>
-                <form>
-                    <div class="contact-fill">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="touch-name">Name</label><br>
-                    <input type="text" class="form-control" id="touch-name"  placeholder="Enter your full name">
-                </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="touch-email">Email address</label><br>
-                                <input type="email" class="form-control" id="touch-email"  placeholder="Enter your email">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="touch-phone">Phone number</label><br>
-                                <input type="email" class="form-control" id="touch-phone"  placeholder="Enter your email">
-                            </div>
-                        </div>
-                        </div>
-                <div class="form-group">
-                    <label for="message">Message</label><br>
-                    <textarea class="form-control" id="message"  placeholder="Enter your message" rows="3"></textarea>
-                </div>
-                <div class="submit-icon">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-
-                    </div>
-                    </div>
-                </form>
-
-            </div>
-            <!-- <div class="contact-us-image">
-                <img src="<?php echo base_url(); ?>optimum/plugins/images/contact-img.jpeg" alt="image" class="img-fluid">
-            </div> -->
-        </div>
-    </div>
-
-</section>
-
-
-<section class="bottom">
+<!-- <section class="bottom">
     <div class="container">
         <div class="footer-in">
             <div class="footer-left">
@@ -391,39 +186,38 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="footer-link">
                     <div>
                         <h2>Useful links</h2>
-                        <a href="#">Home</a><br>
-                        <a href="#">Features</a><br>
-                        <a href="#">Pricing</a><br>
-                        <a href="#">Contact us</a>
+                        <a>Home</a><br>
+                        <a>Features</a><br>
+                        <a>Pricing</a><br>
+                        <a>Contact us</a>
                     </div>
                     <div>
-                        <h2>Social media</h2>
-                        <a href="#">Linked In</a><br>
-                        <a href="#">Twitter</a><br>
-                        <a href="#">Instagram</a>
+                    <h2>Social media</h2>
+                        <a>Linked in</a><br>
+                        <a>Twitter</a><br>
+                        <a>Instagram</a>
                     </div>
                     <div>
-                        <h2>Use Cases</h2>
-                        <a href="#">Conferences</a><br>
-                        <a href="#">Events</a>
+                    <h2>Use Cases</h2>
+                        <a>Conferences</a><br>
+                        <a>Events</a>
                     </div>
                 </div>
             </div>
             <div class="footer-right">
-                <h2>AVOX.LIVE</h2>
-                <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
-                </div>
-                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
+               <h2>AVOX.LIVE</h2>
+               <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
+               <div class="text-center">
+               <button type="submit" class="btn btn-primary text-center" ><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
+               </div>
+               <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
             </div>
         </div>
     </div>
-</section>
-</div>
 
-   <?php include 'js-ui.php'; ?>
-   <?php include 'js.php'; ?>
+</section> -->
+
+    <?php include 'js-ui.php'; ?>
 
 </body>
 

@@ -1,8 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class Admin_model extends CI_Model { 
-	
+class Admin_model extends CI_Model {
+
 	function __construct()
     {
         parent::__construct();
@@ -16,13 +16,13 @@ class Admin_model extends CI_Model {
         $page_data['phone']  = html_escape($this->input->post('phone'));
         $page_data['password']  = sha1($this->input->post('name'));
         $page_data['level']     = html_escape($this->input->post('level'));
-        $page_data['clinic_id'] =  $this->session->userdata('clinic_id');
-        
+        $page_data['exhibitor_id'] =  $this->session->userdata('exhibitor_id');
+
         $this->db->insert('admin', $page_data);
 
         $admin_id = $this->db->insert_id();
         move_uploaded_file($_FILES['admin_image']['tmp_name'], 'uploads/admin_image/' . $admin_id . '.jpg');
-        
+
         $page_data2['admin_id'] =  $admin_id;
         $this->db->insert('admin_role', $page_data2);
 
@@ -30,7 +30,7 @@ class Admin_model extends CI_Model {
     }
 
     function deleteAdministrator($param2){
-        
+
         $this->db->where('admin_id', $param2);
         $this->db->delete('admin');
     }
@@ -58,5 +58,5 @@ class Admin_model extends CI_Model {
 
     }
 
-    
+
 }

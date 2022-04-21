@@ -16,7 +16,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div>
-    <?php include 'header-head.php';?>
+    <?php include 'header-blue.php';?>
 
 
     <!-- <section class="get-in-touch">
@@ -117,6 +117,7 @@ sds
         <div class="pricing-sec">
                     <div class="pricing-img">
                         <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
+                        <div class="text-on-image">BASIC</div>
                     </div>
                     <h2>Prefect for one quick projects</h2>
                     <h3>$0</h3>
@@ -126,7 +127,8 @@ sds
                 </div>
                 <div class="pricing-sec">
                     <div class="pricing-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
+                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price2.png" alt="image1" class="img-fluid">
+                        <div class="text-on-image">MEDIUM</div>
                     </div>
                     <h2>Prefect for one quick projects</h2>
                     <h3>$0</h3>
@@ -136,7 +138,8 @@ sds
                 </div>
                 <div class="pricing-sec">
                     <div class="pricing-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
+                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price3.png" alt="image1" class="img-fluid">
+                        <div class="text-on-image">ADVANCED</div>
                     </div>
                     <h2>Prefect for one quick projects</h2>
                     <h3>$0</h3>
@@ -213,21 +216,21 @@ sds
                 <div class="footer-link">
                     <div>
                         <h2>Useful links</h2>
-                        <h3>Home</h3>
-                        <h3>Features</h3>
-                        <h3>Pricing</h3>
-                        <h3>Contact us</h3>
+                        <a>Home</a><br>
+                        <a>Features</a><br>
+                        <a>Pricing</a><br>
+                        <a>Contact us</a>
                     </div>
                     <div>
                     <h2>Social media</h2>
-                        <h3>Linked in</h3>
-                        <h3>Twitter</h3>
-                        <h3>Instagram</h3>
+                        <a>Linked in</a><br>
+                        <a>Twitter</a><br>
+                        <a>Instagram</a>
                     </div>
                     <div>
                     <h2>Use Cases</h2>
-                        <h3>Conferences</h3>
-                        <h3>Events</h3>
+                        <a>Conferences</a><br>
+                        <a>Events</a>
                     </div>
                 </div>
             </div>

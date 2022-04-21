@@ -2461,7 +2461,8 @@ tbody.collapse.in {
 	}
 	.navbar-nav>li>a {
 		padding-top: 15px;
-		padding-bottom: 15px
+		padding-bottom: 15px;
+		margin-top: 20px;
 	}
 }
 
@@ -2718,8 +2719,10 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse {
-	background-color: #222;
-	border-color: #080808
+	/* background-color: #222;
+	border-color: #080808 */
+	background: rgb(102,185,211);
+background: linear-gradient(90deg, rgba(102,185,211,1) 0%, rgba(25,93,155,1) 100%, rgba(255,255,255,0) 100%, rgba(237,233,233,0) 100%);
 }
 
 .navbar-inverse .navbar-brand {
@@ -2737,7 +2740,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-nav>li>a {
-	color: #9d9d9d
+	/* color: #9d9d9d; */
+	color: #fff;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover,
@@ -2749,8 +2753,11 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>.active>a:focus {
-	color: #fff;
-	background-color: #080808
+	color: #30629e;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 10px;
+	font-weight: 600;
 }
 
 .navbar-inverse .navbar-nav>.disabled>a,
@@ -4894,5 +4901,21 @@ button.close {
 	.navbar-right .dropdown-menu-left {
 		left: 0;
 		right: auto
+	}
+}
+
+@media screen and (max-width:900px){
+
+	.form-control {
+		font-size: 8px
+	}
+	textarea.form-control {
+		height: 27px;
+	}
+	label {
+		font-size: 8px;
+	}
+	body {
+		line-height: 0.6;
 	}
 }

@@ -15,9 +15,9 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
     </div> -->
 	<div id="warning-message">
 		<div class="display-message">
-   <h2>This website is only viewable in landscape mode</h2>
-   <h2>Please rotate the screen for better experience</h2>
-</div>
+			<h2>This website is only viewable in landscape mode</h2>
+			<h2>Please rotate the screen for better experience</h2>
+		</div>
 	</div>
 	<div id="wrappers">
     <div id="wrapper">

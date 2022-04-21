@@ -177,6 +177,14 @@ class Admin extends CI_Controller {
     $page_data['select_exhibitor']  = $this->db->get_where('exhibitor',array('exhibition_id'=>$exhibition_id))->result_array();
     $this->load->view('backend/index', $page_data);
 }
+
+function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
+    $page_data['page_name']     = 'exhibitor_add';
+    $page_data['page_title']    = get_phrase('Manage exhibitor');
+    $this->load->view('backend/index', $page_data);
+}
+
+
 /**  ends admin to exhibitor funtion ***/
 
     function get_designation($department_id = null){
@@ -406,7 +414,7 @@ class Admin extends CI_Controller {
             redirect(base_url(). 'admin/newAdministrator', 'refresh');
         }
         $page_data['page_name']     = 'newAdministrator';
-         $clinic_id = $this->session->userdata('clinic_id');
+         $exhibitor_id = $this->session->userdata('exhibitor_id');
         $page_data['page_title']    = get_phrase('New Administrator');
         $this->load->view('backend/index', $page_data);
     }
@@ -447,6 +455,11 @@ class Admin extends CI_Controller {
         $clinic_id = $this->session->userdata('clinic_id');
         // $page_data['page_title'] = get_phrase('Online_Consultancy');
         $page_data['page_title'] = get_phrase('jitsi_live_class');
+        $this->load->view('backend/index',$page_data);
+    }
+    function jitsi_list($param1 = null, $param2 = null, $param3 = null){
+        $page_data['page_name'] = 'jitsi_list';
+        $page_data['page_title'] = get_phrase('Online Consultancy list');
         $this->load->view('backend/index',$page_data);
     }
 
@@ -509,6 +522,7 @@ function schedule_list(){
         $this->load->view('backend/index', $page_data);
 
     }
+
      function save()
         {
             $response = array();
@@ -520,7 +534,7 @@ function schedule_list(){
                 unset($param['calendar_id']);
                 if($calendar_id == 0)
                 {
-                $param['create_at']     = date('d-m-Y H:i');
+                $param['create_at'] = date('d-m-Y H:i');
                 $title = $this->input->post('title');
                 $description = $this->input->post('description');
                 $start_date = $this->input->post('start_date');
@@ -662,7 +676,7 @@ function schedule_list(){
                 redirect(base_url() . 'admin/add_advertisment/', 'refresh');
                 }
                 $page_data['page_name'] = 'add_advertisment';
-                $page_data['page_title'] = get_phrase('add_advertisment');
+                $page_data['page_title'] = get_phrase('Advertisment');
                 $this->load->view('backend/index',$page_data);
             }
 

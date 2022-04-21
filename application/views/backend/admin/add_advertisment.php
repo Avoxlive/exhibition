@@ -1,21 +1,21 @@
 
 
 
-  <div class="row">
+  <!-- <div class="row">
                     <div class="col-sm-12">
                         <div class="panel panel-info">
                             <div class="panel-heading">&nbsp;
                                 <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD NEW ADVERTISEMENT</a> <a href="#" data-perform="panel-dismiss"></a> </div>
                             </div>
                             <div class="panel-wrapper collapse out" aria-expanded="true">
-                                <div class="panel-body">
+                                <div class="panel-body"> -->
 
-
+<div class="information">
 			<?php echo form_open(base_url() . 'admin/add_advertisment/add' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
 					<div class="row">
                     <div class="col-sm-6">
                     <div class="form-group">
-                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('select_image');?>&nbsp;</label>
+                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('Add_new_advertisement');?>&nbsp;</label>
                     <div class="col-sm-12">
              	            <input type="file" name="file_name" class="form-control" required>
 
@@ -30,13 +30,14 @@
 
 
                 <?php echo form_close();?>
+</div>
 
 
-                                </div>
+                                <!-- </div>
                             </div>
                         </div>
                     </div>
-				</div>
+				</div> -->
 
 
             <!----TABLE LISTING ENDS--->
@@ -45,20 +46,18 @@
 				        <div class="panel panel-info">
 
 				            <div class="panel-body table-responsive">
-				                <?php echo get_phrase('abcd');?>
+				                <?php
+								// echo get_phrase('abcd');?>
 								<?php
 											// echo "Today is " . date("Y/m/d") . "<br>";
 											// echo "The time is " . date("h:i:sa");?>
-				                <hr class="sep-2">
+				                <!-- <hr class="sep-2"> -->
 
 				                <table id="example23" class="display nowrap" cellspacing="0" width="100%">
 				                    <thead>
 				                        <tr>
-				                            <th><?=get_phrase('uploaded_by')?></th>
+				                            <!-- <th><?=get_phrase('uploaded_by')?></th> -->
 				                            <th><?=get_phrase('uploaded_image')?></th>
-
-
-
 				                            <th><?=get_phrase('action')?></th>
 				                        </tr>
 				                    </thead>
@@ -79,7 +78,7 @@
 
 				                            </td> -->
 
-				                            <td><?=$row['clinic_advertisment_id'];?></td>
+				                            <!-- <td><?=$row['clinic_advertisment_id'];?></td> -->
 				                            <td><?=$row['file_name'];?></td>
 
 

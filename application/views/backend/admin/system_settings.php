@@ -1,6 +1,6 @@
 <div class="row">
 
-	<div class="col-sm-7">
+	<div class="col-sm-6">
 		<div class="panel panel-info">
 
 			<div class="panel-heading"><i class="fa fa-gear"></i>  <?php echo get_phrase('System Settings');?></div>
@@ -58,7 +58,7 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label class="col-md-12" for="example-text"><?php echo get_phrase('Paypal Email');?></label>
 					<div class="col-sm-12">
 						<input type="text" class="form-control" name="paypal_email" value="<?php echo $this->db->get_where('settings', array('type' => 'paypal_email'))->row()->description;?>">
@@ -70,7 +70,7 @@
 					<div class="col-sm-12">
 						<input type="text" class="form-control" name="currency" value="<?php echo $this->db->get_where('settings', array('type' => 'currency'))->row()->description;?>">
 					</div>
-				</div>
+				</div> -->
 
 				<div class="form-group">
 					<label class="col-md-12" for="example-text"><?php echo get_phrase('System Email');?></label>
@@ -79,8 +79,7 @@
 					</div>
 				</div>
 
-
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label class="col-md-12" for="example-text"><?php echo get_phrase('Text Alignment');?></label>
 					<div class="col-sm-12">
 
@@ -90,9 +89,9 @@
 								<option value="right-to-left" <?php if ($align == 'right-to-left') echo 'selected';?>> Right to left</option>
 						</select>
 					</div>
-				</div>
+				</div> -->
 
-				<div class="form-group">
+				<!-- <div class="form-group">
                    <label class="col-md-12" for="example-text"><?php echo get_phrase('language'); ?></label>
                     <div class="col-sm-12">
                         <select name="language" class="form-control select2">
@@ -111,11 +110,11 @@
                                     ?>
                         </select>
                     </div>
-                </div>
+                </div> -->
 
 
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label class="col-md-12" for="example-text"><?php echo get_phrase('Running Session');?></label>
 					<div class="col-sm-12">
 
@@ -142,7 +141,7 @@
 					<div class="col-sm-12">
 						<input type="text" class="form-control" name="footer" value="<?php echo $this->db->get_where('settings', array('type' => 'footer'))->row()->description;?>">
 					</div>
-				</div>
+				</div> -->
 
 
 				<div class="form-group">
@@ -166,7 +165,7 @@
 	</div>
 
 
-<div class="col-sm-5">
+<div class="col-sm-6">
 <div class="panel panel-info">
 <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('System Logo'); ?></div>
 <div class="panel-wrapper collapse in" aria-expanded="true">
@@ -178,7 +177,7 @@
 					 <label class="col-sm-12"><?php echo get_phrase('browse_image');?>*</label>
 					 <div class="col-sm-12">
   		  			 <input type='file' class="form-control" name="userfile" onChange="readURL(this);" required>
-       				 <img id="blah" src="<?php echo base_url(); ?>uploads/logo.png" alt="" height="200" width="200"/>
+       				 <img id="blah" src="<?php echo base_url(); ?>uploads/logo.png" alt="" height="120" width="120"/>
 					</div>
 					</div>
 

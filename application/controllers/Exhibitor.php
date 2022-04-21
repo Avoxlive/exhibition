@@ -122,6 +122,14 @@ class Exhibitor extends CI_Controller {
             $this->load->view('backend/index',$page_data);
         }
 
+        function jitsi_list($param1 = null, $param2 = null, $param3 = null){
+            $page_data['page_name'] = 'jitsi_list';
+            $page_data['page_title'] = get_phrase('Online Consultancy list');
+            $this->load->view('backend/index',$page_data);
+        }
+
+
+
         function edit_jitsi($jitsi_id){
             $page_data['page_name'] = 'edit_jitsi';
             $page_data['page_title'] = get_phrase('edit_jitsi');

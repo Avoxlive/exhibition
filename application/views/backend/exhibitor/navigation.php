@@ -41,12 +41,21 @@
 
     <li> <a href="<?php echo base_url();?>exhibitor/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('Dashboard') ;?></span></a> </li>
 
-                <li class="<?php if ($page_name == 'jitsi') echo 'active';?>">
-        <a href="<?php echo base_url();?>exhibitor/jitsi">
-        <i class="fa fa-laptop p-r-10"></i>
-        <span class="hide-menu"><?php echo get_phrase('Online_consultancy');?></span>
-    </a>
+        <li class="<?php if ($page_name == 'jitsi') echo 'active';?>">
+            <a href="<?php echo base_url();?>exhibitor/jitsi">
+                <i class="fa fa-laptop p-r-10"></i>
+                <span class="hide-menu"><?php echo get_phrase('Online_meeting');?></span>
+            </a>
         </li>
+
+        <li class="<?php if ($page_name == 'jitsi_list') echo 'active';?>">
+            <a href="<?php echo base_url();?>exhibitor/jitsi_list">
+                <i class="fa fa-laptop p-r-10"></i>
+                <span class="hide-menu"><?php echo get_phrase('Meetings_list');?></span>
+            </a>
+        </li>
+
+
 
     <!-- <li> <a href="#" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-download p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('information_page');?><span class="fa arrow"></span></span></a>
 
@@ -58,8 +67,6 @@
             //     echo 'opened active';
             ?>
              <!-- "> -->
-
-
 
                  <!-- </ul>
         </li> -->
@@ -85,14 +92,12 @@
                     </a>
                 </li>
 
-
                 <li class="<?php if ($page_name == 'appointment') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/appointment">
                     <i class="fa fa-calendar p-r-10"></i>
                     <span class="hide-menu"><?php echo get_phrase('Appointment'); ?></span>
                     </a>
                 </li>
-
 
         <!-- </ul>
     </li> -->
@@ -134,20 +139,16 @@
                 $page_name == 'attendance_report')
             echo 'opened active';
             ?>">
-
-
                 <li class="<?php if ($page_name == 'manage_attendance') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/manage_attendance/<?php echo date("d/m/Y"); ?>">
                     <i class="fa fa-angle-double-right p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('mark_attendance'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('mark_attendance'); ?></span>
                     </a>
                 </li>
-
-
                 <li class="<?php if ($page_name == 'attendance_report') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/attendance_report">
                     <i class="fa fa-angle-double-right p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('view_attendance'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('view_attendance'); ?></span>
                     </a>
                 </li>
         </ul>
@@ -156,10 +157,10 @@
     <li> <a href="#" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-bar-chart-o p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('report_cards');?><span class="fa arrow"></span></span></a>
 
         <ul class=" nav nav-second-level<?php
-            if ($page_name == 'marks' ||
+                if ($page_name == 'marks' ||
                     $page_name == 'exam_marks_sms'||
                     $page_name == 'tabulation_sheet')
-                echo 'opened active';
+                    echo 'opened active';
             ?>">
 
         <?php $select_role = $this->db->get_where('exhibitor', array('exhibitor_id' => $this->session->userdata('exhibitor_id')))->row()->role;?>
@@ -177,7 +178,7 @@
                     <li class="<?php if ($page_name == 'student_marksheet_subject') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>exhibitor/student_marksheet_subject">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                           <span class="hide-menu"><?php echo get_phrase('subject_exhibitor'); ?></span>
+                        <span class="hide-menu"><?php echo get_phrase('subject_exhibitor'); ?></span>
                         </a>
                     </li>
         <?php endif;?>

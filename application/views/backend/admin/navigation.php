@@ -4,10 +4,10 @@
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search hidden-sm hidden-md hidden-lg">
                         <!-- input-group -->
-                        <div class="input-group custom-search-form">
+                        <!-- <div class="input-group custom-search-form">
                             <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
             <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
-            </span> </div>
+            </span> </div> -->
                         <!-- /input-group -->
                     </li>
                     <li class="user-pro">
@@ -63,8 +63,15 @@
         <li class="<?php if ($page_name == 'jitsi') echo 'active';?>">
         <a href="<?php echo base_url();?>admin/jitsi">
         <i class="fa fa-laptop p-r-10"></i>
-        <span class="hide-menu"><?php echo get_phrase('Online consultancy');?></span>
-    </a>
+        <span class="hide-menu"><?php echo get_phrase('Online meeting');?></span>
+        </a>
+        </li>
+
+        <li class="<?php if ($page_name == 'jitsi_list') echo 'active';?>">
+        <a href="<?php echo base_url();?>admin/jitsi_list">
+        <i class="fa fa-laptop p-r-10"></i>
+        <span class="hide-menu"><?php echo get_phrase('Meeting_list');?></span>
+        </a>
         </li>
 
 
@@ -74,7 +81,8 @@
      <?php if($check_admin_permission == '1'):?>
         <li> <a href="javascript:void(0);" class=""><i class="fa fa-mortar-board" data-icon="7"></i> <span class="hide-menu"> <?php echo get_phrase('Manage Academics');?> <span class="fa arrow"></span></span></a>
                         <ul class=" nav nav-second-level<?php
-            if (    $page_name == 'enquiry_category'||
+            if (
+                    $page_name == 'enquiry_category'||
                     $page_name == 'list_enquiry'||
                     $page_name == 'club'||
                     $page_name == 'circular'||
@@ -181,10 +189,19 @@
                      <span class="hide-menu"><?php echo get_phrase('Add doctors'); ?></span>
                 </a>
             </li> -->
+
+
+            <li class="<?php if ($page_name == 'exhibitor_add') echo 'active'; ?>">
+                <a href="<?php echo base_url(); ?>admin/exhibitor_add">
+                <i class="fa fa-angle-double-right p-r-10"></i>
+                <span class="hide-menu"><?php echo get_phrase('Add_exhibitors'); ?></span>
+                </a>
+            </li>
+
             <li class="<?php if ($page_name == 'exhibitor') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>admin/exhibitor">
                 <i class="fa fa-angle-double-right p-r-10"></i>
-                     <span class="hide-menu"><?php echo get_phrase('Add exhibitors'); ?></span>
+                     <span class="hide-menu"><?php echo get_phrase('Exhibitors_list'); ?></span>
                 </a>
             </li>
 

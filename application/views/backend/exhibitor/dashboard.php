@@ -34,8 +34,6 @@
      <div class="dashboard-box-in">
      <div class="r-icon-statsw">
                  <!-- <i class="ti-user bg-megna"></i> -->
-
-
                  <i class="fa fa-user-plus" aria-hidden="true"></i>
                  <div class="bodystate">
                      <h4><?php echo $this->db->count_all_results('jitsi');?></h4>

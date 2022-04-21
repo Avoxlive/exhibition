@@ -28,5 +28,8 @@ function contactus(){
 function signup(){
   $this->load->view('backend/signup');
 }
+function signin(){
+  $this->load->view('backend/signin');
+}
 
 }

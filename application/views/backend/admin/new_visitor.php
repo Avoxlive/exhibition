@@ -9,7 +9,7 @@
 				  	<div class="row panel-body">
                     <div class="col-sm-6">
 
-					<div class="alert alert-success"><?php echo get_phrase('admission_form'); ?>&nbsp;-&nbsp;PART A</div>
+					<!-- <div class="alert alert-success"><?php echo get_phrase('admission_form'); ?>&nbsp;-&nbsp;PART A</div> -->
 
 
                 <?php echo form_open(base_url() . 'admin/new_visitor/create/' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
@@ -21,12 +21,12 @@
 					</div>
 					</div>
 
-					<div class="form-group">
+					<!-- <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('running_session');?></label>
                     <div class="col-sm-12">
                   <input type="text" class="form-control" name="session"  value="<?php echo $this->db->get_where('settings', array('type' => 'session'))->row()->description; ?>" readonly="true">
                     </div>
-                </div>
+                </div> -->
 
 						<div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('full_name');?></label>
@@ -62,32 +62,18 @@
 						</div>
 					</div>
 
-
-
-
-
-
-
-
-
-
-
 					<div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('sub_group');?></label>
                     <div class="col-sm-12">
 		                        <select name="sub_group_id" class="form-control select2" style="width:100%" id="sub_group_selector_holder">
 		                            <option value=""><?php echo get_phrase('select_group_first');?></option>
-
 			                    </select>
-	<a href="<?php echo base_url();?>admin/sub_group/"><button type="button" class="btn btn-info btn-circle btn-xs"><i class="fa fa-plus"></i></button></a>
+	                            <a href="<?php echo base_url();?>admin/sub_group/"><button type="button" class="btn btn-info btn-circle btn-xs"><i class="fa fa-plus"></i></button></a>
 			                </div>
 					</div> -->
 
 
 					<input type="hidden" class="form-control" name="roll" value="<?php echo substr(md5(uniqid(rand(), true)), 0, 7); ?>" required>
-
-
-
 					<div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('birthday');?></label>
                     <div class="col-sm-12">
@@ -103,12 +89,12 @@
 						</div>
 					</div>
 
-					<div class="form-group">
+					<!-- <div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('place_birth');?></label>
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="place_birth" value="" >
 						</div>
-					</div>
+					</div> -->
 
 					<div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('gender');?></label>
@@ -141,9 +127,9 @@
 
 					<div class="col-sm-6">
 
-					<div class="alert alert-success"><?php echo get_phrase('admission_form'); ?>&nbsp;-&nbsp;PART B</div>
+					<!-- <div class="alert alert-success"><?php echo get_phrase('admission_form'); ?>&nbsp;-&nbsp;PART B</div> -->
 
-					<div class="form-group">
+					<!-- <div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('religion');?></label>
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="religion" value="" >
@@ -155,7 +141,7 @@
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="m_tongue" value="" >
 						</div>
-					</div>
+					</div> -->
 
 					<div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('address');?></label>
@@ -165,7 +151,7 @@
 					</div>
 
 
-					<div class="form-group">
+					<!-- <div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('city');?></label>
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="city" value="" >
@@ -177,7 +163,7 @@
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="state" value="" >
 						</div>
-					</div>
+					</div> -->
 
 						<div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('nationality');?></label>
@@ -203,28 +189,21 @@
 					<div class="form-group">
                  	<label class="col-md-9" for="example-text"><?php echo get_phrase('password');?></label>
                     <div class="col-sm-12">
-					<input type="password" class="form-control" name="password" value="" onkeyup="CheckPasswordStrength(this.value)" required>
-					<strong id="password_strength"></strong>
-						</div>
+					    <input type="password" class="form-control" name="password" value="" onkeyup="CheckPasswordStrength(this.value)" required>
+					    <strong id="password_strength"></strong>
 					</div>
-
-
+					</div>
 					</div>
 					</div>
 
 
 
 
- <div class="form-group">
-
+        <div class="form-group">
 			<button type="submit" class="btn btn-success btn-sm btn-rounded btn-block"> <i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('save_visitor');?></button>
 			<img id="install_progress" src="<?php echo base_url() ?>assets/images/loader-2.gif" style="margin-left: 20px; display: none"/>
-
-					</div>
-
-
+		</div>
                 <?php echo form_close();?>
-
 				</div>
 			</div>
 		</div>
@@ -238,9 +217,7 @@
 
 
 <script type="text/javascript">
-
 	function get_group_sub_group(group_id) {
-
     	$.ajax({
             url: '<?php echo base_url();?>admin/get_group_sub_group/' + group_id ,
             success: function(response)
@@ -248,34 +225,25 @@
                 jQuery('#sub_group_selector_holder').html(response);
             }
         });
-
     }
-
 </script>
 
 
 
-
-
-
 <script type="text/javascript">
-
 	function CheckPasswordStrength(password) {
 	var password_strength = document.getElementById("password_strength");
-
         //TextBox left blank.
         if (password.length == 0) {
             password_strength.innerHTML = "";
             return;
         }
-
         //Regular Expressions.
         var regex = new Array();
         regex.push("[A-Z]"); //Uppercase Alphabet.
         regex.push("[a-z]"); //Lowercase Alphabet.
         regex.push("[0-9]"); //Digit.
         regex.push("[$@$!%*#?&]"); //Special Character.
-
         var passed = 0;
 
         //Validate for each Regular Expression.
