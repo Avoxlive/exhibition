@@ -18,7 +18,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     </div>
     <?php include 'header-blue.php';?>
 
-
+    <section id="wrapper" class="login-register">
     <div class="box-width">
             <div class="box-wrapper">
                 <div class="box-in">
@@ -85,6 +85,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 </div>
             </div>
         </div>
+    </section>
 
 <!--
 <div class="login-wrapper">

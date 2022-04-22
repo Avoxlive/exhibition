@@ -19,15 +19,19 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 <div id="wrappers">
 
   <?php include 'header-blue.php';?>
+
+<section class="banner-image">
+    <img src="<?php echo base_url() ?>optimum/plugins/images/home-page.png" alt="img1" class="img-fluid">
+</section>
+
+<!--
 <section id="wrapper" class="login-register">
-
-
         <div class="box-width">
             <div class="box-wrapper">
                 <div class="box-in">
 
                     <h4 class="box-title m-b-20" align="center">Sign in
-                        <!-- <img src="<?php echo base_url() ?>uploads/logo.png" class="img-circle" width="70" height="70" /> -->
+                        <img src="<?php echo base_url() ?>uploads/logo.png" class="img-circle" width="70" height="70" />
                     </h4>
                     <h5 align="center"><a href=""><?php echo $system_name;?></a></h5>
 
@@ -90,7 +94,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         </div>
 
 
-        <!-- <div class="login-wrapper">
+        <div class="login-wrapper">
             <div class="login-box-left login-sidebar login-box-left-img">
                 <h2>WELCOME</h2>
                 <div class="user">
@@ -172,8 +176,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 </div>
 
             </div>
-        </div> -->
-    </section>
+        </div>
+    </section> -->
 
 <!-- <section class="hero-bottom">
 <h5>Great meeting are just the <span>beginning</span></h5>
@@ -220,7 +224,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
    </section>
 
    <section class="avox-feature" id="feature">
-
        <div class="container">
            <div class="header">
            <h2>Features</h2>
@@ -253,7 +256,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                     <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid image1">
                 </div>
            </div>
-
            <div class="feature-box">
                <div class="feature-box-image2">
                    <img src="<?php echo base_url(); ?>optimum/plugins/images/feature2.jpeg" href="#" alt="image1" class="img-fluid">
@@ -293,18 +295,15 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h2>
             <hr>
             <div class="client-details">
-
             <div class="col-md-12 col-lg-12 col-sm-12 col-12 p-0">
                     <div class="owl-carousel owl-theme owl-loaded testimonial-client-details">
                         <div class="owl-stage-outer">
                             <div class="owl-stage">
-
                                     <div class="owl-item" style="width: 140.563px!important; margin-right: 20px;">
                                         <div class="service-text">
                                         <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/13.jpg" class="hvrbox-layer_bottom img-rounded"></a>
                                         </div>
                                     </div>
-
                                     <div class="owl-item" style="width: 140.563px!important; margin-right: 20px;">
                                         <div class="service-text">
                                         <a href="#"><img src="<?php echo base_url(); ?>optimum/plugins/images/13.jpg" class="hvrbox-layer_bottom img-rounded"></a>
@@ -329,8 +328,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         </div>
         <div class="contact-us">
             <div class="contact-us-form">
-                <h2>
-                You are welcome to write to us with your inputs, suggestions, proposals etc. We value every input.</h2>
+                <h2>You are welcome to write to us with your inputs, suggestions, proposals etc. We value every input.</h2>
                 <form>
                     <div class="contact-fill">
                     <div class="col-md-12">
@@ -375,6 +373,45 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
 </section>
 
+<!--
+<section class="touch-details">
+<div class="container">
+<div class="heading">
+            <h2>Get in touch</h2>
+            <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2">
+        </div>
+        <div class="contact-us">
+        <form>
+            <div class="form-data">
+                <div class="form-group">
+                    <label for="touch-name">Name</label><br>
+                    <input type="text" class="form-control" id="touch-name"  placeholder="Enter your full name">
+                </div>
+            </div>
+            <div class="form-data">
+                            <div class="form-group">
+                                <label for="touch-email">Email address</label><br>
+                                <input type="email" class="form-control" id="touch-email"  placeholder="Enter your email">
+                            </div>
+            </div>
+            <div class="form-data">
+                            <div class="form-group">
+                                <label for="touch-phone">Phone number</label><br>
+                                <input type="email" class="form-control" id="touch-phone"  placeholder="Enter your email">
+                            </div>
+            </div>
+                <div class="form-group">
+                    <label for="message">Message</label><br>
+                    <textarea class="form-control" id="message"  placeholder="Enter your message" rows="3"></textarea>
+                </div>
+                <div class="submit-icon">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+                </form>
+        </div>
+</div>
+</section> -->
 
 <section class="bottom">
     <div class="container">

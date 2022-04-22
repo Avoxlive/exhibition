@@ -4791,14 +4791,14 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 .error-body h1 {
                     font-size: 210px;
                     font-weight: 900;
-                    line-height: 210px
+                    line-height: 210px;
                 }
 
                 .login-register {
                     background: url(../../optimum/plugins/images/home-page.png) top center/cover no-repeat!important;
-                    /* height: 100%; */
-                    /* position: fixed; */
-                    /* display: flex; */
+                    height: 100%;
+                    position: fixed;
+                    display: flex;
                     align-items: center;
                     padding-top: 20px;
                 }
@@ -4815,7 +4815,6 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     width: 60%;
                     margin: 0 auto;
                     /* background: #f0f; */
-
                     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
                     border-radius: 10px;
                 }
