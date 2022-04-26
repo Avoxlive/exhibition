@@ -24,13 +24,12 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="box-in">
 
                     <h4 class="box-title m-b-20" align="center">Sign in
-                        <!-- <img src="<?php echo base_url() ?>uploads/logo.png" class="img-circle" width="70" height="70" /> -->
+                        <!-- <img src="<?php echo base_url()?>uploads/logo.png" class="img-circle" width="70" height="70" /> -->
                     </h4>
                     <h5 align="center"><a href=""><?php echo $system_name;?></a></h5>
 
                     <form method="post" role="form" id="loginform" class="form-horizontal form-material"
                         action="<?php echo base_url();?>login/validate_login">
-
                         <div class="form-group ">
                             <div class="col-xs-12">
                                 <label for="email">Name</label><br>
@@ -72,9 +71,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                     <a href="<?php echo base_url();?>"><button
                                         class="btn btn-info btn-rounded btn-sm text-uppercase" type="button"
                                         style="color:white"><i
-                                                class="fa fa-mail-reply-all"></i>&nbsp;<?php echo get_phrase('back_to_login');?></button></a>
+                                        class="fa fa-mail-reply-all"></i>&nbsp;<?php echo get_phrase('back_to_login');?></button></a>
                                     <button class="btn btn-success btn-rounded btn-sm text-uppercase" type="submit"
-                                        style="color:white"> <i class="fa fa-key"></i>&nbsp;
+                                        style="color:white"><i class="fa fa-key"></i>&nbsp;
                                         <?php echo get_phrase('reset_password');?>
                                     </button>
                                 </div>
@@ -131,11 +130,10 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                     <?php echo get_phrase('log_in');?>
                                 </button>
                                 <div align="center"><img id="install_progress"
-                                        src="<?php echo base_url() ?>assets/images/preloader.gif"
-                                        style="margin-left: 20px; display: none"/></div>
+                                src="<?php echo base_url() ?>assets/images/preloader.gif"
+                                style="margin-left: 20px; display: none"/></div>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-12">
                                 <div class="checkbox checkbox-primary pull-left">
@@ -159,16 +157,13 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                                 class="fa fa-mail-reply-all"></i>&nbsp;<?php echo get_phrase('back_to_login');?></button></a>
                                     <button class="btn btn-success btn-rounded btn-sm  text-uppercase" type="submit"
                                         style="color:white"><i
-                                            class="fa fa-key"></i>&nbsp;<?php echo get_phrase('reset_password');?></button>
+                                        class="fa fa-key"></i>&nbsp;<?php echo get_phrase('reset_password');?></button>
                                 </div>
                             </div>
-
                             <?php echo form_close();?>
                         </form>
                     </form>
-
                 </div>
-
             </div>
         </div> -->
 
@@ -200,8 +195,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                     </div>
                     <div>
                     <h2>Use Cases</h2>
-                        <a>Conferences</a><br>
-                        <a>Events</a>
+                    <a>Conferences</a><br>
+                    <a>Events</a>
                     </div>
                 </div>
             </div>
@@ -209,13 +204,12 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                <h2>AVOX.LIVE</h2>
                <h3>“Focus on the core problem your business solves and put out lots of content and enthusiasm and ideas about how to solve that problem.”</h3>
                <div class="text-center">
-               <button type="submit" class="btn btn-primary text-center" ><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
+               <button type="submit" class="btn btn-primary text-center"><i class="fa fa-play" aria-hidden="true"></i>Play Demo</button>
                </div>
                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
             </div>
         </div>
     </div>
-
 </section> -->
 
     <?php include 'js-ui.php'; ?>

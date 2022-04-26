@@ -4797,7 +4797,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 .login-register {
                     background: url(../../optimum/plugins/images/home-page.png) top center/cover no-repeat!important;
                     height: 100%;
-                    position: fixed;
+                    /* position: fixed; */
                     display: flex;
                     align-items: center;
                     padding-top: 20px;

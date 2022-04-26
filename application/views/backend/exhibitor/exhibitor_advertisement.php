@@ -1,14 +1,14 @@
 
+<div class="information">
 
-
-  <div class="row">
+  <!-- <div class="row">
                     <div class="col-sm-12">
                         <div class="panel panel-info">
                             <div class="panel-heading">&nbsp;
                                 <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD NEW ADVERTISEMENT</a> <a href="#" data-perform="panel-dismiss"></a> </div>
                             </div>
                             <div class="panel-wrapper collapse out" aria-expanded="true">
-                                <div class="panel-body">
+                                <div class="panel-body"> -->
 
 
 			<?php echo form_open(base_url() . 'exhibitor/exhibitor_advertisment/add' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
@@ -34,11 +34,12 @@
 				</div>
 			</div>
                 <?php echo form_close();?>
-                                </div>
+                                <!-- </div>
                             </div>
                         </div>
                     </div>
-				</div>
+				</div> -->
+</div>
 
 
             <!----TABLE LISTING ENDS--->

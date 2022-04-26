@@ -73,7 +73,7 @@ padding: 20px 0px;
 }
 
 .avox-feature .feature-table td, .feature-table th {
-    border: 1px solid #ddd;
+    border-bottom: 3px solid #ddd;
     padding: 20px;
     font-size: 16px;
     color: #103160;
@@ -280,9 +280,10 @@ padding: 20px 0px;
   .get-in-touch{
      margin: 20px 0px;
  }
- .get-in-touch .heading{
-     margin: 30px;
- }
+    .get-in-touch .heading{
+    margin: 30px;
+}
+
  .get-in-touch .heading h2{
     font-size: 40px;
     font-weight: 500;
