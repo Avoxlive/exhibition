@@ -65,7 +65,6 @@
 				                                </div>
 				                            </div>
 
-
 				                            <div class="form-group">
 				                                <label class="col-md-12"
 				                                    for="example-text"><?php echo get_phrase('description');?></label>
@@ -119,7 +118,7 @@
                                     </div>
                                 </div>
                             </div> -->
-                                                <!-- <div class="form-group">
+                                        <!-- <div class="form-group">
                                                     <label class="control-label col-sm-2">End Time</label>
                                                     <div class="col-sm-12">
                                                         <div data-date-format="hh-mm-ss" data-date-viewmode="years">
@@ -145,7 +144,6 @@
 				                                    <label class="col-md-12"
 				                                    for="example-text"><?php echo get_phrase('time_start');?></label>
 				                                </div>
-
 				                                <div class="col-lg-6">
 				                                    <div class="input-group clockpicker " data-placement="left" data-align="top"
 				                                        data-autoclose="true">
@@ -156,11 +154,8 @@
 				                                    <label class="col-md-12"
 													 for="example-text"><?php echo get_phrase('time_end');?></label>
 				                                </div>
-
 				                            </div>
-
 				                            <!-- /.row -->
-
 				                            <br>
 				                            <div class="form-group">
 				                                <label class="col-md-9"
@@ -185,18 +180,12 @@
 				                                <p style="color:green" id="send_sms">Meetting info will be sent to parent and
 				                                    students' phone number(s). Note that only parent(s) and student(s) in the class
 				                                    selected will receive message</p>
-
 				                            </div> -->
-
-
-
 
 				                        </div>
 				                    </div>
-
 				                    <input type="submit" class="btn btn-success btn-rounded btn-block btn-sm"
 				                        value="<?php echo get_phrase('save');?>">
-
 				                    <?php echo form_close();?>
 
 
@@ -205,82 +194,63 @@
 				        </div> -->
 				    </div>
 				</div>
-</div>
+            </div>
+		</div>
 
 
-				</div>
+		<script>
+		$('form').submit(function(e) {
+			$('#install_progress').show();
+			$('#modal_1').show();
+			$('.btn').val('saving, please wait...');
+			$('form').submit();
+			e.preventDefault();
+		});
+		</script>
 
 
-				<script>
-$('form').submit(function(e) {
-    $('#install_progress').show();
-    $('#modal_1').show();
-    $('.btn').val('saving, please wait...');
-    $('form').submit();
-    e.preventDefault();
-});
-				</script>
-
-
-				<!-- <script type="text/javascript">
+<!-- <script type="text/javascript">
 function get_class_sections(class_id) {
-
     $.ajax({
         url: '<?php echo base_url();?>admin/get_class_section/' + class_id,
         success: function(response) {
             jQuery('#section_selector_holder').html(response);
         }
     });
-
 }
 
-
 $('#check').click(function() {
-
     if ($('#check').is(':checked') == true) {
         $("#send_sms").show(500);
         $("#initial").hide(500);
     } else {
-
         $("#send_sms").hide(500);
         $("#initial").show(500);
     }
-
 });
-
 $("#send_sms").hide();
-				</script> -->
-
-
+</script> -->
 
 <script type="text/javascript">
 function get_group_sub_groups(group_id) {
-
     $.ajax({
         url: '<?php echo base_url();?>admin/get_group_sub_group/' + group_id,
         success: function(response) {
             jQuery('#section_selector_holder').html(response);
         }
     });
-
 }
-
 
 $('#check').click(function() {
 
-    if ($('#check').is(':checked') == true) {
+    if ($('#check').is(':checked') == true){
         $("#send_sms").show(500);
         $("#initial").hide(500);
-    } else {
-
+    }
+	else{
         $("#send_sms").hide(500);
         $("#initial").show(500);
     }
-
 });
-
 $("#send_sms").hide();
-
-
-
-				</script>
+</script>

@@ -33,6 +33,8 @@ class Visitor extends CI_Controller {
         if ($param1 == 'update') {
             $data['name']   =   $this->input->post('name');
             $data['email']  =   $this->input->post('email');
+            // $data['email']  =   $this->input->post('email');
+            $data['phone']  =   $this->input->post('phone');
             $this->db->where('visitor_id', $this->session->userdata('visitor_id'));
             $this->db->update('visitor', $data);
             move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/visitor_image/' . $this->session->userdata('visitor_id') . '.jpg');

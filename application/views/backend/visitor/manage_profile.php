@@ -46,31 +46,19 @@
 					</div>
 					</div> -->
 
-
-
 					<div class="form-group">
 					<div class="btn-left">
-					<button type="submit" class="btn"><?php echo get_phrase('save');?></button>
-				</div>
+						<button type="submit" class="btn"><?php echo get_phrase('save');?></button>
+					</div>
 					</div>
 
-
-
-
 				<?php echo form_close();?>
-
-
 				<?php endforeach;?>
-
-
 		</div>
 		<div class="manage-profile-right">
 			<img id="blah" src="<?php echo $this->crud_model->get_image_url('visitor', $row['visitor_id']); ?>" alt="" height="200" width="200"/>
-
-
 		</div>
 	</div>
-
 </div>
 <!--
 <div class="row">

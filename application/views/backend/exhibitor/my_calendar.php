@@ -566,14 +566,12 @@ return false;
                 });
             })
         }
-
     </script>
 
 
-    <script type="text/javascript">
+<script type="text/javascript">
   $("#update_attendance").hide();
-
-function update_attendance() {
+function update_attendance(){
     $("#attendance_list").hide();
     $("#update_attendance_button").hide();
     $("#update_attendance").show();

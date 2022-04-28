@@ -21479,8 +21479,15 @@ width: 30%!important;
         width: 100%;
         object-fit: fill;
     }
-    .gallery-scroll-bg .service-text {
+    /* .gallery-scroll-bg .service-text {
         margin-top: 0rem;
+    } */
+
+    .gallery-scroll-bg .service-text{
+        height: 140px;
+        width: 100%;
+        /* background: #00aff0; */
+        margin-top: 1rem;
     }
     .gallery-scroll-bg{
         height: 80px;

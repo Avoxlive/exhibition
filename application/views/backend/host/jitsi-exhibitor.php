@@ -79,12 +79,13 @@
                 /* border: 1px solid #e7e7e7 */
             }
 
-            @media (max-width: 768px) {
+            /* @media (max-width: 768px) { */
+                @media (max-width: 900px) {
                 .clinic-scroll .service-text {
-                height: 150px;
+                height: 120px;
             }
             .clinic-scroll{
-                height: 200px !important;
+                height: 120px !important;
             }
             .clinic-scroll  h2{
                 font-size: 10px !important;
@@ -102,7 +103,6 @@
                 height: 55vh !important;
             }
         }
-
 
             .clinic-scroll .service-text img{
                 width: 100%;
@@ -122,19 +122,18 @@
             }
             .conference-block .block-exhibition-advertisement{
                 display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    grid-auto-rows: minmax(200px, auto);
-    font-size: 30px;
-    width: 100%;
-
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+                grid-auto-rows: minmax(200px, auto);
+                font-size: 30px;
+                width: 100%;
             }
 
             .conference-block .block-exhibitor-advertisement{
                 display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 1rem;
-    grid-auto-rows: minmax(200px, auto);
+                grid-template-columns: 3fr 1fr;
+                grid-gap: 1rem;
+                grid-auto-rows: minmax(200px, auto);
             }
 
 
@@ -168,7 +167,6 @@
   }
 
         </style>
-
 							<!-- Select * From Jitsi with Jitsi ID -->
                             <?php
                             include 'advertisement_block.php';

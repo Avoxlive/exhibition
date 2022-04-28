@@ -58,13 +58,49 @@
     padding: 0.5rem 0rem;
     background-color: #f3f8f8;
     width: 20%;
-    height: 400px;
+    height: 160px;
     float: right;
     text-align: right;
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
 .clinic-scroll .service-text {
-    height: 340px;
+    height: 140px!important;
+}
+.clinic-scroll .service-text img{
+    height: 100%;
+    width: 100%;
+}
+.clinic-scroll{
+                height: 140px !important;
+            }
+            .clinic-scroll  h2{
+                font-size: 10px !important;
+                padding: 0px !important;
+            }
+
+.gallery-scroll-bg .service-text{
+            width: 100%;
+            height: 120px;
+            }
+            .gallery-scroll-bg .service-text img{
+                width: 100%;
+                height: 100%;
+            }
+            /* #container{
+                height: 55vh !important;
+            } */
+            .clinic-scroll .service-text {
+    /* margin: 0px;
+    padding: 0px 10px;
+    text-align: center;
+    width: 100%; */
+    height: 120px!important;
+    /* border-radius: 0px;
+    overflow: hidden; */
+    /* border: 10px solid #f0f; */
+    /* -webkit-box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%);
+    box-shadow: 0 3px 5px 0 rgb(32 113 117 / 33%); */
+    /* border: 1px solid #e7e7e7 */
 }
 }
 
@@ -73,7 +109,7 @@
     padding: 0px 10px;
     text-align: center;
     width: 100%;
-    height: 470px;
+    height: 440px;
     border-radius: 0px;
     overflow: hidden;
     /* border: 10px solid #f0f; */
@@ -124,8 +160,8 @@
         </style>
 
 
-        <div class="warning-message">
-		<div class="display-message">
+        <div id="warning-message">
+		<div id="display-message">
    <h2>This website is only viewable in landscape mode</h2>
    <h2>Please rotate the screen for better experience</h2>
 </div>
@@ -154,19 +190,23 @@
         <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <h4 style="color:white"><i class="fa fa-plus"></i> Meeting Title : <?=$row['title']?></h4>
-
-                </div>
-                <div class="navbar-form navbar-right">
-                    <h5 style="color:white"> HOST BY :
+                    <h4 style="color:white"><i class="fa fa-plus"></i> Meeting Title : <?=$row['title']?>
+                    HOST BY :
 					<img src="<?=$this->crud_model->get_image_url($user_type, $user_id)?>" HostImageclass="img-circle" height="30" width="30"/> <?=$HostName->name?>
 					&nbsp;&nbsp;&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a>
-                </h5>
-                    <!-- <h5 style="color:#fff;"> <?php // echo $accountType ?></h5> -->
-
+                </h4>
 
                 </div>
-                <img src="#">
+                <!-- <div class="navbar-form navbar-right">
+                    <h5 style="color:white"> HOST BY :
+					<img src="<?=$this->crud_model->get_image_url($user_type, $user_id)?>" HostImageclass="img-circle" height="30" width="30"/> <?=$HostName->name?>
+					&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a>
+                </h5>
+                    <h5 style="color:#fff;"> <?php // echo $accountType ?></h5>
+
+
+                </div> -->
+                <!-- <img src="#"> -->
 
 
             </div>
