@@ -48,4 +48,11 @@ class Exhibitor_calendar_model extends CI_Model
         return $this->db->affected_rows();
     }
 
+    // function calendarstatus(){
+
+    //     $staff = $this->session->userdata('status');
+    //     $sql = "select * from calendar where calendar_id='".$staff."' order by calendar_id asc";
+    //     return $this->db->query($sql)->result_array();
+    // }
+
 }

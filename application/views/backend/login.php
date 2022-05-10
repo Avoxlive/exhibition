@@ -263,7 +263,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                <div class="feature-box-content">
               <h2>“One can talk to people and see them at the same time—so it is <span>Video Conferencing”</span></h2>
               <h3>Engage a global audience in exhibitions/events like never before.</h3>
-              <!-- <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image-second"> -->
+              <!-- <img src="<?php echo base_url();?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image-second"> -->
                </div>
            </div>
            <div class="feature-box">
@@ -273,7 +273,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
               <!-- <img src="<?php echo base_url(); ?>optimum/plugins/images/shapes-01.png" href="#" alt="image1" class="img-fluid image2"> -->
             </div>
                 <div class="feature-box-image">
-                <img src="<?php echo base_url(); ?>optimum/plugins/images/feature3.jpeg" href="#" alt="image1" class="img-fluid">
+                    <img src="<?php echo base_url(); ?>optimum/plugins/images/feature3.jpeg" href="#" alt="image1" class="img-fluid">
                 </div>
            </div>
        </div>
@@ -329,37 +329,42 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         <div class="contact-us">
             <div class="contact-us-form">
                 <h2>You are welcome to write to us with your inputs, suggestions, proposals etc. We value every input.</h2>
-                <form>
+                <form method="post" role="form" action="<?php echo base_url(); ?>admin/contactus/add/" class="form-horizontal form-material">
+                    <!-- <form> -->
                     <div class="contact-fill">
+                    <?php
+                        // echo form_open(base_url() . 'admin/contactus/add/' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-4">
-                <div class="form-group">
-                    <label for="touch-name">Name</label><br>
-                    <input type="text" class="form-control" id="touch-name"  placeholder="Enter your full name">
-                </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="touch-email">Email address</label><br>
-                                <input type="email" class="form-control" id="touch-email"  placeholder="Enter your email">
+                                <div class="form-group">
+                                    <label for="touch-name">Name</label><br>
+                                    <input type="text" class="form-control" name="touch_name"  placeholder="Enter your full name">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="touch-phone">Phone number</label><br>
-                                <input type="email" class="form-control" id="touch-phone"  placeholder="Enter your email">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="touch-email">Email address</label><br>
+                                    <input type="email" class="form-control" name="touch_email"  placeholder="Enter your email">
+                                </div>
                             </div>
-                        </div>
-                        </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="touch-phone">Phone number</label><br>
+                                    <input type="number" class="form-control" name="touch_phone"  placeholder="Enter your phone">
+                                </div>
+                            </div>
+                        </div><br>
                 <div class="form-group">
                     <label for="message">Message</label><br>
-                    <textarea class="form-control" id="message"  placeholder="Enter your message" rows="3"></textarea>
+                    <textarea class="form-control" name="touch_message"  placeholder="Enter your message" rows="3"></textarea>
                 </div>
                 <div class="submit-icon">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-
+                <?php
+                // echo form_close();?>
                     </div>
                     </div>
                 </form>
@@ -429,9 +434,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                     <div>
                         <h2>Useful links</h2>
                         <a href="#">Home</a><br>
-                        <a href="#">Features</a><br>
-                        <a href="#">Pricing</a><br>
-                        <a href="#">Contact us</a>
+                        <a href="<?php echo base_url(); ?>login#feature">Features</a><br>
+                        <!-- <a href="#">Pricing</a><br> -->
+                        <a href="<?php echo base_url(); ?>login#contactus" id="contactus">Contact us</a>
                     </div>
                     <div>
                         <h2>Social media</h2>
@@ -452,7 +457,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i> Play Demo</button>
                 </div>
-                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i> 2020. All Rights Reserved by AVOX.LIVE</h4>
+                <h4><i class="fa fa-creative-commons" aria-hidden="true"></i>2020. All Rights Reserved by AVOX.LIVE</h4>
             </div>
         </div>
     </div>

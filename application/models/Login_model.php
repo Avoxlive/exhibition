@@ -34,14 +34,12 @@ class Login_model extends CI_Model {
         $query = $this->db->get_where('admin', $credential);
         if ($query->num_rows() > 0) {
             $row = $query->row();
-
             $this->session->set_userdata('login_type', 'admin');
             $this->session->set_userdata('admin_login', '1');
             $this->session->set_userdata('admin_id', $row->admin_id);
             $this->session->set_userdata('login_user_id', $row->admin_id);
             $this->session->set_userdata('name', $row->name);
             $this->session->set_userdata('clinic_id', $row->clinic_id);
-
             return  $this->db->set('login_status', ('1'))
                     ->where('admin_id', $this->session->userdata('admin_id'))
                     ->update('admin');
@@ -218,15 +216,15 @@ class Login_model extends CI_Model {
 
     function logout_model_for_super_admin(){
         return  $this->db->set('login_status', ('0'))
-                    ->where('superadmin_id', $this->session->userdata('superadmin_id'))
-                    ->update('superadmin');
+            ->where('superadmin_id', $this->session->userdata('superadmin_id'))
+            ->update('superadmin');
     }
 
 
     function logout_model_for_admin(){
         return  $this->db->set('login_status', ('0'))
-                    ->where('admin_id', $this->session->userdata('admin_id'))
-                    ->update('admin');
+                ->where('admin_id', $this->session->userdata('admin_id'))
+                ->update('admin');
     }
 
     function logout_model_for_hrm(){
@@ -264,7 +262,6 @@ class Login_model extends CI_Model {
                     ->where('teacher_id', $this->session->userdata('teacher_id'))
                     ->update('teacher');
     }
-
     function logout_model_for_doctor(){
         return  $this->db->set('login_status', ('0'))
                     ->where('doctor_id', $this->session->userdata('doctor_id'))
@@ -292,11 +289,6 @@ class Login_model extends CI_Model {
                     ->where('student_id', $this->session->userdata('student_id'))
                     ->update('student');
     }
-
-
-
-
-
 
 
 }

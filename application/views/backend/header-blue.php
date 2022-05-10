@@ -20,10 +20,10 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="<?php echo base_url(); ?>home/login">Home</a></li>
         <!-- <li><a href="<?php echo base_url(); ?>home/feature">Features</a></li> -->
-        <li><a href="#feature">Features</a></li>
+        <li><a href="<?php echo base_url(); ?>login#feature">Features</a></li>
         <li><a href="<?php echo base_url(); ?>home/signup">Signup</a></li>
         <li><a href="<?php echo base_url(); ?>home/signin">Signin</a></li>
-        <li><a href="#contactus">Contact us</a></li>
+        <li><a href="<?php echo base_url(); ?>login#contactus">Contact us</a></li>
         <!-- <li><a href="<?php echo base_url(); ?>home/contactus">Contact us</a></li> -->
         <!-- <li><a href="#">Sign up</a></li> -->
 

@@ -8,6 +8,8 @@ class Login extends CI_Controller {
 
 		$this->load->database();
 		$this->load->library('session');
+    $this->load->model('login_model');                      // Load Apllication Model Here
+
     }
 
     //***************** The function below redirects to logged in user area
@@ -91,4 +93,6 @@ class Login extends CI_Controller {
       $this->session->sess_destroy();
       redirect('login', 'refresh');
      }
+
+
 }

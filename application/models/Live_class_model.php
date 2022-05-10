@@ -11,7 +11,7 @@ class Live_class_model extends CI_Model {
     function createNewJitsiClassFunction(){
 
         $arrayLive = array(
-            'exhibition_id' => $this->session->userdata('exhibition_id'),
+            'exhibition_id'     => $this->session->userdata('exhibition_id'),
             'title'             => html_escape($this->input->post('title')),
             'visitor_id'        => html_escape($this->input->post('visitor_id')),
             'meeting_date'      => strtotime($this->input->post('meeting_date')),

@@ -17,37 +17,29 @@
                  		<label class="col-md-12" for="example-text"><?php echo get_phrase('title');?></label>
                     	<div class="col-sm-12">
 							<input type="text" class="form-control" name="title" required>
-
 						</div>
 					</div>
-
-
 					<div class="form-group">
                  		<label class="col-md-12" for="example-text"><?php echo get_phrase('visitor');?></label>
                     	<div class="col-sm-12">
 							<select name="visitor_id" class="form-control select2" style="width:100%"id="visitor_id" onchange="return get_group_sub_groups(this.value)">
                               <option value=""><?php echo get_phrase('select');?></option>
                               <?php
-								$classes = $this->crud_model->get_visitors(); foreach($classes as $row): ?>
+								$classes = $this->crud_model->get_visitors(); foreach($classes as $row):?>
                             		<option value="<?php echo $row['visitor_id'];?>"><?php echo $row['name'];?></option>
                                 <?php endforeach; ?>
                           </select>
 						</div>
 					</div>
 
-
-
                     <div class="form-group">
                  		<label class="col-md-12" for="example-text"><?php echo get_phrase('description');?></label>
                     	<div class="col-sm-12">
-                			<textarea rows="5" name="description" class="form-control" placeholder="please specify meeting description here" ></textarea>
+                			<textarea rows="5" name="description" class="form-control" placeholder="please specify meeting description here"></textarea>
 						</div>
-            	</div>
-
-			</div>
-
+                    </div>
+                </div>
 					 <div class="col-sm-6">
-
 						 <div class="form-group">
 							<label class="col-sm-12"><?php echo get_phrase('date'); ?></label>
 							<div class="col-sm-12">
@@ -60,31 +52,28 @@
                             <div class="row">
 							<label class="col-md-12" for="example-text"><?php echo get_phrase('meeting_time');?></label>
                                 <div class="col-lg-6">
-                                    <div class="input-group clockpicker " data-placement="bottom" data-align="top" data-autoclose="true">
+                                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
                                         <input type="text" name="start_time" class="form-control" value="13:14">
-                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span>
                                     </div>
 									<label class="col-md-12" for="example-text"><?php echo get_phrase('time_start');?></label>
                                 </div>
-
                                 <div class="col-lg-6">
                                     <div class="input-group clockpicker " data-placement="left" data-align="top" data-autoclose="true">
                                         <input type="text" name="end_time" class="form-control" value="13:14">
-                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-time">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-time">
 										</span>
                                     </div>
 									<label class="col-md-12" for="example-text"><?php echo get_phrase('time_end');?></label>
                                 </div>
-
 					</div>
 
                 <!-- /.row -->
-
-				<br>
+	            <br>
                 <div class="form-group">
                  			<label class="col-md-9" for="example-text"><?php echo get_phrase('status');?></label>
                     		<div class="col-sm-12">
-		                        <select name="status" class="form-control" >
+		                        <select name="status" class="form-control">
 		                            <option value=""><?php echo get_phrase('select_meeting_status');?></option>
                                     <option value="pending">Pending</option>
                                     <option value="live">Live</option>
@@ -105,7 +94,6 @@
 	</div>
 
 		<input type="submit" class="btn btn-success btn-rounded btn-block btn-sm" value="<?php echo get_phrase('save');?>">
-
                 <?php echo form_close();?>
 
 

@@ -183,7 +183,6 @@ function my_calendar($param1 = null, $param2 = null, $param3 = null){
                     'exhibitor_name' => $exhibitor_name,
                     'status' => $status,
                     'visitor_name' => $visitor_name,
-
         );
                 $insert = $this->visitor_calendar_model->insert($this->table, $param);
                 if ($insert > 0)
@@ -347,7 +346,6 @@ function my_calendar($param1 = null, $param2 = null, $param3 = null){
         $insert = $this->chat_model->createData($data);
         echo json_encode($insert);
     }
-
 
         function list_all_chat_and_order_with_chatid(){
             $visitor_id = $this->session->userdata('visitor_id');

@@ -155,6 +155,10 @@ class Crud_model extends CI_Model {
         $query = $this->db->get('visitor');
         return $query->result_array();
     }
+    function get_exhibitors() {
+        $query = $this->db->get('exhibitor');
+        return $query->result_array();
+    }
 
     function get_class_info($class_id) {
         $query = $this->db->get_where('class', array('class_id' => $class_id));
@@ -956,6 +960,13 @@ class Crud_model extends CI_Model {
 
         $data['description']    =   $this->input->post('skin_colour');
         $this->db->where('type', 'skin_colour');
+        $this->db->update('settings', $data);
+    }
+
+    function update_secondary_theme(){
+
+        $data['description']    =   $this->input->post('secondary_color');
+        $this->db->where('type', 'secondary_color');
         $this->db->update('settings', $data);
     }
 

@@ -98,11 +98,11 @@ body {
 .sidebar {
     /* background: #195D9B; */
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
-    background: #195D9B;
-background: -webkit-linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
+    background: #2b3244;
+/* background: -webkit-linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
 background: -moz-linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
-background: linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%);
-border-radius: 30px;
+background: linear-gradient(to bottom, #195D9B 33%, #1D84B9 77%); */
+/* border-radius: 30px; */
 height: 100%;
 }
 
@@ -131,16 +131,19 @@ height: 100%;
     /* background: rgb(186, 186, 216); */
     background: #fff;
     border-radius: 10px;
-    color: #195D9B!important;
+    color: #2b3244!important;
     margin: 15px;
 
 }
 
 #side-menu>li>a.active {
-    border-right: 3px solid #74a9f0;
-    color: #195D9B!important;
+    /* border-right: 3px solid #74a9f0;
+    color: #195D9B!important; */
+    color: #fff!important;
+    border-right: 3px solid #fff;
+
     font-weight: 500;
-    background: #fff;
+    background: #86c328;
     margin: 15px;
     border-radius: 10px;
     /* background: #2e3192; */
@@ -157,7 +160,8 @@ height: 100%;
 }
 
 #side-menu>li>a.active i {
-    color: #74a9f0;
+    color: #fff;
+    /* color: #74a9f0; */
 }
 
 #side-menu ul>li>a:hover {
@@ -235,3 +239,9 @@ height: 100%;
     background: #fb9678;
     color: #ffffff;
 }
+
+button.dt-button, div.dt-button, a.dt-button {
+    background: #86c328 ;
+    border: 1px solid #86c328 ;
+
+  }

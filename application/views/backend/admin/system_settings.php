@@ -207,8 +207,55 @@
 				</div>
 
 				<div class="radio radio-gray">
-                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'gray') echo 'checked';?> name="skin_colour" id="radio4" value="gray">
-                  <label for="radio4"> Gray </label>
+                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'pink_dark') echo 'checked';?> name="skin_colour" id="radio4" value="pink_dark">
+                  <label for="radio4"> Dark pink </label>
+				</div>
+
+				<!-- <div class="radio radio-black">
+                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'black') echo 'checked';?> name="skin_colour" id="radio5" value="black">
+                  <label for="radio5"> Black </label>
+				</div> -->
+
+				<!-- <div class="radio radio-purple">
+                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'purple') echo 'checked';?> name="skin_colour" id="radio6" value="purple">
+                  <label for="radio6"> Purple </label>
+				</div> -->
+
+				<!-- <div class="radio radio-info">
+                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'blue') echo 'checked';?> name="skin_colour" id="radio7" value="blue">
+                  <label for="radio7"> Blue </label>
+				</div> -->
+
+
+
+
+		<br>
+
+                <div class="form-group">
+                          <button type="submit" class="btn btn-block btn-info btn-rounded btn-sm"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
+                    </div>
+                    <?php echo form_close();?>
+
+
+					THEME SECONDARY COLOR SETTINGS
+				<hr>
+
+				<?php echo form_open(base_url() . 'systemsetting/system_settings/themesecodarySettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
+        ?>
+
+				<div class="radio radio-custom">
+                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'cream') echo 'checked';?> name="secondary_color" id="radio2" value="cream">
+                  <label for="radio2"> cream </label>
+				</div>
+
+				<div class="radio radio-success">
+                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'green') echo 'checked';?> name="secondary_color" id="radio3" value="green">
+                  <label for="radio3"> Green </label>
+				</div>
+
+				<div class="radio radio-gray">
+                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'pink') echo 'checked';?> name="secondary_color" id="radio4" value="pink">
+                  <label for="radio4"> Pink  </label>
 				</div>
 
 				<!-- <div class="radio radio-black">

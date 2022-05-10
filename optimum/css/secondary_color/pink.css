@@ -1,0 +1,20 @@
+
+@media (min-width: 350px){
+#page-wrapper {
+    background: #ed84ea!important;
+    /* background: #f0f; */
+    /* background: #f0f8fb; */
+    min-height: 800px!important;
+}
+}
+
+.bg-title {
+    background: #ed84ea;
+}
+
+.panel .panel-body {
+    /* padding: 30px; */
+    /* border: 1px solid #e0e0e0; */
+    background: #ed84ea;
+    ;
+}

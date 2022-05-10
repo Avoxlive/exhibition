@@ -29,8 +29,8 @@
         <style type="text/css">
 
             .navbar-inverse {
-                background-color: #2f4371;
-                border-color: #2f4371;
+                background-color: #2b3244;
+                border-color: #2b3244;
             }
             .navbar-header h4 {
                 margin: 0;
@@ -47,11 +47,11 @@
             }
             .gallery-scroll-bg .service-text{
             width: 100%;
-            /* height: 220px; */
+            height: 220px;
             }
             .gallery-scroll-bg .service-text img{
                 width: 100%;
-                height: 160px;
+                height: 240px;
             }
 
             .clinic-scroll {
@@ -64,18 +64,21 @@
 }
 @media screen and (max-width:1000px){
 .clinic-scroll .service-text {
-    height: 140px!important;
+    height: 180px!important;
 }
 .clinic-scroll .service-text img{
     height: 100%;
     width: 100%;
 }
 .clinic-scroll{
-                height: 140px !important;
+                height: 240px !important;
             }
             .clinic-scroll  h2{
                 font-size: 10px !important;
                 padding: 0px !important;
+            }
+            .gallery-scroll-bg{
+                height: 120px;
             }
 
 .gallery-scroll-bg .service-text{
@@ -94,7 +97,7 @@
     padding: 0px 10px;
     text-align: center;
     width: 100%; */
-    height: 120px!important;
+    height: 180px!important;
     /* border-radius: 0px;
     overflow: hidden; */
     /* border: 10px solid #f0f; */
@@ -166,13 +169,10 @@
    <h2>Please rotate the screen for better experience</h2>
 </div>
 	</div>
-
-
 							<!-- Select * From Jitsi with Jitsi ID -->
                             <?php
                              include 'advertisement_block.php';
                              include 'exhibitor_advertisement_block.php';
-
                             $select = $this->db->get_where('jitsi', array('jitsi_id' => $jitsi_id))->result_array();
                             foreach ($select as $key => $row):
 							$user = explode('-', $row['user_id']);
@@ -182,10 +182,7 @@
                             $accountType = $this->session->userdata('login_type');
                             ?>
 
-
-
 		<!-- Nav For Top Fix navbar-fixed-top -->
-
         <div id="wrappers">
         <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -194,8 +191,7 @@
                     HOST BY :
 					<img src="<?=$this->crud_model->get_image_url($user_type, $user_id)?>" HostImageclass="img-circle" height="30" width="30"/> <?=$HostName->name?>
 					&nbsp;&nbsp;&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a>
-                </h4>
-
+                    </h4>
                 </div>
                 <!-- <div class="navbar-form navbar-right">
                     <h5 style="color:white"> HOST BY :
@@ -203,14 +199,11 @@
 					&nbsp;<a href="<?=base_url()?><?=$accountType.'/'.'jitsi'?>" style="color:white"> Back </a>
                 </h5>
                     <h5 style="color:#fff;"> <?php // echo $accountType ?></h5>
-
-
                 </div> -->
                 <!-- <img src="#"> -->
 
 
             </div>
-
             </nav>
         </div>
 
@@ -223,14 +216,9 @@
         <div id="wrappers">
 		<div id="container" style="width:100%;height:65vh;">
 
-
-
         </div>
 	<!-- Meet Jitsi API -->
 	<script src="https://8x8.vc/external_api.js"></script>
-
-
-
 
 <?php
 
@@ -238,27 +226,22 @@
     //echo '<script>alert("This exhibitor Acc")</script>';
     //$this->load->view('backend/index', 'refresh');
 }
-
  if ($accountType == 'visitor') {
   //echo '<script>alert("This visitor Acc")</script>';
   //$this->load->view('backend/index', 'refresh');
  }
-
-
 ?>
 	<script>
 		var domain = "8x8.vc";
         var options = {
-
 			userInfo : {
 				email : '<?=$accountType->email;?>' ,
-				displayName : ' <?=
+				displayName : '<?=
                                 $account_type   =   $this->session->userdata('login_type');
                                 $account_id     =   $account_type.'_id';
                                 $name           =   $this->crud_model->get_type_name_by_id($account_type , $this->session->userdata($account_id), 'name');
                                 echo $name;
                         ?>',
-
 				moderator: true,
 			},
 			// roomName: "<?php echo $row['room'];?>",
@@ -276,7 +259,7 @@
             prejoinPageEnabled: false,
             disableRemoteMute: true,
             remoteVideoMenu: {
-                disableKick: false,
+            disableKick: false,
             },
 			},
 			interfaceConfigOverwrite: {
@@ -285,28 +268,16 @@
            TOOLBAR_BUTTONS: ['microphone', 'camera', 'desktop', 'participant', 'fullscreen', 'fodeviceselection', 'hangup', 'chat','sharevideo', 'raisehand','tileview','videobackgroundblur',],
 			},
 		}
-
-
 		var api = new JitsiMeetExternalAPI(domain, options);
 		api.executeCommand('subject', '<?php echo $row['title'];?>');
-
-
 	</script>
 
 <script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/owl-carousel-min.js"></script>
-
-
-
 	<?php endforeach;?>
-
-
     <script>
          $(document).ready(function() {
             $('.gallery-scroll-inn').owlCarousel({
-
-
-
             autoplay: true,
             autoplayHoverPause: true,
             autoplayTimeout: 20,
@@ -333,24 +304,18 @@
             }
         });
          });
-</script>
-
-<script>
-         $(document).ready(function() {
+    </script>
+    <script>
+            $(document).ready(function() {
             $('.exhibitor-advertise-scroll-in').owlCarousel({
-
-
-
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             smartSpeed: 450,
             autoplay: true,
             loop: true,
             dots: false,
-
             margin: 0,
             nav: false,
-
             // navText: [
             //     "<i class='fa fa-chevron-left'></i>",
             //     "<i class='fa fa-chevron-right'></i>"
@@ -367,12 +332,7 @@
                 }
             }
         });
-         });
-</script>
-
-
-
+        });
+        </script>
     </body>
-
-
 </html>

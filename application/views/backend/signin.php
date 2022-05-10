@@ -22,7 +22,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="box-width">
             <div class="box-wrapper">
                 <div class="box-in">
-
                     <h4 class="box-title m-b-20" align="center">Sign in
                         <!-- <img src="<?php echo base_url()?>uploads/logo.png" class="img-circle" width="70" height="70" /> -->
                     </h4>
@@ -30,7 +29,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
                     <form method="post" role="form" id="loginform" class="form-horizontal form-material"
                         action="<?php echo base_url();?>login/validate_login">
-                        <div class="form-group ">
+                        <div class="form-group">
                             <div class="col-xs-12">
                                 <label for="email">Name</label><br>
                                 <input class="form-control" type="email" name="email" required=""
@@ -47,7 +46,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                         <div class="form-group">
                             <div class="col-md-12">
                                 &nbsp;<a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i
-                                    class="fa fa-lock m-r-5"></i> <?php echo get_phrase('forgot_password?');?></a>
+                                    class="fa fa-lock m-r-5"></i><?php echo get_phrase('forgot_password?');?></a>
                             </div>
                         </div>
 

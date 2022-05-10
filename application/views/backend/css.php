@@ -46,6 +46,7 @@
 
 
     <link href="<?php echo base_url(); ?>optimum/css/colors/<?php echo $this->db->get_where('settings', array('type' => 'skin_colour'))->row()->description; ?>.css" id="theme" rel="stylesheet" >
+    <link href="<?php echo base_url(); ?>optimum/css/secondary_color/<?php echo $this->db->get_where('settings', array('type' => 'secondary_color'))->row()->description; ?>.css" id="theme" rel="stylesheet" >
 	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="<?php echo base_url(); ?>optimum/plugins/bower_components/html5-editor/bootstrap-wysihtml5.css" / >
 

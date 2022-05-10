@@ -42,6 +42,14 @@ class Systemsetting extends CI_Controller {
         $this->session->set_flashdata('flash_message', get_phrase('Theme Selected'));
         redirect(base_url() . 'systemsetting/system_settings', 'refresh');
     }
+
+    if ($param1 == 'themesecodarySettings')
+	{
+        $this->crud_model->update_secondary_theme();
+        $this->session->set_flashdata('flash_message', get_phrase('Theme Selected'));
+        redirect(base_url() . 'systemsetting/system_settings', 'refresh');
+    }
+
     $page_data['page_name'] = 'system_settings';
     $page_data['page_title'] = get_phrase('system_settings');
     $page_data['settings'] = $this->db->get_where('settings', array('exhibition_id' => $exhibition_id))->result_array();

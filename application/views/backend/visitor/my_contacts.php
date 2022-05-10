@@ -54,9 +54,7 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
                                     <!-- <td><button type="submit" href="<?php echo base_url();?>visitor/chat_request/<?php echo $exhibitor['exhibitor_id'];?>" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">send request</button></td> -->
 
 
-                            <td>
 
-                            </td>
                              </tr>
                             <?php
                         endforeach; ?>

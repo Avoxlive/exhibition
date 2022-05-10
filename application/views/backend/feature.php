@@ -16,9 +16,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div>
-    <?php include 'header-head.php';?>
+    <?php include 'header-blue.php';?>
 
-    <section class="avox-feature">
+    <!-- <section class="avox-feature">
        <div class="container">
            <div class="header">
            <h2>Features</h2>
@@ -68,7 +68,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
        </div>
 
-   </section>
+   </section> -->
+
+
 
 
 <section class="bottom">

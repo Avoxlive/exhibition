@@ -154,7 +154,8 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
 </div>
 					*/ ?>
 
-         <?php // include 'footer.php'; ?>
+         <?php
+		//  include 'footer.php'; ?>
 
 
 

@@ -194,6 +194,7 @@ $name = $this->session->userdata('name');
                                     <input type="hidden" name="status" class="form-control" value="rejected">
                             </button> -->
                             <button type="submit" class="btn green">submit
+
                             <input type="hidden" name="color" class="form-control" value="#008000">
                             <!-- <input type="hidden" name="status" class="form-control" value="confirmed"> -->
                             </button>

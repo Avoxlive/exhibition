@@ -58,5 +58,47 @@ class Admin_model extends CI_Model {
 
     }
 
+    function insetcontactusFunction(){
+
+        $contactus_data = array(
+            // 'exhibition_id'     => $this->session->userdata('exhibition_id'),
+			'touch_name'              => $this->input->post('touch_name'),
+			'touch_email'              => $this->input->post('touch_email'),
+			'touch_phone'              => $this->input->post('touch_phone'),
+			'touch_message'              => $this->input->post('touch_message'),
+
+        );
+
+        $this->db->insert('contactus', $contactus_data);
+     }
+     function insertsignupFunction(){
+        $signup_data = array(
+            // 'exhibition_id'     => $this->session->userdata('exhibition_id'),
+			'name'              => $this->input->post('name'),
+			'email'              => $this->input->post('email'),
+			'company'              => $this->input->post('company'),
+			'phone'              => $this->input->post('phone'),
+			'exhibitor_id'              => $this->input->post('exhibitor_id'),
+			'price'              => $this->input->post('price'),
+
+        );
+
+        $this->db->insert('signup', $signup_data);
+
+
+     }
+
+     function updatecontactusFunction($param2){
+            $page_data['touch_name']    =   html_escape($this->input->post('touch_name'));
+            $page_data['touch_email']   =   html_escape($this->input->post('touch_email'));
+            $page_data['touch_phone']   =   html_escape($this->input->post('touch_phone'));
+            $page_data['touch_message'] =   html_escape($this->input->post('touch_message'));
+            $this->db->where('contactus_id', $param2);
+            $this->db->update('contactus', $page_data);
+     }
+     function insert_data($data){
+
+     }
+
 
 }

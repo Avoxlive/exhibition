@@ -19,6 +19,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <?php include 'header-blue.php';?>
 
 
+
     <!-- <section class="get-in-touch">
     <div class="container">
         <div class="heading">
@@ -51,8 +52,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
         </div>
     </div>
-
 </section> -->
+
 
 <!-- <section class="signup">
     <div class="container">
@@ -62,7 +63,17 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
 
                 <div class="pricing-sec">
                     <div class="pricing-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
+                        <img src="<?php echo base_url();?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
+                    </div>
+                    <h2>Prefect for one quick projects</h2>
+                    <h3>$0</h3>
+                    <div class="btn-center">
+                    <button class="btn btn-primary">Buy now</button>
+                    </div>
+                </div>
+                <div class="pricing-sec">
+                    <div class="pricing-img">
+                        <img src="<?php echo base_url();?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
                     </div>
                     <h2>Prefect for one quick projects</h2>
                     <h3>$0</h3>
@@ -80,18 +91,6 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                     <button class="btn btn-primary">Buy now</button>
                     </div>
                 </div>
-                <div class="pricing-sec">
-                    <div class="pricing-img">
-                        <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
-                    </div>
-                    <h2>Prefect for one quick projects</h2>
-                    <h3>$0</h3>
-                    <div class="btn-center">
-                    <button class="btn btn-primary">Buy now</button>
-                    </div>
-                </div>
-
-
             </div>
             <div class="pricing-content">
     <h2>With the price of life these days, you've got to get everything for free you can.</h2>
@@ -160,31 +159,55 @@ sds
         <div class="box-right">
         <div class="sign-up-form">
                 <h2>Sign up</h2>
-                            <form>
+                            <form method="post" role="form" action="<?php echo base_url(); ?>admin/signup/add/" class="form-horizontal form-material">
                 <div class="form-group">
                     <label for="name">Name</label><br>
-                    <input type="text" class="form-control" id="name"  placeholder="Enter your full name">
+                    <input type="text" class="form-control" name="name"  placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label><br>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <input type="email" class="form-control" name="email" placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label for="company">Company name</label><br>
-                    <input type="company" class="form-control" id="company" placeholder="Enter your company name">
+                    <input type="text" class="form-control" name="company" placeholder="Enter your company name">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone number</label><br>
-                    <input type="phone" class="form-control" id="phone"  placeholder="Enter your phone number">
+                    <input type="number" class="form-control" name="phone"  placeholder="Enter your phone number">
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="host">select as a host</label><br>
-                    <input type="host" class="form-control" id="host"  placeholder="--select--">
-                </div>
+                    <input type="text" class="form-control" name="host"  placeholder="--select--">
+                </div> -->
+
                 <div class="form-group">
+                <label for="host">select as a host</label><br>
+                    	<div class="col-sm-12">
+							<select name="exhibitor_id" class="form-control select2" style="width:100%"id="exhibitor_id" onchange="return get_group_sub_groups(this.value)">
+                              <option value=""><?php echo get_phrase('select');?></option>
+                              <?php
+								$classes = $this->crud_model->get_exhibitors(); foreach($classes as $row):?>
+                            		<option value="<?php echo $row['exhibitor_id'];?>"><?php echo $row['name'];?></option>
+                                <?php endforeach; ?>
+                          </select>
+						</div>
+					</div>
+                <!-- <div class="form-group">
                     <label for="price">select the price</label><br>
-                    <input type="price" class="form-control" id="price"  placeholder="--select--">
-                </div>
+                    <input type="price" class="form-control" name="price"  placeholder="--select--">
+                </div> -->
+
+                <div class="form-group">
+                <label for="price">select the price</label><br>
+                    <div class="col-sm-12">
+		                <select name="price" class="form-control">
+		                            <option value=""><?php echo get_phrase('select_price');?></option>
+                                    <option value="1000">1000</option>
+                                    <option value="2000">2000</option>
+                        </select>
+			            </div>
+					</div>
 
                 <!-- <div class="form-group">
                     <label for="message">Message</label><br>
@@ -194,7 +217,6 @@ sds
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 </form>
-
             </div>
         </div>
         </div>
@@ -216,21 +238,21 @@ sds
                 <div class="footer-link">
                     <div>
                         <h2>Useful links</h2>
-                        <a>Home</a><br>
-                        <a>Features</a><br>
-                        <a>Pricing</a><br>
-                        <a>Contact us</a>
+                        <a href="#">Home</a><br>
+                        <a href="<?php echo base_url(); ?>login#feature">Features</a><br>
+                        <!-- <a>Pricing</a><br> -->
+                        <a href="<?php echo base_url(); ?>login#contactus">Contact us</a>
                     </div>
                     <div>
                     <h2>Social media</h2>
-                        <a>Linked in</a><br>
-                        <a>Twitter</a><br>
-                        <a>Instagram</a>
+                        <a href="#">Linked in</a><br>
+                        <a href="#">Twitter</a><br>
+                        <a href="#">Instagram</a>
                     </div>
                     <div>
                     <h2>Use Cases</h2>
-                        <a>Conferences</a><br>
-                        <a>Events</a>
+                        <a href="#">Conferences</a><br>
+                        <a href="#">Events</a>
                     </div>
                 </div>
             </div>

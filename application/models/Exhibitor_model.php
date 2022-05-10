@@ -22,10 +22,10 @@ class exhibitor_model extends CI_Model {
 
 
         $exhibitor_array = array(
-            'exhibition_id'             => $this->session->userdata('exhibition_id'),
+            'exhibition_id'         => $this->session->userdata('exhibition_id'),
             'name'                  => $this->input->post('name'),
-            // 'role'                  => $this->input->post('role'),
-			'exhibitor_number'        => $this->input->post('exhibitor_number'),
+            // 'role'               => $this->input->post('role'),
+			'exhibitor_number'      => $this->input->post('exhibitor_number'),
 			'birthday'              => $this->input->post('birthday'),
         	'sex'                   => $this->input->post('sex'),
             'religion'              => $this->input->post('religion'),
@@ -39,14 +39,14 @@ class exhibitor_model extends CI_Model {
             'qualification'         => $this->input->post('qualification'),
 			'marital_status'        => $this->input->post('marital_status'),
 			'password'              => sha1($this->input->post('password')),
-        	'exhibitortype_id'         => $this->input->post('exhibitortype_id'),
-            // 'designation_id'        => $this->input->post('designation_id'),
+        	'exhibitortype_id'      => $this->input->post('exhibitortype_id'),
+            // 'designation_id'     => $this->input->post('designation_id'),
             'date_of_joining'       => $this->input->post('date_of_joining'),
             'joining_salary'        => $this->input->post('joining_salary'),
 			'status'                => $this->input->post('status'),
 			'date_of_leaving'       => $this->input->post('date_of_leaving'),
-			// 'unique_id'       => $this->input->post('unique_id'),
-            'unique_id'          => uniqid('t-',true)
+			// 'unique_id'          => $this->input->post('unique_id'),
+            'unique_id'             => uniqid('t-',true)
 
 
             );
@@ -68,12 +68,10 @@ class exhibitor_model extends CI_Model {
                 move_uploaded_file($_FILES["file_name"]["tmp_name"], "uploads/exhibitor_image/" . $_FILES["file_name"]["name"]);	// upload files
                 move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/exhibitor_image/' . $exhibitor_id . '.jpg');			// image with user ID
             }
-
     }
 
 
     function updateexhibitorFunction($param2){
-
         $exhibitor_data = array(
             'name'                  => $this->input->post('name'),
             'role'                  => $this->input->post('role'),
@@ -99,7 +97,6 @@ class exhibitor_model extends CI_Model {
 
 
     function deleteexhibitorFunction($param2){
-
         $this->db->where('exhibitor_id', $param2);
         $this->db->delete('exhibitor');
     }

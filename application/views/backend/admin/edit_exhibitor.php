@@ -22,7 +22,7 @@ foreach ( $edit_exhibitor as $key => $row):
                                 </div>
                             </div>
 
-							<div class="form-group">
+							<!-- <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('role');?></label>
                     <div class="col-sm-12">
 							<select name="role" class="form-control select2" required>
@@ -30,17 +30,17 @@ foreach ( $edit_exhibitor as $key => $row):
                                     	<option value="2" <?php if($row['role'] == '2')echo 'selected';?>><?php echo get_phrase('dental');?></option>
                           </select>
 						</div>
-					</div>
+					</div> -->
 
 
 
 
-					  <div class="form-group">
+					  <!-- <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('birthday');?></label>
                     <div class="col-sm-12">
                                     <input type="text" class="datepicker form-control" name="birthday" value="<?php echo $row['birthday'];?>"/>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                            <div class="form-group">
@@ -54,12 +54,12 @@ foreach ( $edit_exhibitor as $key => $row):
                             </div>
 
 
-					<div class="form-group">
+					<!-- <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('religion');?></label>
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="religion" value="<?php echo $row ['religion']; ?>" >
 						</div>
-					</div>
+					</div> -->
 					<div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('address');?></label>
                     <div class="col-sm-12">
@@ -68,7 +68,7 @@ foreach ( $edit_exhibitor as $key => $row):
                 </div>
 
 
-					<div class="form-group">
+					<!-- <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('blood_group');?></label>
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="blood_group" value="<?php echo $row ['blood_group']; ?>" >
@@ -92,7 +92,7 @@ foreach ( $edit_exhibitor as $key => $row):
                                     	<option value="Engaged" <?php if($row['marital_status'] == 'Engaged')echo 'selected';?>><?php echo get_phrase('Engaged');?></option>
                                     </select>
                                     </div>
-                                </div>
+                                </div> -->
 
 
 					<div class="form-group">
@@ -103,9 +103,24 @@ foreach ( $edit_exhibitor as $key => $row):
 
 					</div>
 					</div>
+                    <div class="form-group">
+                                    <label class="col-md-12" for="example-email"><?php echo get_phrase('email');?>*</span>
+                                    </label>
+                                    <div class="col-md-12">
+                                        <input type="email" id="example-email" name="email" class="form-control m-r-10" value="<?php echo $row['email']; ?>" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12" for="example-phone"><?php echo get_phrase('phone');?>*</span>
+                                    </label>
+                                    <div class="col-md-12">
+                               <input type="text" id="example-phone" name="phone" class="form-control" value="<?php echo $row['phone']; ?>" required>
+                                    </div>
+                                </div>
 
 
-					<div class="row">
+
+					<!-- <div class="row">
                     <div class="col-sm-6">
                         <div class="white-box">
                             <h3 class="box-title"><?php echo get_phrase('account_information');?></h3>
@@ -135,10 +150,10 @@ foreach ( $edit_exhibitor as $key => $row):
 
 
                         </div>
-                    </div>
+                    </div> -->
 
 
-						<div class="col-sm-6">
+						<!-- <div class="col-sm-6">
                         <div class="white-box">
                             <h3 class="box-title"><?php echo get_phrase('social_information');?></h3>
 
@@ -165,12 +180,16 @@ foreach ( $edit_exhibitor as $key => $row):
 
 
 
-<div class="form-group">
-<button type="submit" class="btn btn-success btn-block btn-rounded btn-sm"><i class="fa fa-edit"></i>&nbsp;&nbsp;<?php echo get_phrase('update_exhibitor');?></button>
-</div>
                 <?php echo form_close();?>
 </div>
-</div>
+</div> -->
+
+
+
+<!-- </div> -->
+
+<div class="form-group">
+<button type="submit" class="btn btn-success btn-block btn-rounded btn-sm"><i class="fa fa-edit"></i>&nbsp;&nbsp;<?php echo get_phrase('update_exhibitor');?></button>
 </div>
 </div>
 </div>

@@ -1,0 +1,12 @@
+
+@media (min-width: 350px){
+#page-wrapper {
+    background: #c9eec3!important;
+    /* background: #f0f; */
+    /* background: #f0f8fb; */
+}
+}
+
+.bg-title {
+    background: #c9eec3;
+}

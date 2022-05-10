@@ -14,6 +14,7 @@ class Admin extends CI_Controller {
                 $this->load->model('language_model');                      // Load Apllication Model Here
                 $this->load->model('admin_model');                      // Load Apllication Model Here
                 $this->load->model('live_class_model');
+                $this->load->model('login_model');
                 $this->load->model('doctor_model');
                 $this->load->model('exhibitor_model');
                 $this->load->model('visitor_model');
@@ -111,6 +112,7 @@ class Admin extends CI_Controller {
         //$page_data['enquiry_category']  = $this->db->get('enquiry_category')->result_array();
         $this->load->view('backend/index', $page_data);
     }
+
 
     // function list_enquiry ($param1 = null, $param2 = null, $param3 = null){
     //     if($param1 == 'delete')
@@ -678,6 +680,40 @@ function schedule_list(){
                 $page_data['page_name'] = 'add_advertisment';
                 $page_data['page_title'] = get_phrase('Advertisment');
                 $this->load->view('backend/index',$page_data);
+            }
+
+            function contactus($param1 = null, $param2 = null, $param3 = null){
+                if($param1 == 'add'){
+                  $this->admin_model->insetcontactusFunction();
+                  $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+                  redirect(base_url(). 'admin/contactus', 'refresh');
+              }
+              if($param1 == 'update'){
+                  $this->admin_model->updatecontactusFunction($param2);
+                  $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
+                  redirect(base_url(). 'backend/login', 'refresh');
+              }
+              if($param1 == 'delete'){
+                  $this->admin_model->deletecontactusFunction($param2);
+                  $this->session->set_flashdata('flash_message', get_phrase('Data deleted successfully'));
+                  redirect(base_url(). 'backend/login', 'refresh');
+              }
+            //   $page_data['page_name']     = 'backend/login';
+            //   $page_data['page_title']    = get_phrase('Manage exhibitor');
+            //   $exhibition_id = $this->session->userdata('exhibition_id');
+            //   $page_data['select_exhibitor']  = $this->db->get_where('exhibitor',array('exhibition_id'=>$exhibition_id))->result_array();
+            //  $this->admin_model->insetcontactusFunction();
+            //  redirect(base_url(). 'admin/contactus', 'refresh');
+            $this->load->view('backend/login');
+               }
+
+               function signup($param1 = null, $param2 = null, $param3 = null){
+                if($param1 == 'add'){
+                  $this->admin_model->insertsignupFunction();
+                  $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+                  redirect(base_url(). 'admin/signup', 'refresh');
+              }
+              $this->load->view('backend/signup');
             }
 
             function edit_advertisment($clinic_advertisment_id){
