@@ -240,7 +240,8 @@
 					THEME SECONDARY COLOR SETTINGS
 				<hr>
 
-				<?php echo form_open(base_url() . 'systemsetting/system_settings/themesecodarySettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
+				<?php
+				echo form_open(base_url() . 'systemsetting/system_settings/themesecodarySettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
         ?>
 
 				<div class="radio radio-custom">
@@ -281,7 +282,8 @@
                 <div class="form-group">
                           <button type="submit" class="btn btn-block btn-info btn-rounded btn-sm"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
                     </div>
-                    <?php echo form_close();?>
+                    <?php
+					echo form_close();?>
 
 </div>
 </div>
