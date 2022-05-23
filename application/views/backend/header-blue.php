@@ -9,29 +9,33 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <!-- <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav">
         <div class="home-header-left">
-            <a class="home-logo" href="#">
-                <img src="<?php echo base_url(); ?>optimum/plugins/logo/logo-avox.png" alt="home-logo">
+            <a class="home-logo" href="#">FOUNTAIN <span>OR DRAIN</span>
+                <!-- <img src="<?php echo base_url(); ?>optimum/plugins/logo/logo-avox.png" alt="home-logo"> -->
             </a>
         </div>
-      </ul> -->
+      </ul>
+
 
 
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li class="active"><a href="<?php echo base_url(); ?>home/login">Home</a></li> -->
-        <!-- <li><a href="<?php echo base_url(); ?>home/feature">Features</a></li> -->
-        <!-- <li><a href="<?php echo base_url(); ?>login#feature">Features</a></li> -->
-        <li><a href="<?php echo base_url(); ?>home/signup"><i class="fa fa-user" aria-hidden="true"></i> Signup</a></li>
-        <li><a href="<?php echo base_url(); ?>home/signin"><i class="fa fa-user" aria-hidden="true"></i> Signin</a></li>
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
         <!-- <li><a href="<?php echo base_url(); ?>login#contactus">Contact us</a></li> -->
         <!-- <li><a href="<?php echo base_url(); ?>home/contactus">Contact us</a></li> -->
         <!-- <li><a href="#">Sign up</a></li> -->
 
+      </ul>
+      <ul class="nav navbar-nav navbar-right bk-color">
+        <!-- <li class="active"><a href="<?php echo base_url(); ?>home/login">Home</a></li> -->
+        <!-- <li><a href="<?php echo base_url(); ?>home/feature">Features</a></li> -->
+        <!-- <li><a href="<?php echo base_url(); ?>login#feature">Features</a></li> -->
+        <li><a href="<?php echo base_url(); ?>home/signup"><i class="fa fa-user pink" aria-hidden="true"></i> SIGNUP</a></li>
+        <li><a href="<?php echo base_url(); ?>home/signin"><i class="fa fa-user pink" aria-hidden="true"></i> SIGNIN</a></li>
       </ul>
     </div>
 
