@@ -1,4 +1,4 @@
-<section class="cardone">
+<section class="cardone block_bkg">
 <div class="heading">
     <h2>ABOUT ME</h2>
 </div>
@@ -15,7 +15,7 @@
 </div>
 </section>
 
-<section class="cardtwo">
+<section class="cardtwo block_bkg">
 <div class="heading">
     <h2>RECENT STORIES</h2>
 </div>
@@ -53,7 +53,7 @@
 </div>
 </section>
 
-<section class="cardtwo">
+<section class="cardtwo block_bkg">
 <div class="heading">
     <h2>READ MORE</h2>
 </div>
@@ -92,7 +92,7 @@
 </div>
 </section>
 
-<section class="cardfour">
+<section class="cardfour block_bkg">
 <div class="heading">
     <h2>ALL CATOGORIES</h2>
 </div>
@@ -104,10 +104,10 @@
   <li>Lorem Ipsum is simply text of the industry.</li>
   <li>Lorem Ipsum is simply text of the printing industry.</li>
 </ui> -->
-<h2><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  Lorem ipsum dolor sit amet</a></h2>
-  <h2><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  Sed ut perspiciatis</a></h2>
-  <h2><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  consectetur adipiscing elit</a></h2>
-  <h2><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  sed do eiusmod tempor incididunt</a></h2>
-  <h2><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  sunt in culpa qui officia</a></h2>
+<h3><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  Lorem ipsum dolor sit amet</a></h3>
+  <h3><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  Sed ut perspiciatis</a></h3>
+  <h3><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  consectetur adipiscing elit</a></h3>
+  <h3><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  sed do eiusmod tempor incididunt</a></h3>
+  <h3><a><i class="fa fa-angle-double-right" aria-hidden="true"></i>  sunt in culpa qui officia</a></h3>
 </div>
 </section>

@@ -437,3 +437,54 @@
         </div>
     </div>
 </section>
+
+<section class="lastest-news background">
+        <div class="container">
+            <div class="heading">
+                <h2>LATEST <span>NEWS</span></h2>
+            </div>
+<div class="lastest-news-in">
+<div class="box1">
+<div class="box1-image">
+<img src="<?php echo base_url() ?>optimum/plugins/images/ex.png" alt="img1" class="img-fluid">
+<div class="button-on-image">
+    <button>JUL 12, 2022</button>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, incididunt</h2>
+</div>
+</div>
+</div>
+<div class="box2">
+<div class="box-top">
+<img src="<?php echo base_url() ?>optimum/plugins/images/ex.png" alt="img1" class="img-fluid">
+<div class="button-on-image">
+    <button>JUL 12, 2022</button>
+    <h2>Lorem ipsum dolor sit amet,</h2>
+
+</div>
+</div>
+<div class="box-bottom">
+<img src="<?php echo base_url() ?>optimum/plugins/images/ex.png" alt="img1" class="img-fluid">
+<div class="button-on-image">
+    <h2>nmnmn</h2>
+    <button>JUL 12, 2022</button>
+    <h2>Lorem ipsum dolor sit amet,</h2>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+    </section>
+
+    <section class="block-sec background">
+        <div class="container">
+           <div class="block-sec-in">
+               <div class="block-sec-left">
+               <?php include 'block_sec_left_in.php';?>
+               </div>
+               <div class="block-sec-right">
+               <?php include 'block_sec_right_in.php';?>
+               </div>
+           </div>
+        </div>
+    </section>

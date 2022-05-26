@@ -116,7 +116,7 @@ sds
         <div class="pricing-sec">
                     <div class="pricing-img">
                         <img src="<?php echo base_url(); ?>optimum/plugins/images/price1.png" alt="image1" class="img-fluid">
-                        <div class="text-on-image">BASIC</div>
+                    <div class="text-on-image">BASIC</div>
                     </div>
                     <h2>Prefect for one quick projects</h2>
                     <h3>$0</h3>
@@ -158,7 +158,7 @@ sds
         </div>
         <div class="box-right">
         <div class="sign-up-form">
-                <h2>Sign up</h2>
+                <h2>SIGN UP</h2>
                             <form method="post" role="form" action="<?php echo base_url(); ?>admin/signup/add/" class="form-horizontal form-material">
                 <div class="form-group">
                     <label for="name">Name</label><br>
@@ -223,7 +223,7 @@ sds
     </div>
 </section>
 
-<section class="bottom">
+<!-- <section class="bottom">
     <div class="container">
         <div class="footer-in">
             <div class="footer-left">
@@ -240,7 +240,7 @@ sds
                         <h2>Useful links</h2>
                         <a href="#">Home</a><br>
                         <a href="<?php echo base_url(); ?>login#feature">Features</a><br>
-                        <!-- <a>Pricing</a><br> -->
+                        <a>Pricing</a><br>
                         <a href="<?php echo base_url(); ?>login#contactus">Contact us</a>
                     </div>
                     <div>
@@ -266,8 +266,38 @@ sds
             </div>
         </div>
     </div>
+</section> -->
 
-</section>
+<section class="footer-bottom background">
+        <div class="container">
+            <div class="footer-bottom-in">
+                <div class="footer-bottom-in-first">
+                    <h2>FOUNTAIN <span>OR DRAIN</span></h2>
+                    <h3><a href="#">HOME</a> | <a href="#">KEY FEATURES</a> | <a href="#">PRODUCT PAGES</a> | <a href="#">CUSTOMER STORIES</a> | <a href="#">CONTACT US</a> | <a href="#">ABOUT US</a> | Terms and conditions | FAQs</h3>
+                </div>
+                <div class="footer-bottom-in-second">
+                    <div class="footer-bottom-grid">
+                        <div class="footer-content">
+                           <h2> <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>  +91 9912345678</a></h2>
+                            <h2><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@fount.org</a></h2>
+                        </div>
+                        <div class="footer-content-mid">
+                            <!-- <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="footer-content-left">
+                        <h2> <a href="#"><i class="fa fa-copyright" aria-hidden="true"></i>copyright 2021 Fountain or drain</a></h2>
+                        <h2><a href="#">All Rights Reserved</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <?php include 'js-ui.php'; ?>
 

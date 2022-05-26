@@ -908,6 +908,9 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     border-radius: 0;
                     color: #2b2b2b
                 }
+                .home-header-left-upper{
+padding: 20px 0px 0px 0px;
+                }
 
                 .nav-tabs>li>a:focus,
                 .nav-tabs>li>a:hover {
@@ -4797,7 +4800,7 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 }
 
                 .login-register {
-                    background: url(../../optimum/plugins/images/home-page.png) top center/cover no-repeat!important;
+                    background: url(../../optimum/plugins/images/main.png) top center/cover no-repeat!important;
                     height: 100%;
                     /* position: fixed; */
                     display: flex;
@@ -4897,13 +4900,13 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 }
                 .box-width .box-wrapper .box-in{
-                    background: #fff;
+                    background: var(--sec_purple);
                     /* margin: 2rem; */
                     padding: 3rem;
-                    border-radius: 30px;
-                    box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
+                    /* border-radius: 30px; */
+                    /* box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
                     -webkit-box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
-                    -moz-box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88);
+                    -moz-box-shadow: 2px 5px 5px 0px rgba(184,230,240,0.88); */
                 }
 
                 .box-width .box-wrapper .box-in h4{
@@ -4911,30 +4914,31 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     font-size: 3rem;
                     font-weight: 500;
                     text-align: center;
-                    color: #1D84B9;
+                    color: var(--white);
                 }
                 .box-width .box-wrapper .box-in label{
-                    color: #1D84B9;
+                    color: var(--white);
                     font-size: 16px;
                     padding: 10px 0px;
                 }
 
                 .box-width .box-wrapper .box-in input{
-                    border-bottom: 1px solid #195D9B;
+                    border-bottom: 1px solid var(--white);
                     background: none !important;
                 }
 
                 .box-width .box-wrapper .box-in button{
-                    background: linear-gradient(90deg, rgba(25,93,155,1) 52%, rgba(29,132,185,1) 100%, rgba(102,185,211,1) 100%, rgba(255,255,255,0) 100%);
-                    border-radius: 30px;
+                    /* background: linear-gradient(90deg, rgba(25,93,155,1) 52%, rgba(29,132,185,1) 100%, rgba(102,185,211,1) 100%, rgba(255,255,255,0) 100%); */
+                    border-radius: 0px;
                     font-size: 20px;
                     font-weight: 400;
+                    background: var(--sec_purple);
                     width: 50%;
-                    color: #fff;
-                    border: 1px solid #66B9D3;
+                    color: var(--white)!important;
+                    border: 2px solid var(--white);
                 }
                 .box-width .box-wrapper .box-in  a{
-                    color: #1D84B9 !important;
+                    color: var(--purple)!important;
                     font-size: 14px;
                     text-align: center;
                 }
@@ -5070,7 +5074,6 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     /* margin: 0 auto; */
                     float: right;
                     background: rgba(255, 255, 255, .5);
-
                 }
 
                 .login-box-left h2{
@@ -5094,7 +5097,6 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     /* z-index: 2;
                      background-color: rgb(0,0,0);
                     background-color: rgba(0,0,0, 0.3); */
-
                 }
 
                 .login-box-left-img{
@@ -5334,7 +5336,6 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                     /* padding: 25px 0; */
                     text-transform: uppercase;
                     border: 1px solid #eeeff0 !important;
-
                 }
 
                 .fc-button {
@@ -5397,18 +5398,15 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
                 .fc-basic-view td.fc-week-number span {
                     padding-right: 5px
                 }
-
                 .weather h1 {
                     color: #fff;
                     font-size: 50px;
                     font-weight: 100
                 }
-
                 .weather i {
                     color: #fff;
                     font-size: 40px
                 }
-
                 .weather .w-title-sub {
                     color: rgba(255, 255, 255, .6)
                 }
@@ -20836,8 +20834,8 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 
                 select.form-control:not([size]):not([multiple]) {
                     height: calc(3.85rem);
-                    background: #f0fafd;
-                    border-bottom: 1px solid #195D9B !important;
+                    background: var(--light_pink);
+                    border-bottom: 1px solid var(--purple) !important;
                     width: 100%;
                 }
 
@@ -21188,6 +21186,11 @@ input[type="date"].form-control, input[type="time"].form-control, input[type="da
 .home-header-left{
     padding: 10px 0px;
 }
+
+.navbar-inverse-bottom .home-header-left{
+    padding: 0px 0px;
+    float: right;
+}
 /* @media screen and (max-width:1200px){ */
 .container{
     width: 80%;
@@ -21504,6 +21507,9 @@ width: 30%!important;
     }
     .gallery-scroll-bg{
         height: 80px;
+    }
+    .home-header-left {
+        padding: 10px 0px 0px 0px;
     }
     .bg-title {
         padding: 0px 0px;

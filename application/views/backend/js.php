@@ -31,6 +31,63 @@
          });
 </script>
 
+<script>
+         $(document).ready(function() {
+            $('.product-block-in').owlCarousel({
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayTimeout: 20,
+            autoplaySpeed: 12000,
+            fluidSpeed: true,
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: false,
+            /*navText: [
+              "<i class='fa fa-chevron-left'></i>",
+              "<i class='fa fa-chevron-right'></i>"
+              ], */
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 4
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+         });
+</script>
+
+<script>
+          $('.testimonial-sec-in').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: false,
+            dots: true,
+            //autoplay:true,
+            navText: [
+                "<i class='fa fa-chevron-left'></i>",
+                "<i class='fa fa-chevron-right'></i>"
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 2
+                }
+            }
+        });
+</script>
+
+
 
 <script>
      $(document).ready(function() {

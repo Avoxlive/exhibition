@@ -22,7 +22,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="box-width">
             <div class="box-wrapper">
                 <div class="box-in">
-                    <h4 class="box-title m-b-20" align="center">Sign in
+                    <h4 class="box-title m-b-20" align="center">SIGN IN
                         <!-- <img src="<?php echo base_url()?>uploads/logo.png" class="img-circle" width="70" height="70" /> -->
                     </h4>
                     <h5 align="center"><a href=""><?php echo $system_name;?></a></h5>
@@ -84,6 +84,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
         </div>
     </section>
+
+
 
 <!--
 <div class="login-wrapper">

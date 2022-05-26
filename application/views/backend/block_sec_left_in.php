@@ -2,7 +2,7 @@
     <div class="heading">
         <h2>RECENT <span>UPDATE</span></h2>
     </div>
-    <div class="feature-block-in">
+    <div class="feature-block-in block_bkg">
     <div class="block-img">
     <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid">
 
@@ -10,7 +10,7 @@
     <div class="block-content">
         <div class="vertical-data">
 
-                <h2><a>NEWS</a></h2>
+                <h4><a>NEWS</a></h4>
                 <a><i class="fa fa-user" aria-hidden="true"></i> By John Deo</a>
                 <a><i class="fa fa-calendar" aria-hidden="true"></i> Nov 06, 2021</a>
 
@@ -21,7 +21,7 @@
     </div>
     </div>
 
-    <div class="feature-block-in">
+    <div class="feature-block-in block_bkg">
     <div class="block-img">
     <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid">
 
@@ -29,7 +29,7 @@
     <div class="block-content">
     <div class="vertical-data">
 
-<h2><a>NEWS</a></h2>
+<h4><a>NEWS</a></h4>
 <a><i class="fa fa-user" aria-hidden="true"></i> By John Deo</a>
 <a><i class="fa fa-calendar" aria-hidden="true"></i> Nov 06, 2021</a>
 
@@ -40,7 +40,7 @@
     </div>
     </div>
 
-    <div class="feature-block-in">
+    <div class="feature-block-in block_bkg">
     <div class="block-img">
     <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid">
 
@@ -48,7 +48,7 @@
     <div class="block-content">
     <div class="vertical-data">
 
-<h2><a>NEWS</a></h2>
+<h4><a>NEWS</a></h4>
 <a><i class="fa fa-user" aria-hidden="true"></i> By John Deo</a>
 <a><i class="fa fa-calendar" aria-hidden="true"></i> Nov 06, 2021</a>
 
@@ -63,7 +63,7 @@
 <section class="lastest">
 <div class="heading"><h2>RECENT <span>COMMENTS</span></h2></div>
 <div class="lastest-block">
-    <div class="lastest-block-in">
+    <div class="lastest-block-in block_bkg">
         <div class="image">
         <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid">
 
@@ -73,11 +73,11 @@
         <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
         <div class="vertical">
         <a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo </a>
-        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a>
+        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 987654321</a>
         </div>
     <!-- <h5><a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo |</a>  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a></h5> -->
     </div>
-    <div class="lastest-block-in">
+    <div class="lastest-block-in block_bkg">
         <div class="image">
         <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid">
         </div>
@@ -86,11 +86,11 @@
         <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
         <div class="vertical">
         <a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo </a>
-        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a>
+        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 987654321</a>
         </div>
     <!-- <h5><a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo  |</a>  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a></h5> -->
     </div>
-    <div class="lastest-block-in">
+    <div class="lastest-block-in block_bkg">
         <div class="image">
         <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid">
         </div>
@@ -99,11 +99,11 @@
         <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
         <div class="vertical">
         <a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo </a>
-        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a>
+        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 987654321</a>
         </div>
         <!-- <h5><a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo  |</a>  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a></h5> -->
     </div>
-    <div class="lastest-block-in">
+    <div class="lastest-block-in block_bkg">
         <div class="image">
             <img src="<?php echo base_url(); ?>optimum/plugins/images/feature1.jpeg" href="#" alt="image1" class="img-fluid">
         </div>
@@ -112,7 +112,7 @@
         <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
         <div class="vertical">
         <a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo </a>
-        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a>
+        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 987654321</a>
         </div>
         <!-- <h5><a href="#"><i class="fa fa-user" aria-hidden="true"></i> John Deo  </a> | <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 888 8888 8888</a></h5> -->
     </div>
