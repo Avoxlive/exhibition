@@ -69,7 +69,7 @@ if($query_admin_role_table->num_rows() < 1)
                         </div>
 
                            <div class="form-group">
-                                  <button type="submit" class="btn btn-block btn-success btn-rounded btn-sm "><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('add_admin');?></button>
+                                  <button type="submit" class="btn save-button"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('add_admin');?></button>
 							</div>
                 <?php echo form_close();?>
                 </div>

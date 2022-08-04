@@ -52,7 +52,7 @@
                     </div>
                 </div> -->
 <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-block btn-rounded btn-sm"> <i class="fa fa-plus"></i>&nbsp; <?php echo get_phrase('add_exhibitortype'); ?></button>
+                        <button type="submit" class="btn save-button"> <i class="fa fa-plus"></i>&nbsp; <?php echo get_phrase('add_exhibitortype'); ?></button>
                 </div>
                 <?php echo form_close(); ?>
 		 		</div>

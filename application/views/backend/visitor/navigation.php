@@ -43,13 +43,12 @@
 
 
     <li> <a href="<?php echo base_url();?>visitor/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('Dashboard') ;?></span></a> </li>
-
-              <li class="<?php if ($page_name == 'jitsi') echo 'active';?>">
-        <a href="<?php echo base_url(); ?>visitor/jitsi">
-        <i class="fa fa-laptop p-r-10"></i>
-        <span class="hide-menu"><?php echo get_phrase('my_meeting');?></span>
-    </a>
-        </li>
+            <li class="<?php if ($page_name == 'jitsi') echo 'active';?>">
+                <a href="<?php echo base_url(); ?>visitor/jitsi">
+                <i class="fa fa-laptop p-r-10"></i>
+                <span class="hide-menu"><?php echo get_phrase('my_meeting');?></span>
+                </a>
+            </li>
 
 
 
@@ -129,19 +128,19 @@
                     <i class="fa fa-credit-card p-r-10"></i>
                         <span class="hide-menu"><?php echo get_phrase('Payment History'); ?></span>
                 </a>
-        </li>                -->
+        </li> -->
 
             <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>visitor/manage_profile">
                     <i class="fa fa-gears p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('manage_profile'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('manage_profile'); ?></span>
                 </a>
             </li>
 
             <li class="">
                 <a href="<?php echo base_url(); ?>login/logout">
                     <i class="fa fa-sign-out p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('Logout'); ?></span>
+                    <span class="hide-menu"><?php echo get_phrase('Logout'); ?></span>
                 </a>
             </li>
 

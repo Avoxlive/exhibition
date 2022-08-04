@@ -17,17 +17,15 @@
                     <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('Banner');?>&nbsp;</label>
                     <div class="col-sm-12">
-             	            <input type="file" name="file_name" class="form-control" required>
+             	        <input type="file" name="file_name" class="form-control" required>
 					</div>
 					</div>
-
                     <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('Description');?>&nbsp;</label>
                     <div class="col-sm-12">
-             	            <input type="text" name="advertisement_content" class="form-control" required>
+             	        <input type="text" name="advertisement_content" class="form-control" required>
 					</div>
 					</div>
-
                     <div class="form-group">
                         <button type="submit" class="btn btn-success btn-block btn-rounded btn-sm"><i class="fa fa-book"></i>&nbsp;<?php echo get_phrase('add');?></button>
 					</div>

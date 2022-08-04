@@ -200,7 +200,7 @@
 
 
         <div class="form-group">
-			<button type="submit" class="btn btn-success btn-sm btn-rounded btn-block"> <i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('save_visitor');?></button>
+			<button type="submit" class="btn save-button"> <i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('save_visitor');?></button>
 			<img id="install_progress" src="<?php echo base_url() ?>assets/images/loader-2.gif" style="margin-left: 20px; display: none"/>
 		</div>
                 <?php echo form_close();?>

@@ -267,7 +267,7 @@
 
 
 <div class="form-group">
-<button type="submit" class="btn btn-success btn-rounded btn-block btn-sm"> <i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('add_exhibitor');?></button>
+<button type="submit" class="btn save-button"> <i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('add_exhibitor');?></button>
 <img id="install_progress" src="<?php echo base_url() ?>assets/images/loader-2.gif" style="margin-left: 20px; display: none"/>
 </div>
 

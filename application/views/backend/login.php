@@ -49,14 +49,16 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
     <div class="container">
         <div class="heading">
         <h2>KEY <span>FEATURES</span></h2>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, incididunt ut labore et dolore magna aliqua.</h3>
         </div>
+        <div class="key-feature-block">
         <div class="key-feature-list">
             <div class="feature-list-image">
                 <img src="<?php echo base_url() ?>optimum/plugins/images/feature1.png" alt="#">
             </div>
             <div class="feature-list-content">
             <h2>Moderator can mute individual participant</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -65,7 +67,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Control the volume</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -74,7 +76,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Chat with Moderator</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -83,7 +85,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Schedule meetings</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -92,7 +94,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Brand up the meeting experience</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -101,7 +103,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Choose colors of your choice</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -110,7 +112,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Display logos of your company</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -119,7 +121,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Display banners during the meeting</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -128,7 +130,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="feature-list-content">
             <h2>Invite only meetings</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
             </div>
         </div>
         <div class="key-feature-list">
@@ -136,9 +138,10 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <img src="<?php echo base_url() ?>optimum/plugins/images/feature1.png" alt="#">
             </div>
             <div class="feature-list-content">
-            <h2>Allow attendance only on scheduled time</h2>
-            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+            <h2>Allow attendance on scheduled time</h2>
+            <h3>Sed ut perspiciatis unde omnis voluptatem</h3>
             </div>
+        </div>
         </div>
     </div>
 </section>
@@ -148,9 +151,11 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         <div class="container">
             <div class="heading">
                 <h2>PRODUCT <span>PAGES</span></h2>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+
             </div>
 
-            <div class="product-block">
+            <!-- <div class="product-block">
             <div class="owl-carousel owl-theme owl-loaded product-block-in">
                         <div class="owl-stage-outer">
                             <div class="owl-stage">
@@ -181,7 +186,61 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                             </div>
                         </div>
                     </div>
+            </div> -->
+
+            <div class="product-block">
+<div class="product-img">
+    <img src="<?php echo base_url() ?>optimum/plugins/images/dashboard.webp" alt="#">
+
+</div>
+<div class="product-detail">
+    <h2>Dashboard Page</h2>
+    <h3>Satus error sit voluptatem consectetur adipiscing elit, incididunt ut labore et dolore</h3>
+<ul>
+    <li>Nemo enim ipsam voluptatem quia</li>
+    <li>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</li>
+    <li>cillum dolore eu fugiat nulla pariatur</li>
+</ul>
+</div>
             </div>
+
+            <div class="product-block-g">
+
+<div class="product-detail">
+    <h2>Meetings list Page</h2>
+    <h3>Satus error sit voluptatem consectetur adipiscing elit, incididunt ut labore et dolore</h3>
+<ul>
+    <li>Nemo enim ipsam voluptatem quia</li>
+    <li>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</li>
+    <li>cillum dolore eu fugiat nulla pariatur</li>
+</ul>
+</div>
+<div class="product-img">
+    <img src="<?php echo base_url() ?>optimum/plugins/images/dashboard1.jpg" alt="#">
+
+</div>
+            </div>
+
+            <div class="product-block-r">
+<div class="product-img">
+    <img src="<?php echo base_url() ?>optimum/plugins/images/dashboard2.jpg" alt="#">
+
+</div>
+<div class="product-detail">
+    <h2>Calendar Page</h2>
+    <h3>Satus error sit voluptatem consectetur adipiscing elit, incididunt ut labore et dolore</h3>
+<ul>
+    <li>Nemo enim ipsam voluptatem quia</li>
+    <li>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</li>
+    <li>cillum dolore eu fugiat nulla pariatur</li>
+</ul>
+</div>
+            </div>
+
+
         </div>
 </section>
 
@@ -221,50 +280,38 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                         </div>
                                     </div>
                                     <div class="owl-item">
-
                                         <div class="destination-options">
                                             <div class="overlay">
                                                 <div class="overlay-text">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                        enim ad minim veniam
-                                                    </p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                                    enim ad minim veniam</p>
                                                 </div>
                                             </div>
                                             <div class="avatar">
                                                 <img src="<?php echo base_url() ?>optimum/plugins/images/13.jpg" class="img-fluid" />
-
                                             </div>
                                             <div class="avatar-txt">
                                                 <h3>John smith</h3>
-                                                <p>Customer
-                                                </p>
+                                                <p>Customer</p>
                                             </div>
                                         </div>
-
-
                                     </div>
                                     <div class="owl-item">
-
                                         <div class="destination-options">
                                             <div class="overlay">
                                                 <div class="overlay-text">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                        enim ad minim veniam
-                                                    </p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                                    enim ad minim veniam</p>
                                                 </div>
                                             </div>
                                             <div class="avatar">
-                                                <img src="<?php echo base_url() ?>optimum/plugins/images/13.jpg" class="img-fluid" />
-
+                                                <img src="<?php echo base_url() ?>optimum/plugins/images/13.jpg" class="img-fluid"/>
                                             </div>
                                             <div class="avatar-txt">
                                                 <h3>John smith</h3>
-                                                <p>Customer
-                                                </p>
+                                                <p>Customer</p>
                                             </div>
                                         </div>
 
@@ -285,12 +332,9 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                                             </div>
                                             <div class="avatar-txt">
                                                 <h3>John smith</h3>
-                                                <p>Customer
-                                                </p>
+                                                <p>Customer</p>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -317,7 +361,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <h2>GET IN <span>TOUCH</span></h2>
             </div>
             <form method="post" role="form" action="<?php echo base_url(); ?>admin/contactus/add/" class="form-horizontal form-material">
-<div class="centered-box-block">
+            <div class="centered-box-block">
             <div class="centered-box-content">
                 <div class="box1">
                 <div class="form-group">
@@ -340,29 +384,17 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
             </div>
             <div class="message">
             <div class="form-group">
-                    <label for="message">Message</label><br>
-                    <textarea class="form-control" name="touch_message"  placeholder="Enter your message" rows="3"></textarea>
-                </div>
+                <label for="message">Message</label><br>
+                <textarea class="form-control" name="touch_message"  placeholder="Enter your message" rows="3"></textarea>
+            </div>
             </div>
             <div class="centered-submit">
             <button type="submit" class="btn btn-primary">SUBMIT</button>
-
             </div>
-</div>
+            </div>
             </form>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -387,7 +419,7 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
         <div class="container">
             <div class="footer-bottom-in">
                 <div class="footer-bottom-in-first">
-                    <h2>FOUNTAIN <span>OR DRAIN</span></h2>
+                    <h2>AVOX <span>.LIVE</span></h2>
                     <h3><a href="#">HOME</a> | <a href="<?php echo base_url(); ?>login#feature">KEY FEATURES</a> |
                     <a href="<?php echo base_url(); ?>login#productpages">PRODUCT PAGES</a> |
                     <a href="<?php echo base_url(); ?>login#customerstories">CUSTOMER STORIES</a> |
@@ -398,8 +430,8 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
                 <div class="footer-bottom-in-second">
                     <div class="footer-bottom-grid">
                         <div class="footer-content">
-                           <h2> <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>  +91 9912345678</a></h2>
-                            <h2><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@fount.org</a></h2>
+                        <h2> <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>  +91 9912345678</a></h2>
+                        <h2><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@fount.org</a></h2>
                         </div>
                         <div class="footer-content-mid">
                             <!-- <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
@@ -422,5 +454,4 @@ $system_title = $this->db->get_where('settings', array('type' => 'system_title')
    <?php include 'js-ui.php'; ?>
    <?php include 'js.php'; ?>
 </body>
-
 </html>

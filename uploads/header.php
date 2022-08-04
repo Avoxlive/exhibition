@@ -103,6 +103,8 @@
 
                     <!-- /.dropdown -->
                     <li class="dropdown">
+
+
                             <?php
                             $key = $this->session->userdata('login_type') . '_id';
                             $face_file = 'uploads/' . $this->session->userdata('login_type') . '_image/' . $this->session->userdata($key) . '.jpg';

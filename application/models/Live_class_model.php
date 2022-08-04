@@ -14,7 +14,7 @@ class Live_class_model extends CI_Model {
             'exhibition_id'     => $this->session->userdata('exhibition_id'),
             'title'             => html_escape($this->input->post('title')),
             'visitor_id'        => html_escape($this->input->post('visitor_id')),
-            'meeting_date'      => strtotime($this->input->post('meeting_date')),
+            'meeting-date'      => strtotime($this->input->post('meeting-date')),
             'description'       => html_escape($this->input->post('description')),
             'start_time'        => html_escape($this->input->post('start_time')),
             'end_time'          => html_escape($this->input->post('end_time')),
@@ -22,7 +22,6 @@ class Live_class_model extends CI_Model {
             'room'              => md5(date('d-m-Y H:i:s')).substr(md5(rand(1000000, 2000000)), 0, 10),
             'publish_date'      => strtotime(date('Y-m-d')),
             'user_id'           => $this->session->userdata('login_type').'-'.$this->session->userdata('login_user_id')
-
         );
 
         $arrayLiveToCalendar = array(
@@ -34,7 +33,7 @@ class Live_class_model extends CI_Model {
             'color'        => html_escape($this->input->post('color')),
             'start_date'        => html_escape($this->input->post('start_date')),
             'end_date'        => html_escape($this->input->post('end_date')),
-            // 'meeting_date'      => strtotime($this->input->post('meeting_date')),
+            // 'meeting-date'      => strtotime($this->input->post('meeting-date')),
             'description'       => html_escape($this->input->post('description')),
             'start_time'        => html_escape($this->input->post('start_time')),
             'end_time'          => html_escape($this->input->post('end_time')),
@@ -42,7 +41,6 @@ class Live_class_model extends CI_Model {
             // 'room'              => md5(date('d-m-Y H:i:s')).substr(md5(rand(1000000, 2000000)), 0, 10),
             // 'publish_date'      => strtotime(date('Y-m-d')),
             // 'user_id'           => $this->session->userdata('login_type').'-'.$this->session->userdata('login_user_id')
-
         );
 
 		$sql = "select * from jitsi order by jitsi_id desc limit 1";
@@ -50,14 +48,13 @@ class Live_class_model extends CI_Model {
 		$arrayLive['jitsi_id'] = $return_query;
         $this->db->insert('jitsi', $arrayLive);
 
-
         $sql = "select * from calendar order by id desc limit 1";
 		$return_query = $this->db->query($sql)->row()->id + 1;
 		$arrayLiveToCalendar['id'] = $return_query;
         $this->db->insert('calendar', $arrayLiveToCalendar);
 
         $sendPhone = $this->input->post('send_notification_sms');
-        $senddate  = $this->input->post('meeting_date');
+        $senddate  = $this->input->post('meeting-date');
 
         if($sendPhone == '1'){
 
@@ -68,7 +65,6 @@ class Live_class_model extends CI_Model {
 
             $message = $this->input->post('title').' ';
             $message .= get_phrase('on').' '. $senddate;
-
             foreach ($parents as $key => $parent){
                 $recieverPhoneNumber = $parent['phone'];
                 $this->sms_model->send_sms($message, $recieverPhoneNumber);
@@ -78,10 +74,7 @@ class Live_class_model extends CI_Model {
                 $recieverPhoneNumber = $visitor['phone'];
                 $this->sms_model->send_sms($message, $recieverPhoneNumber);
             }
-
-
         }
-
     }
 
 
@@ -89,27 +82,23 @@ class Live_class_model extends CI_Model {
 
     /*>>>>>>>>> Function to upadte Jitsi to Table >>>>>>>>> */
     function updateJitsiClassFunction($param2){
-
         $arrayLive = array(
-
             'title'             => html_escape($this->input->post('title')),
             // 'class_id'          => html_escape($this->input->post('class_id')),
             // 'section_id'        => html_escape($this->input->post('section_id')),
             'visitor_id'        => html_escape($this->input->post('visitor_id')),
-            'meeting_date'      => strtotime($this->input->post('meeting_date')),
+            'meeting-date'      => strtotime($this->input->post('meeting-date')),
             'description'       => html_escape($this->input->post('description')),
             'start_time'        => html_escape($this->input->post('start_time')),
             'end_time'          => html_escape($this->input->post('end_time')),
             'status'            => html_escape($this->input->post('status')),
-
         );
-
 
         $this->db->where('jitsi_id', $param2);
         $this->db->update('jitsi', $arrayLive);
 
         $sendPhone = $this->input->post('send_notification_sms');
-        $senddate  = $this->input->post('meeting_date');
+        $senddate  = $this->input->post('meeting-date');
 
         if($sendPhone == '1'){
 
@@ -177,18 +166,14 @@ class Live_class_model extends CI_Model {
     // }
 
     function toSelectFromJitsiWithId($jitsi_id){
-
         $sql = "select * from jitsi where jitsi_id ='".$jitsi_id."'";
         return $this->db->query($sql)->result_array();
-
     }
 
     function datetime(){
-
         $date = date('h:i', time());
         $sql = "select * from jitsi where start_time='".$date."' order by jitsi_id asc";
         return $this->db->query($sql)->result_array();
-
     }
 
 

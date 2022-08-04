@@ -2772,7 +2772,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse {
 	/* background-color: #222;
 	border-color: #080808 */
-	background: #341138;
+	/* background: #341138; */
+	background: #000;
+
 	padding: 20px 0px 0px 0px;
 	height: 70px!important;
 /* background: linear-gradient(90deg, rgba(102,185,211,1) 0%, rgba(25,93,155,1) 100%, rgba(255,255,255,0) 100%, rgba(237,233,233,0) 100%); */
@@ -2913,7 +2915,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar-inverse-bottom {
 	/* background-color: #222;
 	border-color: #080808 */
-	background: #ffcfff;
+	background: #b5e6f7;
 	height: 50px;
 	/* float: left; */
 /* background: linear-gradient(90deg, rgba(102,185,211,1) 0%, rgba(25,93,155,1) 100%, rgba(255,255,255,0) 100%, rgba(237,233,233,0) 100%); */

@@ -32,7 +32,9 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
                                 <th>S.NO</th>
                                 <th>Name</th>
                                 <!-- <th>Status</th> -->
+                                <th>chat status</th>
                                 <th>chat</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -43,7 +45,6 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
                               // $get_exhibitor_from_model = $this->chat_model->list_all_chat_and_order_with_chatid();
 
                                     foreach ($get_exhibitor_from_model as $key => $exhibitor):
-
         ?>
                                 <td><?php
                                 echo $no++ ; ?></td>
@@ -52,6 +53,18 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
                                     class="message-icon" ><i class="fa fa-commenting" aria-hidden="true"></i></a></td>
                                     <!-- <td><button type="submit" href="<?php echo base_url();?>visitor/chat_request/<?php echo $exhibitor['exhibitor_id'];?>" class="btn btn-info">send request</button></td> -->
                                     <!-- <td><button type="submit" href="<?php echo base_url();?>visitor/chat_request/<?php echo $exhibitor['exhibitor_id'];?>" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">send request</button></td> -->
+
+                                    <td>
+
+
+                                    <?php
+                                 $get_chat_request_status_from_model = $this->chat_model->fetch_chat_status_from_exhibitor($visitor_id,$exhibitor_id);
+                                 foreach ($get_chat_request_status_from_model as $key => $chat_request):?>
+
+                                    <p>The Chat Request sent by you is <?php echo $chat_request['status'];?></p>
+
+                                   <?php endforeach?>
+                                    </td>
 
 
 
@@ -99,15 +112,10 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
 </div>
 </form> -->
 
-
-
-
 <script>
-
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
-
 </script>
 
 

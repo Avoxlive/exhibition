@@ -37,8 +37,8 @@
 
 
 				<div class="form-group">
-				<div class="btn-left">
-					<button type="submit" class="btn"><i class="fa fa-save"></i>  <?php echo get_phrase('save');?></button>
+				<div class="">
+					<button type="submit" class="btn save-button"><i class="fa fa-save"></i>  <?php echo get_phrase('save');?></button>
 				</div>
 				</div>
 

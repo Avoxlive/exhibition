@@ -272,8 +272,14 @@ sds
         <div class="container">
             <div class="footer-bottom-in">
                 <div class="footer-bottom-in-first">
-                    <h2>FOUNTAIN <span>OR DRAIN</span></h2>
-                    <h3><a href="#">HOME</a> | <a href="#">KEY FEATURES</a> | <a href="#">PRODUCT PAGES</a> | <a href="#">CUSTOMER STORIES</a> | <a href="#">CONTACT US</a> | <a href="#">ABOUT US</a> | Terms and conditions | FAQs</h3>
+                    <h2>AVOX <span>.LIVE</span></h2>
+                    <h3><a href="#">HOME</a> | <a href="<?php echo base_url(); ?>login#feature">KEY FEATURES</a> |
+                    <a href="<?php echo base_url(); ?>login#productpages">PRODUCT PAGES</a> |
+                    <a href="<?php echo base_url(); ?>login#customerstories">CUSTOMER STORIES</a> |
+                    <a href="<?php echo base_url(); ?>login#aboutus">ABOUT US</a> |
+                    <a href="<?php echo base_url(); ?>login#contactus">CONTACT US</a> |
+                    TERMS & CONDITIONS | FAQs</h3>
+                    <!-- <h3><a href="#">HOME</a> | <a href="#">KEY FEATURES</a> | <a href="#">PRODUCT PAGES</a> | <a href="#">CUSTOMER STORIES</a> | <a href="#">CONTACT US</a> | <a href="#">ABOUT US</a> | Terms and conditions | FAQs</h3> -->
                 </div>
                 <div class="footer-bottom-in-second">
                     <div class="footer-bottom-grid">

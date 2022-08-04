@@ -72,7 +72,7 @@ class Visitor extends CI_Controller {
 
         function jitsi($param1 = null, $param2 = null, $param3 = null){
 			$page_data['page_name'] = 'jitsi';
-			$page_data['page_title'] = get_phrase('online_consultancy');
+			$page_data['page_title'] = get_phrase('My Meeting');
 			$this->load->view('backend/index', $page_data);
         }
 
@@ -87,7 +87,7 @@ class Visitor extends CI_Controller {
                 redirect(base_url(). 'exhibitor/my_calendar', 'refresh');
             }
             $page_data['page_name']     = 'appointment';
-            $page_data['page_title']    = get_phrase('manage_exhibitor_details');
+            $page_data['page_title']    = get_phrase('My Appointment');
             $this->load->view('backend/index', $page_data);
 }
 
@@ -139,7 +139,7 @@ function my_calendar($param1 = null, $param2 = null, $param3 = null){
         }
     $page_data = array();
     $page_data['page_name']     = 'my_calendar';
-    $page_data['page_title']    = get_phrase('manage_my_calendar');
+    $page_data['page_title']    = get_phrase('my_calendar');
     $page_data['get_data']           = json_encode($calendar);
     $this->load->view('backend/index', $page_data);
 }
@@ -151,10 +151,8 @@ function my_calendar($param1 = null, $param2 = null, $param3 = null){
         if ($this->form_validation->run() == TRUE)
         {
             $param = $this->input->post();
-
             $calendar_id = $param['calendar_id'];
             unset($param['calendar_id']);
-
             if($calendar_id == 0)
             {
                 $param['create_at']     = date('d-m-Y H:i');

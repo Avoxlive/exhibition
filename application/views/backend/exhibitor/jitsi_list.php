@@ -21,7 +21,7 @@
 
 				                            <!-- <th><?=get_phrase('patient')?></th> -->
 				                            <th><?=get_phrase('visitor')?></th>
-				                            <th><?=get_phrase('meeting_date')?></th>
+				                            <th><?=get_phrase('meeting-date')?></th>
 				                            <th><?=get_phrase('meeting_time')?></th>
 				                            <th><?=get_phrase('status')?></th>
 				                            <th><?=get_phrase('description')?></th>
@@ -48,7 +48,7 @@
 							<td><?=$this->crud_model->get_type_name_by_id('section', $row['section_id']);?></td> -->
 				                            <!-- <td><?=$this->crud_model->get_type_name_by_id('patient', $row['patient_id']);?></td> -->
 				                            <td><?=$this->crud_model->get_type_name_by_id('visitor', $row['visitor_id']);?></td>
-				                            <td><?=date('d M, Y', $row['meeting_date'])?></td>
+				                            <td><?=date('d M, Y', $row['meeting-date'])?></td>
 				                            <td><?=$row['start_time'] .' - '.$row['end_time']?></td>
 				                            <!-- <td><span
 				                                    class="label label-<?php if($row['status'] == 'pending') echo 'warning';elseif($row['status'] == 'live') echo 'success'; else echo 'danger';?>"><?=$row['status']?></span>

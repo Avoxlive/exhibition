@@ -23,8 +23,6 @@ $exhibitor_id = $this->session->userdata('exhibitor_id');
                              <tr>
                              <?php $no = 1 ;  $get_exhibitor_from_model = $this->chat_model->list_all_exhibitor_who_accepted_chat_request($visitor_id);
                                     foreach ($get_exhibitor_from_model as $key => $exhibitor):
-
-
         ?>
                                 <td><?php echo $no++ ; ?></td>
                                 <td><?php echo $exhibitor['exhibitor_name'];?></td>

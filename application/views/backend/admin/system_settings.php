@@ -145,7 +145,7 @@
 
 
 				<div class="form-group">
-					<button type="submit" class="btn btn-success btn-rounded btn-block btn-sm"><i class="fa fa-save"></i>  <?php echo get_phrase('save');?></button>
+					<button type="submit" class="btn save-button"><i class="fa fa-save"></i>  <?php echo get_phrase('save');?></button>
 				</div>
 
 
@@ -182,7 +182,7 @@
 					</div>
 
 				<div class="form-group">
-                     <button class="btn btn-block btn-info btn-rounded btn-sm"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Update Logo');?></button>
+                     <button class="btn save-button"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Update Logo');?></button>
 
                 </div>
 
@@ -232,7 +232,7 @@
 		<br>
 
                 <div class="form-group">
-                          <button type="submit" class="btn btn-block btn-info btn-rounded btn-sm"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
+                          <button type="submit" class="btn save-button"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
                     </div>
                     <?php echo form_close();?>
 
@@ -280,7 +280,7 @@
 		<br>
 
                 <div class="form-group">
-                          <button type="submit" class="btn btn-block btn-info btn-rounded btn-sm"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
+                          <button type="submit" class="btn save-button"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
                     </div>
                     <?php
 					echo form_close();?>

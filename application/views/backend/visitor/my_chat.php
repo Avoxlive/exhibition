@@ -23,15 +23,13 @@ $doctor_id = $this->session->userdata('doctor_id');
                              <tr>
                              <?php $no = 1 ;  $get_doctor_from_model = $this->crud_model->list_all_doctor_and_order_with_doctor_id();
                                     foreach ($get_doctor_from_model as $key => $doctor):
-                                    	
-
         ?>
                                 <td><?php echo $no++ ; ?></td>
                                 <td><?php echo $doctor['name'];?></td>
                                 <td><a href="<?php echo base_url();?>patient/chat/<?php echo $doctor['doctor_id'];?>"
                                     class="btn btn btn-info btn-circle btn-xs" ><i class="prime zmdi zmdi-comment-outline"></i></a></td>
-                                
-                                
+
+
                              </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -44,11 +42,11 @@ $doctor_id = $this->session->userdata('doctor_id');
 
 
 <script>
-    
+
 </script>
 
 
 
-        
-                        
+
+
 

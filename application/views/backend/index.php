@@ -24,15 +24,13 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
 
 
 	<?php
-	// include 'header.php'; ?>
+	include 'header.php'; ?>
 	<?php
 	//  include 'logo-advertisement.php'; ?>
 	<?php include $loginType.'/navigation.php';?>
 	<?php include 'page_info.php';?>
 	<?php include $loginType.'/'.$page_name.'.php';?>
-
 	<?php  include 'dashboard.php'; ?>
-
 <!-- <div class="protrait-veiw">
 	<h2>hjhj</h2>
 </div> -->
@@ -41,7 +39,6 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
                     <div class="slimscrollright">
                         <div class="rpanel-title">Current Mesage Thread<span><i class="ti-close right-side-toggle"></i></span> </div>
                         <div class="r-panel-body">
-
                             <ul class="m-t-20 chatonline">
                             <?php
                             $user_array = ['superadmin', 'admin', 'student','doctor','patient', 'teacher', 'parent', 'hrm', 'hostel', 'accountant', 'librarian'];
@@ -63,8 +60,6 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
                                 </li>
                         <?php endforeach;?>
                         <?php endfor;?>
-
-
                             </ul>
                         </div>
                     </div>

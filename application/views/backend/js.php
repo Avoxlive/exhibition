@@ -3,19 +3,18 @@
 <script>
          $(document).ready(function() {
             $('.gallery-scroll-in').owlCarousel({
+                animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            smartSpeed: 450,
             autoplay: true,
-            autoplayHoverPause: true,
-            autoplayTimeout: 20,
-            autoplaySpeed: 12000,
-            fluidSpeed: true,
             loop: true,
-            margin: 20,
-            nav: false,
             dots: false,
-            /*navText: [
-              "<i class='fa fa-chevron-left'></i>",
-              "<i class='fa fa-chevron-right'></i>"
-              ], */
+            margin: 0,
+            nav: false,
+            // navText: [
+            //     "<i class='fa fa-chevron-left'></i>",
+            //     "<i class='fa fa-chevron-right'></i>"
+            // ],
             responsive: {
                 0: {
                     items: 1
@@ -30,6 +29,36 @@
         });
          });
 </script>
+<!-- <script>
+         $(document).ready(function() {
+            $('.gallery-scroll-in').owlCarousel({
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayTimeout: 20,
+            autoplaySpeed: 12000,
+            fluidSpeed: true,
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: false,
+            navText: [
+              "<i class='fa fa-chevron-left'></i>",
+              "<i class='fa fa-chevron-right'></i>"
+              ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
+         });
+</script> -->
 
 <script>
          $(document).ready(function() {
@@ -86,8 +115,6 @@
             }
         });
 </script>
-
-
 
 <script>
      $(document).ready(function() {
