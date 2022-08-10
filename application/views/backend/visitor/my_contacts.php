@@ -9,6 +9,7 @@ $name = $this->session->userdata('name');
 
 
 $visitor_namee= $this->db->get_where('visitor',array('name' => $visitor_name))->row()->visitor_name;
+$chat_status= $this->db->get_where('chat_request',array('visitor_name' => $visitor_name))->row()->visitor_name;
 
 
 $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, 'name'=>$visitor_namee))->result_array();
@@ -39,38 +40,38 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id, '
                         </thead>
                         <tbody>
                              <tr>
+
                              <?php
-                             $no = 1 ;
-                              $get_exhibitor_from_model = $this->crud_model->list_all_exhibitor_and_order_with_chat_id();
-                              // $get_exhibitor_from_model = $this->chat_model->list_all_chat_and_order_with_chatid();
 
-                                    foreach ($get_exhibitor_from_model as $key => $exhibitor):
-        ?>
-                                <td><?php
-                                echo $no++ ; ?></td>
-                                <td><?php echo $exhibitor['name'];?></td>
-                                <td><a href="<?php echo base_url();?>visitor/chat_Rsend/<?php echo $exhibitor['exhibitor_id'];?>"
+        // $visitor_id= $this->session->userdata('visitor_id');
+                             $no =1; $get_status= $this->chat_model->chat_status($visitor_id);
+                             foreach($get_status as $key => $exhibitor):
+                             ?>
+
+                             <td><?php echo $no++ ;?></td>
+                             <td><?php echo $exhibitor['name']?></td>
+                             <td><a href="<?php echo base_url();?>visitor/chat_Rsend/<?php echo $exhibitor['exhibitor_id'];?>"
                                     class="message-icon" ><i class="fa fa-commenting" aria-hidden="true"></i></a></td>
-                                    <!-- <td><button type="submit" href="<?php echo base_url();?>visitor/chat_request/<?php echo $exhibitor['exhibitor_id'];?>" class="btn btn-info">send request</button></td> -->
-                                    <!-- <td><button type="submit" href="<?php echo base_url();?>visitor/chat_request/<?php echo $exhibitor['exhibitor_id'];?>" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">send request</button></td> -->
+                             <td><?php
+                            //  echo $exhibitor['status']?>
 
-                                    <td>
-
-
-                                    <?php
-                                 $get_chat_request_status_from_model = $this->chat_model->fetch_chat_status_from_exhibitor($visitor_id,$exhibitor_id);
-                                 foreach ($get_chat_request_status_from_model as $key => $chat_request):?>
-
-                                    <p>The Chat Request sent by you is <?php echo $chat_request['status'];?></p>
-
-                                   <?php endforeach?>
-                                    </td>
-
-
-
-                             </tr>
                             <?php
-                        endforeach; ?>
+               if($exhibitor['status'] == 'accepted') {?>
+               <div class="chat-acceptance">
+                                    <a href="<?php echo base_url();?>visitor/chat/<?php echo $exhibitor['exhibitor_id'];?>"
+                                   ><i class="fa fa-comments-o" aria-hidden="true"></i> Request Accepted</a>
+               </div>
+
+                                    <?php }
+                                    elseif($exhibitor['status'] == 'pending')
+                                    echo 'pending';
+                                    else echo 'send chat Request';
+                                    ?>
+                                  </td>
+                             </tr>
+                            <?php endforeach?>
+
+
                         </tbody>
                     </table>
                 </div>

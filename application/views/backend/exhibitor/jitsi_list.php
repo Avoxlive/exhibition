@@ -44,9 +44,6 @@
 				                            </td>
 
 				                            <td><?=$row['title'];?></td>
-				                            <!-- <td><?=$this->crud_model->get_type_name_by_id('class', $row['class_id']);?></td>
-							<td><?=$this->crud_model->get_type_name_by_id('section', $row['section_id']);?></td> -->
-				                            <!-- <td><?=$this->crud_model->get_type_name_by_id('patient', $row['patient_id']);?></td> -->
 				                            <td><?=$this->crud_model->get_type_name_by_id('visitor', $row['visitor_id']);?></td>
 				                            <td><?=date('d M, Y', $row['meeting-date'])?></td>
 				                            <td><?=$row['start_time'] .' - '.$row['end_time']?></td>
@@ -57,10 +54,8 @@
 				                            </td>
 				                            <td><?=$row['description']?></td>
 				                            <td>
-				                                <a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
-				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
-				                                            class="fa fa-edit"></i> edit</button></a>
-
+												<?php
+                                            if(($row['meeting-date']>= strtotime("today")) &&($row['meeting-date']<= strtotime("tomorrow"))){?>
 				                                <?php
 												// date_default_timezone_set("Asia/Calcutta");
 												date_default_timezone_set("Asia/Kolkata");
@@ -70,17 +65,23 @@
 				                                        type="button" class="btn btn-success btn-rounded btn-sm"><i
 				                                        class="fa fa-youtube-play"></i>start meeting</button></a>
 				                                <?php endif;?>
+				                                <?php }
+												else if($row['meeting-date']<= strtotime("today"))
+												echo "expired";
+																	else if($row['meeting-date']>= strtotime("today"))
+																	echo "pending";
+												?>
 
+                                                <a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
+				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
+				                                            class="fa fa-edit"></i> edit</button></a>
 				                                <a href="#"
 				                                    onclick="confirm_modal('<?php echo base_url();?>exhibitor/jitsi/delete/<?php echo $row['jitsi_id'];?>');"><button
 				                                        type="button" class="btn btn-danger btn-rounded btn-sm"><i
 				                                            class="fa fa-times"></i> delete</button></a>
 															<?php
 															//  echo date('h:i', time())?>
-
-
 				                            </td>
-
 				                        </tr>
 
 

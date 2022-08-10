@@ -232,6 +232,13 @@ class Chat_model extends CI_Model {
                 $sql = "select * from chat_request where visitor_id='".$studentClassvisitor."'  order by chat_request_id asc";
                 return $this->db->query($sql)->result_array();
             }
+            function selectChatrequestvisitorbychatstatus(){
+                $visitortoexhibitorchatstatus = $this->db->get_where('chat_request', array('chat_request_id' => $this->session->userdata('chat_request_id')))->row()->exhibitor_id;
+                // $visitorsubgroup = $this->db->get_where('visitor', array('visitor_id' => $this->session->userdata('visitor_id')))->row()->subgroup_id;
+
+                $sql = "select * from chat_request where visitor_id='".$visitortoexhibitorchatstatus."'  order by chat_request_id asc";
+                return $this->db->query($sql)->result_array();
+            }
 function retrive_visitor_name_from_visitor_name(){
 
    $sql= "select * from visitor inner join chat_request on visitor.visitor_id=chat_request.visitor_id";
@@ -306,6 +313,16 @@ function retrive_visitor_name_from_visitor_name(){
         $sendvisitor = $this->db->get_where('chat_request', array('visitor_id' =>  $visitor_id))->row()->visitor_id;
         $sql = "select * from chat_request where exhibitor_id ='".$receiveexhibitor."' and visitor_id='".$sendvisitor."' order by chat_request_id asc";
         return $this->db->query($sql)->result_array();
+    }
+
+    function chat_status($visitor_id){
+        $visitor_id= $this->session->userdata('visitor_id');
+
+    $sql= "select exhibitor.exhibitor_id, exhibitor.name, chat_request.status, chat_request.visitor_id
+from exhibitor left join chat_request
+on exhibitor.exhibitor_id=chat_request.exhibitor_id and visitor_id='$visitor_id' ";
+return $this->db->query($sql)->result_array();
+
     }
 }
 

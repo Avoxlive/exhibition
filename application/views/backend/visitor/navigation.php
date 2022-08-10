@@ -97,15 +97,15 @@
                 <li class="<?php if ($page_name == 'chat_request') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>visitor/chat_request">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('chat_request'); ?></span>
+                        <span class="hide-menu"><?php echo get_phrase('my_chat'); ?></span>
                     </a>
                 </li>
-                <li class="<?php if ($page_name == 'chat_acceptance') echo 'active'; ?> ">
+                <!-- <li class="<?php if ($page_name == 'chat_acceptance') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>visitor/chat_acceptance">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                         <span class="hide-menu"><?php echo get_phrase('my_chat'); ?></span>
                     </a>
-                </li>
+                </li> -->
          <!-- </ul>
     </li> -->
 
@@ -143,8 +143,6 @@
                     <span class="hide-menu"><?php echo get_phrase('Logout'); ?></span>
                 </a>
             </li>
-
-
         </ul>
     </div>
 </div>

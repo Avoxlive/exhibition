@@ -6,6 +6,8 @@ class Visitor extends CI_Controller {
     function __construct() {
         parent::__construct();
                 $this->table        = 'calendar';
+                $this->table        = 'exhibitor';
+                $this->table        = 'chat_request';
         		$this->load->database();                                //Load Databse Class
                 $this->load->library('session');					    //Load library for session
                 $this->load->model('live_class_model');

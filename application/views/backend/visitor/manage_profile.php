@@ -90,9 +90,7 @@
   		  			 <input type='file' class="form-control" name="userfile" onChange="readURL(this);">
 					 <img id="blah" src="<?php echo $this->crud_model->get_image_url('visitor', $row['visitor_id']); ?>" alt="" height="200" width="200"/>
 					</div>
-					</div>
-
-
+				</div>
 
 				<div class="form-group">
 					<button type="submit" class="btn btn-success btn-rounded btn-block btn-sm"><i class="fa fa-save"></i>  <?php echo get_phrase('save');?></button>
@@ -121,7 +119,7 @@
 
 <?php echo form_open(base_url() . 'visitor/manage_profile/change_password', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
         ?>
-					<div class="form-group">
+				<div class="form-group">
 					<label class="col-md-12" for="example-text"><?php echo get_phrase('Password');?></label>
 					<div class="col-sm-12">
 						<input type="password" class="form-control" name="new_password" value="">
@@ -138,11 +136,8 @@
 
 				<div class="form-group">
                      <button class="btn btn-block btn-success btn-rounded btn-sm"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Change Password');?></button>
-
                 </div>
-
 				<?php echo form_close(); ?>
-
 </div>
 </div>
 

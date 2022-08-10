@@ -60,25 +60,17 @@
 						echo "expired";
 						else if(($row['start_time']>=date('h:i',time())))
 						echo "pending";
-						// else if(($row['meeting-date']>= strtotime("tomorrow")) ||(($row['start_time']<=date('h:i',time()))&& ($row['end_time']>=date('h:i',time()))) )
-						// echo "pendedee";?>
+						?>
 						<?php  }
 else if($row['meeting-date']<= strtotime("today"))
 	echo "expired";
 						else if($row['meeting-date']>= strtotime("today"))
 						echo "pending";
 
-						// else if(($row['end_time']<=date('h:i',time())))
-						// echo "expired";
 
 						?>
 
-<?php
-// if(($row['meeting-date']<= strtotime("today")) ){ ?>
- <!-- <button type="button" class="btn btn-success btn-rounded btn-sm"> -->
-								<!-- <i class="fa fa-youtube-play"></i> expired</button></a> -->
-<?php
-// }?>
+
 
 
                             </td>
