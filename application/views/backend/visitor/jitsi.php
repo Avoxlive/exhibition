@@ -48,8 +48,6 @@
 
 
 						<?php
-
-
 						if(($row['meeting-date']>= strtotime("today")) &&($row['meeting-date']<= strtotime("tomorrow"))){?>
 							<?php if(($row['status']=='live')&&($row['start_time']<=date('h:i',time()))&& ($row['end_time']>=date('h:i',time()))){?>
 							 <a href="<?php echo base_url();?>visitor/stream_jitsi/<?php echo $row['jitsi_id'];?>">

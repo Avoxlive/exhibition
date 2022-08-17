@@ -44,7 +44,7 @@
 						<div class="form-group">
 							<label class="col-sm-12"><?php echo get_phrase('date'); ?></label>
 							<div class="col-sm-12">
-								<input type="date" class="form-control datepicker" name="meeting_date" value="<?=date('Y-m-d', $value['meeting_date'])?>" required>
+								<input type="date" class="form-control datepicker" name="meeting-date" value="<?=date('Y-m-d', $value['meeting-date'])?>" required>
 							</div>
 					</div>
 
@@ -61,7 +61,7 @@
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <div class="input-group clockpicker " data-placement="left" data-align="top" data-autoclose="true">
+                                    <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
                                         <input type="text" name="end_time" class="form-control" value="<?=$value['end_time']?>">
                                         <span class="input-group-addon"> <span class="glyphicon glyphicon-time">
 										</span>

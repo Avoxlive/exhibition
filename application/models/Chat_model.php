@@ -324,6 +324,15 @@ on exhibitor.exhibitor_id=chat_request.exhibitor_id and visitor_id='$visitor_id'
 return $this->db->query($sql)->result_array();
 
     }
+    function chat_status_from_exhibitor($exhibitor_id){
+        $exhibitor_id= $this->session->userdata('exhibitor_id');
+
+    $sql= "select visitor.visitor_id, visitor.name, chat_request.status,chat_request.chat_request_id , chat_request.exhibitor_id
+from visitor left join chat_request
+on visitor.visitor_id=chat_request.visitor_id and exhibitor_id='$exhibitor_id' ";
+return $this->db->query($sql)->result_array();
+
+    }
 }
 
 

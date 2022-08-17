@@ -183,7 +183,8 @@ class Exhibitor extends CI_Controller {
         }
 
         function my_chat_request($param1 = null, $param2 = null, $param3 = null){
-            $page_data['page_name']     = 'my_chat_request';
+            // $page_data['page_name']     = 'my_chat_request';
+            $page_data['page_name']     = 'my_chat';
             $page_data['page_title']    = get_phrase('manage_my_chat_request');
             $this->load->view('backend/index', $page_data);
         }
@@ -454,7 +455,7 @@ class Exhibitor extends CI_Controller {
                         }
                                 $page_data['page_name']     = 'appointment_form';
                                 $page_data['page_title']    = get_phrase('manage_appointment_form');
-                                $page_data['select_appointment_form']  = $this->db->get_where('calendar',array('id'=>$id))->result_array();
+                                // $page_data['select_appointment_form']  = $this->db->get_where('calendar',array('id'=>$id))->result_array();
                                 $this->load->view('backend/index', $page_data);
                     }
 

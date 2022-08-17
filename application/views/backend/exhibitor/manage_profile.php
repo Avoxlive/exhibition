@@ -33,6 +33,13 @@
 						<input type="text" class="form-control" name="phone" value="<?php echo $row['phone number'];?>">
 					</div>
 				</div>
+				<div class="form-group">
+					 <label class="col-sm-12"><?php echo get_phrase('profile Image');?>*</label>
+					 <div class="col-sm-12">
+  		  			 <input type='file' class="form-control" name="userfile" onChange="readURL(this);">
+					 <!-- <img id="blah" src="<?php echo $this->crud_model->get_image_url('exhibitor', $row['exhibitor_id']); ?>" alt="" height="200" width="200"/> -->
+					</div>
+					</div>
 
 
 
@@ -132,22 +139,17 @@
 						<input type="password" class="form-control" name="new_password" value="">
 					</div>
 				</div>
-
-
 				<div class="form-group">
 					<label class="col-md-12" for="example-text"><?php echo get_phrase('Confirm Password');?></label>
 					<div class="col-sm-12">
 						<input type="password" class="form-control" name="confirm_new_password" value="">
 					</div>
 				</div>
-
 				<div class="form-group">
                      <button class="btn btn-block btn-success btn-rounded btn-sm"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Change Password');?></button>
 
                 </div>
-
 				<?php echo form_close(); ?>
-
 </div>
 </div>
 

@@ -16,26 +16,49 @@ $exhibitor_id = $this->session->userdata('exhibitor_id');
                             <tr>
                                 <th>S.NO</th>
                                 <th>Name</th>
-                                <!-- <th>Status</th> -->
+                                <th>Status</th>
                                 <th>chat</th>
                             </tr>
                         </thead>
                         <tbody>
-                             <tr>
-                             <?php $no = 1 ;  $get_visitor_from_model = $this->crud_model->list_all_visitor_and_order_with_visitor_id();
-                                    foreach ($get_visitor_from_model as $key => $visitor):
-        ?>
-                                <td><?php echo $no++ ; ?></td>
-                                <td><?php echo $visitor['name'];?></td>
-                                <td>
+                            <tr>
+                            <?php
+
+                     $no =1; $get_status= $this->chat_model->chat_status_from_exhibitor($exhibitor_id);
+                     foreach($get_status as $key => $visitor):
+                     ?>
+
+<td><?php echo $no++ ; ?></td>
+<td><?php echo $visitor['name'];?></td>
+<td>
+    <?php
+    // echo $visitor['status'];
+
+if($visitor['status'] == 'pending'){?>
+
+                                <a href="<?php echo base_url();?>exhibitor/edit_chat_request/<?php echo $visitor['chat_request_id'];?>"
+                                class="message-icon" ><i class="fa fa-commenting" aria-hidden="true"></i></a>
+
+ <?php }
+
+ elseif($visitor['status'] == 'accepted')
+echo "chat accepted";
+else echo"chat request not sent";
+ ?>
+
+</td>
+
+<td>
                                     <div class="chat-acceptance">
                                 <a href="<?php echo base_url();?>exhibitor/chat/<?php echo $visitor['visitor_id'];?>"
                                  ><i class="fa fa-comments-o">
                                     </i></a>
                                     </div></td>
-                             </tr>
-                            <?php endforeach;
-                            ?>
+
+                            </tr>
+                            <?php endforeach?>
+
+
                         </tbody>
                     </table>
                 </div>

@@ -115,12 +115,12 @@
             ?>
             <!-- "> -->
 
-                <li class="<?php if ($page_name == 'chat_request') echo 'active'; ?> ">
+                <!-- <li class="<?php if ($page_name == 'chat_request') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>exhibitor/my_chat_request ">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                         <span class="hide-menu"><?php echo get_phrase('my_chat_request');?></span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="<?php if ($page_name == 'message') echo 'active'; ?>">
                     <a href="<?php echo base_url(); ?>exhibitor/my_chat">

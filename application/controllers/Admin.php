@@ -433,7 +433,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
     function set_language($lang){
         $this->session->set_userdata('language', $lang);
         redirect(base_url(). 'admin', 'refresh');
-        recache();
+        // recache();
     }
  /* Jitsi */
 
@@ -653,11 +653,11 @@ function schedule_list(){
                     echo '<option value="'.$exhibitor['name'].'">'.$exhibitor['name'].'</option>';
                 }
         }
-        function get_patient_section2($patient_id){
-            $patient = $this->db->get_where('patient', array('patient_id' => $patient_id))->result_array();
-                foreach($patient as $key => $patient)
+        function get_visitor_section2($visitor_id){
+            $visitor = $this->db->get_where('visitor', array('visitor_id' => $visitor_id))->result_array();
+                foreach($visitor as $key => $visitor)
                 {
-                    echo '<option value="'.$patient['name'].'">'.$patient['name'].'</option>';
+                    echo '<option value="'.$visitor['name'].'">'.$visitor['name'].'</option>';
                 }
         }
 
@@ -707,15 +707,14 @@ function schedule_list(){
             $this->load->view('backend/login');
                }
 
-               function signup($param1 = null, $param2 = null, $param3 = null){
-                if($param1 == 'add'){
-                  $this->admin_model->insertsignupFunction();
-                  $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
-                  redirect(base_url(). 'admin/signup', 'refresh');
-              }
-              $this->load->view('backend/signup');
+            function signup($param1 = null, $param2 = null, $param3 = null){
+            if($param1 == 'add'){
+                $this->admin_model->insertsignupFunction();
+                $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+                redirect(base_url(). 'admin/signup', 'refresh');
             }
-
+            $this->load->view('backend/signup');
+            }
             function edit_advertisment($clinic_advertisment_id){
             $page_data['page_name'] = 'edit_advertisment';
             $page_data['page_title'] = get_phrase('replace_advertisement');

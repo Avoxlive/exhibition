@@ -46,18 +46,18 @@
                             </div>
 
                                  <div class="form-group">
-                    <label class="col-md-12" for="example-text"><?php echo get_phrase('Doctors confirmed');?></label>
+                    <label class="col-md-12" for="example-text"><?php echo get_phrase('exhibitors confirmed');?></label>
                     <div class="col-sm-12">
-                           <select name="doctor_id" id="doctor_id" class="form-control select2" onchange="return get_doctor(this.value)" required>
-                    <option value=""><?php echo get_phrase('select_doctor');?></option>
+                           <select name="exhibitor_id" id="exhibitor_id" class="form-control select2" onchange="return get_exhibitor(this.value)" required>
+                    <option value=""><?php echo get_phrase('select_exhibitor');?></option>
 
-                    <?php $doctor =  $this->db->get('doctor')->result_array();
-                    foreach($doctor as $key => $doctor):?>
-                    <option value="<?php echo $doctor['doctor_id'];?>"<?php if(isset($doctor_id) && $doctor_id==$doctor['doctor_id']) echo 'selected="selected"';?>><?php echo $doctor['name'];?></option>
+                    <?php $exhibitor =  $this->db->get('exhibitor')->result_array();
+                    foreach($exhibitor as $key => $exhibitor):?>
+                    <option value="<?php echo $exhibitor['exhibitor_id'];?>"<?php if(isset($exhibitor_id) && $exhibitor_id==$exhibitor['exhibitor_id']) echo 'selected="selected"';?>><?php echo $exhibitor['name'];?></option>
                     <?php endforeach;?>
                    </select>
 
-                           <select name="doctor_name" style="visibility:hidden;" class="form-control select2" id="section_selector_holder1" >
+                           <select name="exhibitor_name" style="visibility:hidden;" class="form-control select2" id="section_selector_holder1" >
                     <option value=""><?php echo get_phrase('select_name');?></option>
                     </select>
 
@@ -65,18 +65,18 @@
                   </div>
 
                     <div class="form-group" style="margin-top: -27px;">
-                    <label class="col-md-12" for="example-text"><?php echo get_phrase('Patient confirmed');?></label>
+                    <label class="col-md-12" for="example-text"><?php echo get_phrase('visitor confirmed');?></label>
                     <div class="col-sm-12">
-                           <select name="patient_id" id="patient_id" class="form-control select2" onchange="return get_patient(this.value)" required>
-                    <option value=""><?php echo get_phrase('select_patient');?></option>
+                           <select name="visitor_id" id="visitor_id" class="form-control select2" onchange="return get_visitor(this.value)" required>
+                    <option value=""><?php echo get_phrase('select_visitor');?></option>
 
-                    <?php $patient =  $this->db->get('patient')->result_array();
-                    foreach($patient as $key => $patient):?>
-                    <option value="<?php echo $patient['patient_id'];?>"<?php if(isset($patient_id) && $patient_id==$patient['patient_id']) echo 'selected="selected"';?>><?php echo $patient['name'];?></option>
+                    <?php $visitor =  $this->db->get('visitor')->result_array();
+                    foreach($visitor as $key => $visitor):?>
+                    <option value="<?php echo $visitor['visitor_id'];?>"<?php if(isset($visitor_id) && $visitor_id==$visitor['visitor_id']) echo 'selected="selected"';?>><?php echo $visitor['name'];?></option>
                     <?php endforeach;?>
                    </select>
 
-                    <select name="patient_name" class="form-control select2" id="section_selector_holder" style="visibility:hidden;" >
+                    <select name="visitor_name" class="form-control select2" id="section_selector_holder" style="visibility:hidden;" >
                     <option value=""><?php echo get_phrase('select_name');?></option>
                     </select>
                       </div>
@@ -427,7 +427,7 @@
                     dataType: 'JSON',
                     beforeSend: function()
                     {
-                        element.find('button[doctortype=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
+                        element.find('button[exhibitortype=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
                     },
                     success: function(data)
                     {
@@ -486,7 +486,7 @@
                     dataType: 'JSON',
                     beforeSend: function()
                     {
-                        element.find('button[doctortype=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
+                        element.find('button[exhibitortype=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
                     },
                     success: function(data)
                     {
@@ -654,20 +654,19 @@ function update_attendance() {
 
 }
 
-function select_section(doctor_id) {
-
-var doctor = $(".doctor");
-for (var i = doctor.length - 1; i >= 0; i--) {
-    doctor[i].style.display = "none";
-    if (doctor[i].value == group_id){
-        doctor[i].style.display = "block";
-        doctor[i].selected = "selected";
+function select_section(exhibitor_id) {
+var exhibitor = $(".exhibitor");
+for (var i = exhibitor.length - 1; i >= 0; i--) {
+    exhibitor[i].style.display = "none";
+    if (exhibitor[i].value == group_id){
+        exhibitor[i].style.display = "block";
+        exhibitor[i].selected = "selected";
     }
-}
+  }
 }
 
-// function select_section(teacher_id) {
 
+//  function select_section(teacher_id) {
 //     var teacher = $(".teacher");
 //     for (var i = teacher.length - 1; i >= 0; i--) {
 //         teacher[i].style.display = "none";
@@ -678,6 +677,7 @@ for (var i = doctor.length - 1; i >= 0; i--) {
 //     }
 // }
 
+
 // function get_class_teacher(teacher_id){
 //     $.ajax({
 //         url:        '<?php echo base_url();?>admin/get_teacher_section1/' + teacher_id,
@@ -687,49 +687,48 @@ for (var i = doctor.length - 1; i >= 0; i--) {
 //     });
 // }
 
-function get_doctor(doctor_id){
+function get_exhibitor(exhibitor_id){
     $.ajax({
-        url:        '<?php echo base_url();?>admin/get_doctor_section1/' + doctor_id,
+        url:        '<?php echo base_url();?>admin/get_exhibitor_section1/' + exhibitor_id,
         success:    function(response){
             jQuery('#section_selector_holder1').html(response);
         }
     });
 }
-function select_section(patient_id) {
-
-var patient = $(".patient");
-for (var i = patient.length - 1; i >= 0; i--) {
-    patient[i].style.display = "none";
-    if (patient[i].value == patient_id){
-        patient[i].style.display = "block";
-        patient[i].selected = "selected";
+function select_section(visitor_id) {
+var visitor = $(".visitor");
+for (var i = visitor.length - 1; i >= 0; i--) {
+    visitor[i].style.display = "none";
+    if (visitor[i].value == visitor_id){
+        visitor[i].style.display = "block";
+        visitor[i].selected = "selected";
     }
 }
 }
 
-// function select_section(student_id) {
 
+// function select_section(student_id) {
 //     var student = $(".student");
 //     for (var i = student.length - 1; i >= 0; i--) {
 //         student[i].style.display = "none";
 //         if (student[i].value == student_id){
 //             student[i].style.display = "block";
 //             student[i].selected = "selected";
-//         }
+//      }
 //     }
 // }
 // function get_student(student_id){
-//     $.ajax({
+//      $.ajax({
 //         url:        '<?php echo base_url();?>admin/get_student_section2/' + student_id,
 //         success:    function(response){
 //             jQuery('#section_selector_holder').html(response);
 //         }
 //     });
-// }
+//   }
 
-function get_patient(patient_id){
+function get_visitor(visitor_id){
     $.ajax({
-        url:        '<?php echo base_url();?>admin/get_patient_section2/' + patient_id,
+        url:        '<?php echo base_url();?>admin/get_visitor_section2/' + visitor_id,
         success:    function(response){
             jQuery('#section_selector_holder').html(response);
         }

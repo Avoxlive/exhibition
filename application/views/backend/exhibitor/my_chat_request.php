@@ -29,24 +29,31 @@ $visitors = $this->db->get_where('visitor', array('visitor_id' => $visitor_id))-
                         </thead>
                         <tbody>
                              <tr>
-                             <?php $no = 1 ;  $get_visitor_from_model =( $this->chat_model->list_all_visitor_and_order_with_chat_request($exhibitor_id)) and ($this->crud_model->list_all_visitor_and_order_with_visitor_id());
-                            //  <?php $no = 1 ;  $get_visitor_from_model = $this->chat_model->list_all_visitor_and_order_with_chat_request($exhibitor_id);
-                                    foreach ($get_visitor_from_model as $key => $visitor):
+                             <?php
+                            //  $no = 1 ;  $get_visitor_from_model =( $this->chat_model->list_all_visitor_and_order_with_chat_request($exhibitor_id)) and ($this->crud_model->list_all_visitor_and_order_with_visitor_id());
+                                    // foreach ($get_visitor_from_model as $key => $visitor):
+
+                                        $no =1; $get_status= ($this->chat_model->chat_status_from_exhibitor($exhibitor_id)) and ($this->crud_model->list_all_visitor_and_order_with_visitor_id());
+                                        foreach($get_status as $key => $visitor):
                             ?>
 
-                            <?php if($visitor['status'] == 'pending'):?>
                                 <td><?php echo $no++ ; ?></td>
                                 <!-- <td><?php echo $visitor['visitor_id'];?></td> -->
-                                <td><?php echo $visitor['visitor_name'];?></td>
+                                <td><?php echo $visitor['name'];?></td>
+
+
+                                <!-- <td>
+oo
+
+                                </td> -->
+
                                 <td>
+                            <?php if($visitor['status'] == 'pending'):?>
                                 <a href="<?php echo base_url();?>exhibitor/edit_chat_request/<?php echo $visitor['chat_request_id'];?>"
                                 class="message-icon" ><i class="fa fa-commenting" aria-hidden="true"></i></a>
                                 </td>
                                 <?php endif?>
-                                    <!-- <a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
-				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
-				                                           class="fa fa-edit"></i> edit</button></a> -->
-                                    </tr>
+                                </tr>
                             <?php  endforeach; ?>
                         </tbody>
                     </table>
