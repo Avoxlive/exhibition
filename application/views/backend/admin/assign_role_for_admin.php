@@ -23,8 +23,8 @@ if($query_admin_role_table->num_rows() < 1)
                     <td>dashboard</td>
                     <td>Manage Academics </td>
                     <td>Manage Employee </td>
-                    <td>Manage Student </td>
-                    <td>Manage Patient </td>
+                    <!-- <td>Manage Student </td> -->
+                    <td>Manage Visitor </td>
                     <td>Manage Calendar </td>
                     <td>Manage Chat </td>
                 </tr>
@@ -32,8 +32,8 @@ if($query_admin_role_table->num_rows() < 1)
                     <td><input class="check" name="dashboard" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->dashboard) echo 'checked';?> type="checkbox"></td>
                     <td><input class="check" name="manage_academics" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_academics) echo 'checked';?> type="checkbox"></td>
                     <td><input class="check" name="manage_employee" value="1"  <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_employee) echo 'checked';?> type="checkbox"></td>
-                    <td><input class="check" name="manage_student" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_student) echo 'checked';?> type="checkbox"></td>
-                    <td><input class="check" name="manage_patient" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_patient) echo 'checked';?> type="checkbox"></td>
+                    <!-- <td><input class="check" name="manage_student" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_student) echo 'checked';?> type="checkbox"></td> -->
+                    <td><input class="check" name="manage_visitor" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_visitor) echo 'checked';?> type="checkbox"></td>
                     <td><input class="check" name="manage_calendar" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_calendar) echo 'checked';?> type="checkbox"></td>
                     <td><input class="check" name="manage_chat" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_chat) echo 'checked';?> type="checkbox"></td>
                 </tr>
@@ -47,9 +47,9 @@ if($query_admin_role_table->num_rows() < 1)
                     <td><input class="check" name="manage_attendance" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_attendance) echo 'checked';?> type="checkbox"></td>
                     <td><input class="check" name="download_page" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->download_page) echo 'checked';?> type="checkbox"></td>
                     <td><input class="check" name="manage_parent" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_parent) echo 'checked';?> type="checkbox"></td>
-                    <td><input class="check" name="manage_alumni" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_alumni) echo 'checked';?> type="checkbox"></td> 
+                    <td><input class="check" name="manage_alumni" value="1" <?php if($this->db->get_where('admin_role', array('admin_id' => $param2))->row()->manage_alumni) echo 'checked';?> type="checkbox"></td>
                 </tr>
-                
+
             </table>
             <hr>
             <div class="form-group">

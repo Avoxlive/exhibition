@@ -1,10 +1,18 @@
 <?php
-$system_name    = $this->db->get_where('settings', array('type' => 'system_name', 'type' => 'clinic_id'))->row()->description;
-$system_address = $this->db->get_where('settings', array('type' => 'address', 'type' => 'clinic_id'))->row()->description;
-$footer         = $this->db->get_where('settings', array('type' => 'footer', 'type' => 'clinic_id'))->row()->description;
-$text_align     = $this->db->get_where('settings', array('type' => 'text_align', 'type' => 'clinic_id'))->row()->description;
+// $system_name    = $this->db->get_where('settings', array('type' => 'system_name', 'type' => 'clinic_id'))->row()->description;
+// $system_address = $this->db->get_where('settings', array('type' => 'address', 'type' => 'clinic_id'))->row()->description;
+// $footer         = $this->db->get_where('settings', array('type' => 'footer', 'type' => 'clinic_id'))->row()->description;
+// $text_align     = $this->db->get_where('settings', array('type' => 'text_align', 'type' => 'clinic_id'))->row()->description;
+// $loginType      = $this->session->userdata('login_type');
+// $clinic_id    = $this->session->userdata('clinic_id');
+// $running_year   = $this->db->get_where('settings', array('type' => 'session'))->row()->description;
+
+$system_name    = $this->db->get_where('settings', array('type' => 'system_name', 'type' => 'exhibition_id'))->row()->description;
+$system_address = $this->db->get_where('settings', array('type' => 'address', 'type' => 'exhibition_id'))->row()->description;
+$footer         = $this->db->get_where('settings', array('type' => 'footer', 'type' => 'exhibition_id'))->row()->description;
+$text_align     = $this->db->get_where('settings', array('type' => 'text_align', 'type' => 'exhibition_id'))->row()->description;
 $loginType      = $this->session->userdata('login_type');
-$clinic_id    = $this->session->userdata('clinic_id');
+$exhibition_id    = $this->session->userdata('exhibition_id');
 $running_year   = $this->db->get_where('settings', array('type' => 'session'))->row()->description;
 ?>
 <?php include 'css.php'; ?>
@@ -41,7 +49,7 @@ $running_year   = $this->db->get_where('settings', array('type' => 'session'))->
                         <div class="r-panel-body">
                             <ul class="m-t-20 chatonline">
                             <?php
-                            $user_array = ['superadmin', 'admin', 'student','doctor','patient', 'teacher', 'parent', 'hrm', 'hostel', 'accountant', 'librarian'];
+                            $user_array = ['superadmin', 'admin', 'exhibitor','visitor','accountant', 'librarian'];
                             for($i= 0; $i < sizeof($user_array); $i++):
                             $user_lists = $this->db->get($user_array[$i])->result_array();
                             ?>

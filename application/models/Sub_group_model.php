@@ -1,8 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class Sub_group_model extends CI_Model { 
-	
+class Sub_group_model extends CI_Model {
+
 	function __construct()
     {
         parent::__construct();
@@ -18,7 +18,7 @@ class Sub_group_model extends CI_Model {
             // 'class_id'      => html_escape($this->input->post('class_id')),
             'group_id'      => html_escape($this->input->post('group_id')),
             'doctor_id'    => html_escape($this->input->post('doctor_id')),
-            'clinic_id' => $this->session->userdata('clinic_id'),
+            'exhibition_id' => $this->session->userdata('exhibition_id'),
 	    );
 
         $this->db->insert('sub_group', $page_data);
@@ -42,7 +42,7 @@ class Sub_group_model extends CI_Model {
         $this->db->where('sub_group_id', $param2);
         $this->db->delete('sub_group');
     }
-	
-	
+
+
 }
 

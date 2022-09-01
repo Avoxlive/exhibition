@@ -183,34 +183,32 @@
 
 				<div class="form-group">
                      <button class="btn save-button"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Update Logo');?></button>
-
                 </div>
 
 				<?php echo form_close(); ?>
 
 
-
 				THEME SETTINGS
 				<hr>
 
-				<?php echo form_open(base_url() . 'systemsetting/system_settings/themeSettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
+				<?php
+				echo form_open(base_url() . 'systemsetting/system_settings/themeSettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
+				// echo form_open(base_url() . 'systemsetting/theme_change/update_themee', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
         ?>
-
-				<div class="radio radio-custom">
-                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'default') echo 'checked';?> name="skin_colour" id="radio2" value="default">
+				<!-- <div class="radio radio-custom">
+                  <input type="radio" <?php if($skin = $this->db->get_where('exhibition_settings' , array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->primary_color == 'blue-dark') echo 'checked';?> name="primary_color" id="radio2" value="blue-dark">
                   <label for="radio2"> Dark Blue </label>
 				</div>
 
 				<div class="radio radio-success">
-                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'green') echo 'checked';?> name="skin_colour" id="radio3" value="green">
+                  <input type="radio" <?php if($skin = $this->db->get_where('exhibition_settings' , array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->primary_color == 'blue-green')  echo 'checked';?> name="skin_colour" id="radio3" value="green">
                   <label for="radio3"> Green </label>
-				</div>
+				</div> -->
 
-				<div class="radio radio-gray">
+				<!-- <div class="radio radio-gray">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'pink_dark') echo 'checked';?> name="skin_colour" id="radio4" value="pink_dark">
                   <label for="radio4"> Dark pink </label>
-				</div>
-
+				</div> -->
 				<!-- <div class="radio radio-black">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'black') echo 'checked';?> name="skin_colour" id="radio5" value="black">
                   <label for="radio5"> Black </label>
@@ -227,68 +225,134 @@
 				</div> -->
 
 
+				<div class="form-group">
+                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('primary_color');?></label>
+                    <div class="col-sm-12">
+						<select name="primary_color" class="form-control select2" style="width:100%" required>
+                            <option value=""><?php echo get_phrase('select');?></option>
+                            <option value="green"><?php echo get_phrase('green');?></option>
+                            <option value="blue"><?php echo get_phrase('blue');?></option>
+                        </select>
+					</div>
+				</div>
+					<div class="form-group">
+						<label class="col-md-12" for="example-text"><?php echo get_phrase('secondary_color');?></label>
+						<div class="col-sm-12">
+							<select name="secondary_color" class="form-control select2" style="width:100%" required>
+								<option value=""><?php echo get_phrase('select');?></option>
+								<option value="light-green"><?php echo get_phrase('light-green');?></option>
+								<option value="light-blue"><?php echo get_phrase('light-blue');?></option>
+							</select>
+						</div>
+					</div>
+		        	<br>
+					<div class="form-group">
+						<button type="submit" class="btn save-button"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
+					</div>
+					<?php echo form_close();?>
 
 
-		<br>
-
-                <div class="form-group">
-                          <button type="submit" class="btn save-button"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
-                    </div>
-                    <?php echo form_close();?>
-
-
-					THEME SECONDARY COLOR SETTINGS
-				<hr>
+				<!-- THEME SECONDARY COLOR SETTINGS -->
 
 				<?php
-				echo form_open(base_url() . 'systemsetting/system_settings/themesecodarySettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
+				// echo form_open(base_url() . 'systemsetting/system_settings/themesecodarySettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
         ?>
-
-				<div class="radio radio-custom">
-                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'cream') echo 'checked';?> name="secondary_color" id="radio2" value="cream">
-                  <label for="radio2"> cream </label>
+				<!-- <div class="radio radio-custom">
+                    <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'cream') echo 'checked';?> name="secondary_color" id="radio2" value="cream">
+                    <label for="radio2"> cream </label>
 				</div>
-
 				<div class="radio radio-success">
-                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'green') echo 'checked';?> name="secondary_color" id="radio3" value="green">
-                  <label for="radio3"> Green </label>
+                    <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'green') echo 'checked';?> name="secondary_color" id="radio3" value="green">
+                    <label for="radio3"> Green </label>
 				</div>
-
 				<div class="radio radio-gray">
-                  <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'pink') echo 'checked';?> name="secondary_color" id="radio4" value="pink">
-                  <label for="radio4"> Pink  </label>
+                    <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'pink') echo 'checked';?> name="secondary_color" id="radio4" value="pink">
+                    <label for="radio4"> Pink </label>
 				</div>
-
-				<!-- <div class="radio radio-black">
+				<div class="radio radio-black">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'black') echo 'checked';?> name="skin_colour" id="radio5" value="black">
                   <label for="radio5"> Black </label>
-				</div> -->
-
-				<!-- <div class="radio radio-purple">
+				</div>
+				<div class="radio radio-purple">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'purple') echo 'checked';?> name="skin_colour" id="radio6" value="purple">
                   <label for="radio6"> Purple </label>
-				</div> -->
-
-				<!-- <div class="radio radio-info">
+				</div>
+				<div class="radio radio-info">
                   <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'skin_colour'))->row()->description == 'blue') echo 'checked';?> name="skin_colour" id="radio7" value="blue">
                   <label for="radio7"> Blue </label>
-				</div> -->
-
-
-
-
-		<br>
-
+				</div>
+		        <br>
                 <div class="form-group">
-                          <button type="submit" class="btn save-button"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
-                    </div>
-                    <?php
-					echo form_close();?>
+                    <button type="submit" class="btn save-button"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('change_theme');?></button>
+                </div> -->
+
+				<?php
+				// echo form_close();?>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </div>
-</div>
 
-</div>
-</div>
+<div class="row">
+				    <div class="col-sm-12">
+				        <div class="panel panel-info">
 
-</div>
+				            <div class="panel-body table-responsive">
+				                <?php
+								// echo get_phrase('abcd');?>
+								<?php
+											// echo "Today is " . date("Y/m/d") . "<br>";
+											// echo "The time is " . date("h:i:sa");?>
+				                <!-- <hr class="sep-2"> -->
+
+				                <table id="example23" class="display nowrap" cellspacing="0" width="100%">
+				                    <thead>
+				                        <tr>
+				                            <!-- <th><?=get_phrase('uploaded_by')?></th> -->
+				                            <th><?=get_phrase('uploaded_primary_theme')?></th>
+				                            <th><?=get_phrase('uploaded_secondary_theme')?></th>
+				                            <th><?=get_phrase('action')?></th>
+				                        </tr>
+				                    </thead>
+				                    <tbody>
+
+				                        <?php
+                                        $select = $this->crud_model->selecttheme();
+					 		            foreach ($select as $key => $row) : ?>
+				                        <tr>
+				                            <!-- <td>
+				                                <?php
+
+													// $user = explode('-', $row['user_id']);
+													// $user_type = $user[1];
+													// $user_id = $user[1];
+													// echo $this->db->get_where($user_type,array($user_type.'_id' => $user_id))->row()->name;
+													?>
+
+				                            </td> -->
+<??>
+				                            <!-- <td><?=$row['clinic_advertisment_id'];?></td> -->
+				                            <td><?=$row['primary_color'];?></td>
+				                            <td><?=$row['secondary_color'];?></td>
+				                            <td>
+				                                <!-- <a href="<?php echo base_url();?>admin/changetheme/<?php echo $row['exhibition_id'];?>"><button
+				                                    type="button" class="btn btn-info btn-rounded btn-sm"><i
+				                                    class="fa fa-edit"></i> change</button></a> -->
+													<a onclick="showAjaxModal('<?php echo base_url();?>modal/popup/changetheme/<?php echo $row['exhibition_id'];?>')" class="btn btn-info btn-rounded btn-xs">change theme <i class="fa fa-edit"></i></a>
+
+				                                <!-- <a href="#"
+				                                    onclick="confirm_modal('<?php echo base_url();?>admin/add_advertisment/delete/<?php echo $row['clinic_advertisment_id'];?>');"><button
+				                                    type="button" class="btn btn-danger btn-rounded btn-sm"><i
+				                                    class="fa fa-times"></i>delete</button></a> -->
+				                            </td>
+				                        </tr>
+				                        <?php endforeach;?>
+				                    </tbody>
+				                </table>
+				            </div>
+				        </div>
+				    </div>
+				</div>

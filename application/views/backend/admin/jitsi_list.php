@@ -183,7 +183,6 @@
 
 
     $('#check').click(function(){
-
         if($('#check').is(':checked') == true){
             $("#send_sms").show(500);
             $("#initial").hide(500);

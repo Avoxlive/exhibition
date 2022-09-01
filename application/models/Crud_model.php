@@ -254,6 +254,26 @@ class Crud_model extends CI_Model {
         return $data;
     }
 
+    function list_all_exhibition_and_order_with_exhibition_id(){
+
+        $data = array();
+        $sql = "select * from exhibition order by exhibition_id asc limit 0, 20";
+        $all_exhibition_selected = $this->db->query($sql)->result_array();
+
+        foreach($all_exhibition_selected as $key => $selected_exhibitions_from_exhibition_table){
+            $exhibition_id = $selected_exhibitions_from_exhibition_table['exhibition_id'];
+            $face_file = 'uploads/exhibition_image/'. $exhibition_id . '.jpg';
+            if(!file_exists($face_file)){
+                $face_file = 'uploads/exhibition_image/default_image.jpg/';
+            }
+
+            $selected_exhibitions_from_exhibition_table['face_file'] = base_url() . $face_file;
+            array_push($data, $selected_exhibitions_from_exhibition_table);
+        }
+
+        return $data;
+    }
+
     function list_all_exhibitor_and_order_with_chat_id(){
 
         $data = array();
@@ -660,16 +680,15 @@ class Crud_model extends CI_Model {
 
     function insert_accountant(){
         $page_data = array(		// array data that postulate the input fileds
-            'school_id'             => $this->session->userdata('school_id'),
+            'school_id'         => $this->session->userdata('school_id'),
             'name' 				=> $this->input->post('name'),
-            'accountant_number' 	=> $this->input->post('accountant_number'),
+            'accountant_number' => $this->input->post('accountant_number'),
             'birthday' 			=> $this->input->post('birthday'),
             'sex' 				=> $this->input->post('sex'),
             'religion' 			=> $this->input->post('religion'),
             'blood_group' 		=> $this->input->post('blood_group'),
             'address' 			=> $this->input->post('address'),
             'phone' 			=> $this->input->post('phone'),
-
             'facebook' 			=> $this->input->post('facebook'),
             'twitter' 			=> $this->input->post('twitter'),
             'googleplus' 		=> $this->input->post('googleplus'),
@@ -729,9 +748,6 @@ class Crud_model extends CI_Model {
         $this->db->delete('accountant');
     }
 
-
-
-
     function insert_hostel(){
         $page_data = array(		// array data that postulate the input fileds
             'school_id'             => $this->session->userdata('school_id'),
@@ -743,7 +759,6 @@ class Crud_model extends CI_Model {
             'blood_group' 		=> $this->input->post('blood_group'),
             'address' 			=> $this->input->post('address'),
             'phone' 			=> $this->input->post('phone'),
-
             'facebook' 			=> $this->input->post('facebook'),
             'twitter' 			=> $this->input->post('twitter'),
             'googleplus' 		=> $this->input->post('googleplus'),
@@ -815,7 +830,6 @@ class Crud_model extends CI_Model {
             'blood_group' 		=> $this->input->post('blood_group'),
             'address' 			=> $this->input->post('address'),
             'phone' 			=> $this->input->post('phone'),
-
             'facebook' 			=> $this->input->post('facebook'),
             'twitter' 			=> $this->input->post('twitter'),
             'googleplus' 		=> $this->input->post('googleplus'),
@@ -855,7 +869,6 @@ class Crud_model extends CI_Model {
             'blood_group' 		=> $this->input->post('blood_group'),
             'address' 			=> $this->input->post('address'),
             'phone' 			=> $this->input->post('phone'),
-
             'email' 			=> $this->input->post('email'),
             'facebook' 			=> $this->input->post('facebook'),
             'twitter' 			=> $this->input->post('twitter'),
@@ -884,13 +897,13 @@ class Crud_model extends CI_Model {
 
     function update_settings(){
 
-        //  $data['description'] =  $this->input->post('system_name');
-        //  $this->db->where('type', 'system_name');
-        //  $this->db->update('settings', $data);
+         $data['description'] =  $this->input->post('system_name');
+         $this->db->where('type', 'system_name');
+         $this->db->update('settings', $data);
 
-        //  $data['description'] = $this->input->post('system_title');
-        //  $this->db->where('type', 'system_title');
-        //  $this->db->update('settings', $data);
+         $data['description'] = $this->input->post('system_title');
+         $this->db->where('type', 'system_title');
+         $this->db->update('settings', $data);
 
         $data['description'] = $this->input->get('exhibition_id');
         $this->db->where('type', 'exhibition_id');
@@ -907,7 +920,6 @@ class Crud_model extends CI_Model {
         $data['description']    =   $this->input->post('password');
         $this->db->where('type', 'password');
         $this->db->update('settings', $data);
-
 
         $data['description']    =   $this->input->post('location');
         $this->db->where('type', 'location');
@@ -933,7 +945,6 @@ class Crud_model extends CI_Model {
         $this->db->where('type', 'text_align');
         $this->db->update('settings', $data);
 
-
         $data['description']    =   $this->input->post('running_session');
         $this->db->where('type', 'session');
         $this->db->update('settings', $data);
@@ -946,13 +957,10 @@ class Crud_model extends CI_Model {
         $this->db->where('type', 'paypal_email');
         $this->db->update('settings', $data);
 
-
-
         $settiings_array = array(
             'exhibition_id'  => $this->session->userdata('exhibition_id'),
         );
         $this->db->update('settings', $settiings_array);
-
     }
 
 
@@ -961,10 +969,37 @@ class Crud_model extends CI_Model {
         $data['description']    =   $this->input->post('skin_colour');
         $this->db->where('type', 'skin_colour');
         $this->db->update('settings', $data);
+
     }
 
-    function update_secondary_theme(){
+    function update_themee(){
+        $page_data = array(
+            'exhibition_id'     => $this->session->userdata('exhibition_id'),
+            'primary_color'     => html_escape($this->input->post('primary_color')),
+            'exhibition_setting_id'     => html_escape($this->input->post('exhibition_setting_id')),
+            'secondary_color'   => html_escape($this->input->post('secondary_color')),
+     );
+    $this->db->insert('exhibition_settings', $page_data);
+    }
 
+    function selecttheme(){
+        $staff = $this->session->userdata('exhibition_id');
+        $sql = "select * from exhibition_settings where exhibition_id='".$staff."' order by exhibition_setting_id asc";
+
+
+        return $this->db->query($sql)->result_array();
+    }
+  function change_themee($param2){
+    $page_data = array(
+    'primary_color'     => $this->input->post('primary_color'),
+    'secondary_color'   => $this->input->post('secondary_color')
+    );
+    $this->db->where('exhibition_id', $param2);
+    $this->db->update('exhibition_settings', $page_data);
+  }
+
+
+    function update_secondary_theme(){
         $data['description']    =   $this->input->post('secondary_color');
         $this->db->where('type', 'secondary_color');
         $this->db->update('settings', $data);
@@ -975,54 +1010,42 @@ class Crud_model extends CI_Model {
         return $get_settings;
     }
 
-
     function stripe_settings (){
         $stripe_info = array();
-
         $stripe['stripe_active']    = html_escape($this->input->post('stripe_active'));
         $stripe['testmode']         = html_escape($this->input->post('testmode'));
         $stripe['secret_key']       = html_escape($this->input->post('secret_key'));
         $stripe['public_key']       = html_escape($this->input->post('public_key'));
         $stripe['secret_live_key']  = html_escape($this->input->post('secret_live_key'));
         $stripe['public_live_key']  = html_escape($this->input->post('public_live_key'));
-
         array_push($stripe_info, $stripe);
-
         $data['description'] = json_encode($stripe_info);
         $this->db->where('type', 'stripe_setting');
-        $this->db->update('clinic', $data);
-
+        $this->db->update('exhibition', $data);
     }
 
     function paypal_settings(){
         $paypal_info = array();
-
         $stripe['paypal_active']          = html_escape($this->input->post('paypal_active'));
         $stripe['paypal_mode']            = html_escape($this->input->post('paypal_mode'));
         $stripe['sandbox_client_id']      = html_escape($this->input->post('sandbox_client_id'));
         $stripe['production_client_id']   = html_escape($this->input->post('production_client_id'));
-
         array_push($paypal_info, $stripe);
-
         $data['description'] = json_encode($paypal_info);
         $this->db->where('type', 'paypal_setting');
-        $this->db->update('clinic', $data);
-
-
+        $this->db->update('exhibition', $data);
     }
 
 
    function send_student_score_model(){
-
         $exam_id = $this->input->post('exam_id');
         $class_id = $this->input->post('class_id');
         $receiver = $this->input->post('receiver');
-
         $select_all_student_from_student_table = $this->db->get_where('student', array('class_id' => $class_id))->result_array();
         foreach ($select_all_student_from_student_table as $key => $all_selected_student_from_student_table){
 
             if($receiver == 'student')
-                $recieverPhoneNumber = $all_selected_student_from_student_table['phone'];
+            $recieverPhoneNumber = $all_selected_student_from_student_table['phone'];
             if($receiver == 'parent' && $all_selected_student_from_student_table['parent_id'] != NULL)
             $select_from_parent_table = $this->db->get_where('parent', array('parent_id' => $all_selected_student_from_student_table['parent_id']))->row()->phone;
 
@@ -1032,7 +1055,6 @@ class Crud_model extends CI_Model {
 
             foreach($select_student_score_from_mark_table as $key => $all_selected_student_scores_from_mark_table){
                 $message = '';
-
                 $selelect_all_subject_from_subject_table = $this->db->get_where('subject', array('subject_id' => $all_selected_student_scores_from_mark_table['subject_id']))->row()->name;
                 $student_mark_obtained_in_class_score_and_exam = $all_selected_student_scores_from_mark_table['class_score1'] + $all_selected_student_scores_from_mark_table['class_score2'] + $all_selected_student_scores_from_mark_table['class_score3'] + $all_selected_student_scores_from_mark_table['exam_score'];
                 $message .= $all_selected_student_scores_from_mark_table['student_id'] . ' ' . $selelect_all_subject_from_subject_table . ':' . $student_mark_obtained_in_class_score_and_exam . 'Over 100';
@@ -1040,57 +1062,98 @@ class Crud_model extends CI_Model {
                 // Sending sms
                 $this->sms_model->send_sms($message, $recieverPhoneNumber);
             }
-
-
         }
 
     }
 
-/* School Crud Model */
+/* Exhibition Crud Model */
 
-    function insert_school(){
+    function insert_exhibition(){
         $page_data = array(		// array data that postulate the input fileds
-            'school_id'             => $this->input->post('school_id'),
-            'school_name'           => $this->input->post('school_name'),
-            'school_admin_email'    => $this->input->post('school_admin_email'),
-			'password'              => sha1($this->input->post('password')),
-			'location'              => $this->input->post('location'),
-        	'phone'                 => $this->input->post('phone'),
-        	'school_email'          => $this->input->post('school_email'),
-            'language'              => $this->input->post('language'),
-            'text_align'            => $this->input->post('text_align'),
-            'session'               => $this->input->post('session'),
-
+            'exhibition_id'             => $this->input->post('exhibition_id'),
+            'exhibition_name'           => $this->input->post('exhibition_name'),
+            'email'                     => $this->input->post('email'),
+			'password'                  => sha1($this->input->post('password')),
+			'location'                  => $this->input->post('location'),
+        	'phone'                     => $this->input->post('phone'),
+        	'exhibition_email'          => $this->input->post('exhibition_email'),
+            'language'                  => $this->input->post('language'),
+            'text_align'                => $this->input->post('text_align'),
+            'session'                   => $this->input->post('session'),
+            'login_status'              => $this->input->post('login_status'),
+            'level'                     => $this->input->post('level'),
             );
-
-        $this->db->insert('school', $page_data);
-        $school_id = $this->db->insert_id();
-
+        $this->db->insert('exhibition', $page_data);
+        $exhibition_id = $this->db->insert_id();
     }
 
-    function update_school($param2){
+    function update_exhibition($param2){
         $page_data = array(			// array starts from here
-            'school_name'           => $this->input->post('school_name'),
-            'school_admin_email'    => $this->input->post('school_admin_email'),
-			'password'              => sha1($this->input->post('password')),
-			'location'              => $this->input->post('location'),
-        	'phone'                 => $this->input->post('phone'),
-        	'school_email'          => $this->input->post('school_email'),
-            'language'              => $this->input->post('language'),
-            'text_align'            => $this->input->post('text_align'),
-            'session'               => $this->input->post('session'),
-
+            'exhibition_name'           => $this->input->post('exhibition_name'),
+            'exhibition_admin_email'    => $this->input->post('exhibition_admin_email'),
+			'password'                  => sha1($this->input->post('password')),
+			'location'                  => $this->input->post('location'),
+        	'phone'                     => $this->input->post('phone'),
+        	'exhibition_email'          => $this->input->post('exhibition_email'),
+            'language'                  => $this->input->post('language'),
+            'text_align'                => $this->input->post('text_align'),
+            'session'                   => $this->input->post('session'),
             );
 
-                $this->db->where('school_id', $param2);
-                $this->db->update('school', $page_data);
-
+            $this->db->where('exhibition_id', $param2);
+            $this->db->update('exhibition', $page_data);
     }
 
-    function delete_school($param2){
-        $this->db->where('school_id', $param2);
-        $this->db->delete('school');
+
+    function delete_exhibition($param2){
+        $this->db->where('exhibition_id', $param2);
+        $this->db->delete('exhibition');
     }
+
+
+    /* School Crud Model */
+
+    // function insert_school(){
+    //     $page_data = array(		// array data that postulate the input fileds
+    //     'school_id'             => $this->input->post('school_id'),
+    //     'school_name'           => $this->input->post('school_name'),
+    //     'school_admin_email'    => $this->input->post('school_admin_email'),
+	// 	   'password'              => sha1($this->input->post('password')),
+	// 	   'location'             => $this->input->post('location'),
+    //     'phone'                => $this->input->post('phone'),
+    //     'school_email'         => $this->input->post('school_email'),
+    //     'language'              => $this->input->post('language'),
+    //     'text_align'            => $this->input->post('text_align'),
+    //     'session'               => $this->input->post('session'),
+    //         );
+    //     $this->db->insert('school', $page_data);
+    //     $school_id = $this->db->insert_id();
+
+    // }
+
+    // function update_school($param2){
+    //     $page_data = array(			// array starts from here
+    //         'school_name'           => $this->input->post('school_name'),
+    //         'school_admin_email'    => $this->input->post('school_admin_email'),
+	// 		'password'              => sha1($this->input->post('password')),
+	// 		'location'              => $this->input->post('location'),
+    //     	'phone'                 => $this->input->post('phone'),
+    //     	'school_email'          => $this->input->post('school_email'),
+    //         'language'              => $this->input->post('language'),
+    //         'text_align'            => $this->input->post('text_align'),
+    //         'session'               => $this->input->post('session'),
+    //         );
+    //             $this->db->where('school_id', $param2);
+    //             $this->db->update('school', $page_data);
+
+    // }
+
+    // function delete_school($param2){
+    //     $this->db->where('school_id', $param2);
+    //     $this->db->delete('school');
+    // }
+
+
 
 
     function list_all_appointment_list_model_and_order_with_id(){

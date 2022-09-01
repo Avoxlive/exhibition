@@ -14,11 +14,13 @@ class Login extends CI_Controller {
 
     //***************** The function below redirects to logged in user area
     public function index() {
-
-        if ($this->session->userdata('superadmin_login') == 1) redirect (base_url(). 'superadmin/school_setting');
-        if ($this->session->userdata('admin_login', 'clinic_id')== 1) redirect (base_url(). 'admin/dashboard');
-        if ($this->session->userdata('parent_login')== 1) redirect (base_url(). 'parent/dashboard');
-        if ($this->session->userdata('doctor_login')== 1) redirect (base_url(). 'doctor/dashboard');
+        if ($this->session->userdata('superadmin_login') == 1) redirect (base_url(). 'superadmin/exhibition_setting');
+        if ($this->session->userdata('admin_login', 'exhibition_id')== 1) redirect (base_url(). 'admin/dashboard');
+        if ($this->session->userdata('admin_login')==1) redirect (base_url(). 'admin/dashboard');
+        // if ($this->session->userdata('superadmin_login') == 1) redirect (base_url(). 'superadmin/school_setting');
+        // if ($this->session->userdata('admin_login', 'clinic_id')== 1) redirect (base_url(). 'admin/dashboard');
+        // if ($this->session->userdata('parent_login')== 1) redirect (base_url(). 'parent/dashboard');
+        // if ($this->session->userdata('doctor_login')== 1) redirect (base_url(). 'doctor/dashboard');
         if ($this->session->userdata('exhibitor_login')== 1) redirect (base_url(). 'exhibitor/dashboard');
         if ($this->session->userdata('visitor_login')== 1) redirect (base_url(). 'visitor/dashboard');
         if ($this->session->userdata('patient_login')== 1) redirect (base_url(). 'patient/dashboard');
@@ -36,18 +38,22 @@ class Login extends CI_Controller {
           redirect(base_url() . 'login', 'refresh');
         }
 
+        // if($login_user == 'superadmin') {
+        //   $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
+        //   redirect(base_url() . 'superadmin/school_setting', 'refresh');
+        // }
         if($login_user == 'superadmin') {
           $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
-          redirect(base_url() . 'superadmin/school_setting', 'refresh');
+          redirect(base_url() . 'superadmin/exhibition_setting', 'refresh');
         }
         if($login_user == 'admin') {
           $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
           redirect(base_url() . 'admin/dashboard', 'refresh');
         }
-        if($login_user == 'doctor') {
-          $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
-          redirect(base_url() . 'doctor/dashboard', 'refresh');
-        }
+        // if($login_user == 'doctor') {
+        //   $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
+        //   redirect(base_url() . 'doctor/dashboard', 'refresh');
+        // }
         if($login_user == 'exhibitor') {
           $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
           redirect(base_url() . 'exhibitor/dashboard', 'refresh');
@@ -56,14 +62,14 @@ class Login extends CI_Controller {
           $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
           redirect(base_url() . 'visitor/dashboard', 'refresh');
         }
-        if($login_user == 'parent') {
-          $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
-          redirect(base_url() . 'parents/dashboard', 'refresh');
-        }
-        if($login_user == 'patient') {
-          $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
-          redirect(base_url() . 'patient/dashboard', 'refresh');
-        }
+        // if($login_user == 'parent') {
+        //   $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
+        //   redirect(base_url() . 'parents/dashboard', 'refresh');
+        // }
+        // if($login_user == 'patient') {
+        //   $this->session->set_flashdata('flash_message', get_phrase('Successfully Login'));
+        //   redirect(base_url() . 'patient/dashboard', 'refresh');
+        // }
      }
 
 
@@ -75,21 +81,24 @@ class Login extends CI_Controller {
       if($login_user == 'admin'){
           $this->login_model->logout_model_for_admin();
       }
-      if($login_user == 'parent'){
-        $this->login_model->logout_model_for_parent();
-      }
-      if($login_user == 'doctor'){
-        $this->login_model->logout_model_for_doctor();
-      }
+      if($login_user == 'exhibition_admin'){
+        $this->login_model->logout_model_for_admin();
+    }
+      // if($login_user == 'parent'){
+      //   $this->login_model->logout_model_for_parent();
+      // }
+      // if($login_user == 'doctor'){
+      //   $this->login_model->logout_model_for_doctor();
+      // }
       if($login_user == 'exhibitor'){
         $this->login_model->logout_model_for_exhibitor();
       }
       if($login_user == 'visitor'){
         $this->login_model->logout_model_for_visitor();
       }
-      if($login_user == 'patient'){
-        $this->login_model->logout_model_for_patient();
-      }
+      // if($login_user == 'patient'){
+      //   $this->login_model->logout_model_for_patient();
+      // }
       $this->session->sess_destroy();
       redirect('login', 'refresh');
      }

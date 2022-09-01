@@ -10,7 +10,7 @@
                             <div class="panel-wrapper collapse out" aria-expanded="true">
                                 <div class="panel-body"> -->
 
-<div class="information">
+        <div class="information">
 			<?php echo form_open(base_url() . 'admin/add_advertisment/add' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
 					<div class="row">
                     <div class="col-sm-6">
@@ -18,21 +18,15 @@
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('Add_new_advertisement');?>&nbsp;</label>
                     <div class="col-sm-12">
              	            <input type="file" name="file_name" class="form-control" required>
-
-
 					</div>
 					</div>
                     <div class="form-group">
                     <button type="submit" class="btn btn-success btn-block btn-rounded btn-sm"><i class="fa fa-book"></i>&nbsp;<?php echo get_phrase('add');?></button>
 					</div>
-		</div>
-	</div>
-
-
+		        </div>
+	        </div>
                 <?php echo form_close();?>
 </div>
-
-
                                 <!-- </div>
                             </div>
                         </div>
@@ -69,7 +63,6 @@
 				                        <tr>
 				                            <!-- <td>
 				                                <?php
-
 													// $user = explode('-', $row['user_id']);
 													// $user_type = $user[1];
 													// $user_id = $user[1];
@@ -80,28 +73,16 @@
 
 				                            <!-- <td><?=$row['clinic_advertisment_id'];?></td> -->
 				                            <td><?=$row['file_name'];?></td>
-
-
 				                            <td>
-
 				                                <a href="<?php echo base_url();?>admin/edit_advertisment/<?php echo $row['clinic_advertisment_id'];?>"><button
-				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
-				                                            class="fa fa-edit"></i> replace</button></a>
-
-
-
+				                                    type="button" class="btn btn-info btn-rounded btn-sm"><i
+				                                    class="fa fa-edit"></i> replace</button></a>
 				                                <a href="#"
 				                                    onclick="confirm_modal('<?php echo base_url();?>admin/add_advertisment/delete/<?php echo $row['clinic_advertisment_id'];?>');"><button
-				                                        type="button" class="btn btn-danger btn-rounded btn-sm"><i
-				                                            class="fa fa-times"></i> delete</button></a>
-
-
-
+				                                    type="button" class="btn btn-danger btn-rounded btn-sm"><i
+				                                    class="fa fa-times"></i>delete</button></a>
 				                            </td>
-
 				                        </tr>
-
-
 				                        <?php endforeach;?>
 				                    </tbody>
 				                </table>
@@ -109,3 +90,4 @@
 				        </div>
 				    </div>
 				</div>
+

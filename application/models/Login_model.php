@@ -15,6 +15,10 @@ class Login_model extends CI_Model {
         $credential = array('email' => $email, 'password' => sha1($password));
 
 
+        $exhibition_admin_email = html_escape($this->input->post('exhibition_admin_email'));
+        $exhibition_admin_password = html_escape($this->input->post('password'));
+        $exhibition_credential = array('exhibition_admin_email' => $exhibition_admin_email, 'password' => sha1($exhibition_admin_password));
+
 /* Super Admin */
         $query = $this->db->get_where('superadmin', $credential);
         if ($query->num_rows() > 0) {
@@ -39,10 +43,26 @@ class Login_model extends CI_Model {
             $this->session->set_userdata('admin_id', $row->admin_id);
             $this->session->set_userdata('login_user_id', $row->admin_id);
             $this->session->set_userdata('name', $row->name);
-            $this->session->set_userdata('clinic_id', $row->clinic_id);
+            $this->session->set_userdata('exhibition_id', $row->exhibition_id);
+            // $this->session->set_userdata('clinic_id', $row->clinic_id);
             return  $this->db->set('login_status', ('1'))
                     ->where('admin_id', $this->session->userdata('admin_id'))
                     ->update('admin');
+        }
+// exhibition admin
+        $query = $this->db->get_where('exhibition', $credential);
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+            $this->session->set_userdata('login_type', 'admin');
+            $this->session->set_userdata('admin_login', '1');
+            $this->session->set_userdata('admin_id', $row->exhibition_id);
+            $this->session->set_userdata('login_user_id', $row->exhibition_id);
+            $this->session->set_userdata('name', $row->exhibition_name);
+            $this->session->set_userdata('exhibition_id', $row->exhibition_id);
+            return
+            $this->db->set('login_status', ('1'))
+                    ->where('exhibition_id', $this->session->userdata('exhibition_id'))
+                    ->update('exhibition');
         }
 
         $query = $this->db->get_where('hrm', $credential);
@@ -225,6 +245,11 @@ class Login_model extends CI_Model {
         return  $this->db->set('login_status', ('0'))
                 ->where('admin_id', $this->session->userdata('admin_id'))
                 ->update('admin');
+    }
+    function logout_model_for_exhibition_admin(){
+        return  $this->db->set('login_status', ('0'))
+                ->where('exhibition_id', $this->session->userdata('exhibition_id'))
+                ->update('exhibition');
     }
 
     function logout_model_for_hrm(){

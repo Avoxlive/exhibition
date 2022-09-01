@@ -65,45 +65,30 @@ $page_data = array(
 
     function selectAdvertismentAdminInsert(){
         $user_id= $this->session->userdata('user_id');
-
-
         // $staff = $this->db->get_where('clinic_advertisment', array('user_id' => $user_id))->row()->user_id;
-
         // $staff = $this->session->userdata('login_type').'-'.$this->session->userdata('login_user_id');
         $staff = $this->session->userdata('user_id');
         $sql = "select * from clinic_advertisment where user_id='".$staff."' order by clinic_advertisment_id asc";
-
         return $this->db->query($sql)->result_array();
     }
 
-
     function selectAdvertismentAdminInsert2(){
         $user_id= $this->session->userdata('user_id');
-
-
         // $staff = $this->db->get_where('clinic_advertisment', array('user_id' => $user_id))->row()->user_id;
-
         // $staff = $this->session->userdata('login_type').'-'.$this->session->userdata('login_user_id');
         $staff = $this->session->userdata('user_id');
         $sql = "select * from clinic_advertisment where user_id='".$staff."' order by clinic_advertisment_id asc limit 1,2";
-
         return $this->db->query($sql)->result_array();
     }
 
     function selectAdvertismentAdminInsert3(){
         $user_id= $this->session->userdata('user_id');
-
-
         // $staff = $this->db->get_where('clinic_advertisment', array('user_id' => $user_id))->row()->user_id;
-
         // $staff = $this->session->userdata('login_type').'-'.$this->session->userdata('login_user_id');
         $staff = $this->session->userdata('user_id');
         $sql = "select * from clinic_advertisment where user_id='".$staff."' order by clinic_advertisment_id asc limit 2,3";
-
         return $this->db->query($sql)->result_array();
     }
-
-
 
     function selectAllImageFromFolder(){
         $file_name = $this->session->userdata('file_name');
@@ -117,31 +102,16 @@ $page_data = array(
         $sql = "select * from clinic_advertisment where clinic_advertisment_id ='".$clinic_advertisment_id."'";
         return $this->db->query($sql)->result_array();
     }
-
-
     function updateNewAdvertismentFunction($param2){
-
         $page_data = array(
-
             'file_name'           => $this->input->post('file_name'));
-
             $page_data['file_name'] = $_FILES["file_name"]["name"];
             move_uploaded_file($_FILES["file_name"]["tmp_name"], "uploads/advertisment_image/" . $_FILES["file_name"]["name"]);	// upload files
             $this->db->where('clinic_advertisment_id', $param2);
             $this->db->update('clinic_advertisment', $page_data);
     }
-
-
     function deleteAdvertismentClassFunction($param2){
-
         $this->db->where('clinic_advertisment_id', $param2);
         $this->db->delete('clinic_advertisment');
-
-
     }
-
-
-
-
-
 }

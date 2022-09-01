@@ -350,7 +350,7 @@ function my_calendar($param1 = null, $param2 = null, $param3 = null){
         function list_all_chat_and_order_with_chatid(){
             $visitor_id = $this->session->userdata('visitor_id');
             $exhibitor_id = $this->session->userdata('exhibitor_id');
-            $clinic_id = $this->session->userdata('clinic_id');
+            $exhibition_id = $this->session->userdata('exhibition_id');
             $receiveexhibitor = $this->db->get_where('chat', array('exhibitor_id' =>  $this->session->userdata('exhibitor_id')))->row()->exhibitor_id;
             $sendvisitor = $this->db->get_where('chat', array('visitor_id' =>  $this->session->userdata('visitor_id')))->row()->visitor_id;
             $sql = "select * from chat where exhibitor_id ='".$receiveexhibitor."' and visitor_id='".$sendvisitor."' order by chat_id asc";

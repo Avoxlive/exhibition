@@ -54,12 +54,12 @@ class Admin extends CI_Controller {
 	/******************* / Admin dashboard code to redirect to admin page if successfull login** */
 
     function manage_profile($param1 = null, $param2 = null, $param3 = null){
-    if ($this->session->userdata('admin_login') != 1) redirect(base_url(), 'refresh');
+    if($this->session->userdata('admin_login') != 1) redirect(base_url(), 'refresh');
     if ($param1 == 'update') {
         $data['name']   =   $this->input->post('name');
         $data['email']  =   $this->input->post('email');
-        $data['clinic_id'] = $this->session->user_data('clinic_id');
-        $this->db->where('clinic_id', $this->session->userdata('clinic_id'));
+        $data['exhibition_id'] = $this->session->user_data('exhibition_id');
+        $this->db->where('exhibition_id', $this->session->userdata('exhibition_id'));
         $this->db->where('admin_id', $this->session->userdata('admin_id'));
         $this->db->update('admin', $data);
         move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/admin_image/' . $this->session->userdata('admin_id') . '.jpg');
@@ -107,8 +107,8 @@ class Admin extends CI_Controller {
         }
         $page_data['page_name']     = 'enquiry_category';
         $page_data['page_title']    = get_phrase('Manage Category');
-        $clinic_id = $this->session->userdata('clinic_id');
-        $page_data['enquiry_category']   = $this->db->get_where('enquiry_category', array('clinic_id'=>$clinic_id))->result_array();
+        $exhibition_id = $this->session->userdata('exhibition_id');
+        $page_data['enquiry_category']   = $this->db->get_where('enquiry_category', array('exhibition_id'=>$exhibition_id))->result_array();
         //$page_data['enquiry_category']  = $this->db->get('enquiry_category')->result_array();
         $this->load->view('backend/index', $page_data);
     }
@@ -126,8 +126,7 @@ class Admin extends CI_Controller {
     //     $clinic_id = $this->session->userdata('clinic_id');
     //     $page_data['select_enquiry']   = $this->db->get_where('enquiry', array('clinic_id'=>$clinic_id))->result_array();
     //     $this->load->view('backend/index', $page_data);
-    // }
-
+    //  }
     // function parent($param1 = null, $param2 = null, $param3 = null){
     //     if ($param1 == 'insert'){
     //         $this->crud_model->insert_parent();
@@ -195,8 +194,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
         echo '<option value="'.$row['designation_id'].'">' . $row['name'] . '</option>';
     }
 
-    function get_employees($department_id = null)
-    {
+    function get_employees($department_id = null){
         $employees = $this->db->get_where('teacher', array('department_id' => $department_id))->result_array();
         foreach($employees as $key => $employees)
             echo '<option value="' . $employees['teacher_id'] . '">' . $employees['name'] . '</option>';
@@ -205,7 +203,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
     function newusers() {
         $page_data['page_name'] = 'newusers';
         $page_data['page_title'] = get_phrase('newusers');
-        $clinic_id = $this->session->userdata('clinic_id');
+        $exhibition_id = $this->session->userdata('exhibition_id');
         $this->load->view('backend/index', $page_data);
     }
 
@@ -313,7 +311,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
             redirect(base_url(). 'login', 'refresh');
         }
         $page_data['page_name']     = 'newuser';
-        $clinic_id = $this->session->userdata('clinic_id');
+        $exhibition_id = $this->session->userdata('exhibition_id');
         // $page_data['page_title']    = get_phrase('Manage user');
         $this->load->view('backend/login');
 
@@ -332,10 +330,8 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
     //     $page_data['student_id']      = $student_id;
     //     $page_data['page_name']     = 'edit_student';
     //     $page_data['page_title']    = get_phrase('Edit Student');
-    //     $this->load->view('backend/index', $page_data);
+    //  $this->load->view('backend/index', $page_data);
     // }
-
-
 
     function get_class_student($class_id){
         $students = $this->db->get_where('student', array('class_id' => $class_id))->result_array();
@@ -384,7 +380,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
             redirect(base_url(). 'admin/manage_language', 'refresh');
         }
         $page_data['page_name']     = 'manage_language';
-        $clinic_id = $this->session->userdata('clinic_id');
+        $exhibition_id = $this->session->userdata('exhibition_id');
         $page_data['page_title']    = get_phrase('Manage Language');
         $this->load->view('backend/index', $page_data);
     }
@@ -416,7 +412,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
             redirect(base_url(). 'admin/newAdministrator', 'refresh');
         }
         $page_data['page_name']     = 'newAdministrator';
-         $exhibitor_id = $this->session->userdata('exhibitor_id');
+         $exhibition_id = $this->session->userdata('exhibition_id');
         $page_data['page_title']    = get_phrase('New Administrator');
         $this->load->view('backend/index', $page_data);
     }
@@ -454,7 +450,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
             redirect(base_url() . 'admin/jitsi/', 'refresh');
         }
         $page_data['page_name'] = 'jitsi';
-        $clinic_id = $this->session->userdata('clinic_id');
+        $exhibition_id = $this->session->userdata('exhibition_id');
         // $page_data['page_title'] = get_phrase('Online_Consultancy');
         $page_data['page_title'] = get_phrase('jitsi_live_class');
         $this->load->view('backend/index',$page_data);
@@ -495,7 +491,7 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
         }
         $page_data['page_name']     = 'appointment_list';
         $page_data['page_title']    = get_phrase('manage_appointment_list');
-        $clinic_id = $this->session->userdata('clinic_id');
+        $exhibition_id = $this->session->userdata('exhibition_id');
         $page_data['select_appointment_list']  = $this->db->get_where('calendar',array(''))->result_array();
         $this->load->view('backend/index', $page_data);
     }

@@ -41,10 +41,13 @@
 
 
      <!---  Permission for Admin Dashboard starts here ------>
-        <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->dashboard;?>
-        <?php if($check_admin_permission == '1'):?>
+        <?php
+        //  $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->dashboard;?>
+        <?php
+        // if($check_admin_permission == '1'):?>
             <li> <a href="<?php echo base_url();?>admin/dashboard" class=""><i class="ti-dashboard p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('Dashboard') ;?></span></a> </li>
-        <?php endif;?>
+        <?php
+    // endif;?>
     <!---  Permission for Admin Dashboard ends here ------>
 
 
@@ -167,8 +170,10 @@
 
 
     <!---  Permission for Admin Manage Employee starts here ------>
-    <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_employee;?>
-    <?php if($check_admin_permission == '1'):?>
+    <?php
+    // $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_employee;?>
+    <?php
+    //  if($check_admin_permission == '1'):?>
 
         <!-- <li class="staff"> <a href="javascript:void(0);" class=""><i data-icon="&#xe006;" class="fa fa-angle-double-right p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('Manage Employees');?><span class="fa arrow"></span></span></a>
 
@@ -209,7 +214,8 @@
 
                  <!-- </ul>
     </li> -->
-    <?php endif;?> <!---  Permission for Admin Manage Employee ends here ------>
+    <?php
+// endif;?> <!---  Permission for Admin Manage Employee ends here ------>
 
 
 
@@ -217,10 +223,12 @@
 
 
     <!---  Permission for Admin Manage Student starts here ------>
-    <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_student;?>
-    <?php if($check_admin_permission == '1'):?>
+    <?php
+    // $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_student;?>
+    <?php
+    //  if($check_admin_permission == '1'):?>
 
-        <li class="student"> <a href="#" class=""><i data-icon="&#xe006;" class="fa fa-users p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('manage_students');?><span class="fa arrow"></span></span></a>
+        <!-- <li class="student"> <a href="#" class=""><i data-icon="&#xe006;" class="fa fa-users p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('manage_students');?><span class="fa arrow"></span></span></a>
 
                         <ul class=" nav nav-second-level<?php
             if ($page_name == 'new_student' ||
@@ -280,8 +288,9 @@
 
 
                  </ul>
-    </li>
-    <?php endif;?>
+    </li> -->
+    <?php
+// endif;?>
     <!-- -  Permission for Admin Manage Student ends here ---- -->
 
 
@@ -290,8 +299,10 @@
 
 
     <!---  Permission for Admin Manage Patients starts here ------>
-    <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_patient;?>
-    <?php if($check_admin_permission == '1'):?>
+    <?php
+    // $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_patient;?>
+    <?php
+    // if($check_admin_permission == '1'):?>
 
         <!-- <li class="patient"> <a href="#" class=""><i data-icon="&#xe006;" class="fa fa-users p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('manage_patients');?><span class="fa arrow"></span></span></a>
 
@@ -361,7 +372,8 @@
 
                  <!-- </ul>
     </li> -->
-    <?php endif;?> <!---  Permission for Admin Manage patient ends here ------>
+    <?php
+// endif;?> <!---  Permission for Admin Manage patient ends here ------>
 
 
 
@@ -378,10 +390,12 @@
 
 
     <!---  Permission for Admin Manage Attendance starts here ------>
-    <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_attendance;?>
-    <?php if($check_admin_permission == '1'):?>
+    <?php
+    // $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_attendance;?>
+    <?php
+    // if($check_admin_permission == '1'):?>
 
-        <li class="attendance"> <a href="#" class=""><i data-icon="&#xe006;" class="fa fa-hospital-o p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('manage_attendance');?><span class="fa arrow"></span></span></a>
+        <!-- <li class="attendance"> <a href="#" class=""><i data-icon="&#xe006;" class="fa fa-hospital-o p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('manage_attendance');?><span class="fa arrow"></span></span></a>
 
                         <ul class=" nav nav-second-level<?php
             if ($page_name == 'manage_attendance' || $page_name == 'staff_attendance' ||
@@ -407,8 +421,9 @@
 
 
                  </ul>
-                </li>
-            <?php endif;?> <!---  Permission for Admin Manage Attendance ends here ------>
+                </li> -->
+            <?php
+        // endif;?> <!---  Permission for Admin Manage Attendance ends here ------>
 
 
 
@@ -453,22 +468,26 @@
 
 
     <!---  Permission for Admin Download Parent Page starts here ------>
-    <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_parent;?>
-    <?php if($check_admin_permission == '1'):?>
+    <?php
+    // $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_parent;?>
+    <?php
+    // if($check_admin_permission == '1'):?>
 
-        <li class=" <?php if($page_name == 'parent')echo 'active';?>">
+        <!-- <li class=" <?php if($page_name == 'parent')echo 'active';?>">
                     <a href="<?php echo base_url();?>admin/parent" >
                     <i class="fa fa-users p-r-10"></i>
                     <span class="hide-menu"><?php echo get_phrase('manage_parents');?></span>
                     </a>
-        </li>
-    <?php endif;?> <!---  Permission for Admin Download Page  ends here ------>
+        </li> -->
+    <?php
+// endif;?> <!---  Permission for Admin Download Page  ends here ------>
 
 
 
     <!---  Permission for Admin Manage Alumni starts here ------>
     <!-- <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_alumni;?>
-    <?php if($check_admin_permission == '1'):?>
+    <?php
+    // if($check_admin_permission == '1'):?>
 
             <li class="<?php if($page_name == 'alumni')echo 'active';?>">
                 <a href="<?php echo base_url();?>admin/alumni" >
@@ -476,7 +495,8 @@
                     <span class="hide-menu"><?php echo get_phrase('manage_alumni');?></span>
                 </a>
             </li>
-    <?php endif;?>  -->
+    <?php
+//  endif;?>  -->
     <!---  Permission for Admin Manage Alumni ends here ------>
 
 
@@ -1075,8 +1095,10 @@
                 </li> -->
 
 
-        <?php $checking_level = $this->db->get_where('admin', array('admin_id' => $this->session->userdata('login_user_id')))->row()->level;?>
-        <?php if($checking_level == '1'):?>
+        <?php
+        // $checking_level = $this->db->get_where('admin', array('admin_id' => $this->session->userdata('login_user_id')))->row()->level;?>
+        <?php
+        // if($checking_level == '1'):?>
         <!-- <li> <a href="#" class=""><i data-icon="&#xe006;" class="fa fa-cubes p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('role_managements');?><span class="fa arrow"></span></span></a>
 
             <ul class=" nav nav-second-level<?php
@@ -1092,7 +1114,8 @@
 
                  <!-- </ul>
             </li> -->
-        <?php endif;?>
+        <?php
+    // endif;?>
 
         <li class="<?php if ($page_name == 'add_advertisment') echo 'active';?>">
         <a href="<?php echo base_url();?>admin/add_advertisment">
@@ -1101,8 +1124,10 @@
     </a>
         </li>
 
-        <?php $checking_level = $this->db->get_where('admin', array('admin_id' => $this->session->userdata('login_user_id')))->row()->level;?>
-        <?php if($checking_level == '2'):?>
+        <?php
+        $checking_level = $this->db->get_where('admin', array('admin_id' => $this->session->userdata('login_user_id')))->row()->level;?>
+        <?php
+        if($checking_level == '2'):?>
 
 
                         <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
@@ -1111,7 +1136,8 @@
                                  <span class="hide-menu"><?php echo get_phrase('manage_profile'); ?></span>
                             </a>
                         </li>
-        <?php endif;?>
+        <?php
+    endif;?>
 
 
                 <li class="">

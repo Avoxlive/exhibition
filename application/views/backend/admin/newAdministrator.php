@@ -13,7 +13,10 @@ if($query_admin_role_table->num_rows() < 1)
     $this->db->insert('admin_role', $selecting_id_from_admin_table);
 ?>
 
+<?php
+$exhibition_id = $this->session->userdata('exhibition_id');
 
+?>
 
 <div class="row">
     <div class="col-sm-5">
@@ -44,7 +47,7 @@ if($query_admin_role_table->num_rows() < 1)
                                 </div>
                         </div>
 
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                  	        <label class="col-md-12" for="example-text"><?php echo get_phrase('Select Role');?></label>
                         <div class="col-sm-12">
                             <select name="level" class="form-control">
@@ -52,7 +55,7 @@ if($query_admin_role_table->num_rows() < 1)
                                 <option value="2"><?php echo get_phrase('Normal Admin');?>
                              </select>
                         </div>
-                    </div> -->
+                    </div>
 
                         <div class="form-group">
                  	        <label class="col-md-12" for="example-text"><?php echo get_phrase('Password');?></label>

@@ -1,7 +1,5 @@
 /*==== Developed by OPTIMUM LINKUP COMPUER == */
 
-
-
 /*==== Developed by OPTIMUM LINKUP COMPUER : CSS VARRIABLES== */
 :root {
 	--color-green: #55c57a;
@@ -130,15 +128,12 @@ body {
 	cursor: pointer;
 }
 .upload-icon{
-
 	margin-right: 1.5rem;
 	font-size: 1.7rem;
 	color: var(--color-green-dark);
-
 }
 
 .form-heading{
-
 	text-transform: uppercase;
 	font-size: 2rem;
 	font-weight: 400;
@@ -187,7 +182,6 @@ body {
 	padding-top: 1rem;
 }
 
-
 /*==== Developed by OPTIMUM LINKUP COMPUER : STYLE CHAT AREA == */
 #nav{
 	width: 100%;
@@ -206,7 +200,7 @@ body {
 	width: 20%;
 	height: 90vh;
 	background-color: var(--color-white);
-	box-shadow: .8rem 0 .6rem rgba(0,0,0,0.5);	
+	box-shadow: .8rem 0 .6rem rgba(0,0,0,0.5);
 	position: relative;
 }
 
@@ -217,7 +211,7 @@ width: 100%;
 height: 10vh;
 top:-10vh;
 background: linear-gradient(to right, var(--color-green-light), var(--color-green-dark));
-	box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.5);
+box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.5);
 box-shadow: 3px -2px 5px 0px rgba(0,0,0,0.2);
 line-height: 10vh;
 text-align: center;
@@ -247,10 +241,9 @@ color: var(--color-white);
 display: block;
 width: 8rem;
 height: 8rem;
-border-radius: 50%;	
+border-radius: 50%;
 margin: 0 auto;
 overflow: hidden;
-
 
 }
 
@@ -258,18 +251,15 @@ overflow: hidden;
 	transform: scale(1.5);
 }
 
-
 .profile-img{
 	width: 8rem;
 	height: 8rem;
 	border-radius: 50%;
 	transition: all .3s;
-
 }
 
 .left-ul li:not(:first-child):hover {
 background: linear-gradient(to right, var(--color-green-light), var(--color-green-light));
-
 }
 
 .left-ul li:hover a{
@@ -290,7 +280,6 @@ background: linear-gradient(to right, var(--color-green-light), var(--color-gree
 	width: 100%;
 }
 
-
 #right-area{
 	width: 80%;
 	background-color: white;
@@ -301,8 +290,7 @@ background: linear-gradient(to right, var(--color-green-light), var(--color-gree
 	height: 75vh;
 	padding: 2rem;
 	overflow-x: hidden;
-	overflow-y: sroll; 
-
+	overflow-y: sroll;
 }
 
 .left-message{
@@ -329,7 +317,6 @@ position: relative;
 	border: 2px solid var(--color-white);
 }
 
-
 .offline-icon{
 position: absolute;
 	top: 0;
@@ -340,7 +327,6 @@ position: absolute;
 	display: block;
 	border-radius: 50%;
 	border: 2px solid var(--color-white);
-
 }
 
 .sender-img{
@@ -357,8 +343,6 @@ position: absolute;
 	font-weight: 500;
 	font-size: 1.1rem;
 	color: var(--color-silver-4);
-
-
 }
 
 .date-time{
@@ -392,13 +376,11 @@ position: absolute;
 	height: 0;
 	border-top: .7rem solid var(--color-green-light);
 	border-left: .7rem solid transparent;
-
 }
 
 .right-messages{
 	display: flex;
 	justify-content:flex-end;
-
 }
 
 .right-msg-area{
@@ -423,23 +405,17 @@ position: absolute;
 	display: block;
 	text-align: right;
 }
-
 .chat-form{
 	width: 100%;
 	height: 10vh;
 	border-top: 1px solid var(--color-silver-3);
 }
-
 .chat-container{
-
 	display: flex;
 }
-
 .form-input{
 	width: 50%;
 }
-
-
 .textarea-control{
 width: 100%;
 border: 0;
@@ -470,7 +446,6 @@ margin-left: .5rem;
 	margin-left: 3rem;
 	color: var(--color-silver-4);
 }
-
 
 ::-webkit-input-placeholder{
 	font-family: "Poppins", sans-serif;
@@ -506,7 +481,6 @@ cursor: pointer;
 .form-grid{
 	width: 35%;
 }
-
 .custom-bars{
 	position: absolute;
 	float: right;
@@ -515,11 +489,9 @@ cursor: pointer;
 	right: 3rem;
 	top: 33%;
 }
-
 .custom-bars:hover{
 	cursor: pointer;
 }
-
 
 .bars{
 	display: none;
@@ -533,7 +505,6 @@ cursor: pointer;
 	margin-top: 5px;
 }
 
-
 /*=== DESIGN SCROLL BAR ===*/
 
 .messages::-webkit-scrollbar{
@@ -545,7 +516,6 @@ cursor: pointer;
 	background-color: #888;
 	border-radius: 1rem;
 }
-
 
 /*==== Developed by OPTIMUM LINKUP COMPUER : STYLE SIGNUP AND LOGIN FORM RESPONSIVE == */
 
@@ -603,4 +573,3 @@ cursor: pointer;
 		width: 100%;
 	}
 }
-

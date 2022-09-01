@@ -11,21 +11,20 @@ class Admin_model extends CI_Model {
 
     function createNewAdministrator(){
 
-        $page_data['name']  = html_escape($this->input->post('name'));
-        $page_data['email']  = html_escape($this->input->post('email'));
-        $page_data['phone']  = html_escape($this->input->post('phone'));
-        $page_data['password']  = sha1($this->input->post('name'));
+        $page_data['name']      = html_escape($this->input->post('name'));
+        $page_data['email']     = html_escape($this->input->post('email'));
+        $page_data['phone']     = html_escape($this->input->post('phone'));
+        $page_data['password']  = sha1($this->input->post('password'));
         $page_data['level']     = html_escape($this->input->post('level'));
-        $page_data['exhibitor_id'] =  $this->session->userdata('exhibitor_id');
-
+        $page_data['exhibition_id'] =  $this->session->userdata('exhibition_id');
         $this->db->insert('admin', $page_data);
+
 
         $admin_id = $this->db->insert_id();
         move_uploaded_file($_FILES['admin_image']['tmp_name'], 'uploads/admin_image/' . $admin_id . '.jpg');
 
         $page_data2['admin_id'] =  $admin_id;
         $this->db->insert('admin_role', $page_data2);
-
 
     }
 
@@ -38,16 +37,15 @@ class Admin_model extends CI_Model {
     function select_all_the_administrator_from_admin_table(){
         $all_selected_administrator = $this->db->get('admin');
         return $all_selected_administrator->result_array();
-
     }
 
     function updateAllDetailsForAdminRole($param2){
-        $page_data['dashboard']  = html_escape($this->input->post('dashboard'));
+        $page_data['dashboard']         = html_escape($this->input->post('dashboard'));
         $page_data['manage_academics']  = html_escape($this->input->post('manage_academics'));
         $page_data['manage_employee']   = html_escape($this->input->post('manage_employee'));
-        $page_data['manage_patient']   = html_escape($this->input->post('manage_patient'));
-        $page_data['manage_student']    = html_escape($this->input->post('manage_student'));
-        $page_data['manage_attendance']     = html_escape($this->input->post('manage_attendance'));
+        $page_data['manage_visitor']    = html_escape($this->input->post('manage_visitor'));
+        // $page_data['manage_student'] = html_escape($this->input->post('manage_student'));
+        $page_data['manage_attendance'] = html_escape($this->input->post('manage_attendance'));
         $page_data['download_page']     = html_escape($this->input->post('download_page'));
         $page_data['manage_parent']     = html_escape($this->input->post('manage_parent'));
         $page_data['manage_alumni']     = html_escape($this->input->post('manage_alumni'));
@@ -62,29 +60,25 @@ class Admin_model extends CI_Model {
 
         $contactus_data = array(
             // 'exhibition_id'     => $this->session->userdata('exhibition_id'),
-			'touch_name'              => $this->input->post('touch_name'),
-			'touch_email'              => $this->input->post('touch_email'),
-			'touch_phone'              => $this->input->post('touch_phone'),
-			'touch_message'              => $this->input->post('touch_message'),
-
+			'touch_name'           => $this->input->post('touch_name'),
+			'touch_email'          => $this->input->post('touch_email'),
+			'touch_phone'          => $this->input->post('touch_phone'),
+			'touch_message'        => $this->input->post('touch_message'),
         );
-
         $this->db->insert('contactus', $contactus_data);
      }
+
      function insertsignupFunction(){
         $signup_data = array(
             // 'exhibition_id'     => $this->session->userdata('exhibition_id'),
-			'name'              => $this->input->post('name'),
+			'name'               => $this->input->post('name'),
 			'email'              => $this->input->post('email'),
-			'company'              => $this->input->post('company'),
+			'company'            => $this->input->post('company'),
 			'phone'              => $this->input->post('phone'),
-			'exhibitor_id'              => $this->input->post('exhibitor_id'),
+			'exhibitor_id'       => $this->input->post('exhibitor_id'),
 			'price'              => $this->input->post('price'),
-
         );
-
         $this->db->insert('signup', $signup_data);
-
 
      }
 
