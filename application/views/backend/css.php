@@ -45,12 +45,12 @@
     <?php if ($exhibition_id == $this->session->userdata('exhibition_id')) { ?>
     <!-- <link href="<?php echo base_url(); ?>optimum/css/colors/<?php
         // echo $this->db->get_where('settings', array('type' => 'skin_colour'))->row()->description; ?>.css" id="theme" rel="stylesheet" > -->
-    <link href="<?php echo base_url(); ?>optimum/css/colors/<?php echo $this->db->get_where('exhibition_settings', array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->primary_color; ?>.css" id="theme" rel="stylesheet" >
+    <link href="<?php echo base_url(); ?>optimum/css/colors/<?php echo $this->db->get_where('exhibition_settings', array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->primary_color; ?>.css" id="theme" rel="stylesheet">
     <link href="<?php echo base_url(); ?>optimum/css/secondary_color/<?php echo $this->db->get_where('settings', array('type' => 'secondary_color'))->row()->description; ?>.css" id="theme" rel="stylesheet" >
     <?php }?>
 	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="<?php echo base_url(); ?>optimum/plugins/bower_components/html5-editor/bootstrap-wysihtml5.css" / >
-	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" / >
+    <link rel="stylesheet" href="<?php echo base_url(); ?>optimum/plugins/bower_components/html5-editor/bootstrap-wysihtml5.css" />
+	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>optimum/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css" / >
     <link href="<?php echo base_url(); ?>optimum/plugins/bower_components/switchery/dist/switchery.min.css" rel="stylesheet" / >
     <link href="<?php echo base_url(); ?>optimum/plugins/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
@@ -59,7 +59,6 @@
     <link href="<?php echo base_url(); ?>optimum/plugins/bower_components/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
 	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/icheck/skins/all.css" rel="stylesheet">
-
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>optimum/plugins/bower_components/gallery/css/animated-masonry-gallery.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>optimum/plugins/bower_components/fancybox/ekko-lightbox.min.css" />

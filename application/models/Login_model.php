@@ -191,6 +191,7 @@ class Login_model extends CI_Model {
             $this->session->set_userdata('login_type', 'exhibitor');
             $this->session->set_userdata('exhibitor_login', '1');
             $this->session->set_userdata('exhibitor_id', $row->exhibitor_id);
+            $this->session->set_userdata('exhibition_id', $row->exhibition_id);
             $this->session->set_userdata('login_user_id', $row->exhibitor_id);
             $this->session->set_userdata('name', $row->name);
 
@@ -207,6 +208,7 @@ class Login_model extends CI_Model {
             $this->session->set_userdata('login_type', 'visitor');
             $this->session->set_userdata('visitor_login', '1');
             $this->session->set_userdata('visitor_id', $row->visitor_id);
+            $this->session->set_userdata('exhibition_id', $row->exhibition_id);
             $this->session->set_userdata('login_user_id', $row->visitor_id);
             $this->session->set_userdata('name', $row->name);
 
@@ -224,14 +226,10 @@ class Login_model extends CI_Model {
             $this->session->set_userdata('patient_id', $row->patient_id);
             $this->session->set_userdata('login_user_id', $row->patient_id);
             $this->session->set_userdata('name', $row->name);
-
             return  $this->db->set('login_status', ('1'))
                     ->where('patient_id', $this->session->userdata('patient_id'))
                     ->update('patient');
         }
-
-
-
     }
 
     function logout_model_for_super_admin(){

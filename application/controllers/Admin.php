@@ -678,6 +678,27 @@ function schedule_list(){
                 $this->load->view('backend/index',$page_data);
             }
 
+            function add_logo($param1 = null,$param2 = null,$param3 = null){
+                if($param1 == 'add'){
+                    $this->crud_model->createlogoFunction();
+                    $this->session->set_flashdata('flash_message', get_phrase('added_successfuly'));
+                    redirect(base_url() . 'admin/add_advertisment', 'refresh');
+                }
+                if($param1 == 'edit'){
+                    $this->crud_model->updatelogoFunction($param2);
+                    $this->session->set_flashdata('flash_message', get_phrase('successfuly_updated'));
+                    redirect(base_url() . 'admin/add_advertisment/', 'refresh');
+                }
+                if($param1 == 'delete'){
+                    $this->crud_model->deletelogoFunction($param2);
+                    $this->session->set_flashdata('flash_message', get_phrase('advertisment_successfuly_deleted'));
+                    redirect(base_url() . 'admin/add_advertisment/', 'refresh');
+                    }
+                    $page_data['page_name'] = 'add_advertisment';
+                    $page_data['page_title'] = get_phrase('Advertisment');
+                    $this->load->view('backend/index',$page_data);
+                }
+
             function contactus($param1 = null, $param2 = null, $param3 = null){
                 if($param1 == 'add'){
                   $this->admin_model->insetcontactusFunction();

@@ -21236,7 +21236,7 @@ table.dataTable thead th, table.dataTable thead td {
 table.dataTable thead th, table.dataTable thead td {
 /* border-bottom: 1px solid #cfdcf1 !important; */
 font-weight: 500!important;
-background: #2b3244;
+/* background: #2b3244; */
 }
 .add-sec{
 margin: 10px
@@ -21362,7 +21362,6 @@ font-size: 18px;
 color: #000;
 }
 .manage-profile{
-
 margin: 10px 40px;
 }
 

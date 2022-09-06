@@ -890,7 +890,6 @@ class Crud_model extends CI_Model {
 
 
     function system_logo(){
-
         move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/logo.png');
     }
 
@@ -974,10 +973,10 @@ class Crud_model extends CI_Model {
 
     function update_themee(){
         $page_data = array(
-            'exhibition_id'     => $this->session->userdata('exhibition_id'),
-            'primary_color'     => html_escape($this->input->post('primary_color')),
-            'exhibition_setting_id'     => html_escape($this->input->post('exhibition_setting_id')),
-            'secondary_color'   => html_escape($this->input->post('secondary_color')),
+            'exhibition_id'         => $this->session->userdata('exhibition_id'),
+            'primary_color'         => html_escape($this->input->post('primary_color')),
+            'exhibition_setting_id' => html_escape($this->input->post('exhibition_setting_id')),
+            'secondary_color'       => html_escape($this->input->post('secondary_color')),
      );
     $this->db->insert('exhibition_settings', $page_data);
     }
@@ -985,8 +984,6 @@ class Crud_model extends CI_Model {
     function selecttheme(){
         $staff = $this->session->userdata('exhibition_id');
         $sql = "select * from exhibition_settings where exhibition_id='".$staff."' order by exhibition_setting_id asc";
-
-
         return $this->db->query($sql)->result_array();
     }
   function change_themee($param2){
@@ -1128,26 +1125,23 @@ class Crud_model extends CI_Model {
     //         );
     //     $this->db->insert('school', $page_data);
     //     $school_id = $this->db->insert_id();
-
     // }
 
     // function update_school($param2){
     //     $page_data = array(			// array starts from here
-    //         'school_name'           => $this->input->post('school_name'),
-    //         'school_admin_email'    => $this->input->post('school_admin_email'),
+    //      'school_name'           => $this->input->post('school_name'),
+    //      'school_admin_email'    => $this->input->post('school_admin_email'),
 	// 		'password'              => sha1($this->input->post('password')),
 	// 		'location'              => $this->input->post('location'),
     //     	'phone'                 => $this->input->post('phone'),
     //     	'school_email'          => $this->input->post('school_email'),
-    //         'language'              => $this->input->post('language'),
-    //         'text_align'            => $this->input->post('text_align'),
-    //         'session'               => $this->input->post('session'),
+    //      'language'              => $this->input->post('language'),
+    //      'text_align'            => $this->input->post('text_align'),
+    //      'session'               => $this->input->post('session'),
     //         );
     //             $this->db->where('school_id', $param2);
     //             $this->db->update('school', $page_data);
-
     // }
-
     // function delete_school($param2){
     //     $this->db->where('school_id', $param2);
     //     $this->db->delete('school');
@@ -1157,21 +1151,16 @@ class Crud_model extends CI_Model {
 
 
     function list_all_appointment_list_model_and_order_with_id(){
-
         $data = array();
         $sql = "select * from calendar order by id desc  ";
-
-
         $all_appointment_list_selected = $this->db->query($sql)->result_array();
-
         foreach($all_appointment_list_selected as $key => $selected_appointment_list_from_group_table){
             $id = $selected_appointment_list_from_group_table['id'];
            // $face_file = 'uploads/teacher_image/'. $teacher_id . '.jpg';
-            //if(!file_exists($face_file)){
-               // $face_file = 'uploads/teacher_image/default_image.jpg/';
+           //if(!file_exists($face_file)){
+           // $face_file = 'uploads/teacher_image/default_image.jpg/';
            //}
-
-            //$selected_teachers_from_teacher_table['face_file'] = base_url() . $face_file;
+           //$selected_teachers_from_teacher_table['face_file'] = base_url() . $face_file;
             array_push($data, $selected_appointment_list_from_group_table);
         }
 
@@ -1221,7 +1210,33 @@ class Crud_model extends CI_Model {
         return $data;
     }
 
+    function createlogoFunction(){
+        $page_data = array(
+                'exhibition_logo'         => $this->input->post('exhibition_logo'),
+                'exhibition_logo_id'      => $this->input->post('exhibition_logo_id'),
+                'exhibition_id'           => $this->session->userdata('exhibition_id'),
+            );
+                $page_data['exhibition_logo'] = $_FILES["exhibition_logo"]["name"];
+                move_uploaded_file($_FILES["exhibition_logo"]["tmp_name"], "uploads/system_logo/" . $_FILES["exhibition_logo"]["name"]);	// upload files
+                $this->db->insert('exhibition_logo', $page_data);
+            }
 
+            function selectlogoAdminInsert(){
+                $staff = $this->session->userdata('exhibition_id');
+                $sql = "select * from exhibition_logo where exhibition_id='".$staff."' order by exhibition_logo_id asc";
+                return $this->db->query($sql)->result_array();
+            }
+
+            function updatelogoFunction($param2){
+                $page_data = array(
+                'exhibition_logo'         => $this->input->post('exhibition_logo'),
+                'exhibition_logo_id'      => $this->input->post('exhibition_logo_id'),
+                'exhibition_id'           => $this->session->userdata('exhibition_id'),);
+                    $page_data['exhibition_logo'] = $_FILES["exhibition_logo"]["name"];
+                    move_uploaded_file($_FILES["exhibition_logo"]["tmp_name"], "uploads/system_logo/" . $_FILES["exhibition_logo"]["name"]);	// upload files
+                    $this->db->where('exhibition_logo_id', $param2);
+                    $this->db->update('exhibition_logo', $page_data);
+            }
 
 
 }

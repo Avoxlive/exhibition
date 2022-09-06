@@ -174,23 +174,20 @@
 <?php echo form_open(base_url() . 'systemsetting/system_settings/upload_logo', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
         ?>
 					<div class="form-group">
-					 <label class="col-sm-12"><?php echo get_phrase('browse_image');?>*</label>
-					 <div class="col-sm-12">
-  		  			 <input type='file' class="form-control" name="userfile" onChange="readURL(this);" required>
-       				 <img id="blah" src="<?php echo base_url(); ?>uploads/logo.png" alt="" height="120" width="120"/>
+					<label class="col-sm-12"><?php echo get_phrase('browse_image');?>*</label>
+					<div class="col-sm-12">
+  		  			<input type='file' class="form-control" name="userfile" onChange="readURL(this);" required>
+       				<img id="blah" src="<?php echo base_url(); ?>uploads/logo.png" alt="" height="120" width="120"/>
 					</div>
 					</div>
-
-				<div class="form-group">
-                     <button class="btn save-button"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Update Logo');?></button>
-                </div>
-
-				<?php echo form_close(); ?>
+					<div class="form-group">
+					<button class="btn save-button"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Update Logo');?></button>
+					</div>
+				    <?php echo form_close(); ?>
 
 
 				THEME SETTINGS
 				<hr>
-
 				<?php
 				echo form_open(base_url() . 'systemsetting/system_settings/themeSettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
 				// echo form_open(base_url() . 'systemsetting/theme_change/update_themee', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
@@ -235,7 +232,7 @@
                         </select>
 					</div>
 				</div>
-					<div class="form-group">
+				<div class="form-group">
 						<label class="col-md-12" for="example-text"><?php echo get_phrase('secondary_color');?></label>
 						<div class="col-sm-12">
 							<select name="secondary_color" class="form-control select2" style="width:100%" required>
@@ -258,7 +255,8 @@
 				// echo form_open(base_url() . 'systemsetting/system_settings/themesecodarySettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
         ?>
 				<!-- <div class="radio radio-custom">
-                    <input type="radio" <?php if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'cream') echo 'checked';?> name="secondary_color" id="radio2" value="cream">
+                    <input type="radio" <?php
+					if($skin = $this->db->get_where('settings' , array('type'=>'secondary_color'))->row()->description == 'cream') echo 'checked';?> name="secondary_color" id="radio2" value="cream">
                     <label for="radio2"> cream </label>
 				</div>
 				<div class="radio radio-success">

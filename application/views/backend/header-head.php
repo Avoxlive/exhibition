@@ -11,7 +11,7 @@
         <ul class="nav navbar-nav">
         <div class="home-header-left">
             <a class="home-logo" href="#">
-                <img src="<?php echo base_url(); ?>optimum/plugins/logo/logo-avox.png" alt="home-logo">
+              <img src="<?php echo base_url(); ?>optimum/plugins/logo/logo-avox.png" alt="home-logo">
             </a>
         </div>
       </ul>
