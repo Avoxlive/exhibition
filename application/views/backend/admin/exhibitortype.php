@@ -1,7 +1,7 @@
 <div class="row">
                     <div class="col-sm-5">
 				  	<div class="panel panel-info">
-                            <div class="panel-heading"> <i class="fa fa-plus"></i>&nbsp;&nbsp;<?php echo get_phrase('add_exhibitortype'); ?></div>
+                            <div class="panel-heading"> <i class="fa fa-plus"></i>&nbsp;&nbsp;<?php echo get_phrase('add_participant_type'); ?></div>
 										<div class="panel-body table-responsive">
 
 
@@ -12,7 +12,7 @@
 
 
 					<div class="form-group">
-                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('exhibitortype_name');?></label>
+                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('participants_type_name');?></label>
                     <div class="col-sm-12">
                         <input type="text" class="form-control" name="name" value="" required autofocus />
                     </div>
@@ -52,7 +52,7 @@
                     </div>
                 </div> -->
 <div class="form-group">
-                        <button type="submit" class="btn save-button"> <i class="fa fa-plus"></i>&nbsp; <?php echo get_phrase('add_exhibitortype'); ?></button>
+                        <button type="submit" class="btn save-button"> <i class="fa fa-plus"></i>&nbsp; <?php echo get_phrase('save'); ?></button>
                 </div>
                 <?php echo form_close(); ?>
 		 		</div>
@@ -64,7 +64,7 @@
 			<!-- --CREATION FORM ENDS -->
 			<div class="col-sm-7">
 				  	<div class="panel panel-info">
-                            <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list_exhibitortypes'); ?></div>
+                            <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('list_participant_types'); ?></div>
 
 
 
@@ -74,10 +74,10 @@
     <thead>
         <tr>
             <th><div>#</div></th>
-            <th><div><?php echo get_phrase('exhibitortype_name'); ?></div></th>
+            <th><div><?php echo get_phrase('participant_type_name'); ?></div></th>
             <!-- <th><div><?php
             //  echo get_phrase('designation'); ?></div></th> -->
-            <th><div><?php echo get_phrase('total_exhibitors'); ?></div></th>
+            <th><div><?php echo get_phrase('total_participants'); ?></div></th>
             <th><div><?php echo get_phrase('options'); ?></div></th>
         </tr>
 </thead>

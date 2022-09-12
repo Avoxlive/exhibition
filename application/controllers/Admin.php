@@ -173,7 +173,7 @@ class Admin extends CI_Controller {
         redirect(base_url(). 'admin/exhibitor', 'refresh');
     }
     $page_data['page_name']     = 'exhibitor';
-    $page_data['page_title']    = get_phrase('Manage exhibitor');
+    $page_data['page_title']    = get_phrase('Manage participants');
     $exhibition_id = $this->session->userdata('exhibition_id');
     $page_data['select_exhibitor']  = $this->db->get_where('exhibitor',array('exhibition_id'=>$exhibition_id))->result_array();
     $this->load->view('backend/index', $page_data);
@@ -181,7 +181,7 @@ class Admin extends CI_Controller {
 
 function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
     $page_data['page_name']     = 'exhibitor_add';
-    $page_data['page_title']    = get_phrase('Manage exhibitor');
+    $page_data['page_title']    = get_phrase('Manage participants');
     $this->load->view('backend/index', $page_data);
 }
 
@@ -452,12 +452,12 @@ function exhibitor_add($param1 = null, $param2 = null, $param3 = null){
         $page_data['page_name'] = 'jitsi';
         $exhibition_id = $this->session->userdata('exhibition_id');
         // $page_data['page_title'] = get_phrase('Online_Consultancy');
-        $page_data['page_title'] = get_phrase('jitsi_live_class');
+        $page_data['page_title'] = get_phrase('Online Meeting');
         $this->load->view('backend/index',$page_data);
     }
     function jitsi_list($param1 = null, $param2 = null, $param3 = null){
         $page_data['page_name'] = 'jitsi_list';
-        $page_data['page_title'] = get_phrase('Online Consultancy list');
+        $page_data['page_title'] = get_phrase('Online Meeting list');
         $this->load->view('backend/index',$page_data);
     }
 
@@ -524,7 +524,7 @@ function schedule_list(){
      function save()
         {
             $response = array();
-            $this->form_validation->set_rules('title', 'Title cant be empty ', 'required');
+            $this->form_validation->set_rules('title', 'Title cant be empty', 'required');
             if ($this->form_validation->run() == TRUE)
             {
                 $param = $this->input->post();
@@ -685,7 +685,7 @@ function schedule_list(){
                     redirect(base_url() . 'admin/add_advertisment', 'refresh');
                 }
                 if($param1 == 'edit'){
-                    $this->crud_model->updatelogoFunction($param2);
+                    $this->crud_model->updateNewLogoFunction($param2);
                     $this->session->set_flashdata('flash_message', get_phrase('successfuly_updated'));
                     redirect(base_url() . 'admin/add_advertisment/', 'refresh');
                 }
@@ -736,6 +736,12 @@ function schedule_list(){
             $page_data['page_name'] = 'edit_advertisment';
             $page_data['page_title'] = get_phrase('replace_advertisement');
             $page_data['toSelectFromAdvertismentWithId'] = $this->advertisment_model->toSelectFromAdvertismentWithId($clinic_advertisment_id);
+            $this->load->view('backend/index',$page_data);
+        }
+        function edit_logo($exhibition_id){
+            $page_data['page_name'] = 'edit_logo';
+            $page_data['page_title'] = get_phrase('replace_logo');
+            $page_data['toSelectFromLogoWithId'] = $this->crud_model->toSelectFromLogoWithId($exhibition_id);
             $this->load->view('backend/index',$page_data);
         }
 }

@@ -66,13 +66,13 @@
 						</div>
 					</div> -->
 
-						<div class="form-group">
+					<div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('address');?></label>
                     <div class="col-sm-12">
-							<input type="text" class="form-control" name="address" value="" required>
-						</div>
+					    <input type="text" class="form-control" name="address" value="" required>
 					</div>
-				<div class="form-group">
+					</div>
+				    <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('phone');?></label>
                     <div class="col-sm-12">
 							<input type="text" class="form-control" name="phone" value="" required >
@@ -149,16 +149,13 @@
 					</div>
 
 					 <div class="col-sm-6">
-
-
-
-						<div class="form-group">
+					<div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('password');?></label>
                     <div class="col-sm-12">
 						<input type="password" class="form-control" name="password" value="" onkeyup="CheckPasswordStrength(this.value)" required>
-					<strong id="password_strength"></strong>
-						</div>
-						</div>
+					    <strong id="password_strength"></strong>
+					</div>
+					</div>
 
 					<div class="form-group">
 					 <label class="col-sm-12"><?php echo get_phrase('browse_image');?>*</label>

@@ -48,6 +48,13 @@ class Systemsetting extends CI_Controller {
         $this->session->set_flashdata('flash_message', get_phrase('Theme Selected'));
         redirect(base_url() . 'systemsetting/system_settings', 'refresh');
     }
+
+    if ($param1 == 'changelogo')
+	{
+        $this->crud_model->change_logo($param2);
+        $this->session->set_flashdata('flash_message', get_phrase('Theme Selected'));
+        redirect(base_url() . 'systemsetting/system_settings', 'refresh');
+    }
     if ($param1 == 'themesecodarySettings')
 	{
         $this->crud_model->update_secondary_theme();

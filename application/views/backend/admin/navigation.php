@@ -199,14 +199,14 @@
             <li class="<?php if ($page_name == 'exhibitor_add') echo 'active'; ?>">
                 <a href="<?php echo base_url(); ?>admin/exhibitor_add">
                 <i class="fa fa-angle-double-right p-r-10"></i>
-                <span class="hide-menu"><?php echo get_phrase('Add_exhibitors'); ?></span>
+                <span class="hide-menu"><?php echo get_phrase('Add_participants'); ?></span>
                 </a>
             </li>
 
             <li class="<?php if ($page_name == 'exhibitor') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>admin/exhibitor">
                 <i class="fa fa-angle-double-right p-r-10"></i>
-                     <span class="hide-menu"><?php echo get_phrase('Exhibitors_list'); ?></span>
+                     <span class="hide-menu"><?php echo get_phrase('Participants_list'); ?></span>
                 </a>
             </li>
 
@@ -739,7 +739,7 @@
                     <li class="<?php if ($page_name == 'exhibitortype') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>exhibitortype/exhibitortype">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('exhibitortype'); ?></span>
+                             <span class="hide-menu"><?php echo get_phrase('participantstype'); ?></span>
                         </a>
                     </li>
 

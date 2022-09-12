@@ -1,6 +1,6 @@
 
         <!-- <?php
-        // echo form_open(base_url() . 'admin/add_logo/edit/'. $param2, array('class' => 'form-horizontal form-goups-bordered validate'));?>
+        echo form_open(base_url() . 'admin/add_logo/edit/'. $param2, array('class' => 'form-horizontal form-goups-bordered validate'));?>
 
 <div class="row">
                     <div class="col-sm-6">
@@ -20,8 +20,7 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-block btn-info btn-rounded btn-sm "><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('update');?></button>
 			</div>
-            <?php
-            // echo form_close();?> -->
+            <?php echo form_close();?> -->
 
             <?php $select_admin_informtion_from_admin_table = $this->db->get_where('exhibition_logo', array('exhibition_id' => $param2))->result_array();
         foreach ($select_admin_informtion_from_admin_table as $key => $selected_admin):?>
@@ -29,18 +28,22 @@
 	<div class="panel panel-info">
     <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('Change Theme:');?>  <?php echo $selected_admin['name'];?></div>
         <div class="panel-body table-responsive">
-        <?php echo form_open(base_url() . 'admin/add_logo/edit/'. $param2, array('class' => 'form-horizontal form-goups-bordered validate'));?>
+        <?php echo form_open(base_url() . 'systemsetting/system_settings/changelogo/'. $param2, array('class' => 'form-horizontal form-goups-bordered validate'));?>
 
         <div class="form-group">
-            <label class="col-md-12" for="example-text"><?php echo get_phrase('Add_exhibition_logo');?>&nbsp;</label>
-            <div class="col-sm-12">
-                    <input type="file" name="exhibition_logo" class="form-control" required>
-            </div>
-        </div>
+                 	<label class="col-md-12" for="example-text"><?php echo get_phrase('Add_exhibition_logo');?>&nbsp;</label>
+                    <div class="col-sm-12">
+             	            <input type="file" name="exhibition_logo" class="form-control" required>
+					</div>
+
+					</div>
+
+
+
 
             <hr>
             <div class="form-group">
-                <button type="submit" class="btn btn-block btn-info btn-rounded btn-sm"><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('update');?></button>
+                <button type="submit" class="btn btn-block btn-info btn-rounded btn-sm "><i class="fa fa-plus"></i>&nbsp;<?php echo get_phrase('update');?></button>
 			</div>
             <?php echo form_close();?>
         </div>

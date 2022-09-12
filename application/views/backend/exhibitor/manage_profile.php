@@ -1,7 +1,6 @@
 <div class="manage-profile">
 	<div class="manage-profile-in">
 		<div class="manage-profile-left">
-			<h2>My profile</h2>
 			<?php
 				foreach ($edit_profile as $key => $row):
 				?>
@@ -14,12 +13,12 @@
 	</div>
 </div>
 
-<div class="form-group">
-					<label class="col-md-12" for="example-text"><?php echo get_phrase('Email');?></label>
+                <div class="form-group">
+				<label class="col-md-12" for="example-text"><?php echo get_phrase('Email');?></label>
 					<div class="col-sm-12">
 						<input type="text" class="form-control" name="email" value="<?php echo $row['email'];?>">
 					</div>
-				</div>
+	            </div>
 
 					<div class="form-group">
 					<label class="col-md-12" for="example-text"><?php echo get_phrase('Company name');?></label>

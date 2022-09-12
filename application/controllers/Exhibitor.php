@@ -25,7 +25,7 @@ class Exhibitor extends CI_Controller {
      function dashboard() {
         if ($this->session->userdata('exhibitor_login') != 1) redirect(base_url(), 'refresh');
        	$page_data['page_name'] = 'dashboard';
-        $page_data['page_title'] = get_phrase('exhibitor Dashboard');
+        $page_data['page_title'] = get_phrase('Participant Dashboard');
         $this->load->view('backend/index', $page_data);
     }
 
@@ -118,13 +118,13 @@ class Exhibitor extends CI_Controller {
             }
 
             $page_data['page_name'] = 'jitsi';
-            $page_data['page_title'] = get_phrase('Online Consultancy');
+            $page_data['page_title'] = get_phrase('Online Meeting');
             $this->load->view('backend/index',$page_data);
         }
 
         function jitsi_list($param1 = null, $param2 = null, $param3 = null){
             $page_data['page_name'] = 'jitsi_list';
-            $page_data['page_title'] = get_phrase('Online Consultancy list');
+            $page_data['page_title'] = get_phrase('Online Meeting list');
             $this->load->view('backend/index',$page_data);
         }
 

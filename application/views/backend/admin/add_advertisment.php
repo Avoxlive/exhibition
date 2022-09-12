@@ -34,13 +34,10 @@
                     <div class="form-group">
                  	<label class="col-md-12" for="example-text"><?php echo get_phrase('Add_exhibition_logo');?>&nbsp;</label>
                     <div class="col-sm-12">
-             	            <input type="file" name="exhibition_logo" class="form-control" required>
+             	        <input type="file" name="exhibition_logo" class="form-control" required>
 					</div>
-
 					</div>
-
-
-		        </div>
+		            </div>
 					</div>
 					<div class="row">
 				<div class="col-sm-4">
@@ -51,7 +48,6 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
 <?php $select = $this->crud_model->selectlogoAdminInsert();
                                     foreach ($select as $key => $row) {
                                 ?>
-
                 <div class="top-left-part"><a class="logo" href="#"><b><img src="<?php echo base_url() ."uploads/system_logo/" . $row['exhibition_logo'] ;?>" class="img-fluid" alt="home"/></b><small class="hidden-xs" style="display:inline !important;"><strong>
 
 <?php }?>
@@ -160,17 +156,16 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
 													// $user_id = $user[1];
 													// echo $this->db->get_where($user_type,array($user_type.'_id' => $user_id))->row()->name;
 													?>
-
 				                            </td> -->
 
 				                            <!-- <td><?=$row['clinic_advertisment_id'];?></td> -->
 				                            <td><?=$row['exhibition_logo'];?></td>
 				                            <td>
-				                                <!-- <a href="<?php echo base_url();?>admin/edit_advertisment/<?php echo $row['clinic_advertisment_id'];?>"><button
+				                                <a href="<?php echo base_url();?>admin/edit_logo/<?php echo $row['exhibition_id'];?>"><button
 				                                    type="button" class="btn btn-info btn-rounded btn-sm"><i
-				                                    class="fa fa-edit"></i> replace</button></a> -->
+				                                    class="fa fa-edit"></i> replace</button></a>
 
-													<a onclick="showAjaxModal('<?php echo base_url();?>modal/popup/changelogo/<?php echo $row['exhibition_id'];?>')" class="btn btn-info btn-rounded btn-xs">change logo <i class="fa fa-edit"></i></a>
+													<!-- <a onclick="showAjaxModal('<?php echo base_url();?>modal/popup/changelogo/<?php echo $row['exhibition_logo_id'];?>')" class="btn btn-info btn-rounded btn-xs">change logo<i class="fa fa-edit"></i></a> -->
 
 				                                <!-- <a href="#"
 				                                    onclick="confirm_modal('<?php echo base_url();?>admin/add_advertisment/delete/<?php echo $row['clinic_advertisment_id'];?>');"><button

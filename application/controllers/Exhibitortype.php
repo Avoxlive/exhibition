@@ -30,7 +30,7 @@ class Exhibitortype extends CI_Controller {
             redirect(base_url(). 'exhibitortype/exhibitortype', 'refresh');
             }
         $page_data['page_name']     = 'exhibitortype';
-        $page_data['page_title']    = get_phrase('Manage exhibitortype');
+        $page_data['page_title']    = get_phrase('Manage participants_type');
         $page_data['select_exhibitortype']  = $this->db->get('exhibitortype')->result_array();
         $this->load->view('backend/index', $page_data);
         }

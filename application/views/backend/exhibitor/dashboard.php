@@ -39,7 +39,7 @@
                      <h4><?php echo $this->db->count_all_results('jitsi');?></h4>
                  </div>
              </div>
-             <span class="text-muted"><?php echo get_phrase('Consultancy');?></span>
+             <span class="text-muted"><?php echo get_phrase('Meetings');?></span>
      </div>
      </div>
      <div>

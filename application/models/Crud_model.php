@@ -1231,13 +1231,26 @@ class Crud_model extends CI_Model {
                 $page_data = array(
                 'exhibition_logo'         => $this->input->post('exhibition_logo'),
                 'exhibition_logo_id'      => $this->input->post('exhibition_logo_id'),
-                'exhibition_id'           => $this->session->userdata('exhibition_id'),);
-                    $page_data['exhibition_logo'] = $_FILES["exhibition_logo"]["name"];
-                    move_uploaded_file($_FILES["exhibition_logo"]["tmp_name"], "uploads/system_logo/" . $_FILES["exhibition_logo"]["name"]);	// upload files
+                'exhibition_id'           => $this->session->userdata('exhibition_id'),
+            );
+                    // $page_data['exhibition_logo'] = $_FILES["exhibition_logo"]["name"];
+                    // move_uploaded_file($_FILES["exhibition_logo"]["tmp_name"], "uploads/system_logo/" . $_FILES["exhibition_logo"]["name"]);	// upload files
                     $this->db->where('exhibition_logo_id', $param2);
                     $this->db->update('exhibition_logo', $page_data);
             }
-
-
+            function toSelectFromLogoWithId($exhibition_id){
+                $sql = "select * from exhibition_logo where exhibition_id ='".$exhibition_id."'";
+                return $this->db->query($sql)->result_array();
+            }
+            function updateNewLogoFunction($param2){
+                $page_data = array(
+                    'exhibition_logo'           => $this->input->post('exhibition_logo'));
+                    $page_data['exhibition_logo'] = $_FILES["exhibition_logo"]["name"];
+                    move_uploaded_file($_FILES["exhibition_logo"]["tmp_name"], "uploads/system_logo/" . $_FILES["exhibition_logo"]["name"]);
+                    // $page_data['exhibition_logo'] = $_FILES["exhibition_logo"]["name"];
+                    // move_uploaded_file($_FILES["exhibition_logo"]["tmp_name"], "uploads/advertisment_image/" . $_FILES["exhibition_logo"]["name"]);	// upload files
+                    $this->db->where('exhibition_id', $param2);
+                    $this->db->update('exhibition_logo', $page_data);
+            }
 }
 
