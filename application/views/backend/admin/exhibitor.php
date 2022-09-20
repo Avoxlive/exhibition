@@ -10,7 +10,7 @@
                         <tr>
                             <th width="80"><div><?php echo get_phrase('photo');?></div></th>
                             <th><div><?php echo get_phrase('name');?></div></th>
-                            <th><div><?php echo get_phrase('role');?></div></th>
+                            <!-- <th><div><?php echo get_phrase('role');?></div></th> -->
                             <th><div><?php echo get_phrase('email');?></div></th>
                             <th><div><?php echo get_phrase('sex');?></div></th>
                             <th><div><?php echo get_phrase('address');?></div></th>
@@ -22,12 +22,14 @@
                         <tr>
                             <td><img src="<?php echo $this->crud_model->get_image_url('exhibitor', $exhibitor['exhibitor_id']);?>" class="img-circle" width="30px"></td>
                             <td><?php echo $exhibitor['name'];?></td>
-                            <td>
+                            <!-- <td> -->
 
-                           <?php if($exhibitor['role']== 1) echo 'exhibitor';?>
-                           <?php if($exhibitor['role']== 2) echo 'exhibitor 2';?>
+                           <?php
+                        //    if($exhibitor['role']== 1) echo 'exhibitor';?>
+                           <?php
+                        //    if($exhibitor['role']== 2) echo 'exhibitor 2';?>
 
-                            </td>
+                            <!-- </td> -->
                             <td><?php echo $exhibitor['email'];?></td>
                             <td><?php echo $exhibitor['sex'];?></td>
                             <td><?php echo $exhibitor['address'];?></td>

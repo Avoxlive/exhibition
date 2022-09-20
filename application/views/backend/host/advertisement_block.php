@@ -6,6 +6,9 @@
                     <div class="owl-carousel owl-theme owl-loaded gallery-scroll-inn">
                         <div class="owl-stage-outer">
                             <div class="owl-stage">
+
+                            <?php
+                                //   if ($exhibition_id == $this->session->userdata('exhibition_id')) { ?>
                                 <?php
                                  $select = $this->advertisment_model->selectAdvertismentAdminInsert();
                                 foreach ($select as $key => $row) {
@@ -17,8 +20,9 @@
                                         </div>
                                         <h2><?=$row['advertisement_content']?></h2>
                                     </div>
+                                <?php }?>
                                 <?php
-                            } ?>
+                            // }?>
                             </div>
                         </div>
                     </div>

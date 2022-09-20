@@ -71,8 +71,8 @@
     width: 100%;
 }
 .clinic-scroll{
-                height: 240px !important;
-            }
+    height: 240px !important;
+    }
             .clinic-scroll  h2{
                 font-size: 10px !important;
                 padding: 0px !important;
@@ -81,7 +81,7 @@
                 height: 120px;
             }
 
-.gallery-scroll-bg .service-text{
+            .gallery-scroll-bg .service-text{
             width: 100%;
             height: 120px;
             }
@@ -163,13 +163,14 @@
         </style>
 
 
-        <div id="warning-message">
+    <div id="warning-message">
 		<div id="display-message">
-   <h2>This website is only viewable in landscape mode</h2>
-   <h2>Please rotate the screen for better experience</h2>
-</div>
+            <h2>This website is only viewable in landscape mode</h2>
+            <h2>Please rotate the screen for better experience</h2>
+        </div>
 	</div>
 							<!-- Select * From Jitsi with Jitsi ID -->
+
                             <?php
                              include 'advertisement_block.php';
                              include 'exhibitor_advertisement_block.php';
@@ -181,7 +182,6 @@
 							$HostName =  $this->db->get_where($user_type, array($user_type.'_id' => $user_id))->row();
                             $accountType = $this->session->userdata('login_type');
                             ?>
-
 		<!-- Nav For Top Fix navbar-fixed-top -->
         <div id="wrappers">
         <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">

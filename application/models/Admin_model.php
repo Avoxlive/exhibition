@@ -38,6 +38,14 @@ class Admin_model extends CI_Model {
         $all_selected_administrator = $this->db->get('admin');
         return $all_selected_administrator->result_array();
     }
+    function select_all_the_administrator_from_admin_table_exhibition_Id(){
+        // $all_selected_administrator = $this->db->get('admin');
+        // return $all_selected_administrator->result_array();
+
+        $staff = $this->session->userdata('exhibition_id');
+        $sql = "select * from admin where exhibition_id='".$staff."' order by admin_id asc";
+        return $this->db->query($sql)->result_array();
+    }
 
     function updateAllDetailsForAdminRole($param2){
         $page_data['dashboard']         = html_escape($this->input->post('dashboard'));

@@ -81,7 +81,7 @@
 				                            <div class="form-group">
 				                                <label class="col-sm-12"><?php echo get_phrase('date'); ?></label>
 				                                <div class="col-sm-12">
-				                                    <input type="date" class="form-control datepicker" name="meeting_date"
+				                                    <input type="date" class="form-control datepicker" name="meeting-date"
 				                                        value="<?php echo date('Y-m-d');?>" required>
 				                                </div>
 				                            </div>
@@ -105,7 +105,6 @@
                                                             data-date-viewmode="years">
                                                             <input class="form-control m-r-10" name="meeting_date"
                                                                 type="date" required>
-
                                                         </div>
                                                     </div>
                                                 </div> -->
@@ -124,7 +123,6 @@
                                                         <div data-date-format="hh-mm-ss" data-date-viewmode="years">
                                                             <input class="form-control m-r-10" name="end_time"
                                                                 type="time" required>
-
                                                         </div>
                                                     </div>
                                                 </div> -->
@@ -145,7 +143,7 @@
 				                                    for="example-text"><?php echo get_phrase('time_start');?></label>
 				                                </div>
 				                                <div class="col-lg-6">
-				                                    <div class="input-group clockpicker " data-placement="left" data-align="top"
+				                                    <div class="input-group clockpicker" data-placement="left" data-align="top"
 				                                        data-autoclose="true">
 				                                        <input type="text" name="end_time" class="form-control" value="14:14">
 				                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-time">

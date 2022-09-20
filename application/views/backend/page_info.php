@@ -14,14 +14,18 @@
                     <div class="owl-carousel owl-theme owl-loaded gallery-scroll-in">
                         <div class="owl-stage-outer">
                             <div class="owl-stage">
+
                                 <?php  $select = $this->advertisment_model->selectAdvertismentAdminInsert();
                                     foreach ($select as $key => $row) {
                                 ?>
+                            <?php if ($exhibition_id == $this->session->userdata('exhibition_id')) { ?>
+
                                     <div class="owl-item">
                                         <div class="service-text">
                                             <a href="#"><img src="<?php echo base_url() . "uploads/advertisment_image/" . $row['file_name'];?>" class="hvrbox-layer_bottom img-rounded"></a>
                                         </div>
                                     </div>
+                                <?php } ?>
                                 <?php } ?>
                             </div>
                         </div>

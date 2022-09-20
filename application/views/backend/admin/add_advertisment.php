@@ -28,6 +28,7 @@
                 <?php echo form_close();?>
 </div>
 
+<div class="information">
 <?php echo form_open(base_url() . 'admin/add_logo/add' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
 					<div class="row">
                     <div class="col-sm-6">
@@ -36,11 +37,8 @@
                     <div class="col-sm-12">
              	        <input type="file" name="exhibition_logo" class="form-control" required>
 					</div>
-					</div>
-		            </div>
-					</div>
-					<div class="row">
-				<div class="col-sm-4">
+
+					<div class="col-sm-12">
 				<?php
 if ($exhibition_id == $this->session->userdata('exhibition_id'))
 {
@@ -57,8 +55,15 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
 					</div>
 					<div class="form-group">
                     <button type="submit" class="btn btn-success btn-block btn-rounded btn-sm"><i class="fa fa-book"></i>&nbsp;<?php echo get_phrase('add');?></button>
+
 					</div>
+
+		            </div>
+					</div>
+
+
                 <?php echo form_close();?>
+</div>
                                 <!-- </div>
                             </div>
                         </div>
@@ -104,7 +109,19 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
 				                            </td> -->
 
 				                            <!-- <td><?=$row['clinic_advertisment_id'];?></td> -->
-				                            <td><?=$row['file_name'];?></td>
+				                            <!-- <td><?=$row['file_name'];?></td> -->
+											<?php
+$select = $this->crud_model->selectAdvertisementAdmin();
+                                    // foreach ($select as $key => $row) {
+                                ?>
+<td>
+                <div class=""><a class="" href="#"><b><img src="<?php echo base_url() ."uploads/advertisment_image/" . $row['file_name'] ;?>" class="img-fluid" alt="home"/></b><small class="hidden-xs" style="display:inline !important; width:50%;"><strong>
+
+
+</td>
+<?php
+// }?>
+
 				                            <td>
 				                                <a href="<?php echo base_url();?>admin/edit_advertisment/<?php echo $row['clinic_advertisment_id'];?>"><button
 				                                    type="button" class="btn btn-info btn-rounded btn-sm"><i
@@ -165,7 +182,7 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
 				                                    type="button" class="btn btn-info btn-rounded btn-sm"><i
 				                                    class="fa fa-edit"></i> replace</button></a>
 
-													<!-- <a onclick="showAjaxModal('<?php echo base_url();?>modal/popup/changelogo/<?php echo $row['exhibition_logo_id'];?>')" class="btn btn-info btn-rounded btn-xs">change logo<i class="fa fa-edit"></i></a> -->
+												<!-- <a onclick="showAjaxModal('<?php echo base_url();?>modal/popup/changelogo/<?php echo $row['exhibition_logo_id'];?>')" class="btn btn-info btn-rounded btn-xs">change logo<i class="fa fa-edit"></i></a> -->
 
 				                                <!-- <a href="#"
 				                                    onclick="confirm_modal('<?php echo base_url();?>admin/add_advertisment/delete/<?php echo $row['clinic_advertisment_id'];?>');"><button

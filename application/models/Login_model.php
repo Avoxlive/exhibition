@@ -204,14 +204,12 @@ class Login_model extends CI_Model {
         $query = $this->db->get_where('visitor', $credential);
         if ($query->num_rows() > 0) {
             $row = $query->row();
-
             $this->session->set_userdata('login_type', 'visitor');
             $this->session->set_userdata('visitor_login', '1');
             $this->session->set_userdata('visitor_id', $row->visitor_id);
             $this->session->set_userdata('exhibition_id', $row->exhibition_id);
             $this->session->set_userdata('login_user_id', $row->visitor_id);
             $this->session->set_userdata('name', $row->name);
-
             return  $this->db->set('login_status', ('1'))
                     ->where('visitor_id', $this->session->userdata('visitor_id'))
                     ->update('visitor');
@@ -220,7 +218,6 @@ class Login_model extends CI_Model {
         $query = $this->db->get_where('patient', $credential);
         if ($query->num_rows() > 0) {
             $row = $query->row();
-
             $this->session->set_userdata('login_type', 'patient');
             $this->session->set_userdata('patient_login', '1');
             $this->session->set_userdata('patient_id', $row->patient_id);
@@ -237,8 +234,6 @@ class Login_model extends CI_Model {
             ->where('superadmin_id', $this->session->userdata('superadmin_id'))
             ->update('superadmin');
     }
-
-
     function logout_model_for_admin(){
         return  $this->db->set('login_status', ('0'))
                 ->where('admin_id', $this->session->userdata('admin_id'))
@@ -300,18 +295,14 @@ class Login_model extends CI_Model {
                     ->where('visitor_id', $this->session->userdata('visitor_id'))
                     ->update('visitor');
     }
-
     function logout_model_for_patient(){
         return  $this->db->set('login_status', ('0'))
                     ->where('patient_id', $this->session->userdata('patient_id'))
                     ->update('patient');
     }
-
     function logout_model_for_student(){
         return  $this->db->set('login_status', ('0'))
                     ->where('student_id', $this->session->userdata('student_id'))
                     ->update('student');
     }
-
-
 }

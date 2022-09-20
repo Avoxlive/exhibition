@@ -167,13 +167,14 @@
 
 <div class="col-sm-6">
 <div class="panel panel-info">
-<div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('System Logo'); ?></div>
+<div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('THEME SETTINGS'); ?></div>
 <div class="panel-wrapper collapse in" aria-expanded="true">
 <div class="panel-body table-responsive">
 
-<?php echo form_open(base_url() . 'systemsetting/system_settings/upload_logo', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
+<?php
+//  echo form_open(base_url() . 'systemsetting/system_settings/upload_logo', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
         ?>
-					<div class="form-group">
+					<!-- <div class="form-group">
 					<label class="col-sm-12"><?php echo get_phrase('browse_image');?>*</label>
 					<div class="col-sm-12">
   		  			<input type='file' class="form-control" name="userfile" onChange="readURL(this);" required>
@@ -182,12 +183,15 @@
 					</div>
 					<div class="form-group">
 					<button class="btn save-button"><i class="fa fa-save"></i>&nbsp;<?php echo get_phrase('Update Logo');?></button>
-					</div>
-				    <?php echo form_close(); ?>
+					</div> -->
+				    <?php
+					//  echo form_close(); ?>
 
 
-				THEME SETTINGS
-				<hr>
+				<!-- THEME SETTINGS -->
+<!-- <div class="panel-heading"> <i class="fa fa-list"></i>&nbsp;&nbsp;<?php echo get_phrase('THEME SETTINGS'); ?></div> -->
+
+				<!-- <hr> -->
 				<?php
 				echo form_open(base_url() . 'systemsetting/system_settings/themeSettings', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));
 				// echo form_open(base_url() . 'systemsetting/theme_change/update_themee', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data'));

@@ -2,9 +2,9 @@
     <div class="col-sm-12">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <?php echo get_phrase('New exhibition');?>
+                <?php echo get_phrase('New Host');?>
                 <div class="pull-right"><a href="#" data-perform="panel-collapse"><i
-                            class="fa fa-plus"></i>&nbsp;&nbsp;Add <?php echo get_phrase('New exhibition');?> here<i
+                            class="fa fa-plus"></i>&nbsp;&nbsp;Add <?php echo get_phrase('New Host');?> here<i
                             class="btn btn-primary btn-xs"></i></a> <a href="#" data-perform="panel-dismiss"></a> </div>
             </div>
             <div class="panel-wrapper collapse out" aria-expanded="true">
@@ -12,43 +12,43 @@
 
             <?php echo form_open(base_url() . 'superadmin/exhibition_setting/insert/' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
 			<div class="form-group">
-                <label class="col-md-12" for="example-text"><?php echo get_phrase('exhibition ID');?></label>
+                <label class="col-md-12" for="example-text"><?php echo get_phrase('Host ID');?></label>
                 <div class="col-sm-12">
                     <input type="text" class="form-control" name="exhibition_id" value="<?php echo $this->db->get('exhibition', array('type' => 'exhibition_id'))->row()->description;?>">
                 </div>
             </div>
 			<div class="form-group">
-                <label class="col-md-12" for="example-text"><?php echo get_phrase('exhibition Name');?></label>
+                <label class="col-md-12" for="example-text"><?php echo get_phrase('Host Name');?></label>
                 <div class="col-sm-12">
                 <input type="text" class="form-control" name="exhibition_name" value="<?php echo $this->db->get('exhibition')->row()->description;?>">
                 </div>
             </div>
 		    <div class="form-group">
-                <label class="col-md-12" for="example-text"><?php echo get_phrase('exhibition Admin Email Address');?></label>
+                <label class="col-md-12" for="example-text"><?php echo get_phrase('Host Admin Email Address');?></label>
                 <div class="col-sm-12">
                 <input type="text" class="form-control" name="email" value="<?php echo $this->db->get('exhibition')->row()->description;?>">
                 </div>
 			</div>
             <div class="form-group">
-                <label class="col-md-12" for="example-text"><?php echo get_phrase('exhibition Admin Password');?></label>
+                <label class="col-md-12" for="example-text"><?php echo get_phrase('Host Admin Password');?></label>
                 <div class="col-sm-12">
                     <input type="text" class="form-control" name="password" value="<?php echo $this->db->get('exhibition')->row()->description;?>">
                 </div>
             </div>
 		    <div class="form-group">
-                <label class="col-md-12" for="example-text"><?php echo get_phrase('exhibition Location');?></label>
+                <label class="col-md-12" for="example-text"><?php echo get_phrase('Host Location');?></label>
                 <div class="col-sm-12">
                     <input type="text" class="form-control" name="location" value="<?php echo $this->db->get('exhibition')->row()->description;?>">
                 </div>
             </div>
             <div class="form-group">
-            <label class="col-md-12" for="example-text"><?php echo get_phrase('exhibition Phone');?></label>
+            <label class="col-md-12" for="example-text"><?php echo get_phrase('Host Phone');?></label>
             <div class="col-sm-12">
                 <input type="text" class="form-control" name="phone" value="<?php echo $this->db->get('exhibition')->row()->description;?>">
             </div>
         </div>
                 <div class="form-group">
-					<label class="col-md-12" for="example-text"><?php echo get_phrase('exhibition Email');?></label>
+					<label class="col-md-12" for="example-text"><?php echo get_phrase('Host Email');?></label>
 					<div class="col-sm-12">
 						<input type="text" class="form-control" name="exhibition_email" value="<?php echo $this->db->get('exhibition')->row()->description;?>">
 					</div>

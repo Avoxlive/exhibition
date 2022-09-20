@@ -162,7 +162,7 @@ class Exhibitor extends CI_Controller {
                 redirect(base_url(). 'exhibitor/my_chat', 'refresh');
             }
             $page_data['page_name']     = 'my_chat';
-                $page_data['page_title']    = get_phrase('manage_my_chat');
+                $page_data['page_title']    = get_phrase('my_chat');
                 //$page_data['select_my_chat']  = $this->db->get_where('calendar',array('id'=>$id))->result_array();
                 $this->load->view('backend/index', $page_data);
         }
@@ -223,7 +223,7 @@ class Exhibitor extends CI_Controller {
                    }
                $page_data = array();
                $page_data['page_name']     = 'my_calendar';
-               $page_data['page_title']    = get_phrase('manage_my_calendar');
+               $page_data['page_title']    = get_phrase('my_calendar');
                $page_data['get_data']      = json_encode($calendar);
                $this->load->view('backend/index', $page_data);
            }
@@ -412,7 +412,6 @@ class Exhibitor extends CI_Controller {
                 //    {
                 //        $where = ['id' => $calendar_id];
                 //        $delete = $this->exhibitor_calendar_model->delete($this->table, $where);
-
                 //        if ($delete > 0)
                 //        {
                 //            $response['status'] = TRUE;
@@ -434,7 +433,7 @@ class Exhibitor extends CI_Controller {
                }
                     function appointment($param1 = null,$param2 = null){
                        $page_data['page_name']     = 'appointment';
-                       $page_data['page_title']    = get_phrase('manage_visitor_details');
+                       $page_data['page_title']    = get_phrase('visitor_details');
                        $this->load->view('backend/index', $page_data);
                        }
                     function appointment_form($param1 = null, $param2 = null, $param3 = null){

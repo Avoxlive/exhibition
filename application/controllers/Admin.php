@@ -524,7 +524,7 @@ function schedule_list(){
      function save()
         {
             $response = array();
-            $this->form_validation->set_rules('title', 'Title cant be empty', 'required');
+            $this->form_validation->set_rules('title', 'Title cant be empty ', 'required');
             if ($this->form_validation->run() == TRUE)
             {
                 $param = $this->input->post();

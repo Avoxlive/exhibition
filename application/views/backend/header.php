@@ -17,7 +17,8 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
 <?php }?>
 <?php }?>
                     <?php
-                    echo $system_title = $this->db->get_where('settings' , array('type'=>'system_title'))->row()->description; ?>
+                    echo $system_title = $this->db->get_where('exhibition' , array('exhibition_id'=>$this->session->userdata('exhibition_id')))->row()->exhibition_name; ?>
+                    <!-- echo $system_title = $this->db->get_where('settings' , array('type'=>'system_title'))->row()->description; ?> -->
                 </small></a></div>
                     <!-- <ul class="nav navbar-top-links navbar-left hidden-xs">
                         <li><a href="javascript:void(0)" class="open-close hidden-xs waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
@@ -28,7 +29,7 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
                             <form role="search" class="app-search hidden-xs">
                             <input type="text" placeholder="Search..." class="form-control"> <a href="#"><i class="fa fa-search"></i></a> </form>
                     </div> -->
-                    </li>
+            </li>
                 <!-- <li class="dropdown">
                     <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"><i class="icon-envelope"></i>
                         <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
@@ -57,7 +58,7 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
                                             <a href="#">
                                                 <div class="user-img"> <img src="../plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                                 <div class="mail-contnet">
-                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                                <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
                                             </a>
                                         </div>
                                     </li>
@@ -93,14 +94,11 @@ if ($exhibition_id == $this->session->userdata('exhibition_id'))
                         <li <?php if($set_language == $selected_languages['db_field']) { ?> class="active" <?php }?>>
 
                             <a class="set_langs" data-href="<?php echo base_url();?>admin/set_language/<?php echo  $selected_languages['db_field'];?>.png" with="16px" height="16px">
-
                             <div>
                                 <img src="<?php echo base_url();?>optimum/flag/<?php echo $selected_languages['db_field'];?>.png" width="16px" height="16px"> <?php echo $selected_languages['name'];?>
                             </div>
-
                             </a>
                         </li>
-
                         <?php endforeach ?>
 
                         </ul>

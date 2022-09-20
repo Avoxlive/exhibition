@@ -43,7 +43,7 @@
 						 <div class="form-group">
 							<label class="col-sm-12"><?php echo get_phrase('date'); ?></label>
 							<div class="col-sm-12">
-								 <input type="date" class="form-control datepicker" name="meeting_date" value="<?php echo date('Y-m-d');?>" required>
+								 <input type="date" class="form-control datepicker" name="meeting-date" value="<?php echo date('Y-m-d');?>" required>
 							</div>
 					</div>
 

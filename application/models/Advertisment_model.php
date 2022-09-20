@@ -13,6 +13,8 @@ class Advertisment_model extends CI_Model {
 $page_data = array(
 
         'file_name'           => $this->input->post('file_name'),
+       'exhibition_id' =>  $this->session->userdata('exhibition_id'),
+
     );
 
 
@@ -64,11 +66,11 @@ $page_data = array(
     // }
 
     function selectAdvertismentAdminInsert(){
-        $user_id= $this->session->userdata('user_id');
-        // $staff = $this->db->get_where('clinic_advertisment', array('user_id' => $user_id))->row()->user_id;
+        // $exhibition_id= $this->session->userdata('exhibition_id');
+        // $staff = $this->db->get_where('clinic_advertisment', array('exhibition_id' => $exhibition_id))->row()->exhibition_id;
         // $staff = $this->session->userdata('login_type').'-'.$this->session->userdata('login_user_id');
-        $staff = $this->session->userdata('user_id');
-        $sql = "select * from clinic_advertisment where user_id='".$staff."' order by clinic_advertisment_id asc";
+        $staff = $this->session->userdata('exhibition_id');
+        $sql = "select * from clinic_advertisment where exhibition_id='".$staff."' order by clinic_advertisment_id asc";
         return $this->db->query($sql)->result_array();
     }
 

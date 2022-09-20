@@ -1226,6 +1226,11 @@ class Crud_model extends CI_Model {
                 $sql = "select * from exhibition_logo where exhibition_id='".$staff."' order by exhibition_logo_id asc";
                 return $this->db->query($sql)->result_array();
             }
+            function selectAdvertisementAdmin(){
+                $staff = $this->session->userdata('exhibition_id');
+                $sql = "select * from clinic_advertisment where exhibition_id='".$staff."' order by clinic_advertisment_id asc";
+                return $this->db->query($sql)->result_array();
+            }
 
             function updatelogoFunction($param2){
                 $page_data = array(

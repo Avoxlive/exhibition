@@ -21,7 +21,6 @@
 							<th><?=get_phrase('meeting_time')?></th>
 							<th><?=get_phrase('description')?></th>
 							<th><?=get_phrase('status')?></th>
-
 							<th><?=get_phrase('action')?></th>
                         </tr>
                     </thead>
@@ -32,15 +31,12 @@
                         <tr>
 							<td>
 							<?php
-
 							$user = explode('-', $row['user_id']);
 							$user_type = $user[0];
 							$user_id = $user[1];
 							echo $this->db->get_where($user_type, array($user_type.'_id' => $user_id))->row()->name;
 							?>
-
 							</td>
-
 							<td><?=$row['title'];?></td>
 							<td><?=$this->crud_model->get_type_name_by_id('visitor', $row['visitor_id']);?></td>
 							<td><?=date('d M, Y', $row['meeting-date'])?></td>
@@ -108,14 +104,14 @@
                             <td>
                             <?php if(($row['meeting-date']>= strtotime("today"))){?>
 											<a href="<?php echo base_url();?>admin/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
-				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
-				                                            class="fa fa-edit"></i> edit</button></a>
-															<a href="#" onclick="confirm_modal('<?php echo base_url();?>admin/jitsi/delete/<?php echo $row['jitsi_id'];?>');"><button
-				                                    type="button" class="btn btn-danger btn-rounded btn-sm"><i
-				                                    class="fa fa-times"></i> delete</button></a>
-                                                     <?php }
-													 else echo"expired";
-													 ?>
+				                                type="button" class="btn btn-info btn-rounded btn-sm"><i
+				                                class="fa fa-edit"></i> edit</button></a>
+												<a href="#" onclick="confirm_modal('<?php echo base_url();?>admin/jitsi/delete/<?php echo $row['jitsi_id'];?>');"><button
+				                                type="button" class="btn btn-danger btn-rounded btn-sm"><i
+				                                class="fa fa-times"></i> delete</button></a>
+                                                <?php }
+												else echo "expired";
+												?>
                             </td>
                         </tr>
 							 <?php endforeach;?>
@@ -135,7 +131,6 @@
         $('form').submit();
         e.preventDefault();
     });
-
     </script>
 
 <!--

@@ -60,8 +60,8 @@
 						echo "pending";
 						?>
 						<?php  }
-else if($row['meeting-date']<= strtotime("today"))
-	echo "expired";
+						else if($row['meeting-date']<= strtotime("today"))
+						echo "expired";
 						else if($row['meeting-date']>= strtotime("today"))
 						echo "pending";
 

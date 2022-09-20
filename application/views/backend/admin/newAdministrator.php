@@ -23,7 +23,10 @@ $exhibition_id = $this->session->userdata('exhibition_id');
 		<div class="panel panel-info">
             <div class="panel-heading"> <i class="fa fa-plus"></i>&nbsp;&nbsp;<?php echo get_phrase('add_admin'); ?></div>
 
-                <?php echo form_open(base_url() . 'admin/newAdministrator/create', array('class' => 'form-horizontal form-goups-bordered validate'));?>
+                <?php
+
+                echo form_open(base_url() . 'admin/newAdministrator/create', array('class' => 'form-horizontal form-goups-bordered validate'));?>
+
 					<div class="panel-body table-responsive">
 
 					    <div class="form-group">
@@ -97,21 +100,27 @@ $exhibition_id = $this->session->userdata('exhibition_id');
 					</thead>
                     <tbody>
 
-                <?php $counter = 1;  $get_all_admin_from_model = $this->admin_model->select_all_the_administrator_from_admin_table();
+                <?php
+                // $counter = 1;  $get_all_admin_from_model = $this->admin_model->select_all_the_administrator_from_admin_table();
+                $counter = 1;  $get_all_admin_from_model = $this->admin_model->select_all_the_administrator_from_admin_table_exhibition_Id();
                         foreach ($get_all_admin_from_model as $key => $all_selected_administrator):?>
+                            <?php
+                if(
+                    $exhibition_id = $this->session->userdata('exhibition_id')){
+                ?>
                         <tr>
                             <td><?php echo $counter++;?></td>
                             <td><?php echo $all_selected_administrator['name'];?></td>
 							<td><?php echo $all_selected_administrator['email'];?></td>
 							<td><?php echo $all_selected_administrator['phone'];?></td>
 							<td>
-
                             <?php if($all_selected_administrator['level'] == '2'):?>
                             <a onclick="showAjaxModal('<?php echo base_url();?>modal/popup/assign_role_for_admin/<?php echo $all_selected_administrator['admin_id'];?>')" class="btn btn-info btn-rounded btn-xs">Assign Role <i class="fa fa-edit"></i></a>
                             <a href="<?php echo base_url();?>admin/newAdministrator/delete/<?php echo $all_selected_administrator['admin_id'];?>" onclick="return confirm('Are you sure want to delete?');" class="btn btn-danger btn-circle btn-xs" style="color:white"><i class="fa fa-times"></i></a>
                             <?php endif;?>
                             </td>
                         </tr>
+                        <?php }?>
                 <?php endforeach;?>
 
                     </tbody>

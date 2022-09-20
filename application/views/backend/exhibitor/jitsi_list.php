@@ -29,7 +29,6 @@
 				                        </tr>
 				                    </thead>
 				                    <tbody>
-
 				                        <?php
 										$select = $this->live_class_model->selectJitsiStaffInsert();
 					 		foreach ($select as $key => $row) : ?>
@@ -59,7 +58,7 @@
 												date_default_timezone_set("Asia/Calcutta");
 												// date_default_timezone_set("Asia/Kolkata");
 												// DateTimeZone( "Europe/Bucharest" );
-    // $datetime = new DateTime( "now", new DateTimeZone( "Europe/Bucharest" ) );
+                                                // $datetime = new DateTime( "now", new DateTimeZone( "Europe/Bucharest" ) );
 												if(($row['status'] == 'live') && ($row['start_time'] <= date('h:i', time())) && ($row['end_time'] >= date('h:i', time()))) {?>
 
 											   <a href="<?php echo base_url();?>exhibitor/stream_jitsi/<?php echo $row['jitsi_id'];?>"><button
@@ -70,7 +69,6 @@
 												echo "expired";
 												else if(($row['start_time']>=date('h:i',time())))
 												echo "pendings";
-
 												?>
 				                                <?php }
 												else if($row['meeting-date']<= strtotime("today"))
@@ -78,9 +76,6 @@
 												else if($row['meeting-date']>= strtotime("today"))
 						     					echo "pending";
 												?>
-
-
-
                                                 <!-- <a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
 				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
 				                                            class="fa fa-edit"></i> edit</button></a> -->
@@ -90,7 +85,6 @@
 				                                            class="fa fa-times"></i> delete</button></a> -->
 															<?php
 															//  echo date('h:i', time())?>
-
 				                            </td>
 											<td>
 

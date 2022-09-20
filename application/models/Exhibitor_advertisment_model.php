@@ -12,6 +12,8 @@ class Exhibitor_advertisment_model extends CI_Model {
     function createNewAdvertismentFunction(){
         $page_data = array(
         'file_name'                       => $this->input->post('file_name'),
+        'exhibition_id'                   => $this->session->userdata('exhibition_id'),
+        'exhibitor_id'                    => $this->session->userdata('exhibitor_id'),
         'advertisement_content'           => $this->input->post('advertisement_content'),
     );
 
@@ -53,8 +55,8 @@ class Exhibitor_advertisment_model extends CI_Model {
 
     function selectAdvertismentExhibitorInsert(){
         $user_id= $this->session->userdata('user_id');
-        $staff = $this->session->userdata('user_id');
-        $sql = "select * from exhibitor_advertisement where user_id='".$staff."' order by exhibitor_advertisement_id asc";
+        $staff = $this->session->userdata('exhibition_id');
+        $sql = "select * from exhibitor_advertisement where exhibition_id='".$staff."' order by exhibitor_advertisement_id asc";
         return $this->db->query($sql)->result_array();
     }
 
