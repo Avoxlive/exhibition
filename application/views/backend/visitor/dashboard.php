@@ -8,18 +8,17 @@
                                     <h4><?php echo $this->db->count_all_results('student');?></h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+                                    <span class="text-muted"><?php echo get_phrase('Appointments');?></span>
 
                     </div>
                     <div class="dashboard-box-in">
-
                             <div class="r-icon-statsb">
                                 <i class="ti-user bg-megna"></i>
                                 <div class="bodystate">
                                     <h4><?php echo $this->db->count_all_results('teacher');?></h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+                                    <span class="text-muted"><?php echo get_phrase('Meetings');?></span>
 
                     </div>
                     <div class="dashboard-box-in">
@@ -30,7 +29,7 @@
                                     <h4><?php echo $this->db->count_all_results('parent');?></h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+                                    <span class="text-muted"><?php echo get_phrase('Participants');?></span>
 
                     </div>
                     <div class="dashboard-box-in">
@@ -50,7 +49,7 @@
                                     </h4>
                                 </div>
                             </div>
-                                    <span class="text-muted"><?php echo get_phrase('Exhibitions');?></span>
+                                    <span class="text-muted"><?php echo get_phrase('Admin');?></span>
 
                     </div>
 

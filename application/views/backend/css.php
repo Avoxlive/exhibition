@@ -43,11 +43,18 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>optimum/plugins/bower_components/dropify/dist/css/dropify.min.css" >
 	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css" / >
     <?php if ($exhibition_id == $this->session->userdata('exhibition_id')) { ?>
+    <?php if ($this->session->userdata('login_type') == ('exhibitor' ||'admin') &&($this->session->userdata('login_type') != ('visitor' ))) { ?>
     <!-- <link href="<?php echo base_url(); ?>optimum/css/colors/<?php
         // echo $this->db->get_where('settings', array('type' => 'skin_colour'))->row()->description; ?>.css" id="theme" rel="stylesheet" > -->
     <link href="<?php echo base_url(); ?>optimum/css/colors/<?php echo $this->db->get_where('exhibition_settings', array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->primary_color; ?>.css" id="theme" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>optimum/css/secondary_color/<?php echo $this->db->get_where('settings', array('type' => 'secondary_color'))->row()->description; ?>.css" id="theme" rel="stylesheet" >
+    <link href="<?php echo base_url(); ?>optimum/css/secondary_color/<?php echo $this->db->get_where('exhibition_settings', array('exhibition_id' => $this->session->userdata('exhibition_id')))->row()->secondary_color; ?>.css" id="theme" rel="stylesheet" >
+    <?php }
+
+    ?>
     <?php }?>
+    <link href="<?php echo base_url(); ?>optimum/css/colors/megna-dark.css" id="theme" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>optimum/css/secondary_color/cream.css" id="theme" rel="stylesheet">
+
 	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="<?php echo base_url(); ?>optimum/plugins/bower_components/html5-editor/bootstrap-wysihtml5.css" />
 	<link href="<?php echo base_url(); ?>optimum/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />

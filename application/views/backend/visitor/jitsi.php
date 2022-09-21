@@ -40,6 +40,7 @@
 							<!-- <td><?=$this->crud_model->get_type_name_by_id('class', $row['class_id']);?></td>
 							<td><?=$this->crud_model->get_type_name_by_id('section', $row['section_id']);?></td> -->
 							<td><?=date('d-m-Y', $row['meeting-date'])?></td>
+							<!-- <td><?=date('d M, Y', $row['meeting-date'])?></td> -->
                             <td><?=$row['start_time'] .' - '.$row['end_time']?></td>
 							<!-- <td><span class="label label-<?php if($row['status'] == 'pending') echo 'warning';elseif($row['status'] == 'live') echo 'success'; else echo 'danger';?>"><?=$row['status']?></span></td> -->
 							<td><span class="#"><?=$row['status']?></span></td>
@@ -48,8 +49,10 @@
 
 
 						<?php
+
 						if(($row['meeting-date']>= strtotime("today")) &&($row['meeting-date']<= strtotime("tomorrow"))){?>
-							<?php if(($row['status']=='live')&&($row['start_time']<=date('h:i',time()))&& ($row['end_time']>=date('h:i',time()))){?>
+										<?php date_default_timezone_set("Asia/Calcutta");?>
+							<?php if(($row['status']=='live') && ($row['start_time'] <= date('h:i',time()))&& ($row['end_time'] >= date('h:i',time()))){?>
 							 <a href="<?php echo base_url();?>visitor/stream_jitsi/<?php echo $row['jitsi_id'];?>">
 							 <button type="button" class="btn btn-success btn-rounded btn-sm">
 								<i class="fa fa-youtube-play"></i> Join meeting</button></a>
@@ -64,13 +67,7 @@
 						echo "expired";
 						else if($row['meeting-date']>= strtotime("today"))
 						echo "pending";
-
-
 						?>
-
-
-
-
                             </td>
                         </tr>
 							<?php

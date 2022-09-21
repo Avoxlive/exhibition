@@ -56,6 +56,7 @@
                                             if(($row['meeting-date']>= strtotime("today")) &&($row['meeting-date']<= strtotime("tomorrow"))){?>
 				                                <?php
 												date_default_timezone_set("Asia/Calcutta");
+
 												// date_default_timezone_set("Asia/Kolkata");
 												// DateTimeZone( "Europe/Bucharest" );
                                                 // $datetime = new DateTime( "now", new DateTimeZone( "Europe/Bucharest" ) );
@@ -104,8 +105,8 @@
 												<?php if(($row['meeting-date']>= strtotime("today"))){?>
 											<a href="<?php echo base_url();?>exhibitor/edit_jitsi/<?php echo $row['jitsi_id'];?>"><button
 				                                        type="button" class="btn btn-info btn-rounded btn-sm"><i
-				                                            class="fa fa-edit"></i> edit</button></a>
-															<a href="#" onclick="confirm_modal('<?php echo base_url();?>exhibitor/jitsi/delete/<?php echo $row['jitsi_id'];?>');"><button
+				                                        class="fa fa-edit"></i> edit</button></a>
+														<a href="#" onclick="confirm_modal('<?php echo base_url();?>exhibitor/jitsi/delete/<?php echo $row['jitsi_id'];?>');"><button
 				                                    type="button" class="btn btn-danger btn-rounded btn-sm"><i
 				                                    class="fa fa-times"></i> delete</button></a>
                                                      <?php }

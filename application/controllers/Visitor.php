@@ -321,7 +321,7 @@ function my_calendar($param1 = null, $param2 = null, $param3 = null){
         }
 
         function chat($exhibitor_id){
-            $page_data['exhibitor_id']      = $exhibitor_id;
+            $page_data['exhibitor_id']  = $exhibitor_id;
             $page_data['page_name']     = 'chat';
             $page_data['page_title']    = get_phrase('chat with exhibitor');
             $this->load->view('backend/index', $page_data);
