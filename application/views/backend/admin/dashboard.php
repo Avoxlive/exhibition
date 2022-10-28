@@ -8,7 +8,7 @@
                  <h4><?php echo $this->db->count_all_results('newuser');?></h4>
              </div>
          </div>
-         <span class="text-muted"><?php echo get_phrase('Appointments');?></span>
+         <span class="text-muted"><?php echo get_phrase('new users');?></span>
 
      </div>
      <div class="dashboard-box-in">
