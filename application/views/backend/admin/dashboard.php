@@ -3,7 +3,7 @@
      <div class="dashboard-box-in">
 
          <div class="r-icon-stats">
-             <i class="ti-user bg-megna"></i>
+             <i class="ti-book bg-megna"></i>
              <div class="bodystate">
                  <h4><?php echo $this->db->count_all_results('newuser');?></h4>
              </div>
@@ -14,7 +14,7 @@
      <div class="dashboard-box-in">
 
          <div class="r-icon-statsb">
-             <i class="ti-user bg-megna"></i>
+             <i class="ti-image bg-megna"></i>
              <div class="bodystate">
                  <h4><?php echo $this->db->count_all_results('jitsi');?></h4>
              </div>
@@ -88,12 +88,12 @@
      <div class="dashboard-box-in">
 
          <div class="r-icon-statsy">
-             <i class="ti-wallet bg-megna"></i>
+             <i class="ti-crown bg-megna"></i>
              <div class="bodystate">
                  <h4><?php echo $this->db->count_all_results('admin');?></h4>
              </div>
          </div>
-         <span class="text-muted"><?php echo get_phrase('Admin');?></span>
+         <span class="text-muted"><?php echo get_phrase('Admin/Host');?></span>
 
      </div>
      <!-- <div class="dashboard-box-in">
